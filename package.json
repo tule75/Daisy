@@ -1,0 +1,36 @@
+{
+  "name": "daisy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UIT-21522738/Daisy.git"
+  },
+  "keywords": [
+    "daisy",
+    "Daisy",
+    "digital",
+    "business",
+    "TMĐT"
+  ],
+  "author": "Daisy team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UIT-21522738/Daisy/issues"
+  },
+  "homepage": "https://github.com/UIT-21522738/Daisy#readme",
+  "devDependencies": {
+    "bootstrap": "^5.2.2",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "mongoose": "^6.7.2",
+    "morgan": "^1.10.0",
+    "node-sass": "^7.0.3",
+    "nodemon": "^2.0.20"
+  }
+}
