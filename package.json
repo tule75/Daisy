@@ -26,10 +26,15 @@
   "homepage": "https://github.com/UIT-21522738/Daisy#readme",
   "devDependencies": {
     "bootstrap": "^5.2.2",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.8",
     "express": "^4.18.2",
     "express-handlebars": "^6.0.6",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.7.2",
+    "mongoose-slug-generator": "^1.0.4",
     "morgan": "^1.10.0",
+    "node-fetch": "^2.6.7",
     "node-sass": "^7.0.3",
     "nodemon": "^2.0.20"
   }

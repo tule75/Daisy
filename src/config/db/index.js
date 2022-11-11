@@ -2,10 +2,10 @@ const mongoose = require('mongoose')
 
 async function connect() {
     try {
-        await mongoose.connect('mongodb://localhost:27017/f8_education_dev');
+        await mongoose.connect('mongodb://localhost:27017/Daisy');
         console.log('connect success')
     } catch (error) {
-        console.log('connect failure')
+        console.log('khong connect duoc db')
     }
 }
 
