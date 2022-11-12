@@ -1,19 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<script src="../../until/cookies.js"></script>
-<body>
-    <div>
-        <form method="post" action="/login/p">
-            <input type="text" class="form-control" id="" name="username">
-            <input type="text" class="form-control" id="" name="password">
-            <button type="submit" class="btn btn-primary" onclick="addCookies()">đăng nhập</button>
-        </form>
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>daisy</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./assets/css/base.css">
+        <link rel="stylesheet" href="./assets/css/main.css"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Sansita+Swashed:wght@800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+        <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.2.0-web/css/all.css">
+    </head>
+    
+    <body>
+        <div class="main">
+            <div class="grid__full-width">
+                <div class="container">
+                    <div class="container__half-col">
+                        daisy
+                    </div>
+
+                    <div class="container__half-col-signin">
+                        <div class="row-6">
+                            <div class="singin__heading">ĐĂNG NHẬP</div>
+                            <% if (check == 0) {%> 
+                            <div class="signin__modal">
+                                <form class="signin__modal-item" method="post" action="/login">
+                                    <input type="text" id="" class="signin__modal-input" placeholder="Email/Số điện thoại" name="username">
+                                    <input type="text" id="" class="signin__modal-input" placeholder="Mật khẩu" name="password">
+                                    <button type="submit" class="signin__modal-button">Đăng nhập</button>
+                                </form>
+                            </div>
+                            <% } else { %> 
+                            <div class="signin__modal">
+                                <form class="signin__modal-item" method="post" action="/login">
+                                    <input type="text" id="" class="signin__modal-input" placeholder="Email/Số điện thoại" name="username">
+                                    <input type="text" id="" class="signin__modal-input" placeholder="Mật khẩu" name="password">
+                                    <p style="color: red;">Sai tài khoản hoặc mật khẩu</p>
+                                    <button type="submit" class="signin__modal-button">Đăng nhập</button>
+                                </form>
+                            </div>
+                            <% } %> 
+                            
+                            <div class="signin__note">Quên mật khẩu?</div>
+                        </div>
+
+                        <div class="row-4">
+                            <div class="signin__other">HOẶC</div>
+                            <div class="signin__app">
+                                <button class="signin__app-btn">
+                                    <i class="signin__app-btn-icon fa-brands fa-facebook"> Facebook</i>
+                                </button>
+
+                                <button class="signin__app-btn">
+                                    <i class="signin__app-btn-icon fa-brands fa-google"> Google</i>
+                                </button>
+
+                                <button class="signin__app-btn">
+                                    <i class="signin__app-btn-icon fa-brands fa-twitter"> Twitter</i>
+                                </button>
+                            </div>
+                            <div class="signin__signup">Bạn chưa có tài khoản? <a href="" class="signin__signup-link">Đăng kí</a></div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="grid__full-width">
+                    <div class="grid__row">
+                        <div class="grid__col-2-4">
+                            <h4 class="footer-heading">
+                                CHĂM SÓC KHÁCH HÀNG
+                            </h4>
+                            <ul class="footer-list">
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">Daisy Xu</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">Daisy Blog</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">Daisy Mall</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">Vận chuyển</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">Hướng dẫn bán hàng</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">Trả hàng và hoàn tiền  </a>
+                                </li>
+        
+                            </ul>
+                        </div>
+        
+        
+                        <div class="grid__col-2-4">
+                            <h4 class="footer-heading">
+                             Về Daisy
+                            </h4>
+                            <ul class="footer-list">
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">
+                                        Giới thiệu về Daisy Việt Nam
+                                    </a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">Tuyển dụng</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">Điều khoản</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">Chính sách bảo mật</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">Flash Sales</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">Liên hệ với truyền thông</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="grid__col-2-4">
+                            <h4 class="footer-heading">
+                              Thanh Toán
+                            </h4>
+                            <div class="footer-list__pay">
+                               
+                                    <a href="" class="footer-item__link">
+                                        <i class="footer-list__pay-icon fa-brands fa-paypal"></i>
+                                    </a>
+                               
+                               
+                                    <a href="" class="footer-item__link">
+                                        <i class="footer-list__pay-icon fa-brands fa-apple-pay"></i></a>
+                               
+                                    <a href="" class="footer-item__link">
+                                        <i class="footer-list__pay-icon fa-brands fa-google-pay"></i>
+                                    </a>
+                               
+                                    <a href="" class="footer-item__link">
+                                        <i class="footer-list__pay-icon fa-brands fa-cc-paypal"></i>
+                                    </a>
+                               
+                                    <a href="" class="footer-item__link">
+                                        <i class="footer-list__pay-icon fa-brands fa-cc-apple-pay"></i>
+                                    </a>
+                               
+                                    <a href="" class="footer-item__link">
+                                        <i class="footer-list__pay-icon fa-solid fa-credit-card-front"></i>
+                                    </a>
+                            
+                                
+                            </div>
+                        </div>
+        
+                        <div class="grid__col-2-4">
+                            <h4 class="footer-heading">
+                              THEO DÕI CHÚNG TÔI TRÊN
+                            </h4>
+                            <ul class="footer-list">
+                                <li class="footer-item">
+                                   
+                                    <a href="" class="footer-item__link">
+                                        <i class="fa-brands fa-facebook footer-item-icon "></i>
+                                        Facebook
+                                    </a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">
+                                        <i class="footer-item-icon fa-brands fa-instagram"></i>
+                                        Instagram</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">
+                                        <i class="footer-item-icon fa-brands fa-linkedin"></i>
+                                        Linkedin</a>
+                                </li>
+                              
+                                
+                            </ul>
+                        </div>
+        
+                        <div class="grid__col-2-4">
+                            <h4 class="footer-heading">
+                              Đăng nhập Daisy ngay thôi
+                            </h4>
+                            <div class="footer-download">
+                                <div class="footer-download__apps">
+                                    <a href="" class="footer-item__link-img">
+                                        <i class="footer-item-icon fa-brands fa-app-store"></i> App_store
+                                    </a>
+                              
+                                    <a href="" class="footer-item__link-img">
+                                        <i class="footer-item-icon fa-brands fa-google-play"></i>
+                                    Google_play
+                                    </a>
+                                
+                                    <a href="" class="footer-item__link-img">
+                                        <i class="footer-item-icon fa-brands fa-adn"></i>
+                                        AppGallery
+                                    </a>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

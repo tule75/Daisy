@@ -1,0 +1,207 @@
+.main {
+    margin-right: -16px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 550px;
+}
+
+.container__half-col{
+    width: 50%;
+    background-color: #60B95E;
+    margin-top: -8px;
+    margin-left: -8px;
+    text-align: center;
+    color: var(--white-color);
+    font-size: 100px;
+    font-family: 'Sansita Swashed', cursive;
+    padding-top: 200px;
+}
+
+.container__half-col-signin{
+    width: 50%;
+    background-color: var(--white-color);
+    position: relative;
+    margin-top: -8px;
+    margin-right: -8px;
+}
+
+.row-6 {
+    height: 70%;
+    padding-top: 50px;
+}
+
+.row-6,
+.row-4 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.singin__heading {
+    margin-top: 16px;
+    margin-bottom: 32px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.signin__modal-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signin__modal-input{
+    padding: 8px 200px 8px 4px;
+    margin-bottom: 20px;
+}
+
+.signin__modal-input:hover {
+    opacity: 0.5;
+}
+
+.signin__modal-button {
+    background-color: #60B95E;
+    color: var(--white-color);
+    text-align: center;
+    border: none;
+    font-size: 20px;
+    padding: 8px 132px;
+    margin-bottom: 16px;
+}
+
+.signin__modal-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.signin__note {
+    width: 400px;
+    float: left;
+    margin-left: 36px;
+    font-weight: 500;
+}
+
+.signin__note:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.row-4 {
+    justify-content: space-between;
+    height: 30%;
+    margin-top: -50px;
+}
+
+.signin__app {
+    width: 350px;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.signin__app-btn {
+    padding: 8px 10px;
+    background-color: var(--white-color);
+
+}
+
+.signin__app-btn-icon {
+    padding-right: 2px;
+}
+
+.signin__signup-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.signin__app-btn,
+.signin__signup-link:hover {
+    cursor: pointer;
+}
+
+.signin__app-btn:hover {
+    opacity: 0.6;
+}
+
+.signin__signup-link:hover {
+    color: red;
+}
+
+.footer {
+    display: flex;
+    border-top: 4px solid #5BAB5A;
+    padding-top: 20px;
+    /* margin-bottom: 20px; */
+    background-color: rgb(213, 205, 205);
+    margin-left: -8px;
+    margin-top: -4px;
+   
+}
+.footer-heading {
+    text-align: left;
+    font-size: 15px;
+    color: rgb(33, 32, 32);
+    font-weight: 900;
+    /* padding-right: 20px; */
+}
+
+.footer-list{
+    list-style: none;
+    padding: 0;
+
+}
+.footer-item {
+    padding: 7px 0;
+}
+.footer-item__link{
+    text-decoration: none;
+    color:rgb(42, 42, 41);
+    font-size: 14px;
+  margin-top: 2px 0;
+  font-weight: 400;
+}
+.footer-item__link:hover {
+    color: #5BAB5A;
+}
+.footer-item-icon {
+    padding-right: 5px;
+}
+
+.footer-list__pay {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-list__pay-icon {
+    min-width: 20px;
+    font-size: 50px;
+    padding: 0 10px;
+}
+.footer-download {
+    display: flex;
+}
+.footer-item__img {
+    flex: 1;
+    width: 14px;
+}
+.footer-item__link-img {
+    display: flex;
+    text-decoration: none;
+    color: #777;
+    padding: 10px 0;
+    align-items: center;
+}
+.footer-item__link-img:hover {
+    color:#5BAB5A;
+}
+
+
+
+
+
+
+
