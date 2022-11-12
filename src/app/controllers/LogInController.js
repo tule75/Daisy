@@ -5,9 +5,25 @@ const http = require('node:http');
 const { response } = require('express');
 
 class LogInController {
-
+    // [GET] /login 
     gLogIn(req, res, next) {
-        res.render('login.html')
+        if (req.cookies.token){
+            const token = req.cookies.token
+            const id = jwt.verify(token, 'daisy')
+            User.findOne({_id: id})
+            .then(data => {
+                if (data) {
+                    res.redirect('/')
+                } else {
+                    res.render('login.html', {check: 0})
+                }
+            })
+            .catch(err => {
+                res.send('loi')
+            })
+        } else {
+            res.render('login.html', {check: 0})
+        }
     }
     // [POST] /Login
     pLogIn(req, res, next) {
@@ -18,9 +34,9 @@ class LogInController {
                 if (data){
                     const token = jwt.sign({ _id: data._id }, 'daisy');
                     res.cookie('token', token, 20)
-                    res.send('đăng nhập thành công')
+                    res.redirect('/')
                 } else {
-                    res.send('sai tài khoản hoặc mật khẩu')
+                    res.render('login.html', {check: 1})
                 }
             })
             .catch(err => {

@@ -5,7 +5,7 @@ const logInController = require('../app/controllers/LogInController');
 
 router.get("/", logInController.gLogIn);
 
-router.post("/p", logInController.pLogIn);
+router.post("/", logInController.pLogIn);
 
 // router.get("/ship", logInController.ship)
 
