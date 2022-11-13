@@ -142,9 +142,25 @@
     font-weight: 300;
 
 }
+.has-cart {
+    display: flex;
+    position: relative;
+}
 .fa-cart-shopping {
     cursor: pointer;
     color: white;
+   
+}
+.cartAmount {
+    position: absolute ;
+    font-size: 14px;
+    right: 10px;
+    top: -5px;
+    background-color: white;
+    color: red;
+    padding: 0px 2px;
+    border-radius: 50%;
+   
 }
 .user-button {
     margin-left: 10px;

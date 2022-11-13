@@ -77,7 +77,7 @@
                     </li>
                 </ul>
 
-                <div class="cart-product-wrap">
+                <div id="id" class="cart-product-wrap">
                    <div class="cart-product-infor">
                             <img class="cart-product-img" src="/src/public/img/DSC_0976.jpg" alt="">
                            <div class="product-content">
@@ -89,11 +89,11 @@
                    </div>
                    
                    <div class="cart-product-quantity">
-                        <button class="btn quantity-minus">
+                        <button onclick="decrease()" class="btn quantity-minus">
                             <i class="fa-solid fa-minus"></i>
                         </button>
                             <h4 class="quantity-number">1</h4>
-                        <button class="btn quantity-add">
+                        <button onclick="increase()"  class="btn quantity-add">
                             <i class="fa-solid fa-plus"></i>
                         </button>
                    </div>
@@ -107,23 +107,23 @@
                    
                    
                 </div>
-                <div class="cart-product-wrap">
+                <div id="id" class="cart-product-wrap">
                     <div class="cart-product-infor">
                              <img class="cart-product-img" src="/src/public/img/DSC_0976.jpg" alt="">
                             <div class="product-content">
                              <h5 class="car-product-name">
-                                 Mien dong
+                                 Mi dong
                              </h5>
                              <p class="cart-product-price">65.000</p>
                             </div>
                     </div>
                     
                     <div class="cart-product-quantity">
-                         <button class="btn quantity-minus">
+                         <butto onclick="decrease()"  class="btn quantity-minus">
                              <i class="fa-solid fa-minus"></i>
-                         </button>
+                         </butto>
                              <h4 class="quantity-number">1</h4>
-                         <button class="btn quantity-add">
+                         <button onclick="increase()"  class="btn quantity-add">
                              <i class="fa-solid fa-plus"></i>
                          </button>
                     </div>
@@ -134,23 +134,23 @@
                     </button>
                     
                 </div>
-                <div class="cart-product-wrap">
+                <div id="id" class="cart-product-wrap">
                     <div class="cart-product-infor">
                              <img class="cart-product-img" src="/src/public/img/DSC_0976.jpg" alt="">
                             <div class="product-content">
                                 <h5 class="car-product-name">
-                                    Mien dong
+                                    Bun dong
                                 </h5>
                                 <p class="cart-product-price">65.000</p>
                             </div>
                     </div>
                     
-                    <div class="cart-product-quantity">
-                         <button class="btn quantity-minus">
+                    <div  class="cart-product-quantity">
+                         <button onclick="decrease()"  class="btn quantity-minus">
                              <i class="fa-solid fa-minus"></i>
                          </button>
                              <h4 class="quantity-number">1</h4>
-                         <button class="btn quantity-add">
+                         <button onclick="increase()"  class="btn quantity-add">
                              <i class="fa-solid fa-plus"></i>
                          </button>
                     </div>
@@ -333,6 +333,8 @@
                 </div>
             </div>
         </div>
+
+        <script src="/src/public/javascript/giohang.js"></script>
 
     </div>
 </body>
