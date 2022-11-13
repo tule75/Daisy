@@ -11,6 +11,7 @@ const Product = new Schema({
     introduction: String,
     proceduce: String,
     effect: String,
+    img: String,
     guide: String,
     presevartion: String,
     slug: { type: String, slug: "name", unique: true},
