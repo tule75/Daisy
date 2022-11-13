@@ -10,7 +10,7 @@
    
 
    let increase = () => {
-    let search = backet.find((x) => x.selectId1 === selectId1)
+    let search = backet.find((x) => x.selectId1.)
     if(search === undefined) {
         backet.push({
             // id: selectId1,
