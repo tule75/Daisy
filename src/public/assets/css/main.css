@@ -55,21 +55,28 @@
 }
 
 .signin__modal-input{
-    padding: 8px 200px 8px 4px;
+    padding: 10px 200px 10px 6px;
     margin-bottom: 20px;
+    border: 1px solid #999;
+    outline: none;
 }
-
-.signin__modal-input:hover {
+.signin__modal-input:focus {
+    border: 1px solid red;
+    color: black;
+    box-shadow: 0 0 6px #999;
+}
+/* .signin__modal-input:hover {
     opacity: 0.5;
-}
+} */
 
 .signin__modal-button {
     background-color: #60B95E;
     color: var(--white-color);
     text-align: center;
     border: none;
+    width: 349px;
     font-size: 20px;
-    padding: 8px 132px;
+    padding: 8px 124px;
     margin-bottom: 16px;
 }
 
@@ -93,9 +100,10 @@
 .row-4 {
     justify-content: space-between;
     height: 30%;
-    margin-top: -50px;
 }
-
+.signin__other{
+   font-weight: 600;
+}
 .signin__app {
     width: 350px;
     font-size: 30px;
@@ -104,15 +112,22 @@
 }
 
 .signin__app-btn {
+    border: 1px solid #999;
     padding: 8px 10px;
     background-color: var(--white-color);
 
+}
+.signin__app-btn:active {
+    color: black;
 }
 
 .signin__app-btn-icon {
     padding-right: 2px;
 }
 
+.signin__signup {
+    margin-bottom: 20px;
+}
 .signin__signup-link {
     text-decoration: none;
     color: black;
@@ -132,14 +147,15 @@
     color: red;
 }
 
+/* footer */
 .footer {
     display: flex;
     border-top: 4px solid #5BAB5A;
     padding-top: 20px;
+    padding-bottom: 20px;
     /* margin-bottom: 20px; */
     background-color: rgb(213, 205, 205);
-    margin-left: -8px;
-    margin-top: -4px;
+    padding-left: 45px;
    
 }
 .footer-heading {
@@ -147,13 +163,12 @@
     font-size: 15px;
     color: rgb(33, 32, 32);
     font-weight: 900;
-    /* padding-right: 20px; */
+    padding-right: 20px;
+    padding-bottom: 10px;
 }
 
 .footer-list{
     list-style: none;
-    padding: 0;
-
 }
 .footer-item {
     padding: 7px 0;
@@ -194,14 +209,9 @@
     color: #777;
     padding: 10px 0;
     align-items: center;
+    font-size: 13px;
 }
 .footer-item__link-img:hover {
     color:#5BAB5A;
 }
-
-
-
-
-
-
 

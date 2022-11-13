@@ -43,9 +43,10 @@
             </div>
             <div class="header-user">
                 <ul class="user-list">
-                    <li class="user-item ">
+                    <li class="user-item has-cart ">
                         <!-- <i class="fa fa-regular fa-bell "></i><i class="fa-regular fa-cart-shopping-fast"></i> -->
                         <i class="fa fa-light fa-cart-shopping"></i>
+                        <div class="cartAmount">0</div>
                     </li>
                     
                     <!-- <li class="user-item">
@@ -86,14 +87,6 @@
            <!-- company-show -->
 
             <div class="company-container">
-                    <!-- <div class="company-info">
-                        <div class="company-info-pic">
-                            <img class="Anxuan-info" src="img/DSC_0976.jpg" alt="">
-                        </div>
-                        <h3 class="company-info-name">
-                            An Xuan
-                        </h3>
-                    </div> -->
                     <div class="company-info">
                         <div class="company-info-pic">
                             <img class="Anxuan-info" src="https://cagaileoanxuan.vn/wp-content/uploads/2020/08/Logo-cagaileo.png" alt="">
@@ -135,13 +128,22 @@
                             An Xuân
                         </h1>
                     </div>
+                    <div class="company-info">
+                        <div class="company-info-pic">
+                            <img class="Anxuan-info" src="https://cagaileoanxuan.vn/wp-content/uploads/2020/08/Logo-cagaileo.png" alt="">
+                        </div>
+                        <h1 class="company-info-name">
+                            An Xuân
+                        </h1>
+                    </div>
             </div>
+           
             <!-- popular product -->
             <div class="popular-product">
                <button class="next-btn btn--left">
                 <i class="fa fa-solid fa-chevron-left"></i>
                </button>
-               <% for (var i = 0; i < products.length; i++) {%> 
+               <% for (var i = 0; i < products.length; i++) { %> 
                 <div class="popular-info">
                     <div class="popular-picture">
                         <img class="product-1" src="img/sanpham/<%-products[i].img%>.jpg" alt="">
@@ -155,8 +157,8 @@
                         </button>
                     </div>
                 </div>
-                <% } %> 
-                <!-- <div class="popular-info">
+                <% } %>  -->
+                <div class="popular-info active">
                     <div class="popular-picture">
                         <img class="product-1" src="img/DSC_0976.jpg" alt="">
                     </div>
@@ -169,7 +171,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="popular-info">
+                <div class="popular-info active">
                     <div class="popular-picture">
                         <img class="product-1" src="img/DSC_0976.jpg" alt="">
                     </div>
@@ -182,10 +184,39 @@
                         </button>
                     </div>
                 </div>
-                <button class="next-btn btn--right">
-                    <i class="fa fa-solid fa-chevron-right"></i>
-                </button> -->
+                <div class="popular-info active">
+                    <div class="popular-picture">
+                        <img class="product-1" src="img/DSC_0976.jpg" alt="">
+                    </div>
+                    <div class="popular-content">
+                        <h3 class="popular-name">Miến dong</h3>
+                        <p class="popular-price">65.000</p>
+                        <button class="add-button">
+                            <i class="fa fa-regular fa-bag-shopping"></i>
+                            Thêm vào giỏ hàng
+                        </button>
+                    </div>
+                </div>
+                <svg class="btn btn--next" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+                    <path d="M0-.25h24v24H0z" fill="none"/>
+                  </svg>
             </div> 
+
+            <!-- pagination -->
+            <div class="pagination-wrapper">
+                
+                <div class="pagination-container">
+                  <div class="little-dot  little-dot--first"></div>
+                  <div class="little-dot">
+                    <div class="big-dot-container">
+                      <div class="big-dot"></div>
+                    </div>
+                  </div>
+                  <div class="little-dot  little-dot--last"></div>
+                </div>
+                
+              </div>
 
             <!-- product list -->
             <div class="product__container">
@@ -195,9 +226,10 @@
                      <div class="grid__col-2">
                          <nav class="category">
                              <ul class="category__list">
-                                 <h4 class="category__heading">
-                                     <i class="category__heading-icon fa-solid fa-list-ul"></i> Danh mục
-                                 </h4>
+                                <div class="category-menu">
+                                    <i class="category__heading-icon fa-solid fa-list-ul"></i>
+                                 <h4 class="category__heading"> Danh mục </h4>
+                                </div>
                                  <li class="category-item category-item--active">
                                          <a href="" class="category-item_link">
                                              Thực phẩm
@@ -233,17 +265,13 @@
                                         Thời trang
                                      </a>
                                  </li>
-                                 <li class="category-item">
-                                     <a href="" class="category-item_link">
-                                         Thể thao
-                                     </a>
-                                 </li>
                              </ul>
                          </nav>
                      </div>
-                     <div class="grid__col-10">
-                        <div class="home-product">
+                     <div id="shop" class="grid__col-10">
+                        <div  class="home-product">
                             <div class="grid__row">
+                                <% for (var i = 0; i < products.length; i++) { %> 
                                 <div class="grid__col-2-4">
                                     <div class="home-product__item">
                                          <img class="home-product__item-img" src="img/DSC_0976.jpg" alt="">
@@ -274,7 +302,7 @@
                                         
                                      </div>
                                  </div>  
-                                 <!-- <div class="grid__col-2-4">
+                                 <div class="grid__col-2-4">
                                     <div class="home-product__item">
                                          <img class="home-product__item-img" src="img/DSC_0976.jpg" alt="">
                                          
@@ -541,7 +569,7 @@
                                                 <i class="fa-solid fa-plus"></i>                                            </button>
                                         </div>
                                     </div>
-                                </div>  -->
+                                </div> 
                                 
                             </div>
                         </div>
@@ -551,9 +579,6 @@
             </div>
 
         </div>
-
-
-
         <!-- footer -->
         <div class="footer">
             <div class="grid">
@@ -708,6 +733,8 @@
             </div>
         </div>
     </div>
+
+    <script src="javascript/main.js"> </script>
     
 </body>
 </html>
