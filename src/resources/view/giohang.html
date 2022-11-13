@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gio hang</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Itim|Lobster|Montserrat:500|Noto+Serif|Nunito|Patrick+Hand|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab|Saira" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/public/css/giohang.css">
+    <link rel="stylesheet" href="/src/public/css/base.css">
+</head>
+<body>
+    <div class="cart-shopping">
+
+        <div class="cart-header">
+            <img class="header-logo" src="/src/public/img/Rectangle 30 (1).svg" alt="">
+           
+            <div class="header-search">
+                <input class="header-search-input" type="text" placeholder="Search">
+
+                <!-- search-history -->
+                <div class="header-search-history">
+                    <h3 class="header-search-history-heading">
+                        Lịch sử Tìm kiếm
+                    </h3>
+                    <ul class="header-search-history-list">
+                        <li class="header-search-history-item">
+                            <a class="search-history-item-link" href="">Mien dong</a>
+                        </li>
+                        <li class="header-search-history-item">
+                            <a class="search-history-item-link" href="">Bun dong</a>
+                        </li>
+                    </ul>
+                </div>
+               <button class="input-enter">
+                <i class="fa fa-solid fa-magnifying-glass input-icon"></i>
+               </button>
+            </div>
+            <div class="header-user">
+                <ul class="user-list">
+                    <li class="user-item ">
+                        <!-- <i class="fa fa-regular fa-bell "></i><i class="fa-regular fa-cart-shopping-fast"></i> -->
+                        <i class="fa fa-light fa-cart-shopping"></i>
+                    </li>
+                    
+                    <!-- <li class="user-item">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                     </li>
+                    <li class="user-item">
+                        <i class="fa fa-solid fa-user"></i>
+                    </li> -->
+                    <button class="user-button">Sign in</button>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cart-body">
+                <h4 class="car-body-heading">
+                    Giỏ hàng của bạn
+                </h4>
+
+                <ul class="cart-infor-list">
+                    <li class="cart-infor-child">
+                        Sản phẩm
+                    </li>
+                    <li class="cart-infor-child">
+                        Số lượng
+                    </li><li class="cart-infor-child">
+                        Tổng tiền
+                    </li><li class="cart-infor-child">
+                       Xoá
+                    </li>
+                </ul>
+
+                <div class="cart-product-wrap">
+                   <div class="cart-product-infor">
+                            <img class="cart-product-img" src="/src/public/img/DSC_0976.jpg" alt="">
+                           <div class="product-content">
+                            <h5 class="car-product-name">
+                                Mien dong
+                            </h5>
+                            <p class="cart-product-price">65.000</p>
+                           </div>
+                   </div>
+                   
+                   <div class="cart-product-quantity">
+                        <button class="btn quantity-minus">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                            <h4 class="quantity-number">1</h4>
+                        <button class="btn quantity-add">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                   </div>
+
+                    <p class="total">  65.000 </p>
+                   <button class="btn product-trash">
+                      <i class="fa-solid fa-trash"></i>
+                   </button>
+
+
+                   
+                   
+                </div>
+                <div class="cart-product-wrap">
+                    <div class="cart-product-infor">
+                             <img class="cart-product-img" src="/src/public/img/DSC_0976.jpg" alt="">
+                            <div class="product-content">
+                             <h5 class="car-product-name">
+                                 Mien dong
+                             </h5>
+                             <p class="cart-product-price">65.000</p>
+                            </div>
+                    </div>
+                    
+                    <div class="cart-product-quantity">
+                         <button class="btn quantity-minus">
+                             <i class="fa-solid fa-minus"></i>
+                         </button>
+                             <h4 class="quantity-number">1</h4>
+                         <button class="btn quantity-add">
+                             <i class="fa-solid fa-plus"></i>
+                         </button>
+                    </div>
+ 
+                     <p class="total">  65.000 </p>
+                    <button class="btn product-trash">
+                       <i class="fa-solid fa-trash"></i>
+                    </button>
+                    
+                </div>
+                <div class="cart-product-wrap">
+                    <div class="cart-product-infor">
+                             <img class="cart-product-img" src="/src/public/img/DSC_0976.jpg" alt="">
+                            <div class="product-content">
+                                <h5 class="car-product-name">
+                                    Mien dong
+                                </h5>
+                                <p class="cart-product-price">65.000</p>
+                            </div>
+                    </div>
+                    
+                    <div class="cart-product-quantity">
+                         <button class="btn quantity-minus">
+                             <i class="fa-solid fa-minus"></i>
+                         </button>
+                             <h4 class="quantity-number">1</h4>
+                         <button class="btn quantity-add">
+                             <i class="fa-solid fa-plus"></i>
+                         </button>
+                    </div>
+ 
+                     <p class="total">  65.000 </p>
+                    <button class="btn product-trash">
+                       <i class="fa-solid fa-trash"></i>
+                    </button>
+                    
+                </div>
+
+                <div class="cart-footer">
+                    <ul class="thanhtoan">
+                        <li class="thanhtoan-item">
+                            Thanh toán
+                        </li>
+                        <li class="thanhtoan-item">
+                            65.000
+                        </li>
+    
+                    </ul>
+                    <div class="button-thanhtoan">
+                        <button class=" pay">
+                            Thanh Toán
+                        </button>
+                    </div>
+                </div>
+        </div>
+
+         <!-- footer -->
+         <div class="footer">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__col-2-4">
+                        <h4 class="footer-heading">
+                            CHĂM SÓC KHÁCH HÀNG
+                        </h4>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Daisy Xu</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Daisy Blog</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Daisy Mall</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Vận chuyển</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Hướng dẫn bán hàng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Trả hàng và hoàn tiền  </a>
+                            </li>
+    
+                        </ul>
+                    </div>
+    
+    
+                    <div class="grid__col-2-4">
+                        <h4 class="footer-heading">
+                         Về Daisy
+                        </h4>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    Giới thiệu về Daisy Việt Nam
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Tuyển dụng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Điều khoản</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Chính sách bảo mật</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Flash Sales</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Liên hệ với truyền thông</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="grid__col-2-4">
+                        <h4 class="footer-heading">
+                          Thanh Toán
+                        </h4>
+                        <div class="footer-list__pay">
+                           
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-list__pay-icon fa-brands fa-paypal"></i>
+                                </a>
+                           
+                           
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-list__pay-icon fa-brands fa-apple-pay"></i></a>
+                           
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-list__pay-icon fa-brands fa-google-pay"></i>
+                                </a>
+                           
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-list__pay-icon fa-brands fa-cc-paypal"></i>
+                                </a>
+                           
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-list__pay-icon fa-brands fa-cc-apple-pay"></i>
+                                </a>
+                           
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-list__pay-icon fa-solid fa-credit-card-front"></i>
+                                </a>
+                        
+                            
+                        </div>
+                    </div>
+    
+                    <div class="grid__col-2-4">
+                        <h4 class="footer-heading">
+                          THEO DÕI CHÚNG TÔI TRÊN
+                        </h4>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                               
+                                <a href="" class="footer-item__link">
+                                    <i class="fa-brands fa-facebook footer-item-icon "></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item-icon fa-brands fa-instagram"></i>
+                                    Instagram</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item-icon fa-brands fa-linkedin"></i>
+                                    Linkedin</a>
+                            </li>
+                          
+                            
+                        </ul>
+                    </div>
+    
+                    <div class="grid__col-2-4">
+                        <h4 class="footer-heading">
+                          Đăng nhập Daisy ngay thôi
+                        </h4>
+                        <div class="footer-download">
+                            <div class="footer-download__apps">
+                                <a href="" class="footer-item__link-img">
+                                    <i class="footer-item-icon fa-brands fa-app-store"></i> App_store
+                                </a>
+                          
+                                <a href="" class="footer-item__link-img">
+                                    <i class="footer-item-icon fa-brands fa-google-play"></i>
+                                Google_play
+                                </a>
+                            
+                                <a href="" class="footer-item__link-img">
+                                    <i class="footer-item-icon fa-brands fa-adn"></i>
+                                    AppGallery
+                                </a>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
