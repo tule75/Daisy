@@ -52,9 +52,11 @@
                         <!-- <li class="user-item">
                             <i class="fa-solid fa-cart-shopping"></i>
                         </li> -->
-                        <li class="user-item">
-                            <i class="fa fa-solid fa-user"></i>
-                        </li>
+                        <a href="/user/<%-user.slug %> ">
+                            <li class="user-item">
+                                <i class="fa fa-solid fa-user"></i>
+                            </li>
+                        </a>
                     <% } else { %> 
                     <button class="user-button"> <a href="/login" class="user-button">Sign in</a></button>
                     <% } %> 
@@ -298,14 +300,17 @@
                                          </div>
                                         
                                          <div class="home-product__item-orgigin">
+
                                                 <span class="home-product__item-evaluate">
                                                     <i class="fa-solid fa-star"></i>
                                                     <i class="fa-solid fa-star"></i>
                                                     <i class="fa-solid fa-star"></i>
                                                     <i class="fa-solid fa-star"></i>
                                                 </span>
-                                                 <span class="home-product__item-ship"><i class="fa-regular fa-truck"></i></span>
-                                         </div>
+
+                                                    <span class="home-product__item-ship"><i class="fa-regular fa-truck"></i></span>
+                                            </div>
+
 
                                         <div class="btn-buy">
                                             <button class="btn-buy-item">
@@ -325,6 +330,7 @@
                 <% } %>  
 <!-- 
                                  <div class="grid__col-2-4">
+
 
                                     <div class="home-product__item">
                                          <img class="home-product__item-img" src="img/DSC_0976.jpg" alt="">
