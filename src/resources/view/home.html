@@ -52,9 +52,11 @@
                         <!-- <li class="user-item">
                             <i class="fa-solid fa-cart-shopping"></i>
                         </li> -->
-                        <li class="user-item">
-                            <i class="fa fa-solid fa-user"></i>
-                        </li>
+                        <a href="/user/<%-user.slug %> ">
+                            <li class="user-item">
+                                <i class="fa fa-solid fa-user"></i>
+                            </li>
+                        </a>
                     <% } else { %> 
                     <button class="user-button"> <a href="/login" class="user-button">Sign in</a></button>
                     <% } %> 
@@ -275,39 +277,50 @@
                             <div class="grid__row">
                                 <% for (var i = 0; i < products.length; i++) { %> 
                                 <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
-                                                    <% const y = x.replace("/view?usp=share_link","",40)%>
-                                            <div class="grid__col-2-4">
-                                                <div class="home-product__item">
-                                                    
-                                                        <img class="home-product__item-img" src="<%-y %>" alt="">
-                                                        
-                                                        <h4 class="home-product__item-name"><%=products[i].name%></h4>
-                                                        <div class="home-product__item-price"> 
-                                                        <span class="popular-price"><%=products[i].price%></span>
-                                                        <span class="home-product__item-quatity">1,1k Đã bán</span>
-                                                        </div>
-                                                    
-                                                        <div class="home-product__item-orgigin">
-                                                            <span class="home-product__item-evaluate">
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                            </span>
-                                                                <span class="home-product__item-ship"><i class="fa-regular fa-truck"></i></span>
-                                                        </div>
-            
-                                                    <div class="btn-buy">
-                                                        <button class="btn-buy-item">
-                                                            <i class="fa fa-regular fa-bag-shopping"></i>
-                                                        </button>
-                                                        <button class="btn-buy-item has--plus">
-                                                            <i class="fa-solid fa-plus"></i>                                            </button>
-                                                    </div>
-                                                    
-                                                </div>
-            
-                                            </div> 
+                                <% const y = x.replace("/view?usp=share_link","",40)%>
+                                <div class="grid__col-2-4">
+                                    <div class="home-product__item">
+                                        
+                                            <img class="home-product__item-img" src="<%-y %>" alt="">
+                                            
+                                            <h4 class="home-product__item-name"><%=products[i].name%></h4>
+                                            <div class="home-product__item-price">
+                                            <!-- nếu sản phẩm thứ i có nhiều option -->
+                                            <% if (products[i].option) {%>  
+                                                <!-- in ra giá đầu tiên, in ra giá thứ 2 thì price1 có 2 option nên làm v cho khỏe, vao trang riêng của sp cứ if option rồi in ra 2 cái luôn -->
+                                                <span class="popular-price"><%=products[i].price0%></span>
+                                                <!-- nếu ko có nhiều option, kiểm tra nó có giảm giá k -->
+                                            <% } else if(products[i].price_discount) {%>
+                                                <!-- nếu có thì in ra giá discount, trong trang riêng của sp nhớ in giá gốc là price xong gạch -->
+                                                <span class="popular-price"><%=products[i].price_discount%></span>
+                                            <% } else { %>
+                                                <!-- nếu nó k có mấy cái trên thì in giá bth-->
+                                                <span class="popular-price"><%=products[i].price%></span>   
+                                                <% } %>  
+                                            <span class="home-product__item-quatity">1,1k Đã bán</span>
+                                            </div>
+                                        
+                                            <div class="home-product__item-orgigin">
+                                                <span class="home-product__item-evaluate">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </span>
+                                                    <span class="home-product__item-ship"><i class="fa-regular fa-truck"></i></span>
+                                            </div>
+
+                                        <div class="btn-buy">
+                                            <button class="btn-buy-item">
+                                                <i class="fa fa-regular fa-bag-shopping"></i>
+                                            </button>
+                                            <button class="btn-buy-item has--plus">
+                                                <i class="fa-solid fa-plus"></i>                                            </button>
+                                        </div>
+                                        
+                                    </div>
+
+                                </div> 
                                 <% } %> 
                                  <!-- <div class="grid__col-2-4">
                                     <div class="home-product__item">

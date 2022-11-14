@@ -14,9 +14,10 @@ class SiteController {
             User.findOne({_id: id})
             .then(data => {
                 if (data) {
+                    const user = data
                     Product.find()
                         .then(products => {
-                            res.render('home.html', {products: products, check: 1})
+                            res.render('home.html', {products: products, check: 1, user: user})
                             // res.json(products)
                         })
                         .catch(err => {res.send('loi')})
