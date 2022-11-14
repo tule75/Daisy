@@ -1,5 +1,5 @@
         
-        var btns = document.querySelectorAll('.btn--next');
+        var btns = document.querySelectorAll('.btn');
         var paginationWrapper = document.querySelector('.pagination-wrapper');
         var bigDotContainer = document.querySelector('.big-dot-container');
         var littleDot = document.querySelector('.little-dot');
@@ -9,7 +9,7 @@
             }
 
             function btnClick() {
-            if(this.classList.contains('.btn--prev')) {
+            if(this.classList.contains('btn--prev')) {
                 paginationWrapper.classList.add('transition-prev');
             } else {
                 paginationWrapper.classList.add('transition-next');  
