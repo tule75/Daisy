@@ -48,14 +48,16 @@
                         <i class="fa fa-light fa-cart-shopping"></i>
                         <div class="cartAmount">0</div>
                     </li>
-                    
-                    <!-- <li class="user-item">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                     </li>
-                    <li class="user-item">
-                        <i class="fa fa-solid fa-user"></i>
-                    </li> -->
+                    <% if (check != 0) {%> 
+                        <!-- <li class="user-item">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </li> -->
+                        <li class="user-item">
+                            <i class="fa fa-solid fa-user"></i>
+                        </li>
+                    <% } else { %> 
                     <button class="user-button"> <a href="/login" class="user-button">Sign in</a></button>
+                    <% } %> 
                 </ul>
             </div>
         </div>
@@ -152,7 +154,9 @@
                         </button>
                     </div>
                 </div>
-                <% } %>   -->
+
+                <% } %>  
+
                 <div class="popular-info active">
                     <div class="popular-picture">
                         <img class="product-1" src="img/DSC_0976.jpg" alt="">
@@ -321,6 +325,7 @@
                 <% } %>  
 <!-- 
                                  <div class="grid__col-2-4">
+
                                     <div class="home-product__item">
                                          <img class="home-product__item-img" src="img/DSC_0976.jpg" alt="">
                                          
