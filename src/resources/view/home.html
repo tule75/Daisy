@@ -307,11 +307,15 @@
                                             <button class="btn-buy-item">
                                                 <i class="fa fa-regular fa-bag-shopping"></i>
                                             </button>
-                                            <button class="btn-buy-item has--plus">
-                                                <i class="fa-solid fa-plus"></i>                                            </button>
+                                            <form method="post" action="/">
+                                                <button type="submit" class="btn-buy-item has--plus" name="slug" value="<%-products[i].slug%>">
+                                                    <i class="fa-solid fa-plus"></i>                                            
+                                                </button>
+                                            </form>
                                         </div>
                                         
                                      </div>
+
 
                                  </div> 
                 <% } %>  
