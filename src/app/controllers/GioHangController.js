@@ -35,16 +35,16 @@ class GioHangController {
                 const count = data.count + 1;
                 GioHang.updateOne({ user_slug: user_slug, product_slug: product_slug}, {$set: {count: count}})
                 .then(data => {
-                    res.clearCookie('token')
-                    res.cookie('token', token, 20)
+                    // res.clearCookie('token')
+                    // res.cookie('token', token, 20)
                     res.redirect('/')})
                 .catch(err => res.send(err))
             } else {
                 var gioHang = new GioHang({user_slug: user_slug, product_slug: product_slug, count: 1})
                 gioHang.save()
                 .then(data => {
-                    res.clearCookie('token')
-                    res.cookie('token', token, 20)
+                    // res.clearCookie('token')
+                    // res.cookie('token', token, 20)
                     res.redirect('/')})
                 .catch(err => res.send('loi'))
             }
@@ -75,11 +75,13 @@ class GioHangController {
         GioHang.find({user_slug: user_slug})
         .then(data => {
             var products;
+            var count = data.count;
             var dem = 0;
             for (var i = 0; i < data.length; i++){
                 Product.findOne({slug: product_slug})
                 .then(data => {
                     products[dem] = data
+                    products[dem].count = count
                     dem += 1
                 })
                 .catch(err => {res.send("loi")})

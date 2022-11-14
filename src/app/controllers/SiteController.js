@@ -13,6 +13,15 @@ class SiteController {
         })
         .catch(err => {res.send('loi')})
     }
+    //[GET] /:slug
+    showSlug(req, res, next) {
+        Product.findOne({ "slug": req.params.slug })
+            .then(product => {
+                res.render('product.html', {product: product})
+                // res.json(laptop)
+            })
+            .catch(err => {res.json(err)})
+    }
 
 }
 
