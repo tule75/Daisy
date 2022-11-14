@@ -227,8 +227,13 @@
                                 </div>
                                  <li class="category-item category-item--active">
                                          <a href="" class="category-item_link">
-                                             Thực phẩm
+                                             Tất cả sản phẩm
                                          </a>
+                                 </li>
+                                 <li class="category-item category-item--active">
+                                    <a href="" class="category-item_link">
+                                        Thực phẩm
+                                    </a>
                                  </li>
                                  <li class="category-item">
                                      <a href="" class="category-item_link">
@@ -279,13 +284,17 @@
                             <i class="fa fa-regular fa-bag-shopping"></i>
                             Thêm vào giỏ hàng
                         </button>
-                    </div>
+                    </div>const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=") %>
+                                 const y = x.replace("/view?usp=share_link","",40); console.log(y)
                 </div>
                 <% } %>   -->
                 <% for (var i = 0; i < products.length; i++) { %> 
+                    <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                        <% const y = x.replace("/view?usp=share_link","",40)%>
                                 <div class="grid__col-2-4">
                                     <div class="home-product__item">
-                                         <img class="home-product__item-img" src="img/sanpham/<%-products[i].img%>.jpg" alt="">
+                                        
+                                         <img class="home-product__item-img" src="img/DSC_0976.jpg" alt="">
                                          
                                          <h4 class="home-product__item-name"><%=products[i].name%></h4>
                                          <div class="home-product__item-price"> 
