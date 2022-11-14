@@ -48,14 +48,16 @@
                         <i class="fa fa-light fa-cart-shopping"></i>
                         <div class="cartAmount">0</div>
                     </li>
-                    
-                    <!-- <li class="user-item">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                     </li>
-                    <li class="user-item">
-                        <i class="fa fa-solid fa-user"></i>
-                    </li> -->
+                    <% if (check != 0) {%> 
+                        <!-- <li class="user-item">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </li> -->
+                        <li class="user-item">
+                            <i class="fa fa-solid fa-user"></i>
+                        </li>
+                    <% } else { %> 
                     <button class="user-button"> <a href="/login" class="user-button">Sign in</a></button>
+                    <% } %> 
                 </ul>
             </div>
         </div>
@@ -157,7 +159,7 @@
                         </button>
                     </div>
                 </div>
-                <% } %>  -->
+                <% } %>  
                 <div class="popular-info active">
                     <div class="popular-picture">
                         <img class="product-1" src="img/DSC_0976.jpg" alt="">
@@ -272,40 +274,40 @@
                         <div  class="home-product">
                             <div class="grid__row">
                                 <% for (var i = 0; i < products.length; i++) { %> 
-                                <div class="grid__col-2-4">
-                                    <div class="home-product__item">
-                                         <img class="home-product__item-img" src="img/DSC_0976.jpg" alt="">
-                                         <a href="/<%-products[i].slug%>">
-                                         <h4 class="home-product__item-name">Bun Dong</h4>
-                                         </a>
-                                         <div class="home-product__item-price"> 
-                                            <span class="popular-price">65.000</span>
-                                            <span class="home-product__item-quatity">1,1k Đã bán</span>
-                                         </div>
-                                        
-                                         <div class="home-product__item-orgigin">
-                                                <span class="home-product__item-evaluate">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </span>
-                                                 <span class="home-product__item-ship"><i class="fa-regular fa-truck"></i></span>
-                                         </div>
-
-                                        <div class="btn-buy">
-                                            <button class="btn-buy-item">
-                                                <i class="fa fa-regular fa-bag-shopping"></i>
-                                            </button>
-                                            <form method="post" action="/">
-                                                <button type="submit" class="btn-buy-item has--plus" name="slug" value="<%-products[i].slug%>">
-                                                    <i class="fa-solid fa-plus"></i>                                            
-                                                </button>
-                                            </form>
-                                        </div>
-                                        
-                                     </div>
-                                 </div>  
+                                <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                                    <% const y = x.replace("/view?usp=share_link","",40)%>
+                                            <div class="grid__col-2-4">
+                                                <div class="home-product__item">
+                                                    
+                                                        <img class="home-product__item-img" src="<%-y %>" alt="">
+                                                        
+                                                        <h4 class="home-product__item-name"><%=products[i].name%></h4>
+                                                        <div class="home-product__item-price"> 
+                                                        <span class="popular-price"><%=products[i].price%></span>
+                                                        <span class="home-product__item-quatity">1,1k Đã bán</span>
+                                                        </div>
+                                                    
+                                                        <div class="home-product__item-orgigin">
+                                                            <span class="home-product__item-evaluate">
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                            </span>
+                                                                <span class="home-product__item-ship"><i class="fa-regular fa-truck"></i></span>
+                                                        </div>
+            
+                                                    <div class="btn-buy">
+                                                        <button class="btn-buy-item">
+                                                            <i class="fa fa-regular fa-bag-shopping"></i>
+                                                        </button>
+                                                        <button class="btn-buy-item has--plus">
+                                                            <i class="fa-solid fa-plus"></i>                                            </button>
+                                                    </div>
+                                                    
+                                                </div>
+            
+                                            </div> 
                                 <% } %> 
                                  <!-- <div class="grid__col-2-4">
                                     <div class="home-product__item">
