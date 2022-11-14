@@ -128,22 +128,17 @@
                             An Xuân
                         </h1>
                     </div>
-                    <div class="company-info">
-                        <div class="company-info-pic">
-                            <img class="Anxuan-info" src="https://cagaileoanxuan.vn/wp-content/uploads/2020/08/Logo-cagaileo.png" alt="">
-                        </div>
-                        <h1 class="company-info-name">
-                            An Xuân
-                        </h1>
-                    </div>
+                   
             </div>
            
             <!-- popular product -->
             <div class="popular-product">
-               <button class="next-btn btn--left">
-                <i class="fa fa-solid fa-chevron-left"></i>
-               </button>
-               <% for (var i = 0; i < products.length; i++) { %> 
+                <svg class="btn btn--prev" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/>
+                    <path d="M0-.5h24v24H0z" fill="none"/>
+                  </svg>
+
+               <!-- <% for (var i = 0; i < products.length; i++) { %> 
                 <div class="popular-info">
                     <div class="popular-picture">
                         <img class="product-1" src="img/sanpham/<%-products[i].img%>.jpg" alt="">
@@ -157,7 +152,7 @@
                         </button>
                     </div>
                 </div>
-                <% } %>  -->
+                <% } %>   -->
                 <div class="popular-info active">
                     <div class="popular-picture">
                         <img class="product-1" src="img/DSC_0976.jpg" alt="">
@@ -271,14 +266,30 @@
                      <div id="shop" class="grid__col-10">
                         <div  class="home-product">
                             <div class="grid__row">
-                                <% for (var i = 0; i < products.length; i++) { %> 
+                               
+               <!-- <% for (var i = 0; i < products.length; i++) { %> 
+                <div class="popular-info">
+                    <div class="popular-picture">
+                        <img class="product-1" src="img/sanpham/<%-products[i].img%>.jpg" alt="">
+                    </div>
+                    <div class="popular-content">
+                        <h4 class="popular-name"><%=products[i].name%></h4>
+                        <p class="popular-price"><%=products[i].price%></p>
+                        <button class="add-button">
+                            <i class="fa fa-regular fa-bag-shopping"></i>
+                            Thêm vào giỏ hàng
+                        </button>
+                    </div>
+                </div>
+                <% } %>   -->
+                <% for (var i = 0; i < products.length; i++) { %> 
                                 <div class="grid__col-2-4">
                                     <div class="home-product__item">
-                                         <img class="home-product__item-img" src="img/DSC_0976.jpg" alt="">
+                                         <img class="home-product__item-img" src="img/sanpham/<%-products[i].img%>.jpg" alt="">
                                          
-                                         <h4 class="home-product__item-name">Bun Dong</h4>
+                                         <h4 class="home-product__item-name"><%=products[i].name%></h4>
                                          <div class="home-product__item-price"> 
-                                            <span class="popular-price">65.000</span>
+                                            <span class="popular-price"><%=products[i].price%></span>
                                             <span class="home-product__item-quatity">1,1k Đã bán</span>
                                          </div>
                                         
@@ -301,7 +312,10 @@
                                         </div>
                                         
                                      </div>
-                                 </div>  
+
+                                 </div> 
+                <% } %>  
+<!-- 
                                  <div class="grid__col-2-4">
                                     <div class="home-product__item">
                                          <img class="home-product__item-img" src="img/DSC_0976.jpg" alt="">
@@ -569,7 +583,7 @@
                                                 <i class="fa-solid fa-plus"></i>                                            </button>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>  -->
                                 
                             </div>
                         </div>
@@ -734,7 +748,7 @@
         </div>
     </div>
 
-    <script src="javascript/main.js"> </script>
+    <script src="javascript/home.js"> </script>
     
 </body>
 </html>

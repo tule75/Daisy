@@ -205,5 +205,5 @@
   }
   
   .btn--prev {
-    right: calc(100% + 20px);
+    right: calc(100% - 20px);
   }
