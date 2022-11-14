@@ -171,14 +171,16 @@
 .body {
     padding-top: 100px;
     margin: 0 90px;
-    
+
 }
 .shop-header {
     display: flex;
     justify-content: space-between;
     border: 1px solid #ccc;
     padding: 20px 20px;
+
     background-color: white;
+
 } 
 
 .shop-info{
@@ -197,7 +199,9 @@
     top: -20.8px;
     right: 0px;
     margin-right: 20px;
+
     background-color: #ccc;
+
 }
 .shop-avt {
    margin-top: -14px;
@@ -216,7 +220,9 @@
     display: flex;
     flex-direction: column;
     position: relative;
+
     padding: 0 20px;
+
 }
 .btn--follow{
     padding: 6px 3px;
@@ -232,7 +238,9 @@
 }
 .btn--chat {
     position: absolute;
+
     right: -7px;
+
     top: 4px;
     font-size: 24px;
 }
@@ -284,6 +292,7 @@
     border-right: 1px solid rgb(136, 136, 136);
     line-height: 20px;
 }
+
 .nav-item a {
     color: black;
 }
@@ -749,7 +758,6 @@
 .footer-item__link-img:hover {
     color:#5BAB5A;
 }
-
 
 
 

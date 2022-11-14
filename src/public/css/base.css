@@ -131,6 +131,7 @@
     transform: translateX(18px);
     opacity: 1;
   }
+
 }
 
 .transition-next .little-dot--last {
@@ -213,3 +214,4 @@
 a {
   text-decoration: none;
 }
+
