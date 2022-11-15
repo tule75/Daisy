@@ -24,7 +24,7 @@
                     <div class="container__half-col-signin">
                         <div class="row-6">
                             <div class="singin__heading">ĐĂNG NHẬP</div>
-                            <% if (check == 0) {%> 
+                            <% if (check == 0) {%>
                             <div class="signin__modal">
                                 <form class="signin__modal-item" method="post" action="/login">
                                     <input type="text" id="" class="signin__modal-input" placeholder="Email/Số điện thoại" name="username">
@@ -32,7 +32,7 @@
                                     <button type="submit" class="signin__modal-button">Đăng nhập</button>
                                 </form>
                             </div>
-                            <% } else { %> 
+                            <% } else { %>
                             <div class="signin__modal">
                                 <form class="signin__modal-item" method="post" action="/login">
                                     <input type="text" id="" class="signin__modal-input" placeholder="Email/Số điện thoại" name="username">
@@ -46,7 +46,7 @@
                                     <button type="submit" class="signin__modal-button">Đăng nhập</button>
                                 </form>
                             </div>
-                            <% } %> 
+                            <% } %>
                             
                             <div class="signin__note">Quên mật khẩu?</div>
                         </div>
@@ -227,5 +227,31 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            const signup = document.querySelector('.js-signup');
+            const signupContainer = document.querySelector('.js-container');
+            const signupClose = document.querySelector('.js-close');
+            const signupLink = document.querySelector('.js-signup-link');
+
+            function showSignupForm() {
+                signup.classList.add('open');
+            }
+
+            function hideSignupForm() {
+               signup.classList.remove('open');
+           }
+
+           signupLink.addEventListener('click', showSignupForm);
+           
+           signupClose.addEventListener('click', hideSignupForm);
+
+            signup.addEventListener('click', hideSignupForm);
+
+           signupContainer.addEventListener('click', function(event) {event.stopPropagation()
+        });
+
+        </script>
+
     </body>
 </html>
