@@ -46,7 +46,7 @@
                     <li class="user-item has-cart ">
                         <!-- <i class="fa fa-regular fa-bell "></i><i class="fa-regular fa-cart-shopping-fast"></i> -->
                         <i class="fa fa-light fa-cart-shopping"></i>
-                        <div class="cartAmount">0</div>
+                        <div class="cartAmount">0 </div>
                     </li>
                     <% if (check != 0) {%> 
                         <!-- <li class="user-item">
@@ -301,7 +301,7 @@
                                 <div class="grid__col-2-4">
                                     <div class="home-product__item">
                                         
-                                         <img class="home-product__item-img" src="img/DSC_0976.jpg" alt="">
+                                         <img class="home-product__item-img" src="<%-y%>" alt="">
 
                                          
                                          <h4 class="home-product__item-name"><%=products[i].name%></h4>
@@ -324,16 +324,17 @@
 
 
                                         <div class="btn-buy">
-                                            <button class="btn-buy-item">
+                                            <form action="/" method="POST">
+                                            <button class="btn-buy-item" name="slug" value="<%-products[i].slug %>">
                                                 <i class="fa fa-regular fa-bag-shopping"></i>
                                             </button>
+                                            </form> 
                                             <button class="btn-buy-item has--plus">
-                                                <i class="fa-solid fa-plus"></i>                                            </button>
+                                                <i class="fa-solid fa-plus"></i>      
+                                            </button>
                                         </div>
                                         
                                      </div>
-
-
                                  </div> 
                 <% } %>  
 <!-- 

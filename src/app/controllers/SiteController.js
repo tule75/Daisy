@@ -2,6 +2,7 @@ const path = require('path')
 const { mutipleMongoosetoObject } = require('../../until/mongoose')
 var jwt = require('jsonwebtoken');
 const { mongoosetoObject } = require('../../until/mongoose')
+const { getCounts } = require('../../until/countCarts')
 const Product = require('../models/Product')
 const User = require('../models/Users')
 
@@ -14,29 +15,30 @@ class SiteController {
             User.findOne({_id: id})
             .then(data => {
                 if (data) {
+                    const counts = getCounts(data.slug)
                     const user = data
                     Product.find()
                         .then(products => {
-                            res.render('home.html', {products: products, check: 1, user: user})
+                            res.render('home.html', {products: products, check: 1, user: user, countCart: 0})
                             // res.json(products)
                         })
-                        .catch(err => {res.send('loi')})
+                        .catch(err => {res.send('loi ')})
                 } else {
                     Product.find()
                         .then(products => {
-                            res.render('home.html', {products: products, check: 0})
+                            res.render('home.html', {products: products, check: 0, countCart: 0})
                             // res.json(products)
                         })
                         .catch(err => {res.send('loi')})
                 }
             })
             .catch(err => {
-                res.send('loi')
+                res.send('loi qq')
             })
         } else {
             Product.find()
                 .then(products => {
-                    res.render('home.html', {products: products, check: 0})
+                    res.render('home.html', {products: products, check: 0, countCart: 0})
                     // res.json(products)
                 })
                 .catch(err => {res.send('loi')})
