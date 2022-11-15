@@ -5,6 +5,7 @@ const { mongoosetoObject } = require('../../until/mongoose')
 const { getCounts } = require('../../until/countCarts')
 const Product = require('../models/Product')
 const User = require('../models/Users')
+const GioHang = require('../models/GioHang')
 
 class SiteController {
     //[GET] /
@@ -15,14 +16,26 @@ class SiteController {
             User.findOne({_id: id})
             .then(data => {
                 if (data) {
-                    const counts = getCounts(data.slug)
+                    var counts = 0
+                    GioHang.find({user_slug: data.slug})
+                    .then(dataa => {
+                        if (dataa) {
+                            for (var i = 0; i < dataa.length; i++) {
+                                counts += dataa[i].count;
+                            }
+                        }
+                        else {
+                            counts = counts;
+                        }
+                    })
+                    .catch()
                     const user = data
                     Product.find()
                         .then(products => {
-                            res.render('home.html', {products: products, check: 1, user: user, countCart: 0})
+                            res.render('home.html', {products: products, check: 1, user: user, countCart: counts})
                             // res.json(products)
                         })
-                        .catch(err => {res.send('loi ')})
+                        .catch(err => {res.send(err)})
                 } else {
                     Product.find()
                         .then(products => {
