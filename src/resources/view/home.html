@@ -48,6 +48,21 @@
                         <i class="fa fa-light fa-cart-shopping"></i>
                         <div class="cartAmount">0</div>
                     </li>
+                    <li class="user-item has--noti ">
+                        <i class="fa fa-regular fa-bell "></i>
+                        <div class="cart-announcement">
+                            <h4 class="product-title-announ">Thong bao</h4>
+                            <div class="announ-item">
+                                <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
+                                
+                                <div class="announ-note">
+                                <h6 class="announ-heading">Bun gao</h6>
+                                   <p class="note">5 ngay nua duoc chuyen toi</p> 
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                   
                     <% if (check != 0) {%> 
                         <!-- <li class="user-item">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -58,9 +73,10 @@
                             </li>
                         </a>
                     <% } else { %> 
-                    <button class="user-button"> <a href="/login" class="user-button">Sign in</a></button>
+                    <button class="user-button"><a href="/login" class="user-button">Sign in</a></button>
                     <% } %> 
                 </ul>
+                
             </div>
         </div>
 
@@ -168,7 +184,7 @@
                         <p class="popular-price">65.000</p>
                         <button class="add-button">
                             <i class="fa fa-regular fa-bag-shopping"></i>
-                            Thêm vào giỏ hàng
+                            Thêm vào giỏ 
                         </button>
                     </div>
                 </div>
@@ -236,7 +252,7 @@
                                              Tất cả sản phẩm
                                          </a>
                                  </li>
-                                 <li class="category-item category-item--active">
+                                 <li class="category-item">
                                     <a href="" class="category-item_link">
                                         Thực phẩm
                                     </a>
@@ -259,11 +275,6 @@
                                  <li class="category-item">
                                      <a href="" class="category-item_link">
                                          Freeship
-                                     </a>
-                                 </li>
-                                 <li class="category-item">
-                                     <a href="" class="category-item_link">
-                                         Phụ kiện
                                      </a>
                                  </li>
                                  <li class="category-item">
@@ -301,7 +312,7 @@
                                 <div class="grid__col-2-4">
                                     <div class="home-product__item">
                                         
-                                         <img class="home-product__item-img" src="img/DSC_0976.jpg" alt="">
+                                         <img class="home-product__item-img" src="<%-y %> " alt="">
 
                                          
                                          <h4 class="home-product__item-name"><%=products[i].name%></h4>

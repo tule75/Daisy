@@ -29,4 +29,31 @@
 
 
 
+    // const btnAdd = document.querySelector('.btn')
+    const voucherText1 = document.querySelector('.coupontext1')
+    const voucherText2 = document.querySelector('.coupontext2')
+    const voucherText3 = document.querySelector('.coupontext3')
 
+    const btnVouchers = document.querySelectorAll('.coupon-btn')
+    const coupon1 = document.querySelector('.coupon-1')
+    const coupon2 = document.querySelector('.coupon-2')
+    const coupon3 = document.querySelector('.coupon-3')
+
+    btnVouchers.forEach((voucher) => {
+        // console.log(voucher)
+        voucher.addEventListener('click', couponClick);
+    })
+     
+
+    function couponClick() {
+        if(this.classList.contains('coupon-1')) {
+            voucherText1.innerHTML='oke'
+           
+        } 
+        if (this.classList.contains('coupon-2')) {
+            voucherText2.innerHTML='okela'
+        }
+        if (this.classList.contains('coupon-3')) {
+            voucherText3.innerHTML='okelala'
+        }
+    }
