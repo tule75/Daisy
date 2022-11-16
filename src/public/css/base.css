@@ -254,12 +254,13 @@ a {
   position: absolute;
   width: 350px;
   height: auto;
-  top: 60px;
+  top: 50px;
   right: 170px;
   animation: headerNotiGrowth ease 0.4s;
   background-color:#9cc8a9 ;
-  box-shadow: 0 2px 5px #999;
+  box-shadow: 0 0px 5px #999;
   display: none;
+  padding-left: 0;
 }
 .cart-announcement::before{
   position: absolute;
@@ -277,8 +278,9 @@ a {
 .product-title-announ {
   padding-top: 15px;
   padding-left: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 10px;
   border-bottom: 1px solid black;
+margin-bottom: 0;
 
 }
 
@@ -290,6 +292,11 @@ a {
   padding-left:  10px;
   padding-bottom: 10px;
   border-bottom: 1px solid black;
+  cursor: pointer;
+
+}
+.announ-item:hover {
+  background-color:#476650 ;
 
 }
 .announ-pic {
@@ -299,6 +306,7 @@ a {
 
 .announ-note {
   padding: 5px 15px;
+
   color: rgb(43, 42, 42);
   display: flex;
   flex-direction: column;
@@ -315,6 +323,13 @@ a {
 .note {
 
   padding-top: 5px;
+}
+.announ-item:last-child {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.announ-item:first-child {
+  padding-top: 0;
 }
 
 /* user-box */
@@ -363,4 +378,12 @@ a {
 .has--content:hover .box-list {
   display: block;
   z-index: 1;
+}
+.logout{ 
+  text-decoration: none;
+
+}
+.logout {
+  /* border: none;
+  background-color: transparent; */
 }

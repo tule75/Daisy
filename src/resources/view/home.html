@@ -43,39 +43,61 @@
             </div>
             <div class="header-user">
                 <ul class="user-list">
-                    <a href="/giohang"><li class="user-item has-cart ">
+                    <a href="/giohang" class="has-cart"><li class="user-item ">
                         <!-- <i class="fa fa-regular fa-bell "></i><i class="fa-regular fa-cart-shopping-fast"></i> -->
                         <i class="fa fa-light fa-cart-shopping"></i>
                         <div class="cartAmount"><%=countCart%> </div>
                     </li>
+                    </a>
                     <li class="user-item has--noti ">
                         <i class="fa fa-regular fa-bell "></i>
-                        <div class="cart-announcement">
+                        <ul class="cart-announcement">
                             <h4 class="product-title-announ">Thong bao</h4>
-                            <div class="announ-item">
+                            <li class="announ-item">
                                 <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
                                 
                                 <div class="announ-note">
                                 <h6 class="announ-heading">Bun gao</h6>
                                    <p class="note">5 ngay nua duoc chuyen toi</p> 
                                 </div>
-                            </div>
-                        </div>
+                            </li>
+                            <li class="announ-item">
+                                <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
+                                
+                                <div class="announ-note">
+                                <h6 class="announ-heading">Bun gao</h6>
+                                   <p class="note">5 ngay nua duoc chuyen toi</p> 
+                                </div>
+                            </li>
+                            <li class="announ-item">
+                                <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
+                                
+                                <div class="announ-note">
+                                <h6 class="announ-heading">Bun gao</h6>
+                                   <p class="note">5 ngay nua duoc chuyen toi</p> 
+                                </div>
+                            </li>
+                        </ul>
                     </li>
                    
                     <% if (check != 0) {%> 
                         <!-- <li class="user-item">
                             <i class="fa-solid fa-cart-shopping"></i>
                         </li> -->
-                        <a href="/user/<%-user.slug %> ">
+                        <a href="/user/<%-user.slug %> " class="has--content">
                             <li class="user-item">
                                 <i class="fa fa-solid fa-user"></i>
                             </li>
+                            <ul class="box-list">
+                                <li class="box-list--item">Tai khoan</li>
+                                <li class="box-list--item">Don hang</li>
+                               <li class="box-list--item"><button class="logout">Dang xuat</button></li>
+    
+                            </ul>
                         </a>
+                      
                         
-                          
-
-
+                        
                     <% } else { %> 
                     <button class="user-button"><a href="/login" class="user-button">Sign in</a></button>
                     <% } %> 
@@ -212,7 +234,7 @@
                     <div class="popular-content">
                         <h3 class="popular-name">Miến dong</h3>
                         <p class="popular-price">65.000</p>
-                        <button class="add-button">
+                        <button class="add-button" >
                             <i class="fa fa-regular fa-bag-shopping"></i>
                             Thêm vào giỏ
                         </button>
@@ -253,22 +275,22 @@
                                 </div>
                                  <li class="category-item category-item--active">
                                          <a href="" class="category-item_link">
-                                             Tất cả sản phẩm
+                                             Tất cả đặc sản
                                          </a>
                                  </li>
                                  <li class="category-item">
                                     <a href="" class="category-item_link">
-                                        Thực phẩm
+                                        ĐS Cao Bằng
                                     </a>
                                  </li>
                                  <li class="category-item">
                                      <a href="" class="category-item_link">
-                                        Đồ khô
+                                        ĐS Tây Nguyên
                                      </a>
                                   </li>
                                  <li class="category-item">
                                      <a href="" class="category-item_link">
-                                         Giày dép
+                                        Giày dép
                                      </a>
                                  </li>
                                  <li class="category-item">
@@ -278,12 +300,12 @@
                                  </li>
                                  <li class="category-item">
                                      <a href="" class="category-item_link">
-                                         Freeship
+                                         Trà
                                      </a>
                                  </li>
                                  <li class="category-item">
                                      <a href="" class="category-item_link">
-                                        Thời trang
+                                        Đồ khô
                                      </a>
                                  </li>
                              </ul>
@@ -315,15 +337,7 @@
                                         <% const y = x.replace("/view?usp=share_link","",40)%>
                                 <div class="grid__col-2-4">
                                     <div class="home-product__item">
-                                        
-<<<<<<<<< Temporary merge branch 1
-                                         <img class="home-product__item-img" src="<%-y %> " alt="">
-=========
                                          <img class="home-product__item-img" src="<%-y%>" alt="">
->>>>>>>>> Temporary merge branch 2
-
-
-                                         
                                          <h4 class="home-product__item-name"><%=products[i].name%></h4>
                                          <div class="home-product__item-price"> 
                                             <span class="popular-price"><%=products[i].price%></span>
