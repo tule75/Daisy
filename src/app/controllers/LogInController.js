@@ -45,6 +45,11 @@ class LogInController {
             }
         );
     }
+    
+    gLogOut(req, res, next) {
+        res.clearCookie("token")
+        res.redirect('/')
+    }
 
     // ship(req, res, next) {
     //     var dulieu;

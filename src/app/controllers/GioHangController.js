@@ -24,6 +24,38 @@ class GioHangController {
                     //không thì chuyển đến login
                     res.redirect('/login')
                 }
+
+            //slug sản phẩm
+                product_slug = req.body.slug;
+
+                //tìm trong db giỏ hàng có document nào trùng của user_slug và product_slug không
+                GioHang.findOne({user_slug: user_slug, product_slug: product_slug})
+                .then((data) => {
+                    //nếu có
+                    if (data) {
+                        // biến đếm + 1
+                        const count = data.count + 1;
+                        //cập nhật biến đếm
+                        GioHang.updateOne({ user_slug: user_slug, product_slug: product_slug}, {$set: {count: count}})
+                        .then(data => {
+                            // res.clearCookie('token')
+                            // res.cookie('token', token, 20)
+
+                            //chuyển đến trang chủ
+                            res.redirect('/')})
+                        .catch(err => res.send(err))
+                    } else {
+                        //nếu không thì tạo document mới
+                        var gioHang = new GioHang({user_slug: user_slug, product_slug: product_slug, count: 1})
+                        gioHang.save()
+                        .then(data => {
+                            // res.clearCookie('token')
+                            // res.cookie('token', token, 20)
+                            res.redirect('/')})
+                        .catch(err => res.send('loi'))
+                    }
+                })
+                .catch((err)=> res.status(400).send(err))
             })
             .catch(err => {
                 res.send('err')
@@ -33,37 +65,7 @@ class GioHangController {
             res.redirect('/login')
         }
 
-        //slug sản phẩm
-        product_slug = req.body.slug;
-
-        //tìm trong db giỏ hàng có document nào trùng của user_slug và product_slug không
-        GioHang.findOne({user_slug: user_slug, product_slug: product_slug})
-        .then((data) => {
-            //nếu có
-            if (data) {
-                // biến đếm + 1
-                const count = data.count + 1;
-                //cập nhật biến đếm
-                GioHang.updateOne({ user_slug: user_slug, product_slug: product_slug}, {$set: {count: count}})
-                .then(data => {
-                    // res.clearCookie('token')
-                    // res.cookie('token', token, 20)
-
-                    //chuyển đến trang chủ
-                    res.redirect('/')})
-                .catch(err => res.send(err))
-            } else {
-                //nếu không thì tạo document mới
-                var gioHang = new GioHang({user_slug: user_slug, product_slug: product_slug, count: 1})
-                gioHang.save()
-                .then(data => {
-                    // res.clearCookie('token')
-                    // res.cookie('token', token, 20)
-                    res.redirect('/')})
-                .catch(err => res.send('loi'))
-            }
-        })
-        .catch((err)=> res.status(400).send(err))
+       
     }
     //[GET] /giohang
     lay(req, res, next) {

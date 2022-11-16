@@ -36,13 +36,17 @@
 }
 
 .has--plus {
-    /* background-color: darkcyan; */
+    background-color: rgb(220, 60, 60);
+    color: #cce8d4;
+    border: none;
 }
+
 .start-no-color {
     color: #999;
 }
 .fa-user {
   color: black;
+  position: relative;
 }
 .has--user {
   padding: 8px 20px;
@@ -248,13 +252,13 @@ a {
 }
 .cart-announcement {
   position: absolute;
-  width: 400px;
-  height: 300px;
+  width: 350px;
+  height: auto;
   top: 60px;
   right: 170px;
   animation: headerNotiGrowth ease 0.4s;
-  background: linear-gradient(135deg, #cce8d4,#487656);
-  box-shadow: 0 10px 12px #2f4335;
+  background-color:#9cc8a9 ;
+  box-shadow: 0 2px 5px #999;
   display: none;
 }
 .cart-announcement::before{
@@ -273,9 +277,11 @@ a {
 .product-title-announ {
   padding-top: 15px;
   padding-left: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid black;
 
 }
+
 .announ-item {
   display: flex;
   /* justify-content: space-between; */
@@ -283,8 +289,7 @@ a {
   padding-top: 10px;
   padding-left:  10px;
   padding-bottom: 10px;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid black;
 
 }
 .announ-pic {
@@ -298,6 +303,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 13px;
 }
 .announ-heading {
   white-space: nowrap;
@@ -309,4 +315,52 @@ a {
 .note {
 
   padding-top: 5px;
+}
+
+/* user-box */
+
+.box-list {
+  width: 150px;
+  height: auto;
+  background-color: rgb(237, 233, 233);
+  position: absolute;
+  top: 72%;
+  right: 100px;
+  padding-left: 0;
+  list-style: none;
+  cursor: pointer;
+  display: none;
+  animation: headerNotiGrowth ease 0.4s;
+
+
+}
+.box-list--item {
+  padding: 15px 10px ;
+  border-bottom: 1px solid #999;
+  font-size: 16px;
+ line-height: 20px;
+ color: rgb(24, 23, 23);
+ text-align: center;
+ position: relative;
+}
+.box-list--item:last-child {
+  border: none;
+}
+.box-list--item:hover{
+  background-color: #ccc;
+  color: black;
+}
+.box-list::before {
+  position: absolute;
+  top: -15px;
+  content: '';
+  border: 0 0 10px 0;
+  background-color: transparent;
+  width: 20%;
+  height: 13px;
+  right: 0;
+}
+.has--content:hover .box-list {
+  display: block;
+  z-index: 1;
 }

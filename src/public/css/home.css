@@ -177,6 +177,7 @@
     background-color: #2F792E;  
     color: #D9D9D9;
     text-decoration: none;
+   
 }
 .user-button:hover {
     color: #888;
@@ -516,6 +517,7 @@
 .btn-buy-item:active {
     color: #777;
 }
+
 
 
 /* footer */
