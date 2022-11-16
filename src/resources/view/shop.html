@@ -17,9 +17,7 @@
 <body>
     <div class="shop">
         <div class="header">
-
-            <img class="header-logo" src="/src/" alt="">
-
+            <img class="header-logo" src="img/Rectangle 30 (1).svg" alt="">
            
             <div class="header-search">
                 <input class="header-search-input" type="text" placeholder="Search">
@@ -44,38 +42,65 @@
             </div>
             <div class="header-user">
                 <ul class="user-list">
-                    <li class="user-item has-cart ">
+                    <a href="/giohang" class="has-cart"><li class="user-item ">
                         <!-- <i class="fa fa-regular fa-bell "></i><i class="fa-regular fa-cart-shopping-fast"></i> -->
                         <i class="fa fa-light fa-cart-shopping"></i>
-                        <div class="cartAmount">0</div>
+                        <div class="cartAmount"><%=countCart%> </div>
                     </li>
+                    </a>
                     <li class="user-item has--noti ">
                         <i class="fa fa-regular fa-bell "></i>
-                        <div class="cart-announcement">
+                        <ul class="cart-announcement">
                             <h4 class="product-title-announ">Thong bao</h4>
-                            <div class="announ-item">
-                                <img class="announ-pic" src="/img/DSC_0976.jpg"  alt="">
+                            <li class="announ-item">
+                                <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
                                 
                                 <div class="announ-note">
                                 <h6 class="announ-heading">Bun gao</h6>
                                    <p class="note">5 ngay nua duoc chuyen toi</p> 
                                 </div>
-                            </div>
-                        </div>
+                            </li>
+                            <li class="announ-item">
+                                <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
+                                
+                                <div class="announ-note">
+                                <h6 class="announ-heading">Bun gao</h6>
+                                   <p class="note">5 ngay nua duoc chuyen toi</p> 
+                                </div>
+                            </li>
+                            <li class="announ-item">
+                                <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
+                                
+                                <div class="announ-note">
+                                <h6 class="announ-heading">Bun gao</h6>
+                                   <p class="note">5 ngay nua duoc chuyen toi</p> 
+                                </div>
+                            </li>
+                        </ul>
                     </li>
+                   
                     <% if (check != 0) {%> 
                         <!-- <li class="user-item">
                             <i class="fa-solid fa-cart-shopping"></i>
                         </li> -->
-                        <a href="/user/<%-user.slug %> ">
-                            <li class="user-item has--user">
+                        <a href="/user/<%-user.slug %> " class="has--content">
+                            <li class="user-item">
                                 <i class="fa fa-solid fa-user"></i>
                             </li>
+                            <ul class="box-list">
+                                <li class="box-list--item">Tai khoan</li>
+                                <li class="box-list--item">Don hang</li>
+                               <li class="box-list--item"><a href="/logout" class="logout"></a>Dang xuat</a></li>
+    
+                            </ul>
                         </a>
+                        
+                        
                     <% } else { %> 
-                    <button class="user-button"> <a href="/login" class="user-button">Sign in</a></button>
+                    <button class="user-button"><a href="/login" class="user-button">Sign in</a></button>
                     <% } %> 
                 </ul>
+                
             </div>
         </div>
 
@@ -813,7 +838,6 @@
 
         </div>
     </div>
-
 
     <script src="/javascript/home.js">
 

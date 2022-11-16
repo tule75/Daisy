@@ -218,8 +218,11 @@ display: flex;
 .product-content {
     padding: 0 10px;
 }
-.car-product-name {
-
+.cart-product-name {
+ white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 150px;
 }
 .cart-product-price{
 
@@ -229,7 +232,7 @@ display: flex;
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
-    transform: translateX(-12%);
+    transform: translateX(-17%);
 
 }
 .quantity-minus {
@@ -403,3 +406,6 @@ display: flex;
     color:#5BAB5A;
 }
 
+.first-child {
+    transform: translateX(-50%);
+}
