@@ -17,7 +17,9 @@
 <body>
     <div class="shop">
         <div class="header">
-            <img class="header-logo" src="/img/Rectangle 30 (1).svg" alt="">
+
+            <img class="header-logo" src="/src/" alt="">
+
            
             <div class="header-search">
                 <input class="header-search-input" type="text" placeholder="Search">
@@ -29,10 +31,10 @@
                     </h3>
                     <ul class="header-search-history-list">
                         <li class="header-search-history-item">
-                            <a class="search-history-item-link" href="">Miến Dong</a>
+                            <a class="search-history-item-link" href="">Mien dong</a>
                         </li>
                         <li class="header-search-history-item">
-                            <a class="search-history-item-link" href="">Bún dong</a>
+                            <a class="search-history-item-link" href="">Bun dong</a>
                         </li>
                     </ul>
                 </div>
@@ -42,18 +44,37 @@
             </div>
             <div class="header-user">
                 <ul class="user-list">
-                    <li class="user-item ">
+                    <li class="user-item has-cart ">
                         <!-- <i class="fa fa-regular fa-bell "></i><i class="fa-regular fa-cart-shopping-fast"></i> -->
                         <i class="fa fa-light fa-cart-shopping"></i>
+                        <div class="cartAmount">0</div>
                     </li>
-                    
-                    <!-- <li class="user-item">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                     </li>
-                    <li class="user-item">
-                        <i class="fa fa-solid fa-user"></i>
-                    </li> -->
-                    <button class="user-button"> <a href="/login" class="user-button">Đăng ký</a></button>
+                    <li class="user-item has--noti ">
+                        <i class="fa fa-regular fa-bell "></i>
+                        <div class="cart-announcement">
+                            <h4 class="product-title-announ">Thong bao</h4>
+                            <div class="announ-item">
+                                <img class="announ-pic" src="/img/DSC_0976.jpg"  alt="">
+                                
+                                <div class="announ-note">
+                                <h6 class="announ-heading">Bun gao</h6>
+                                   <p class="note">5 ngay nua duoc chuyen toi</p> 
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <% if (check != 0) {%> 
+                        <!-- <li class="user-item">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </li> -->
+                        <a href="/user/<%-user.slug %> ">
+                            <li class="user-item has--user">
+                                <i class="fa fa-solid fa-user"></i>
+                            </li>
+                        </a>
+                    <% } else { %> 
+                    <button class="user-button"> <a href="/login" class="user-button">Sign in</a></button>
+                    <% } %> 
                 </ul>
             </div>
         </div>
@@ -71,8 +92,8 @@
 
                          <i class="fa-regular fa-comment btn--chat"></i>
                         <ul class="follower">
-                            <li class="follower-item">
-                                <i class="fa-solid fa-user"></i> 
+                            <li class="follower-item ">
+                                <i class="fa-solid fa-user "></i> 
 
                                     Người theo dõi : 6789
                             </li>
@@ -116,9 +137,9 @@
                     <div class="ticket-item">
                         <h4 class="ticket-item-discount">Giảm 50%</h4>
                         <h6 class="ticket-item-condition">Đơn hàng từ 200.000</h6>
-                        <div class="coupon-btn">
-                            <span id="couponBtn">Lưu mã</span>
-                        </div>
+                        <button class="coupon-btn coupon-1 ">
+                            <span class="coupontext1">Lưu mã</span>
+                        </button>
                         <p class="ticket-item-note">HSD: 1/1-1/12 </p>
     
                        <ul class="circle">
@@ -133,9 +154,9 @@
                     <div class="ticket-item">
                         <h4 class="ticket-item-discount">Giảm 50%</h4>
                         <h6 class="ticket-item-condition">Đơn hàng từ 200.000</h6>
-                        <div class="coupon-btn">
-                            <span id="couponBtn">Lưu mã</span>
-                        </div>
+                        <button class="coupon-btn coupon-2 ">
+                            <span class="coupontext2">Lưu mã 1</span>
+                        </button>
                         <p class="ticket-item-note">HSD: 1/1-1/12 </p>
     
                        <ul class="circle">
@@ -150,9 +171,9 @@
                     <div class="ticket-item">
                         <h4 class="ticket-item-discount">Giảm 50%</h4>
                         <h6 class="ticket-item-condition">Đơn hàng từ 200.000</h6>
-                        <div class="coupon-btn">
-                            <span id="couponBtn">Lưu mã</span>
-                        </div>
+                        <button class="coupon-btn coupon-3 ">
+                            <span class="coupontext3">Lưu mã 2</span>
+                        </button>
                         <p class="ticket-item-note">HSD: 1/1-1/12 </p>
     
                        <ul class="circle">
@@ -631,7 +652,7 @@
                 <div class="uudai-container">
                     <h2 class="heading-uudai">Chưa có ưu đãi nào trong hôm nay</h2>
                      <i class="fa-solid fa-hands waving-icon"></i>
-                     <button class="btn--continue"><a href="#phanloai">Tiếp tục mua sắm</a> <i class="fa-regular fa-face-smile"></i></button>
+                     <button class="btn--continue"><a href="/">Tiếp tục mua sắm</a> <i class="fa-regular fa-face-smile"></i></button>
                 </div>
                 <!-- <i class="fa-regular fa-hands-clapping"></i> -->
             </div>
@@ -793,6 +814,11 @@
         </div>
     </div>
 
-    <script src="/javascript/home.js"></script>
+
+    <script src="/javascript/home.js">
+
+       
+    </script>
+
 </body>
 </html>

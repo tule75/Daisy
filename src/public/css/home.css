@@ -15,7 +15,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #5BAB5A;
-    z-index: 1;
+    z-index: 100;
 }
 .header-logo {
     width: 90px;
@@ -133,8 +133,10 @@
     margin-right: 80px;
     font-size: 24px;
     padding-top:11px;
+    align-items: center;
     
 }
+
 
 .user-item {
     display: flex;
@@ -142,6 +144,8 @@
     font-weight: 300;
 
 }
+
+
 .has-cart {
     display: flex;
     position: relative;
@@ -580,6 +584,9 @@
 .footer-item__link-img:hover {
     color:#5BAB5A;
 }
+
+
+
 
 
 

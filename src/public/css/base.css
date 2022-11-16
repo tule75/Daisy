@@ -41,7 +41,16 @@
 .start-no-color {
     color: #999;
 }
+.fa-user {
+  color: black;
+}
+.has--user {
+  padding: 8px 20px;
+  padding: 6px 5px;
+  border-radius: 50%;
+  border: 1px solid black;
 
+}
  /* pagnition product */
 
 .pagination-wrapper {
@@ -215,3 +224,89 @@ a {
   text-decoration: none;
 }
 
+
+@keyframes headerNotiGrowth {
+  from {
+      opacity: 0;
+      /* scale() : do lon len */
+       transform: scale(0);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* noti */
+.fa-bell {
+  position: relative;
+  cursor: pointer;
+}
+.has--noti:hover .cart-announcement{
+  display: block;
+  z-index: 1;
+}
+.cart-announcement {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  top: 60px;
+  right: 170px;
+  animation: headerNotiGrowth ease 0.4s;
+  background: linear-gradient(135deg, #cce8d4,#487656);
+  box-shadow: 0 10px 12px #2f4335;
+  display: none;
+}
+.cart-announcement::before{
+  position: absolute;
+  top: -15px;
+  content: '';
+  border: 0 0 10px 0;
+  background-color: transparent;
+  width: 20%;
+  height: 13px;
+  right: 0;
+
+}
+
+
+.product-title-announ {
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+
+}
+.announ-item {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding-top: 10px;
+  padding-left:  10px;
+  padding-bottom: 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+
+}
+.announ-pic {
+  width: 100px;
+  height: 90px;
+}
+
+.announ-note {
+  padding: 5px 15px;
+  color: rgb(43, 42, 42);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.announ-heading {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+  padding-top: 5px;
+}
+.note {
+
+  padding-top: 5px;
+}

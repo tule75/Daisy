@@ -16,13 +16,11 @@
     justify-content: space-between;
     align-items: center;
     background-color: #5BAB5A;
-    /* background: linear-gradient(135deg, #598465,#2f4335); */
-
-    z-index: 1;
+    z-index: 100;
 }
 .header-logo {
-    width: 87px;
-    height: 97px;
+    width: 90px;
+    height: 100px;
     margin-left: 50px;
     transform: translateY(-23px);
 
@@ -66,8 +64,10 @@
 }
 .header-search-history-list{
     list-style: none;
-}
+    margin-bottom: 0;
+    padding-left: 0;
 
+}
 .header-search-history-item {
     text-decoration: none;
     height: 38px;
@@ -134,8 +134,10 @@
     margin-right: 80px;
     font-size: 24px;
     padding-top:11px;
+    align-items: center;
     
 }
+
 
 .user-item {
     display: flex;
@@ -143,27 +145,45 @@
     font-weight: 300;
 
 }
+
+.has-cart {
+    display: flex;
+    position: relative;
+}
 .fa-cart-shopping {
     cursor: pointer;
     color: white;
+   
+}
+.cartAmount {
+    position: absolute ;
+    font-size: 14px;
+    right: 10px;
+    top: -5px;
+    background-color: white;
+    color: red;
+    padding: 0px 2px;
+    border-radius: 50%;
+   
 }
 .user-button {
     margin-left: 10px;
-     margin-right: 5px;
+    /* margin-right: 5px; */
     border: none;
     font-size: 17px;
-    padding: 8px 12px;
+    padding: 8px 23px;
     font-weight: bold;
     border-radius: 5px;
     background-color: #2F792E;  
     color: #D9D9D9;
     text-decoration: none;
 }
-.user-button:active {
-    background-color: #68df66;
-}
 .user-button:hover {
-    color: #ccc;
+    color: #888;
+}
+.user-button:active{
+    background-color: #224422;
+    color: white;
 }
 
 
@@ -359,9 +379,9 @@
     margin: 10px 10px;
     padding: 2px 4px;
     color: #2f4335;
-    
+    cursor: pointer;
 }
-#couponBtn {
+.coupontext {
     cursor: pointer;
 }
 .ticket-item-note {
@@ -761,3 +781,15 @@
 
 
 
+
+
+
+
+/* announcement */
+/* .has-cart {
+    display: flex;
+    position: relative;
+}
+.fa-bell {
+    position: relative;
+} */
