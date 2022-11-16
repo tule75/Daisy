@@ -60,12 +60,53 @@ class SiteController {
     }
     //[GET] /:slug
     showSlug(req, res, next) {
-        Product.findOne({ "slug": req.params.slug })
+        if (req.cookies.token){
+            const token = req.cookies.token
+            const id = jwt.verify(token, 'daisy')
+            User.findOne({_id: id})
+            .then(data => {
+                if (data) {
+                    //check countCart
+                    var counts = 0
+                    GioHang.find({user_slug: data.slug})
+                    .then(dataa => {
+                        if (dataa) {
+                            for (var i = 0; i < dataa.length; i++) {
+                                counts += dataa[i].count;
+                            }
+                        }
+                        else {
+                            counts = counts;
+                        }
+                    })
+                    .catch()
+
+                    Product.findOne({ "slug": req.params.slug })
+                    .then(product => {
+                        res.render('product.html', {product: product, check: 1, user: data, countCart: counts})
+                        // res.json(laptop)
+                    })
+                    .catch(err => {res.json(err)})
+                } else {
+                    Product.findOne({ "slug": req.params.slug })
+                    .then(product => {
+                        res.render('product.html', {product: product, check: 0, countCart: 0})
+                        // res.json(laptop)
+                    })
+                    .catch(err => {res.json(err)})
+                }
+            })
+            .catch(err => {
+                res.send('loi')
+            })
+        } else {
+            Product.findOne({ "slug": req.params.slug })
             .then(product => {
-                res.render('product.html', {product: product})
+                res.render('product.html', {product: product, check: 0, countCart: 0})
                 // res.json(laptop)
             })
             .catch(err => {res.json(err)})
+        }
     }
 
 }
