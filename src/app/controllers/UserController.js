@@ -1,5 +1,5 @@
 const User = require('../models/Users')
-var jwt = require('jsonwebtoken');
+var jwt = require('jsonwebtoken')
 
 class UserController {
     //[GET] /user/:slug
