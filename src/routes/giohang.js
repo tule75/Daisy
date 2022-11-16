@@ -7,8 +7,6 @@ const BuyController = require('../app/controllers/BuyController');
 // router.get("/", GiohangController.gLogIn);
 
 router.get("/", GioHangController.lay);
-router.get("/buy", )
-
 // router.get("/ship", logInController.ship)
 
 module.exports = router
