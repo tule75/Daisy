@@ -43,57 +43,34 @@
             </div>
             <div class="header-user">
                 <ul class="user-list">
-                    <li class="user-item has-cart ">
+                    <a href="/giohang"><li class="user-item has-cart ">
                         <!-- <i class="fa fa-regular fa-bell "></i><i class="fa-regular fa-cart-shopping-fast"></i> -->
                         <i class="fa fa-light fa-cart-shopping"></i>
                         <div class="cartAmount"><%=countCart%> </div>
                     </li>
-                   
+                    <li class="user-item has--noti ">
+                        <i class="fa fa-regular fa-bell "></i>
+                        <div class="cart-announcement">
+                            <h4 class="product-title-announ">Thong bao</h4>
+                            <div class="announ-item">
+                                <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
+                                
+                                <div class="announ-note">
+                                <h6 class="announ-heading">Bun gao</h6>
+                                   <p class="note">5 ngay nua duoc chuyen toi</p> 
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                    
                     <% if (check != 0) {%> 
                         <!-- <li class="user-item">
                             <i class="fa-solid fa-cart-shopping"></i>
                         </li> -->
-                        <li class="user-item has--noti ">
-                            <i class="fa fa-regular fa-bell "></i>
-                            <div class="cart-announcement">
-                                <h4 class="product-title-announ">Thong bao</h4>
-                                <div class="announ-item">
-                                    <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
-                                    
-                                    <div class="announ-note">
-                                    <h6 class="announ-heading">Bun gao</h6>
-                                       <p class="note">5 ngay nua duoc chuyen toi</p> 
-                                    </div>
-                                </div>
-                                <div class="announ-item">
-                                    <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
-                                    
-                                    <div class="announ-note">
-                                    <h6 class="announ-heading">Bun gao</h6>
-                                       <p class="note">5 ngay nua duoc chuyen toi</p> 
-                                    </div>
-                                </div>
-                                <div class="announ-item">
-                                    <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
-                                    
-                                    <div class="announ-note">
-                                    <h6 class="announ-heading">Bun gao</h6>
-                                       <p class="note">5 ngay nua duoc chuyen toi</p> 
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </li>
-                        <a href="/user/<%-user.slug %> " class="has--content ">
-                            <li class="user-item ">
-                                <i class="fa fa-solid fa-user "></i>
+                        <a href="/user/<%-user.slug %> ">
+                            <li class="user-item">
+                                <i class="fa fa-solid fa-user"></i>
                             </li>
-                            <ul class="box-list">
-                                <li class="box-list--item">Tai khoan </li>
-                                <li class="box-list--item">Gio hang </li>
-                                <li class="box-list--item">Dang xuat </li>
-                            </ul>
                         </a>
                         
                           
@@ -338,8 +315,13 @@
                                         <% const y = x.replace("/view?usp=share_link","",40)%>
                                 <div class="grid__col-2-4">
                                     <div class="home-product__item">
-
+                                        
+<<<<<<<<< Temporary merge branch 1
                                          <img class="home-product__item-img" src="<%-y %> " alt="">
+=========
+                                         <img class="home-product__item-img" src="<%-y%>" alt="">
+>>>>>>>>> Temporary merge branch 2
+
 
                                          
                                          <h4 class="home-product__item-name"><%=products[i].name%></h4>

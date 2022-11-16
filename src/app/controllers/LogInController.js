@@ -25,6 +25,7 @@ class LogInController {
             res.render('login.html', {check: 0})
         }
     }
+    
     // [POST] /Login
     pLogIn(req, res, next) {
         const username = req.body.username

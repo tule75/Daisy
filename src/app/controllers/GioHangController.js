@@ -70,39 +70,46 @@ class GioHangController {
     //[GET] /giohang
     lay(req, res, next) {
         var user_slug;
+        var user;
         if (req.cookies.token){
             const token = req.cookies.token
-            const slug = jwt.verify(token, 'daisy')
-            User.findOne({slug: slug})
+            const id = jwt.verify(token, 'daisy')
+            User.findOne({_id: id})
             .then(data => {
                 if (data) {
+                    user = data
                     user_slug = data.slug
                 } else {
-                    res.redirect('/login')
+                    user = undefined;
                 }
             })
             .catch(err => {
                 res.send('loi')
             })
         } else {
-            res.redirect('/login')
+            user = undefined;
         }
+
+        console.log(user)
 
         GioHang.find({user_slug: user_slug})
         .then(data => {
-            var products;
-            var count = data.count;
+            var products = []; //sản phẩm trong giỏ
             var dem = 0;
             for (var i = 0; i < data.length; i++){
-                Product.findOne({slug: product_slug})
+                Product.findOne({slug: data[i].product_slug})
                 .then(data => {
-                    products[dem] = data
-                    products[dem].count = count
-                    dem += 1
+                    products.push(data[i]);
+                    dem += 1;
                 })
                 .catch(err => {res.send("loi")})
             }
-            res.render('giohang', {products: products})
+            if(user) {
+                res.render('giohang.html', {products: products, check: 1, user: user})
+            }
+            else {
+                res.redirect('/login')
+            }
         })
         .catch(err => {res.send("loi")})
     }
