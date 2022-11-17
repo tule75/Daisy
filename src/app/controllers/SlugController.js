@@ -53,7 +53,7 @@ class SlugController {
             User.findOne({slug: req.params.slug})
                 .then(data => {
                     if (data) {
-                        res.render('product.html', {shop: data, check: 0, countCart: 0})
+                        res.render('product.html', {product: data, check: 0, countCart: 0})
                     }
                     else {
                         res.send('không tồn tại')
