@@ -13,12 +13,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/giohang.css">
     <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/assets/css/main.css"> 
 </head>
 <body>
     <div class="cart-shopping">
-
-        <div class="cart-header">
-            <img class="header-logo" src="/img/Rectangle 30 (1).svg" alt="">
+        <div class="header">
+            <img class="header-logo" src="img/Rectangle 30 (1).svg" alt="">
            
             <div class="header-search">
                 <input class="header-search-input" type="text" placeholder="Search">
@@ -43,18 +43,23 @@
             </div>
             <div class="header-user">
                 <ul class="user-list">
-                    <li class="user-item ">
+                    <a href="/giohang"><li class="user-item has-cart ">
                         <!-- <i class="fa fa-regular fa-bell "></i><i class="fa-regular fa-cart-shopping-fast"></i> -->
                         <i class="fa fa-light fa-cart-shopping"></i>
-                    </li>
-                    
-                    <!-- <li class="user-item">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                     </li>
-                    <li class="user-item">
-                        <i class="fa fa-solid fa-user"></i>
-                    </li> -->
-                    <button class="user-button">Sign in</button>
+                        <div class="cartAmount"><%=countCart%> </div>
+                    </li></a>
+                    <% if (check != 0) {%> 
+                        <!-- <li class="user-item">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </li> -->
+                        <a href="/user/<%-user.slug %> ">
+                            <li class="user-item">
+                                <i class="fa fa-solid fa-user"></i>
+                            </li>
+                        </a>
+                    <% } else { %> 
+                    <button class="user-button"> <a href="/login" class="user-button">Sign in</a></button>
+                    <% } %> 
                 </ul>
             </div>
         </div>
