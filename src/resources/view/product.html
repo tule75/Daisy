@@ -5,10 +5,465 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Itim|Lobster|Montserrat:500|Noto+Serif|Nunito|Patrick+Hand|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab|Saira" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/public/css/base.css">
+    <link rel="stylesheet" href="/src/public/css/product.css">
 </head>
 <body>
-    <% if (product) {%>
-    <h1><%= product.name %> </h1>
-    <% } %>  
+    <!-- <% if (product) {%>
+    <h1 class="head"><%= product.name %> </h1>
+    <% } %>   -->
+
+    <div class="app">
+        <div class="header">
+            <div class="content"></div>
+        </div>
+
+        <div class="body">
+            <div class="product-show">
+                <div class="product-show-img">
+                    <img class="img-item has-item" src="/src/public/img/DSC_0976.jpg" alt="">
+                    <ul class="img-list">
+                        <li class="img-list-item">
+                             <img class="img-item" src="/src/public/img/DSC_0976.jpg" alt="">
+                        </li>
+                        <li class="img-list-item">
+                            <img class="img-item" src="/src/public/img/DSC_0976.jpg" alt="">
+                       </li>
+                       <li class="img-list-item">
+                        <img class="img-item" src="/src/public/img/DSC_0976.jpg" alt="">
+                    </li>
+                    </ul>
+                </div>
+                <div class="product-information">
+                    <h4 class="product-name">Thao duoc tay nguyen</h4>
+                    <div class="product-name-evaluate home-product__item-orgigin">
+                        <span class="home-product__item-evaluate">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star start-no-color last-child"></i>
+                        </span>
+                         <!-- <span class="home-product__item-ship"><i class="fa-regular fa-truck"></i></span> -->
+                    </div>
+                    <div class="product-has-price">
+                        <span class="price-final">100.000</span>
+                        <span class="price-discount">200.000 </span>
+                        <span class="discount-number" >-1%</span>
+                    </div>
+                    <div class="voucher">
+                        <h6 class="voucher-title">Vouchers</h6>
+                       <div class="voucher-list">
+                        <div class="voucher-item">
+                            50k
+                        </div>
+                        <div class="voucher-item">
+                            150k
+                        </div>
+                       </div>
+
+                    </div>
+                    <h6 class="product-shipping-add">Giao hang den :UITUIT</h6>
+                    <div class="product-adjust-quantity">
+                        <h6 class="quantity-title">So luong</h6>
+                        <div class="product-quantity">
+                       
+                            <button  class="btn quantity-minus">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                                <h4 class="quantity-number">1</h4>
+                            <button  class="btn quantity-add">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+    
+                    </div>
+                    <div class="phanloai">
+                        <h6 class="phanloai-title">Phan loai</h6>
+                        <div class="phanloai-seperate">
+                            <button class="btn-phanloai">loai 1</button>
+                            <button class="btn-phanloai">loai 2</button>
+    
+                        </div>
+                    </div>
+                    <div class="buy-btn">
+                        <button class="btn-buy ">
+                            Buy Now!
+                        </button>
+                        <button class="add-button" >
+                            <i class="fa fa-regular fa-bag-shopping"></i>
+                            Thêm vào giỏ
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="shop-show">
+                <div class="shop-introduce">
+                    <img src="https://cagaileoanxuan.vn/wp-content/uploads/2020/08/Logo-cagaileo.png" alt="" class="shop-img">
+                    <div class="shop-basic-infor">
+                        <h4 class="shop-name">Ten Shop</h4>
+                        <p class="shop-active">Online 5 phut truoc</p>
+                    </div>
+                </div>
+                <div class="shop-detail">
+                    <ul class="shop-detail-list">
+                        <li class="detail-item">Danh gia : <span>10</span></li>
+                        <li class="detail-item">San pham: <span>10</span></li>
+                    </ul>
+
+                    <ul class="shop-detail-list">
+                        <li class="detail-item">Ti le phan hoi : <span>10</span></li>
+                        <li class="detail-item">Thoi gian phan hoi :<span>10</span> </li>
+                    </ul>
+
+                    <ul class="shop-detail-list">
+                        <li class="detail-item">Tham gia : <span>10</span></li>
+                        <li class="detail-item">Nguoi theo doi <span>10</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="shop-product">
+               <div class="about-product">
+                <div class="product-origin">
+                    <h4 class="product-origin--title">
+                        Chi tiet san pham
+                    </h4>
+                    <div class="product-origin-show">
+                        <p class="show-item">Trong luong 
+                            <span class="item-content"> 20kg</span>
+                        </p>
+                    </div>
+                    <div class="product-origin-show">
+                        <p class="show-item">Kho hang
+                            <span class="item-content"> 49</span>
+                        </p>
+                    </div>
+                    <div class="product-origin-show">
+                        <p class="show-item">Gui tu
+                            <span class="item-content">Cao Bang</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product-description">
+                    <h4 class="description-title">Mo ta san pham</h4>
+                    <p class="desription-list">
+                        Bạn không phải lo lắng về câu hỏi của khách hàng sẽ không được trả lời hoặc bị kẹt trên máy tính hàng giờ để trả lời các câu hỏi và xử lý các vấn đề phát sinh.
+
+        Amazon sẽ xử lý tất cả các vấn đề của khách hàng, bao gồm cả hoàn tiền. Tốt hơn nữa, mọi thiệt hại hoặc mất mát đối với cổ phiếu của bạn sẽ được Amazon bồi hoàn.
+
+        Khách mua hàng được hưởng chế độ chăm sóc khách hàng 24/7 và được sự hỗ trợ đổi trả của Amazon nếu đó là hình thức bán hàng Amazon FBA. Điều này giúp khách hàng yên tâm lựa chọn sản phẩm của bạn hơn so với đối thủ.
+        Bạn không phải lo lắng về câu hỏi của khách hàng sẽ không được trả lời hoặc bị kẹt trên máy tính hàng giờ để trả lời các câu hỏi và xử lý các vấn đề phát sinh.
+
+        Amazon sẽ xử lý tất cả các vấn đề của khách hàng, bao gồm cả hoàn tiền. Tốt hơn nữa, mọi thiệt hại hoặc mất mát đối với cổ phiếu của bạn sẽ được Amazon bồi hoàn.
+
+        Khách mua hàng được hưởng chế độ chăm sóc khách hàng 24/7 và được sự hỗ trợ đổi trả của Amazon nếu đó là hình thức bán hàng Amazon FBA. Điều này giúp khách hàng yên tâm lựa chọn sản phẩm của bạn hơn so với đối thủ.Bạn không phải lo lắng về câu hỏi của khách hàng sẽ không được trả lời hoặc bị kẹt trên máy tính hàng giờ để trả lời các câu hỏi và xử lý các vấn đề phát sinh.
+
+        Amazon sẽ xử lý tất cả các vấn đề của khách hàng, bao gồm cả hoàn tiền. Tốt hơn nữa, mọi thiệt hại hoặc mất mát đối với cổ phiếu của bạn sẽ được Amazon bồi hoàn.
+
+        Khách mua hàng được hưởng chế độ chăm sóc khách hàng 24/7 và được sự hỗ trợ đổi trả của Amazon nếu đó là hình thức bán hàng Amazon FBA. Điều này giúp khách hàng yên tâm lựa chọn sản phẩm của bạn hơn so với đối thủ.
+                    </p>
+                </div>
+               </div>
+               <ul class="about-popular-product">
+                <h4 class="about-popular-product-title"> Top san pham ban chay</h4>
+                    <li class="popular-product-container">
+                        <img class="popular-product-img" src="/src/public/img/sanpham/1.jpg" alt="">
+                        <h6 class="popular-product-name">Name name</h6>
+                        <p class="popular-product-price">50.000</p>
+                    </li>
+                    <li class="popular-product-container">
+                        <img class="popular-product-img" src="/src/public/img/sanpham/1.jpg" alt="">
+                        <h6 class="popular-product-name">Name name</h6>
+                        <p class="popular-product-price">50.000</p>
+                    </li>
+                    <li class="popular-product-container">
+                        <img class="popular-product-img" src="/src/public/img/sanpham/1.jpg" alt="">
+                        <h6 class="popular-product-name">Name name</h6>
+                        <p class="popular-product-price">50.000</p>
+                    </li>
+               </ul>
+            </div>
+
+            <div class="shop-evaluate">
+                <h4 class="shop-evaluate-title">Danh gia san pham</h4>
+                
+                <div class="shop-evaluate-note">
+                    <i class="fa-solid fa-star big--size"></i>
+                    <p>
+                        Chua co danh gia nao
+                    </p>
+                </div>
+            </div>
+
+
+            <div class=".grid__full-width">
+                <div class="grid__row ">
+                    <!-- chia theo bieu do 12 cot -->
+                    <div id="shop" class="grid__col-10">
+                       <div  class="home-product">
+                           <div class="grid__row">
+                               <div class="grid__col-2">
+                                   <div class="home-product__item">
+                                        <img class="home-product__item-img" src="/src/public/img/DSC_0976.jpg" alt="">
+                                        
+                                        <h4 class="home-product__item-name">Bun Dong</h4>
+                                        <div class="home-product__item-price"> 
+                                           <span class="popular-price">65.000</span>
+                                           <span class="home-product__item-quatity">1,1k Đã bán</span>
+                                        </div>
+                                    
+                                     
+                                    </div>
+                                </div> 
+                                <div class="grid__col-2">
+                                    <div class="home-product__item">
+                                         <img class="home-product__item-img" src="/src/public/img/DSC_0976.jpg" alt="">
+                                         
+                                         <h4 class="home-product__item-name">Bun Dong</h4>
+                                         <div class="home-product__item-price"> 
+                                            <span class="popular-price">65.000</span>
+                                            <span class="home-product__item-quatity">1,1k Đã bán</span>
+                                         </div>
+                                     
+                                      
+                                     </div>
+                                 </div> 
+                                 <div class="grid__col-2">
+                                    <div class="home-product__item">
+                                         <img class="home-product__item-img" src="/src/public/img/DSC_0976.jpg" alt="">
+                                         
+                                         <h4 class="home-product__item-name">Bun Dong</h4>
+                                         <div class="home-product__item-price"> 
+                                            <span class="popular-price">65.000</span>
+                                            <span class="home-product__item-quatity">1,1k Đã bán</span>
+                                         </div>
+                                     
+                                      
+                                     </div>
+                                 </div> 
+                                 <div class="grid__col-2">
+                                    <div class="home-product__item">
+                                         <img class="home-product__item-img" src="/src/public/img/DSC_0976.jpg" alt="">
+                                         
+                                         <h4 class="home-product__item-name">Bun Dong</h4>
+                                         <div class="home-product__item-price"> 
+                                            <span class="popular-price">65.000</span>
+                                            <span class="home-product__item-quatity">1,1k Đã bán</span>
+                                         </div>
+                                     
+                                      
+                                     </div>
+                                 </div> 
+                                 <div class="grid__col-2">
+                                    <div class="home-product__item">
+                                         <img class="home-product__item-img" src="/src/public/img/DSC_0976.jpg" alt="">
+                                         
+                                         <h4 class="home-product__item-name">Bun Dong</h4>
+                                         <div class="home-product__item-price"> 
+                                            <span class="popular-price">65.000</span>
+                                            <span class="home-product__item-quatity">1,1k Đã bán</span>
+                                         </div>
+                                     
+                                      
+                                     </div>
+                                 </div> 
+                              
+                                 <div class="grid__col-2">
+                                    <div class="home-product__item">
+                                         <img class="home-product__item-img" src="/src/public/img/DSC_0976.jpg" alt="">
+                                         
+                                         <h4 class="home-product__item-name">Bun Dong</h4>
+                                         <div class="home-product__item-price"> 
+                                            <span class="popular-price">65.000</span>
+                                            <span class="home-product__item-quatity">1,1k Đã bán</span>
+                                         </div>
+                                     
+                                      
+                                     </div>
+                                 </div> 
+                                 <div class="grid__col-2">
+                                    <div class="home-product__item">
+                                         <img class="home-product__item-img" src="/src/public/img/DSC_0976.jpg" alt="">
+                                         
+                                         <h4 class="home-product__item-name">Bun Dong</h4>
+                                         <div class="home-product__item-price"> 
+                                            <span class="popular-price">65.000</span>
+                                            <span class="home-product__item-quatity">1,1k Đã bán</span>
+                                         </div>
+                                     
+                                      
+                                     </div>
+                                 </div> 
+                              
+                               
+                           </div>
+                       </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__col-2-4">
+                        <h4 class="footer-heading">
+                            CHĂM SÓC KHÁCH HÀNG
+                        </h4>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Daisy Xu</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Daisy Blog</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Daisy Mall</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Vận chuyển</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Hướng dẫn bán hàng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Trả hàng và hoàn tiền  </a>
+                            </li>
+    
+                        </ul>
+                    </div>
+    
+    
+                    <div class="grid__col-2-4">
+                        <h4 class="footer-heading">
+                         Về Daisy
+                        </h4>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    Giới thiệu về Daisy Việt Nam
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Tuyển dụng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Điều khoản</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Chính sách bảo mật</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Flash Sales</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Liên hệ với truyền thông</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="grid__col-2-4">
+                        <h4 class="footer-heading">
+                          Thanh Toán
+                        </h4>
+                        <div class="footer-list__pay">
+                           
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-list__pay-icon fa-brands fa-paypal"></i>
+                                </a>
+                           
+                           
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-list__pay-icon fa-brands fa-apple-pay"></i></a>
+                           
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-list__pay-icon fa-brands fa-google-pay"></i>
+                                </a>
+                           
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-list__pay-icon fa-brands fa-cc-paypal"></i>
+                                </a>
+                           
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-list__pay-icon fa-brands fa-cc-apple-pay"></i>
+                                </a>
+                           
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-list__pay-icon fa-solid fa-credit-card-front"></i>
+                                </a>
+                        
+                            
+                        </div>
+                    </div>
+    
+                    <div class="grid__col-2-4">
+                        <h4 class="footer-heading">
+                          THEO DÕI CHÚNG TÔI TRÊN
+                        </h4>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                               
+                                <a href="" class="footer-item__link">
+                                    <i class="fa-brands fa-facebook footer-item-icon "></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item-icon fa-brands fa-instagram"></i>
+                                    Instagram</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item-icon fa-brands fa-linkedin"></i>
+                                    Linkedin</a>
+                            </li>
+                          
+                            
+                        </ul>
+                    </div>
+    
+                    <div class="grid__col-2-4">
+                        <h4 class="footer-heading">
+                          Đăng nhập Daisy ngay thôi
+                        </h4>
+                        <div class="footer-download">
+                            <div class="footer-download__apps">
+                                <a href="" class="footer-item__link-img">
+                                    <i class="footer-item-icon fa-brands fa-app-store"></i> App_store
+                                </a>
+                          
+                                <a href="" class="footer-item__link-img">
+                                    <i class="footer-item-icon fa-brands fa-google-play"></i>
+                                Google_play
+                                </a>
+                            
+                                <a href="" class="footer-item__link-img">
+                                    <i class="footer-item-icon fa-brands fa-adn"></i>
+                                    AppGallery
+                                </a>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
