@@ -11,8 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/public/css/base.css">
-    <link rel="stylesheet" href="/src/public/css/product.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/product.css">
 </head>
 <body>
     <!-- <% if (product) {%>
@@ -21,22 +22,104 @@
 
     <div class="app">
         <div class="header">
-            <div class="content"></div>
+            <img class="header-logo" src="img/Rectangle 30 (1).svg" alt="">
+           
+            <div class="header-search">
+                <input class="header-search-input" type="text" placeholder="Search">
+
+                <!-- search-history -->
+                <div class="header-search-history">
+                    <h3 class="header-search-history-heading">
+                        Lịch sử Tìm kiếm
+                    </h3>
+                    <ul class="header-search-history-list">
+                        <li class="header-search-history-item">
+                            <a class="search-history-item-link" href="">Mien dong</a>
+                        </li>
+                        <li class="header-search-history-item">
+                            <a class="search-history-item-link" href="">Bun dong</a>
+                        </li>
+                    </ul>
+                </div>
+               <button class="input-enter">
+                <i class="fa fa-solid fa-magnifying-glass input-icon"></i>
+               </button>
+            </div>
+            <div class="header-user">
+                <ul class="user-list">
+                    <a href="/giohang" class="has-cart"><li class="user-item ">
+                        <!-- <i class="fa fa-regular fa-bell "></i><i class="fa-regular fa-cart-shopping-fast"></i> -->
+                        <i class="fa fa-light fa-cart-shopping"></i>
+                        <div class="cartAmount"><%=countCart%> </div>
+                    </li>
+                    </a>
+                    <li class="user-item has--noti ">
+                        <i class="fa fa-regular fa-bell "></i>
+                        <ul class="cart-announcement">
+                            <h4 class="product-title-announ">Thong bao</h4>
+                            <li class="announ-item">
+                                <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
+                                
+                                <div class="announ-note">
+                                <h6 class="announ-heading">Bun gao</h6>
+                                   <p class="note">5 ngay nua duoc chuyen toi</p> 
+                                </div>
+                            </li>
+                            <li class="announ-item">
+                                <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
+                                
+                                <div class="announ-note">
+                                <h6 class="announ-heading">Bun gao</h6>
+                                   <p class="note">5 ngay nua duoc chuyen toi</p> 
+                                </div>
+                            </li>
+                            <li class="announ-item">
+                                <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
+                                
+                                <div class="announ-note">
+                                <h6 class="announ-heading">Bun gao</h6>
+                                   <p class="note">5 ngay nua duoc chuyen toi</p> 
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                    <% if (check != 0) {%> 
+                        <!-- <li class="user-item">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </li> -->
+                        <a href="/user/<%-user.slug %> "  class="has--content">
+                            <li class="user-item" >
+                                <i class="fa fa-solid fa-user"></i>
+                            </li>
+                            <ul class="box-list">
+                                <li class="box-list--item">Tai khoan</li>
+                                <li class="box-list--item">Don hang</li>
+                                <li class="box-list--item"><a class="box-link" href="/logout">Dang xuat</a></li>
+                            </ul>
+                        </a>
+
+                    <% } else { %> 
+                    <button class="user-button"><a href="/login" class="user-button">Sign in</a></button>
+                    <% } %> 
+                </ul>
+                
+            </div>
         </div>
 
         <div class="body">
             <div class="product-show">
                 <div class="product-show-img">
-                    <img class="img-item has-item" src="/src/public/img/DSC_0976.jpg" alt="">
+                    <img class="img-item has-item" src="/img/DSC_0976.jpg" alt="">
                     <ul class="img-list">
                         <li class="img-list-item">
-                             <img class="img-item" src="/src/public/img/DSC_0976.jpg" alt="">
+                             <img class="img-item" src="/img/DSC_0976.jpg" alt="">
                         </li>
                         <li class="img-list-item">
-                            <img class="img-item" src="/src/public/img/DSC_0976.jpg" alt="">
+                            <img class="img-item" src="/img/DSC_0976.jpg" alt="">
                        </li>
                        <li class="img-list-item">
-                        <img class="img-item" src="/src/public/img/DSC_0976.jpg" alt="">
+                        <img class="img-item" src="/img/DSC_0976.jpg" alt="">
                     </li>
                     </ul>
                 </div>
@@ -176,17 +259,17 @@
                <ul class="about-popular-product">
                 <h4 class="about-popular-product-title"> Top san pham ban chay</h4>
                     <li class="popular-product-container">
-                        <img class="popular-product-img" src="/src/public/img/sanpham/1.jpg" alt="">
+                        <img class="popular-product-img" src="/img/sanpham/1.jpg" alt="">
                         <h6 class="popular-product-name">Name name</h6>
                         <p class="popular-product-price">50.000</p>
                     </li>
                     <li class="popular-product-container">
-                        <img class="popular-product-img" src="/src/public/img/sanpham/1.jpg" alt="">
+                        <img class="popular-product-img" src="/img/sanpham/1.jpg" alt="">
                         <h6 class="popular-product-name">Name name</h6>
                         <p class="popular-product-price">50.000</p>
                     </li>
                     <li class="popular-product-container">
-                        <img class="popular-product-img" src="/src/public/img/sanpham/1.jpg" alt="">
+                        <img class="popular-product-img" src="/img/sanpham/1.jpg" alt="">
                         <h6 class="popular-product-name">Name name</h6>
                         <p class="popular-product-price">50.000</p>
                     </li>
@@ -213,7 +296,7 @@
                            <div class="grid__row">
                                <div class="grid__col-2">
                                    <div class="home-product__item">
-                                        <img class="home-product__item-img" src="/src/public/img/DSC_0976.jpg" alt="">
+                                        <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
                                         
                                         <h4 class="home-product__item-name">Bun Dong</h4>
                                         <div class="home-product__item-price"> 
@@ -226,7 +309,7 @@
                                 </div> 
                                 <div class="grid__col-2">
                                     <div class="home-product__item">
-                                         <img class="home-product__item-img" src="/src/public/img/DSC_0976.jpg" alt="">
+                                         <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
                                          
                                          <h4 class="home-product__item-name">Bun Dong</h4>
                                          <div class="home-product__item-price"> 
@@ -239,7 +322,7 @@
                                  </div> 
                                  <div class="grid__col-2">
                                     <div class="home-product__item">
-                                         <img class="home-product__item-img" src="/src/public/img/DSC_0976.jpg" alt="">
+                                         <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
                                          
                                          <h4 class="home-product__item-name">Bun Dong</h4>
                                          <div class="home-product__item-price"> 
@@ -252,7 +335,7 @@
                                  </div> 
                                  <div class="grid__col-2">
                                     <div class="home-product__item">
-                                         <img class="home-product__item-img" src="/src/public/img/DSC_0976.jpg" alt="">
+                                         <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
                                          
                                          <h4 class="home-product__item-name">Bun Dong</h4>
                                          <div class="home-product__item-price"> 
@@ -265,7 +348,7 @@
                                  </div> 
                                  <div class="grid__col-2">
                                     <div class="home-product__item">
-                                         <img class="home-product__item-img" src="/src/public/img/DSC_0976.jpg" alt="">
+                                         <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
                                          
                                          <h4 class="home-product__item-name">Bun Dong</h4>
                                          <div class="home-product__item-price"> 
@@ -279,7 +362,7 @@
                               
                                  <div class="grid__col-2">
                                     <div class="home-product__item">
-                                         <img class="home-product__item-img" src="/src/public/img/DSC_0976.jpg" alt="">
+                                         <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
                                          
                                          <h4 class="home-product__item-name">Bun Dong</h4>
                                          <div class="home-product__item-price"> 
@@ -292,7 +375,7 @@
                                  </div> 
                                  <div class="grid__col-2">
                                     <div class="home-product__item">
-                                         <img class="home-product__item-img" src="/src/public/img/DSC_0976.jpg" alt="">
+                                         <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
                                          
                                          <h4 class="home-product__item-name">Bun Dong</h4>
                                          <div class="home-product__item-price"> 
