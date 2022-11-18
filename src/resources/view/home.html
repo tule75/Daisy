@@ -43,11 +43,12 @@
             </div>
             <div class="header-user">
                 <ul class="user-list">
-                    <a href="/giohang" class="has-cart"><li class="user-item ">
+                    <a href="/giohang" class="has-cart">
+                        <li class="user-item ">
                         <!-- <i class="fa fa-regular fa-bell "></i><i class="fa-regular fa-cart-shopping-fast"></i> -->
                         <i class="fa fa-light fa-cart-shopping"></i>
                         <div class="cartAmount"><%=countCart%> </div>
-                    </li>
+                        </li>
                     </a>
                     <li class="user-item has--noti ">
                         <i class="fa fa-regular fa-bell "></i>
@@ -84,16 +85,20 @@
                         <!-- <li class="user-item">
                             <i class="fa-solid fa-cart-shopping"></i>
                         </li> -->
-                        <a href="/user/<%-user.slug %> "  class="has--content">
-                            <li class="user-item" >
+                      
+                            <li class="user-item has--content" >
+                                <a href="/user/<%-user.slug %> ">
                                 <i class="fa fa-solid fa-user"></i>
-                            </li>
-                            <ul class="box-list">
+                             </a>
+                             <ul class="box-list">
                                 <li class="box-list--item">Tai khoan</li>
                                 <li class="box-list--item">Don hang</li>
-                                <li class="box-list--item"><a class="box-link" href="/logout">Dang xuat</a></li>
+                                 <li class="box-list--item"><a class="box-link" href="/logout">Dang xuat</a></li>
                             </ul>
-                        </a>
+                            </li>
+                        
+                           
+                        
 
                     <% } else { %> 
                     <button class="user-button"><a href="/login" class="user-button">Sign in</a></button>

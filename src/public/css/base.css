@@ -335,13 +335,16 @@ margin-bottom: 0;
 
 /* user-box */
 
+.has--content{
+  position: relative;
+}
 .box-list {
   width: 150px;
   height: auto;
   background-color: rgb(237, 233, 233);
   position: absolute;
   top: 72%;
-  right: 100px;
+  right: 30px;
   padding-left: 0;
   list-style: none;
   cursor: pointer;
@@ -359,9 +362,7 @@ margin-bottom: 0;
  text-align: center;
  position: relative;
 }
-.box-list--item:last-child {
-  /* border: none; */
-}
+
 .box-list--item:hover{
   background-color: #ccc;
   color: black;
@@ -384,7 +385,7 @@ margin-bottom: 0;
   text-decoration: none;
   color: black;
   /* display: none; */
-  padding: 15px 10px ;
+  /* padding: 10px 10px ; */
   text-align: center;
   
 }
