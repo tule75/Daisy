@@ -66,7 +66,10 @@
                                     <i class="signin__app-btn-icon fa-brands fa-twitter"> Twitter</i>
                                 </button>
                             </div>
-                            <div class="signin__signup">Bạn chưa có tài khoản? <a href="" class="signin__signup-link">Đăng kí</a></div>
+
+                            <div class="signin__signup">Bạn chưa có tài khoản? 
+                                <button class="signin__signup-link js-signup-link">Đăng kí</button>
+                            </div>
 
                         </div>
                     </div>
@@ -224,6 +227,42 @@
         
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="signup js-signup">
+            <div class="signup__container js-container">
+                <div class="signup__container-header">
+                    <div class="signup__container-close js-close">
+                        <i class="signup__icon fa-sharp fa-solid fa-xmark"></i>
+                    </div>
+    
+                    <header class="signup__container-content">
+                        ĐĂNG KÍ
+                    </header>
+                </div>
+
+                <div class="signup__container-body">
+                    <form class="signup__container-body-item" method="post" action="/login/p">
+                        <input type="text" id="" class="signup__body-input" placeholder="Tên của bạn" name="">
+                        <input type="text" id="" class="signup__body-input" placeholder="Email/ Số điện thoại" name="username">
+                        <input type="password" id="" class="signup__body-input" placeholder="Mật khẩu" name="password">
+                        <input type="password" id="" class="signup__body-input" placeholder="Nhập lại mật khẩu" name="">
+                        <div class="signup__body-check">
+                            <li class="input__type">
+                                Bán hàng
+                                <input type="radio" id="" class="input__checkbox" placeholder="" name="type">
+                            </li>
+
+                            <li class="input__type">
+                                Mua hàng
+                                <input type="radio" id="" class="input__checkbox" placeholder="" name="type">
+                            </li>
+                        </div>
+                        <button type="submit" class="signup__body-button">Đăng kí</button>
+                    </form>
                 </div>
             </div>
         </div>
