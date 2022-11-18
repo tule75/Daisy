@@ -80,25 +80,20 @@
                     </li>
                    
                     <% if (check != 0) {%> 
-                        <!-- <li class="user-item">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </li> -->
-                        <a href="/user/<%-user.slug %> " class="has--content">
-                            <li class="user-item">
-                                <i class="fa fa-solid fa-user"></i>
-                            </li>
-                            <ul class="box-list">
-                                <li class="box-list--item">Tai khoan</li>
-                                <li class="box-list--item">Don hang</li>
-                               <li class="box-list--item"><a href="/logout" class="logout"></a>Dang xuat</a></li>
-    
-                            </ul>
-                        </a>
-                        
-                        
-                    <% } else { %> 
-                    <button class="user-button"><a href="/login" class="user-button">Sign in</a></button>
-                    <% } %> 
+                        <li class="user-item has--content" >
+                            <a href="/user/<%-user.slug %> ">
+                            <i class="fa fa-solid fa-user"></i>
+                         </a>
+                         <ul class="box-list">
+                            <li class="box-list--item">Tai khoan</li>
+                            <li class="box-list--item">Don hang</li>
+                             <li class="box-list--item"><a class="box-link" href="/logout">Dang xuat</a></li>
+                        </ul>
+                        </li>
+                    
+                <% } else { %> 
+                <button class="user-button"><a href="/login" class="user-button">Sign in</a></button>
+                <% } %> 
                 </ul>
                 
             </div>

@@ -85,23 +85,20 @@
                     </li>
                    
                     <% if (check != 0) {%> 
-                        <!-- <li class="user-item">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </li> -->
-                        <a href="/user/<%-user.slug %> "  class="has--content">
-                            <li class="user-item" >
-                                <i class="fa fa-solid fa-user"></i>
-                            </li>
-                            <ul class="box-list">
-                                <li class="box-list--item">Tai khoan</li>
-                                <li class="box-list--item">Don hang</li>
-                                <li class="box-list--item"><a class="box-link" href="/logout">Dang xuat</a></li>
-                            </ul>
-                        </a>
-
-                    <% } else { %> 
-                    <button class="user-button"><a href="/login" class="user-button">Sign in</a></button>
-                    <% } %> 
+                        <li class="user-item has--content" >
+                            <a href="/user/<%-user.slug %> ">
+                            <i class="fa fa-solid fa-user"></i>
+                         </a>
+                         <ul class="box-list">
+                            <li class="box-list--item">Tai khoan</li>
+                            <li class="box-list--item">Don hang</li>
+                             <li class="box-list--item"><a class="box-link" href="/logout">Dang xuat</a></li>
+                        </ul>
+                        </li>
+                    
+                <% } else { %> 
+                <button class="user-button"><a href="/login" class="user-button">Sign in</a></button>
+                <% } %> 
                 </ul>
                 
             </div>
@@ -124,7 +121,7 @@
                     </ul>
                 </div>
                 <div class="product-information">
-                    <h4 class="product-name">Thao duoc tay nguyen</h4>
+                    <h4 class="product-name"><%=product.name%></h4>
                     <div class="product-name-evaluate home-product__item-orgigin">
                         <span class="home-product__item-evaluate">
                             <i class="fa-solid fa-star"></i>
@@ -135,9 +132,9 @@
                          <!-- <span class="home-product__item-ship"><i class="fa-regular fa-truck"></i></span> -->
                     </div>
                     <div class="product-has-price">
-                        <span class="price-final">100.000</span>
+                        <span class="price-final">50.000</span>
                         <span class="price-discount">200.000 </span>
-                        <span class="discount-number" >-1%</span>
+                        <span class="discount-number" >-75%</span>
                     </div>
                     <div class="voucher">
                         <h6 class="voucher-title">Vouchers</h6>
@@ -151,9 +148,9 @@
                        </div>
 
                     </div>
-                    <h6 class="product-shipping-add">Giao hang den :UITUIT</h6>
+                    <h6 class="product-shipping-add">Giao hàng đến :UITUIT</h6>
                     <div class="product-adjust-quantity">
-                        <h6 class="quantity-title">So luong</h6>
+                        <h6 class="quantity-title">Số lượng:</h6>
                         <div class="product-quantity">
                        
                             <button  class="btn quantity-minus">
@@ -167,10 +164,10 @@
     
                     </div>
                     <div class="phanloai">
-                        <h6 class="phanloai-title">Phan loai</h6>
+                        <h6 class="phanloai-title">Phân loại</h6>
                         <div class="phanloai-seperate">
-                            <button class="btn-phanloai">loai 1</button>
-                            <button class="btn-phanloai">loai 2</button>
+                            <button class="btn-phanloai">Loại 1</button>
+                            <button class="btn-phanloai">Loại 2</button>
     
                         </div>
                     </div>
@@ -178,7 +175,7 @@
                         <button class="btn-buy ">
                             Buy Now!
                         </button>
-                        <button class="add-button" >
+                        <button class="add-button" name="slug" value="<%-product.slug %>" >
                             <i class="fa fa-regular fa-bag-shopping"></i>
                             Thêm vào giỏ
                         </button>
@@ -193,23 +190,23 @@
                     <img src="https://cagaileoanxuan.vn/wp-content/uploads/2020/08/Logo-cagaileo.png" alt="" class="shop-img">
                     <div class="shop-basic-infor">
                         <h4 class="shop-name">Ten Shop</h4>
-                        <p class="shop-active">Online 5 phut truoc</p>
+                        <p class="shop-active">Online 5 phút trước</p>
                     </div>
                 </div>
                 <div class="shop-detail">
                     <ul class="shop-detail-list">
-                        <li class="detail-item">Danh gia : <span>10</span></li>
-                        <li class="detail-item">San pham: <span>10</span></li>
+                        <li class="detail-item">Đánh giá : <span>10</span></li>
+                        <li class="detail-item">Sản phẩm: <span>10</span></li>
                     </ul>
 
                     <ul class="shop-detail-list">
-                        <li class="detail-item">Ti le phan hoi : <span>10</span></li>
-                        <li class="detail-item">Thoi gian phan hoi :<span>10</span> </li>
+                        <li class="detail-item">Tỉ lệ phản hồi : <span>10</span></li>
+                        <li class="detail-item">Thời gian phản hồi :<span>10</span> </li>
                     </ul>
 
                     <ul class="shop-detail-list">
                         <li class="detail-item">Tham gia : <span>10</span></li>
-                        <li class="detail-item">Nguoi theo doi <span>10</span></li>
+                        <li class="detail-item">Người theo dõi : <span>10</span></li>
                     </ul>
                 </div>
             </div>
@@ -218,26 +215,26 @@
                <div class="about-product">
                 <div class="product-origin">
                     <h4 class="product-origin--title">
-                        Chi tiet san pham
+                        Chi tiết sản phẩm
                     </h4>
                     <div class="product-origin-show">
-                        <p class="show-item">Trong luong 
+                        <p class="show-item">Trọng lượng 
                             <span class="item-content"> 20kg</span>
                         </p>
                     </div>
                     <div class="product-origin-show">
-                        <p class="show-item">Kho hang
+                        <p class="show-item">Kho hàng
                             <span class="item-content"> 49</span>
                         </p>
                     </div>
                     <div class="product-origin-show">
-                        <p class="show-item">Gui tu
-                            <span class="item-content">Cao Bang</span>
+                        <p class="show-item">Gửi từ
+                            <span class="item-content">Cao Bằng</span>
                         </p>
                     </div>
                 </div>
                 <div class="product-description">
-                    <h4 class="description-title">Mo ta san pham</h4>
+                    <h4 class="description-title">Mô tả sản phẩm</h4>
                     <p class="desription-list">
                         Bạn không phải lo lắng về câu hỏi của khách hàng sẽ không được trả lời hoặc bị kẹt trên máy tính hàng giờ để trả lời các câu hỏi và xử lý các vấn đề phát sinh.
 
@@ -257,7 +254,7 @@
                 </div>
                </div>
                <ul class="about-popular-product">
-                <h4 class="about-popular-product-title"> Top san pham ban chay</h4>
+                <h4 class="about-popular-product-title"> Top sản phẩm bán chạy</h4>
                     <li class="popular-product-container">
                         <img class="popular-product-img" src="/img/sanpham/1.jpg" alt="">
                         <h6 class="popular-product-name">Name name</h6>
@@ -277,12 +274,12 @@
             </div>
 
             <div class="shop-evaluate">
-                <h4 class="shop-evaluate-title">Danh gia san pham</h4>
+                <h4 class="shop-evaluate-title">Đánh giá sản phẩm</h4>
                 
                 <div class="shop-evaluate-note">
                     <i class="fa-solid fa-star big--size"></i>
                     <p>
-                        Chua co danh gia nao
+                        Chưa có đánh giá nào
                     </p>
                 </div>
             </div>
@@ -293,6 +290,7 @@
                     <!-- chia theo bieu do 12 cot -->
                     <div id="shop" class="grid__col-10">
                        <div  class="home-product">
+                        <h4 class="product-title">Sản phẩm tương tự</h4>
                            <div class="grid__row">
                                <div class="grid__col-2">
                                    <div class="home-product__item">

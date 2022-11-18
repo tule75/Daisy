@@ -82,24 +82,17 @@
                     </li>
                    
                     <% if (check != 0) {%> 
-                        <!-- <li class="user-item">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </li> -->
-                      
                             <li class="user-item has--content" >
                                 <a href="/user/<%-user.slug %> ">
                                 <i class="fa fa-solid fa-user"></i>
                              </a>
                              <ul class="box-list">
-                                <li class="box-list--item">Tai khoan</li>
-                                <li class="box-list--item">Don hang</li>
-                                 <li class="box-list--item"><a class="box-link" href="/logout">Dang xuat</a></li>
+                                <li class="box-list--item">Tài khoản</li>
+                                <li class="box-list--item">Đơn hàng</li>
+                                 <li class="box-list--item"><a class="box-link" href="/logout">Đăng xuất</a></li>
                             </ul>
                             </li>
                         
-                           
-                        
-
                     <% } else { %> 
                     <button class="user-button"><a href="/login" class="user-button">Sign in</a></button>
                     <% } %> 
