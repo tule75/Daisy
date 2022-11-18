@@ -343,7 +343,7 @@ margin-bottom: 0;
   height: auto;
   background-color: rgb(237, 233, 233);
   position: absolute;
-  top: 72%;
+  top: 75%;
   right: 30px;
   padding-left: 0;
   list-style: none;
@@ -400,4 +400,5 @@ margin-bottom: 0;
 
 .big--size {
   font-size: 70px;
+  color: #ccc;
 }
