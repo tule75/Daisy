@@ -87,25 +87,25 @@ class GioHangController {
                         var counts = 0
                         var i = 0
                         // for (var i = 0; i < data.length; i++)
-                        while (i < data.length){
-                            counts += data[i].count
-                            Product.findOne({slug: data[i].product_slug})
-                            .then(product => {
-                                if (product != null){
-                                    var p = {};
-                                    p.name = product.name;
-                                    p.slug = product.slug;
-                                    p.price = product.price;
-                                    p.count = data[i].count;
-                                    p.img = product.img;
-                                    p.user_id = product.user_id;
+                        // while (i < data.length){
+                        //     counts += data[i].count
+                        //     Product.findOne({slug: data[i].product_slug})
+                        //     .then(product => {
+                        //         if (product != null){
+                        //             var p = {};
+                        //             p.name = product.name;
+                        //             p.slug = product.slug;
+                        //             p.price = product.price;
+                        //             p.count = data[i].count;
+                        //             p.img = product.img;
+                        //             p.user_id = product.user_id;
 
-                                    products.push(p);
-                                }
-                                i++;
-                            })
-                            .catch(err => {})
-                        }
+                        //             products.push(p);
+                        //         }
+                        //         i++;
+                        //     })
+                        //     .catch(err => {})
+                        // }
 
                         console.log(Array.from(products))
                         res.render('giohang.html', {products: products, check: 1, user: user, countCart: counts})
