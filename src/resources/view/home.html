@@ -334,10 +334,12 @@
                 <% for (var i = 0; i < products.length; i++) { %> 
                     <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
                                         <% const y = x.replace("/view?usp=share_link","",40)%>
+                           
                                 <div class="grid__col-2-4">
+                                    <a href="/<%-products[i].slug %> " class="addhref">
                                     <div class="home-product__item">
                                          <img class="home-product__item-img" src="<%-y%>" alt="">
-                                         <a href="/<%-products[i].slug %> "><h4 class="home-product__item-name"><%=products[i].name%></h4></a>
+                                        <h4 class="home-product__item-name"><%=products[i].name%></h4>
                                          <div class="home-product__item-price"> 
                                             <span class="popular-price"><%=products[i].price%></span>
                                             <span class="home-product__item-quatity">1,1k Đã bán</span>
@@ -369,6 +371,7 @@
                                         
                                      </div>
                                  </div> 
+                        </a>
                 <% } %>  
 <!-- 
                                  <div class="grid__col-2-4">
