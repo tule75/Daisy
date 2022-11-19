@@ -271,6 +271,7 @@
     /* background-color: #ccc; */
     border: 1px solid black;
     width: 100%;
+    cursor: pointer;
 }
 .voucher-title {
     padding: 13px 10px;
@@ -288,6 +289,9 @@
     margin-bottom: 10px;
 
 
+}
+.voucher-item:hover {
+    background-color: #999;
 }
 .product-shipping-add {
     padding: 16px 0;

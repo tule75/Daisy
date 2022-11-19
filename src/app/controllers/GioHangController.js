@@ -120,6 +120,32 @@ class GioHangController {
         } else {
             res.redirect('/login')
         }
+
+        console.log(user)
+
+        GioHang.find({user_slug: user_slug})
+        .then(data => {
+            var products = []; //sản phẩm trong giỏ
+            var counts = 0
+            var dem = 0;
+            for (var i = 0; i < data.length; i++){
+                Product.findOne({slug: data[i].product_slug})
+                .then(data => {
+                    counts += data[i].count
+                    products.push(data);
+                    dem += 1;
+                })
+                .catch(err => {})
+            }
+            if(user) {
+                res.render('giohang.html', {products: products, check: 1, user: user, countCart: counts})
+            }
+            else {
+                res.redirect('/login')
+            }
+        })
+        .catch(err => {res.send("loi")})
+
     }
 }
 

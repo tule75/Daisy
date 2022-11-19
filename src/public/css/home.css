@@ -18,10 +18,11 @@
     z-index: 100;
 }
 .header-logo {
-    width: 90px;
-    height: 100px;
+    width: 80px;
+    height: 95px;
     margin-left: 50px;
     transform: translateY(-23px);
+    position: relative;
 
 }
 .header-search {
@@ -465,6 +466,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: black;
 }
 .home-product__item-img {
     width: 189.9px;
