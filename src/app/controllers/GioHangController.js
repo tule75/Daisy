@@ -70,6 +70,7 @@ class GioHangController {
     //[GET] /giohang
     lay(req, res, next) {
         var user_slug;
+        var products = [];
         var user;
         if (req.cookies.token){
             const token = req.cookies.token
@@ -79,15 +80,45 @@ class GioHangController {
                 if (data) {
                     user = data
                     user_slug = data.slug
-                } else {
-                    user = undefined;
+
+                    GioHang.find({user_slug: user_slug})
+                    .then(data => {
+                         //sản phẩm trong giỏ
+                        var counts = 0
+                        var i = 0
+                        // for (var i = 0; i < data.length; i++)
+                        while (i < data.length){
+                            counts += data[i].count
+                            Product.findOne({slug: data[i].product_slug})
+                            .then(product => {
+                                if (product != null){
+                                    var p = {};
+                                    p.name = product.name;
+                                    p.slug = product.slug;
+                                    p.price = product.price;
+                                    p.count = data[i].count;
+                                    p.img = product.img;
+                                    p.user_id = product.user_id;
+
+                                    products.push(p);
+                                }
+                                i++;
+                            })
+                            .catch(err => {})
+                        }
+
+                        console.log(Array.from(products))
+                        res.render('giohang.html', {products: products, check: 1, user: user, countCart: counts})
+                    })
+                    .catch(err => {res.send("loi")})
                 }
+                else { res.redirect('/login')}
             })
             .catch(err => {
                 res.send('loi')
             })
         } else {
-            user = undefined;
+            res.redirect('/login')
         }
 
         console.log(user)
@@ -114,6 +145,7 @@ class GioHangController {
             }
         })
         .catch(err => {res.send("loi")})
+
     }
 }
 
