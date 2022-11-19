@@ -118,7 +118,7 @@ class GioHangController {
 
                         var promise = new Promise( function(resolve, reject) {
                             let pr = [];
-                            cart.forEach(element => {
+                            cart.forEach((element, i) => {
                                 Product.findOne({slug: element.product_slug})
                                 .then((product) => {
                                     if (product != null){
@@ -126,7 +126,7 @@ class GioHangController {
                                         p.name = product.name;
                                         p.slug = product.slug;
                                         p.price = product.price;
-                                        // p.count = cart[i].count;
+                                        p.count = cart[i].count;
                                         p.img = product.img;
                                         p.user_id = product.user_id;
                                         // console.log(product)
