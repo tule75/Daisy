@@ -1,0 +1,275 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* .header {
+    width: 100%;
+    background-color: rgb(83, 77, 77);
+    height: 100px;
+} */
+.body {
+    /* padding-top: 50px; */
+}
+
+.heading {
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+.information-wrap {
+    background-color: rgb(210, 209, 209);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 80px;
+}
+.customer-side {
+    padding: 10px 20px;
+    position: relative;
+    flex:1;
+
+}
+.customer-infor {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    /* justify-content: center; */
+    align-items: center;
+
+}
+.customer-infor-showing{
+   padding-right: 10px;
+
+}
+.change-add {
+    border: none;
+    position: absolute;
+    right: 50px;
+    top: 10px;
+    background-color: rgb(67, 105, 67);
+    color: white;
+    padding: 4px 7px;
+    
+}
+.customer-add {
+
+}
+
+.customer-add--title {
+    font-size: 15px;
+    text-decoration: underline;
+    padding-bottom: 0;
+}
+.customer-add-show {
+    width: 88%;
+}
+.customer-side::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height : 100%;
+    background-color: black;
+    right: 30px;
+    top: 0;
+}
+/*  */
+
+.shipment-side {
+    flex: 1;
+    padding-left: 10px;
+    position: relative;
+
+}
+.shipment-title {
+   padding-top: 10px;
+
+
+}
+.shipment-showing {
+
+}
+.shipment-change {
+    border: none;
+    position: absolute;
+    right: 50px;
+    padding: 4px 7px;
+    /* background: linear-gradient(100deg,rgb(98, 96, 96),#ccc); */
+    background-color: rgb(67, 105, 67);
+    color: white;
+
+}
+.shipment-date {
+    padding: 5px 0;
+}
+.shipment-fee {
+
+    font-weight: 600;
+}
+
+.product-wrap {
+    margin: 30px 80px;
+    background-color: rgb(210, 209, 209);
+
+}
+.product-list {
+     padding-top: 15px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgb(41, 39, 39);
+    padding-left: 20px;
+}
+.product-name {
+
+}
+.product-container {
+    display: flex;
+
+}
+.product-img {
+    width: 180px;
+    height: 160px;
+}
+.product-item {
+
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.name {
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+.quantity {
+}
+.dongia {
+    width: 400px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(100, 96, 96);
+}
+.total {
+    font-weight: 600;
+
+}
+
+
+/* voucher */
+.voucher-wrap {
+    display: flex;
+    margin: 20px 80px;
+    justify-content: space-between;
+    background-color: #ccc;
+    padding: 10px 20px;
+}
+.voucher-shop {
+    flex: 1;
+    position: relative;
+
+}
+.voucher-shop::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 120%;
+    right: 40px;
+    background-color: black;
+    top: -9px;
+}
+.voucher-list {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+.voucher-item {
+    border: 1px dashed black;
+    padding: 3px 7px;
+    margin-right:  10px;
+    margin-top: 10px;
+}
+
+.voucher-daisy {
+    flex: 1;
+
+}
+
+/* thanh toan */
+.thanhtoan-wrap {
+
+    margin: 20px 80px;
+    padding: 10px 10px;
+    background-color: #ccc;
+}
+.header-thanhtoan {
+    padding-left: 10px;
+}
+.thanhtoan-way {
+    padding: 10px 10px;
+
+}
+.thanhtoan {
+    border-radius: 20px;
+    margin-right: 20px;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    background:linear-gradient(130deg,rgb(85, 173, 85),rgb(46, 83, 46));
+}
+.khinhanhang {
+    
+}
+.momo {
+
+}
+.internet-banking {
+
+}
+
+/* dat hang */
+.total-wrap {
+    padding: 10px 10px;
+    margin: 20px 80px;
+    background-color: #ccc;
+    position: relative;
+}
+.header-total {
+    padding: 0 10px;
+}
+.total-detail {
+    list-style: none;
+
+}
+.total-item {
+    padding: 4px 0;
+
+}
+.total-add {
+    font-weight: 600;
+}
+.ending {
+    position: absolute;
+    right:20%;
+    bottom: 10%;
+    border: none;
+    background:linear-gradient(130deg,rgb(85, 173, 85),rgb(68, 110, 68));
+    color: white;
+    padding: 10px 25px;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.ending_2 {
+    position: absolute;
+    right:2%;
+    bottom: 10%;
+    border: none;
+    background:linear-gradient(130deg,rgb(85, 173, 85),rgb(68, 110, 68));
+    color: white;
+    padding: 10px 25px;
+    font-size: 20px;
+    margin-right: 10px;
+    
+}
+.ending_2 a {
+    color: white;
+}

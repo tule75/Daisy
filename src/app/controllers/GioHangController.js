@@ -69,7 +69,7 @@ class GioHangController {
     }
     //[GET] /giohang
     lay(req, res, next) {
-        var user_slug;
+        var products = [];
         var user;
         if (req.cookies.token){
             const token = req.cookies.token
@@ -78,42 +78,62 @@ class GioHangController {
             .then(data => {
                 if (data) {
                     user = data
-                    user_slug = data.slug
-                } else {
-                    user = undefined;
+
+                    GioHang.find({user_slug: data.slug})
+                    .then(cart => {
+                         //sản phẩm trong giỏ
+                        var counts = 0
+                        var i = 0
+
+
+                        var promise = new Promise( function(resolve, reject) {
+                            let pr = [];
+                            cart.forEach((element, i) => {
+                                Product.findOne({slug: element.product_slug})
+                                .then((product) => {
+                                    if (product != null){
+                                        var p = {};
+                                        p.name = product.name;
+                                        p.slug = product.slug;
+                                        p.price = product.price;
+                                        p.count = cart[i].count;
+                                        p.img = product.img;
+                                        p.user_id = product.user_id;
+                                        // console.log(product)
+                                        console.log(p)
+                                        
+                                        pr.push(p);
+                                        // console.log(products)
+                                    }
+                                    // i++;
+                                })
+                                .catch(err => {})
+                            },100000000);
+                            if (pr) {
+                                resolve(pr)
+                            } else {
+                                reject()
+                            }
+                        })
+                        promise.then(async (pr) => {
+                            pr = await resolveAfter2Seconds(pr)
+                            console.log(pr)
+                            res.render('giohang.html', {products: pr, check: 1, user: user, countCart: counts})
+                        })
+                        
+                        
+                    })
+                    .catch(err => {res.send("loi")})
                 }
+                else { res.redirect('/login')}
             })
             .catch(err => {
                 res.send('loi')
             })
         } else {
-            user = undefined;
+            res.redirect('/login')
         }
 
-        console.log(user)
-
-        GioHang.find({user_slug: user_slug})
-        .then(data => {
-            var products = []; //sản phẩm trong giỏ
-            var counts = 0
-            var dem = 0;
-            for (var i = 0; i < data.length; i++){
-                Product.findOne({slug: data[i].product_slug})
-                .then(data => {
-                    counts += data[i].count
-                    products.push(data[i]);
-                    dem += 1;
-                })
-                .catch(err => {})
-            }
-            if(user) {
-                res.render('giohang.html', {products: products, check: 1, user: user, countCart: counts})
-            }
-            else {
-                res.redirect('/login')
-            }
-        })
-        .catch(err => {res.send("loi")})
     }
 }
 

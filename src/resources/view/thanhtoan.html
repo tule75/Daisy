@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gio hang</title>
+    <title>Thanh toan</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Itim|Lobster|Montserrat:500|Noto+Serif|Nunito|Patrick+Hand|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab|Saira" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/giohang.css">
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/assets/css/main.css"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+   <!-- <link rel="stylesheet" href="css/home.css">
+   <link rel="stylesheet" href="css/base.css"> -->
+   <link rel="stylesheet" href="/css/thanhtoan.css">
+   <link rel="stylesheet" href="css/home.css">
+   <link rel="stylesheet" href="/css/base.css">
 </head>
 <body>
-    <div class="cart-shopping">
-        <div class="header">
+    <div class="app">
+         <div class="header">
             <div class="header-left"> 
              <img class="header-logo" src="img/Rectangle 30 (1).svg" alt="">
              <p class="header-has-seller">Kenh nguoi ban</p>
@@ -25,7 +27,7 @@
              <div class="header-search">
                  <input class="header-search-input" type="text" placeholder="Search">
  
-                 <!-- search-history -->
+                
                  <div class="header-search-history">
                      <h3 class="header-search-history-heading">
                          Lịch sử Tìm kiếm
@@ -47,8 +49,8 @@
                  <ul class="user-list">
                      <a href="/giohang" class="has-cart">
                          <li class="user-item ">
-                         <!-- <i class="fa fa-regular fa-bell "></i><i class="fa-regular fa-cart-shopping-fast"></i> -->
-                         <i class="fa fa-light fa-cart-shopping"></i>
+                         
+                         <button class="noti-btn"><i class="fa fa-light fa-cart-shopping"></i></button>
                          <div class="cartAmount"><%=countCart%> </div>
                          </li>
                      </a>
@@ -87,7 +89,7 @@
                              </ul>
                          </li>
                              <li class="user-item has--content" >
-                                 <a href="/user/<%-user.slug %> ">
+                                 <a href="/user/<%-//user.slug %> ">
                                  <i class="fa fa-solid fa-user"></i>
                               </a>
                               <ul class="box-list">
@@ -104,129 +106,116 @@
                  
              </div>
          </div>
-
-        <div class="cart-body">
-                <h4 class="car-body-heading">
-                    Giỏ hàng của bạn
-                </h4>
-
-                <ul class="cart-infor-list">
-                    <li class="cart-infor-child">
-                        Sản phẩm
-                    </li>
-                    <li class="cart-infor-child">
-                        Số lượng
-                    </li><li class="cart-infor-child">
-                        Tổng tiền
-                    </li><li class="cart-infor-child">
-                       Xoá
-                    </li>
-                </ul>
-                <% for (var i = 0; i < products.length; i++) { %> 
-                    <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
-                    <% const y = x.replace("/view?usp=share_link","",40)%>
-                <div class="cart-product-wrap">
-                   <div class="cart-product-infor">
-                            <img class="cart-product-img"  src="<%-y%>" alt="">
-                           <div class="product-content">
-                            <h5 class="cart-product-name">
-                                <%=products[i].name%>
-                            </h5>
-                            <p class="cart-product-price"><%=products[i].price%></p>
-                           </div>
-                   </div>
-                   
-                   <div class="cart-product-quantity first-child">
-                    <button onclick="decrease()"  class="btn quantity-minus">
-                        <i class="fa-solid fa-minus"></i>
-                    </button>
-                        <h4 class="quantity-number"><%=countCart%></h4>
-                    <button onclick="increase()"  class="btn quantity-add">
-                        <i class="fa-solid fa-plus"></i>
-                    </button>
-                    </div>
-
-                        <p class="total">  65.000 </p>
-                    <button class="btn product-trash">
-                        <i class="fa-solid fa-trash"></i>
-                    </button>
-               
-                </div>
-                <% } %>  
-                <!-- <div  class="cart-product-wrap">
-                    <div class="cart-product-infor">
-                             <img class="cart-product-img" src="/img/DSC_0976.jpg" alt="">
-                            <div class="product-content">
-                             <h5 class="car-product-name">
-                                 Mi dong
-                             </h5>
-                             <p class="cart-product-price">65.000</p>
-                            </div>
-                    </div>
-                    
-                    <div class="cart-product-quantity">
-                         <butto onclick="decrease()"  class="btn quantity-minus">
-                             <i class="fa-solid fa-minus"></i>
-                         </butto>
-                             <h4 class="quantity-number">1</h4>
-                         <button onclick="increase()"  class="btn quantity-add">
-                             <i class="fa-solid fa-plus"></i>
-                         </button>
-                    </div>
- 
-                     <p class="total">  65.000 </p>
-                    <button class="btn product-trash">
-                       <i class="fa-solid fa-trash"></i>
-                    </button>
-                    
-                </div>
-                <div class="cart-product-wrap">
-                    <div class="cart-product-infor">
-                             <img class="cart-product-img" src="/img/DSC_0976.jpg" alt="">
-                            <div class="product-content">
-                                <h5 class="car-product-name">
-                                    Bun dong
-                                </h5>
-                                <p class="cart-product-price">65.000</p>
-                            </div>
-                    </div>
-                    
-                    <div  class="cart-product-quantity">
-                         <button onclick="decrease()"  class="btn quantity-minus">
-                             <i class="fa-solid fa-minus"></i>
-                         </button>
-                             <h4 class="quantity-number">1</h4>
-                         <button onclick="increase()"  class="btn quantity-add">
-                             <i class="fa-solid fa-plus"></i>
-                         </button>
-                    </div>
- 
-                     <p class="total">  65.000 </p>
-                    <button class="btn product-trash">
-                       <i class="fa-solid fa-trash"></i>
-                    </button>
-                    
-                </div> -->
-
-                <div class="cart-footer">
-                    <ul class="thanhtoan">
-                        <li class="thanhtoan-item">
-                            Thanh toán
+         
+         <!-- body -->
+         <div class="body">
+            <h2 class="heading">Thanh toán</h2>
+            <div class="information-wrap">
+                <div class="customer-side">
+                    <ul class="customer-infor">
+                        <li class="customer-infor-showing">
+                            <h5>Nguyễn Văn An</h5>
                         </li>
-                        <li class="thanhtoan-item">
-                            65.000
-                        </li>
-    
+                        <li class="customer-infor-showing"><h6>036658356660</h6></li>
+                        <li class="customer-infor-showing"><button class="change-add">Đổi địa chỉ</button></li>
                     </ul>
-                    <div class="button-thanhtoan">
-                        <button class=" pay">
-                            <a href="/thanhtoan" class="paya">Thanh Toán</a>
-                        </button>
+                    <div class="customer-add">
+                        <h5 class="customer-add--title">Giao hàng tới :</h5>
+                        <p class="customer-add-show">Ktx Khu B, Đường Nguyễn Du, Khu Phố 6, Phường Linh Trung, Thành Phố Thủ Đức, TP. Hồ Chí Minh</p>
                     </div>
                 </div>
-        </div>
+                <div class="shipment-side">
+                   <h4 class="shipment-title">Phương thức Vận chuyển</h4>
+                   <div class="shipment-showing">
+                        <i class="fa-solid fa-truck-fast"></i> GHTK
+                        <span><button class="shipment-change">Thay đổi phương thức</button></span>
+                    </div>
+                    <div class="shipment-date">Nhận hàng vào: <span>10/12/2022</span></div>
+                    <div class="shipment-fee">Giá vận chuyển: <span>20.000</span></div>
+                </div>
+            </div>
 
-         <!-- footer -->
+            <div class="product-wrap">
+                <div class="product-list">
+                    <h5 class="product-name">Ten shop 1</h5>
+                    <div class="product-container">
+                        <img class="product-img" src="/img/DSC_0976.jpg" alt="">
+                        <div class="product-item">
+                            <h5 class="name">Bun gao</h5>
+                            <p class="quantity">Số lượng : <span>3</span></p>
+                            <p class="dongia">Đơn giá: <span>100.000</span></p>
+                            <div class="total">Thành tiền: <span>100.000</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-list">
+                    <h5 class="product-name">Tên shop 1</h5>
+                    <div class="product-container">
+                        <img class="product-img" src="/img/DSC_0976.jpg" alt="">
+                        <div class="product-item">
+                            <h5 class="name">Bun gao</h5>
+                            <p class="quantity">Số lượng: <span>3</span></p>
+                            <p class="dongia">Đơn giá: <span>100.000</span></p>
+                            <div class="total">Thành tiền : <span>100.000</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-list">
+                    <h5 class="product-name">Ten shop 1</h5>
+                    <div class="product-container">
+                        <img class="product-img" src="/img/DSC_0976.jpg" alt="">
+                        <div class="product-item">
+                            <h5 class="name">Bun gao</h5>
+                            <p class="quantity">So luong: <span>3</span></p>
+                            <p class="dongia">Đơn giá: <span>100.000</span></p>
+                            <div class="total">Thanh tien: <span>100.000</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="voucher-wrap">
+                <div class="voucher-shop">
+                    <h5 class="header-voucher">Voucher của shop</h5>
+                    <ul class="voucher-list">
+                        <li class="voucher-item ">50k</li>
+                        <li class="voucher-item">100k</li>
+                        <li class="voucher-item">Freeship</li>
+                    </ul>
+                </div>
+                <div class="voucher-daisy">
+                    <h5 class="header-voucher">Voucher của Daisy</h5>
+                    <ul class="voucher-list">
+                        <li class="voucher-item">50k</li>
+                        <li class="voucher-item">Freeship</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="thanhtoan-wrap">
+                <h4 class="header-thanhtoan">Phương thức thanh toán</h4>
+                <div class="thanhtoan-way">
+                    <button class="khinhanhang thanhtoan">Thanh toán khi nhận hàng</button>
+                    <button class="momo thanhtoan">Thanh toán bằng MoMo</button>
+                    <button class="internet-banking thanhtoan">Thanh toán bằng Internet Banking</button>
+
+                </div>
+            </div>
+            
+            <div class="total-wrap">
+                <h4 class="header-total">Tổng chi phí</h4>
+                <ul class="total-detail">
+                    <li class="total-item">Tiền hàng : <span>300.000</span></li>
+                    <li class="total-item">Tiền vận chuyển : <span>20.000</span></li>
+                    <li class="total-item total-add">Tổng cộng : <span>320.000</span></li>
+                </ul>
+                <button class="ending">ĐẶT HÀNG</button>
+                <button class="ending_2"><a href="/"> Quay lai trang chu</a></button>
+            </div>
+
+           
+         </div>
+
          <div class="footer">
             <div class="grid">
                 <div class="grid__row">
@@ -379,9 +368,6 @@
                 </div>
             </div>
         </div>
-
-        <script src="/javascript/giohang.js"></script>
-
     </div>
 </body>
 </html>
