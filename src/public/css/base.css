@@ -427,3 +427,15 @@ margin-bottom: 0;
 .paya {
   color: white;
 }
+
+.addhref {
+  color: black;
+}
+.addhref:hover {
+  color: black;
+}
+
+.home-product__item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 5px #ccc;
+}
