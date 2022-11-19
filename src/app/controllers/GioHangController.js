@@ -108,7 +108,7 @@ class GioHangController {
                                     // i++;
                                 })
                                 .catch(err => {})
-                            },100000000);
+                            });
                             if (pr) {
                                 resolve(pr)
                             } else {
