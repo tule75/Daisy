@@ -289,12 +289,17 @@ margin-bottom: 0;
   display: flex;
   /* justify-content: space-between; */
   align-items: center;
-  padding-top: 10px;
+  padding-top: 15px;
   padding-left:  10px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   border-bottom: 1px solid black;
-  cursor: pointer;
+  cursor: pointer; 
+ 
 
+}
+.noti-btn {
+  background-color: transparent;
+  border: none;
 }
 .announ-item:hover {
   background-color:#476650 ;
@@ -320,6 +325,7 @@ margin-bottom: 0;
   text-overflow: ellipsis;
   font-weight: 600;
   padding-top: 5px;
+
 }
 .note {
 
@@ -401,4 +407,18 @@ margin-bottom: 0;
 .big--size {
   font-size: 70px;
   color: #ccc;
+}
+.announ-more {
+  width: 100%;
+  border: none;
+  background-color: #9cbca5;
+}
+
+.header-has-seller {
+  position: absolute;
+  top: 0;
+  left: 150px;
+  color: rgb(220, 211, 211);
+  font-size: 13px;
+  cursor: pointer;
 }

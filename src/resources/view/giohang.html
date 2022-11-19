@@ -18,51 +18,92 @@
 <body>
     <div class="cart-shopping">
         <div class="header">
-            <img class="header-logo" src="img/Rectangle 30 (1).svg" alt="">
-           
-            <div class="header-search">
-                <input class="header-search-input" type="text" placeholder="Search">
-
-                <!-- search-history -->
-                <div class="header-search-history">
-                    <h3 class="header-search-history-heading">
-                        Lịch sử Tìm kiếm
-                    </h3>
-                    <ul class="header-search-history-list">
-                        <li class="header-search-history-item">
-                            <a class="search-history-item-link" href="">Mien dong</a>
-                        </li>
-                        <li class="header-search-history-item">
-                            <a class="search-history-item-link" href="">Bun dong</a>
-                        </li>
-                    </ul>
-                </div>
-               <button class="input-enter">
-                <i class="fa fa-solid fa-magnifying-glass input-icon"></i>
-               </button>
+            <div class="header-left"> 
+             <img class="header-logo" src="img/Rectangle 30 (1).svg" alt="">
+             <p class="header-has-seller">Kenh nguoi ban</p>
             </div>
-            <div class="header-user">
-                <ul class="user-list">
-                    <a href="/giohang"><li class="user-item has-cart ">
-                        <!-- <i class="fa fa-regular fa-bell "></i><i class="fa-regular fa-cart-shopping-fast"></i> -->
-                        <i class="fa fa-light fa-cart-shopping"></i>
-                        <div class="cartAmount"><%=countCart%> </div>
-                    </li></a>
-                    <% if (check != 0) {%> 
-                        <!-- <li class="user-item">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </li> -->
-                        <a href="/user/<%-user.slug %> ">
-                            <li class="user-item">
-                                <i class="fa fa-solid fa-user"></i>
-                            </li>
-                        </a>
-                    <% } else { %> 
-                    <button class="user-button"> <a href="/login" class="user-button">Sign in</a></button>
-                    <% } %> 
-                </ul>
-            </div>
-        </div>
+             <div class="header-search">
+                 <input class="header-search-input" type="text" placeholder="Search">
+ 
+                 <!-- search-history -->
+                 <div class="header-search-history">
+                     <h3 class="header-search-history-heading">
+                         Lịch sử Tìm kiếm
+                     </h3>
+                     <ul class="header-search-history-list">
+                         <li class="header-search-history-item">
+                             <a class="search-history-item-link" href="">Mien dong</a>
+                         </li>
+                         <li class="header-search-history-item">
+                             <a class="search-history-item-link" href="">Bun dong</a>
+                         </li>
+                     </ul>
+                 </div>
+                <button class="input-enter">
+                 <i class="fa fa-solid fa-magnifying-glass input-icon"></i>
+                </button>
+             </div>
+             <div class="header-user">
+                 <ul class="user-list">
+                     <a href="/giohang" class="has-cart">
+                         <li class="user-item ">
+                         <!-- <i class="fa fa-regular fa-bell "></i><i class="fa-regular fa-cart-shopping-fast"></i> -->
+                         <i class="fa fa-light fa-cart-shopping"></i>
+                         <div class="cartAmount"><%=countCart%> </div>
+                         </li>
+                     </a>
+                    
+                    
+                     <% if (check != 0) {%> 
+                         <li class="user-item has--noti ">
+                             <i class="fa fa-regular fa-bell "></i>
+                             <ul class="cart-announcement">
+                                 <h4 class="product-title-announ">Thong bao</h4>
+                                 <li class="announ-item">
+                                     <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
+                                     
+                                     <div class="announ-note">
+                                     <h6 class="announ-heading">Bun gao</h6>
+                                        <p class="note">5 ngay nua duoc chuyen toi</p> 
+                                     </div>
+                                 </li>
+                                 <li class="announ-item">
+                                     <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
+                                     
+                                     <div class="announ-note">
+                                     <h6 class="announ-heading">Bun gao</h6>
+                                        <p class="note">5 ngay nua duoc chuyen toi</p> 
+                                     </div>
+                                 </li>
+                                 <li class="announ-item">
+                                     <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
+                                     
+                                     <div class="announ-note">
+                                     <h6 class="announ-heading">Bun gao</h6>
+                                        <p class="note">5 ngay nua duoc chuyen toi</p> 
+                                     </div>
+                                 </li>
+                                 <button class="announ-more">Xem</button>
+                             </ul>
+                         </li>
+                             <li class="user-item has--content" >
+                                 <a href="/user/<%-user.slug %> ">
+                                 <i class="fa fa-solid fa-user"></i>
+                              </a>
+                              <ul class="box-list">
+                                 <li class="box-list--item">Tài khoản</li>
+                                 <li class="box-list--item">Đơn hàng</li>
+                                  <li class="box-list--item"><a class="box-link" href="/logout">Đăng xuất</a></li>
+                             </ul>
+                             </li>
+                         
+                     <% } else { %> 
+                     <button class="user-button"><a href="/login" class="user-button">Sign in</a></button>
+                     <% } %> 
+                 </ul>
+                 
+             </div>
+         </div>
 
         <div class="cart-body">
                 <h4 class="car-body-heading">
@@ -81,15 +122,17 @@
                        Xoá
                     </li>
                 </ul>
-
+                <% for (var i = 0; i < products.length; i++) { %> 
+                    <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                    <% const y = x.replace("/view?usp=share_link","",40)%>
                 <div class="cart-product-wrap">
                    <div class="cart-product-infor">
-                            <img class="cart-product-img" src="/img/DSC_0976.jpg" alt="">
+                            <img class="cart-product-img"  src="<%-y%>" alt="">
                            <div class="product-content">
                             <h5 class="cart-product-name">
-                                Mien dong
+                                <%=products[i].name%>
                             </h5>
-                            <p class="cart-product-price">65.000</p>
+                            <p class="cart-product-price"><%=products[i].price%></p>
                            </div>
                    </div>
                    
@@ -97,7 +140,7 @@
                     <button onclick="decrease()"  class="btn quantity-minus">
                         <i class="fa-solid fa-minus"></i>
                     </button>
-                        <h4 class="quantity-number">1</h4>
+                        <h4 class="quantity-number"><%=countCart%></h4>
                     <button onclick="increase()"  class="btn quantity-add">
                         <i class="fa-solid fa-plus"></i>
                     </button>
@@ -109,7 +152,8 @@
                     </button>
                
                 </div>
-                <div  class="cart-product-wrap">
+                <% } %>  
+                <!-- <div  class="cart-product-wrap">
                     <div class="cart-product-infor">
                              <img class="cart-product-img" src="/img/DSC_0976.jpg" alt="">
                             <div class="product-content">
@@ -162,7 +206,7 @@
                        <i class="fa-solid fa-trash"></i>
                     </button>
                     
-                </div>
+                </div> -->
 
                 <div class="cart-footer">
                     <ul class="thanhtoan">

@@ -18,8 +18,10 @@
 <body>
     <div class="app">
         <div class="header">
+           <div class="header-left"> 
             <img class="header-logo" src="img/Rectangle 30 (1).svg" alt="">
-           
+            <p class="header-has-seller">Kenh nguoi ban</p>
+           </div>
             <div class="header-search">
                 <input class="header-search-input" type="text" placeholder="Search">
 
@@ -46,42 +48,44 @@
                     <a href="/giohang" class="has-cart">
                         <li class="user-item ">
                         <!-- <i class="fa fa-regular fa-bell "></i><i class="fa-regular fa-cart-shopping-fast"></i> -->
-                        <i class="fa fa-light fa-cart-shopping"></i>
+                        <button class="noti-btn"><i class="fa fa-light fa-cart-shopping"></i></button>
                         <div class="cartAmount"><%=countCart%> </div>
                         </li>
                     </a>
-                    <li class="user-item has--noti ">
-                        <i class="fa fa-regular fa-bell "></i>
-                        <ul class="cart-announcement">
-                            <h4 class="product-title-announ">Thong bao</h4>
-                            <li class="announ-item">
-                                <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
-                                
-                                <div class="announ-note">
-                                <h6 class="announ-heading">Bun gao</h6>
-                                   <p class="note">5 ngay nua duoc chuyen toi</p> 
-                                </div>
-                            </li>
-                            <li class="announ-item">
-                                <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
-                                
-                                <div class="announ-note">
-                                <h6 class="announ-heading">Bun gao</h6>
-                                   <p class="note">5 ngay nua duoc chuyen toi</p> 
-                                </div>
-                            </li>
-                            <li class="announ-item">
-                                <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
-                                
-                                <div class="announ-note">
-                                <h6 class="announ-heading">Bun gao</h6>
-                                   <p class="note">5 ngay nua duoc chuyen toi</p> 
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
+                   
                    
                     <% if (check != 0) {%> 
+                        <li class="user-item has--noti ">
+                            <i class="fa fa-regular fa-bell "></i>
+                            <ul class="cart-announcement">
+                                <h4 class="product-title-announ">Thong bao</h4>
+                                <li class="announ-item">
+                                    <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
+                                    
+                                    <div class="announ-note">
+                                    <h6 class="announ-heading">Bun gao</h6>
+                                       <p class="note">5 ngay nua duoc chuyen toi</p> 
+                                    </div>
+                                </li>
+                                <li class="announ-item">
+                                    <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
+                                    
+                                    <div class="announ-note">
+                                    <h6 class="announ-heading">Bun gao</h6>
+                                       <p class="note">5 ngay nua duoc chuyen toi</p> 
+                                    </div>
+                                </li>
+                                <li class="announ-item">
+                                    <img class="announ-pic" src="img/DSC_0976.jpg" alt="">
+                                    
+                                    <div class="announ-note">
+                                    <h6 class="announ-heading">Bun gao</h6>
+                                       <p class="note">5 ngay nua duoc chuyen toi</p> 
+                                    </div>
+                                </li>
+                                <button class="announ-more">Xem</button>
+                            </ul>
+                        </li>
                             <li class="user-item has--content" >
                                 <a href="/user/<%-user.slug %> ">
                                 <i class="fa fa-solid fa-user"></i>

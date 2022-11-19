@@ -101,7 +101,7 @@ class GioHangController {
                 Product.findOne({slug: data[i].product_slug})
                 .then(data => {
                     counts += data[i].count
-                    products.push(data[i]);
+                    products.push(data);
                     dem += 1;
                 })
                 .catch(err => {})
