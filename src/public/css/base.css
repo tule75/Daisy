@@ -297,6 +297,7 @@ margin-bottom: 0;
  
 
 }
+
 .noti-btn {
   background-color: transparent;
   border: none;
@@ -421,4 +422,8 @@ margin-bottom: 0;
   color: rgb(220, 211, 211);
   font-size: 13px;
   cursor: pointer;
+}
+
+.paya {
+  color: white;
 }
