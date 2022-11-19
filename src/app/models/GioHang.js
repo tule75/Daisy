@@ -9,6 +9,8 @@ const GioHang = new Schema({
     user_slug: String,
     product_slug: String,
     count: Number,
+    createdAt: { type: Date, default: Date.now },
+    updatedAt: { type: Date, default: Date.now },
 })
 
 module.exports = mongoose.model('cart', GioHang)

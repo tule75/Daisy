@@ -84,11 +84,42 @@ class GioHangController {
                          //sản phẩm trong giỏ
                         var counts = 0
                         var i = 0
+                        // for (var i = 0; i < cart.length; i++){
+                        // // while (i < data.length){
+                        //     // counts += cart[i].count
+                        //     Product.findOne({slug: cart[i].product_slug})
+                        //     .then((product) => {
+                        //         if (product != null){
+                        //             var p = {};
+                        //             p.name = product.name;
+                        //             p.slug = product.slug;
+                        //             p.price = product.price;
+                        //             // p.count = cart[i].count;
+                        //             p.img = product.img;
+                        //             p.user_id = product.user_id;
+                        //             // console.log(product)
+                        //             console.log(p)
+                                    
+                        //             products.push(p);
+                        //             // console.log(products)
+                        //         }
+                        //         // i++;
+                        //     })
+                        //     .catch(err => {})
+                        // }
 
+                        function resolveAfter2Seconds(x) {
+                            return new Promise((resolve) => {
+                              setTimeout(() => {
+                                resolve(x);
+                              }, 1000);
+                            });
+                        }
 
                         var promise = new Promise( function(resolve, reject) {
                             let pr = [];
                             cart.forEach((element, i) => {
+                                counts += element.count
                                 Product.findOne({slug: element.product_slug})
                                 .then((product) => {
                                     if (product != null){
@@ -100,7 +131,7 @@ class GioHangController {
                                         p.img = product.img;
                                         p.user_id = product.user_id;
                                         // console.log(product)
-                                        console.log(p)
+                                        // console.log(p)
                                         
                                         pr.push(p);
                                         // console.log(products)
