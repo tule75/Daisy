@@ -69,7 +69,6 @@ class GioHangController {
     }
     //[GET] /giohang
     lay(req, res, next) {
-        var user_slug;
         var products = [];
         var user;
         if (req.cookies.token){
@@ -79,36 +78,80 @@ class GioHangController {
             .then(data => {
                 if (data) {
                     user = data
-                    user_slug = data.slug
 
-                    GioHang.find({user_slug: user_slug})
-                    .then(data => {
+                    GioHang.find({user_slug: data.slug})
+                    .then(cart => {
                          //sản phẩm trong giỏ
                         var counts = 0
                         var i = 0
-                        // for (var i = 0; i < data.length; i++)
-                        while (i < data.length){
-                            counts += data[i].count
-                            Product.findOne({slug: data[i].product_slug})
-                            .then(product => {
-                                if (product != null){
-                                    var p = {};
-                                    p.name = product.name;
-                                    p.slug = product.slug;
-                                    p.price = product.price;
-                                    p.count = data[i].count;
-                                    p.img = product.img;
-                                    p.user_id = product.user_id;
+                        // for (var i = 0; i < cart.length; i++){
+                        // // while (i < data.length){
+                        //     // counts += cart[i].count
+                        //     Product.findOne({slug: cart[i].product_slug})
+                        //     .then((product) => {
+                        //         if (product != null){
+                        //             var p = {};
+                        //             p.name = product.name;
+                        //             p.slug = product.slug;
+                        //             p.price = product.price;
+                        //             // p.count = cart[i].count;
+                        //             p.img = product.img;
+                        //             p.user_id = product.user_id;
+                        //             // console.log(product)
+                        //             console.log(p)
+                                    
+                        //             products.push(p);
+                        //             // console.log(products)
+                        //         }
+                        //         // i++;
+                        //     })
+                        //     .catch(err => {})
+                        // }
 
-                                    products.push(p);
-                                }
-                                i++;
-                            })
-                            .catch(err => {})
+                        function resolveAfter2Seconds(x) {
+                            return new Promise((resolve) => {
+                              setTimeout(() => {
+                                resolve(x);
+                              }, 1000);
+                            });
                         }
 
-                        console.log(Array.from(products))
-                        res.render('giohang.html', {products: products, check: 1, user: user, countCart: counts})
+                        var promise = new Promise( function(resolve, reject) {
+                            let pr = [];
+                            cart.forEach(element => {
+                                Product.findOne({slug: element.product_slug})
+                                .then((product) => {
+                                    if (product != null){
+                                        var p = {};
+                                        p.name = product.name;
+                                        p.slug = product.slug;
+                                        p.price = product.price;
+                                        // p.count = cart[i].count;
+                                        p.img = product.img;
+                                        p.user_id = product.user_id;
+                                        // console.log(product)
+                                        console.log(p)
+                                        
+                                        pr.push(p);
+                                        // console.log(products)
+                                    }
+                                    // i++;
+                                })
+                                .catch(err => {})
+                            },100000000);
+                            if (pr) {
+                                resolve(pr)
+                            } else {
+                                reject()
+                            }
+                        })
+                        promise.then(async (pr) => {
+                            pr = await resolveAfter2Seconds(pr)
+                            console.log(pr)
+                            res.render('giohang.html', {products: pr, check: 1, user: user, countCart: counts})
+                        })
+                        
+                        
                     })
                     .catch(err => {res.send("loi")})
                 }
@@ -120,31 +163,6 @@ class GioHangController {
         } else {
             res.redirect('/login')
         }
-
-        console.log(user)
-
-        GioHang.find({user_slug: user_slug})
-        .then(data => {
-            var products = []; //sản phẩm trong giỏ
-            var counts = 0
-            var dem = 0;
-            for (var i = 0; i < data.length; i++){
-                Product.findOne({slug: data[i].product_slug})
-                .then(data => {
-                    counts += data[i].count
-                    products.push(data);
-                    dem += 1;
-                })
-                .catch(err => {})
-            }
-            if(user) {
-                res.render('giohang.html', {products: products, check: 1, user: user, countCart: counts})
-            }
-            else {
-                res.redirect('/login')
-            }
-        })
-        .catch(err => {res.send("loi")})
 
     }
 }
