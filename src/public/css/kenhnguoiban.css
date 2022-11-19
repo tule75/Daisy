@@ -1,0 +1,311 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    /* background-color: #ccc; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* border-bottom: 1px solid #ccc; */
+    box-shadow: 0 1px 5px black;
+    align-self: central;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+.logo {
+    padding: 0;
+    /* background-color: #999; */
+    width: 90px;
+    height: 90px;
+    transform: translateY(-20px);
+}
+.title {
+    font-size: 25px;
+    padding-top: 10px;
+    color: rgb(68, 130, 68);
+
+}
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0 20px;
+
+}
+.seller-account {
+    /* background-color: #999; */
+    display: flex;
+    width: 140px;
+    margin: 0 60px;
+    border-radius: 29px;
+    cursor: pointer;
+    align-items: center;
+    padding-right: 4px;
+    justify-content: center;
+    position: relative;
+}
+.seller-account::after {
+    content: '';
+    width: 1px;
+    height: 30px;
+    background-color: rgb(142, 136, 136);
+    right: -40px;
+    position: absolute;
+}
+.seller-account:hover {
+    background-color: #ccc;
+}
+.seller-name {
+    padding-left: 2px;
+    transform: translateY(6.5px);
+    right: 0;
+    font-weight: 300;
+}
+.seller-avt {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 4px 4px;
+}
+.seller-message {
+    background:linear-gradient(137deg,rgb(120, 196, 120),rgb(33, 59, 33));
+    color: white;
+    padding: 13px 10px;
+    margin: 0 10px;
+}
+.bell-icon {
+    margin: 0 10px;
+    font-size: 20px;
+}
+.fa-message {
+    color: rgb(163, 202, 163);
+}
+
+
+.body {
+    display: flex;
+    margin-top: 10px;
+}
+.nav-bar {
+    flex:1;
+    background-color: rgb(212, 212, 212);
+    height: 200px;
+    
+}
+
+.shipment {
+    padding: 20px 10px;
+    position: relative;
+
+}
+.ship-title{
+
+
+}
+.control-icon {
+    position: absolute;
+    right: 10px;
+    top: 20%;
+    cursor: pointer;
+
+}
+.ship-list {
+    list-style: none;
+}
+.ship-contain {
+    cursor: pointer;
+}
+.ship-contain:hover {
+    color: rgb(100, 150, 100);
+}
+.container {
+    flex:4;
+}
+.container-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    
+}
+.container-content {
+    margin: 10px 10px;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+}
+.content-header {
+    /* background-color:rgb(188, 180, 196); */
+    padding: 0px 20px;
+    width: 105px;
+    cursor: pointer;
+
+}
+.content-header::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 97%;
+    right: -11px;
+    top: 0;
+    background-color: black;
+}
+
+.container-showing {
+    /* width: 1135px; */
+    background-color: #ccc;
+    width: 87.5%;
+    margin: 0 80px;
+    list-style: none;
+   padding-left: 10px;
+   padding-right:  10px;
+
+}
+
+.container-item {
+
+
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+.code-hang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.find-code {
+    border: 1px solid black;
+    height: 32px;
+    padding: 0px 20px;
+    text-align: center;
+    line-height: 32px;
+}
+.find-code span {
+    padding-top: 3px;
+}
+.search {
+    position: relative;
+    border: 1px solid black;
+    /* padding: 0px 10px; */
+}
+.input-code {
+    width: 180px;
+    height: 30px;
+    outline: none;
+    
+}
+.search-icon {
+    position: absolute;
+    right: 2px;
+    top: 6px;
+    padding: 0 10px;
+
+}
+.order-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.title-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-right: 5px;
+
+}
+.setdate {
+    border: 1px solid black;
+    background-color: white;
+    padding: 5px 5px;
+}
+.calendar-icon {
+  
+}
+.fromdate{
+    border: 0;
+
+}
+.todate {
+    border: 0;
+}
+.xuat {
+    border: 1px solid #888;
+    margin-right: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.xuat:active {
+    background-color: #999;
+}
+.xuat:hover{
+    background-color: #999;
+}
+
+.body-container {
+    margin-top: 20px;
+}
+.all-header {
+    display: flex ;
+    list-style: none;
+
+}
+.head-title {
+    background-color: pink;
+    padding-right:20px;
+    padding-left:20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.head-title:hover {
+    color: red;
+}
+
+.body-wrap {
+   padding-left: 0;
+   height: 500px;
+   background-color: rgb(234, 228, 228);
+   margin: 0px 20px;
+    list-style: none;
+}
+.wrap-item {
+    
+}
+.item-first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgb(234, 228, 228); */
+    padding: 20px 20px;
+    list-style: none;
+}
+.stateOfgoods {
+
+}
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border: 1px solid black;
+}
+.filter p {
+    margin-bottom: 0;
+}
+.title-filter {
+    /* padding-top: 18px; */
+}
