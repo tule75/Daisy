@@ -8,6 +8,7 @@ const newRouteThanhToan = require("./thanhtoan")
 const newRouteKenhNguoiBan = require("./kenhnguoiban")
 
 function route(app) {
+    app.use("/thanhtoan", newRouteThanhToan);
     app.use("/kenhnguoiban", newRouteKenhNguoiBan);
     app.use("/giohang", newRouteGioHang)
     app.use("/shop", newRouteShop)
