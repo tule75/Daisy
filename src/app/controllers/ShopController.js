@@ -14,7 +14,20 @@ class UserController {
                     User.findOne({slug: req.params.slug})
                     .then(data => {
                         if (data) {
-                            res.render('shop.html', {shop: data, check: 1, user: customer})
+                            var counts = 0
+                            GioHang.find({user_slug: data.slug})
+                            .then(dataa => {
+                                if (dataa) {
+                                    for (var i = 0; i < dataa.length; i++) {
+                                        counts += dataa[i].count;
+                                    }
+                                }
+                                else {
+                                    counts = counts;
+                                }
+                            })
+                            .catch()
+                            res.render('shop.html', {shop: data, check: 1, user: customer, countCart: counts});
                         }
                         else {
                             res.send('không tồn tại')
@@ -24,7 +37,7 @@ class UserController {
                     User.findOne({slug: req.params.slug})
                     .then(data => {
                         if (data) {
-                            res.render('shop.html', {shop: data, check: 0})
+                            res.render('shop.html', {shop: data, check: 0, countCart: 0})
                         }
                         else {
                             res.send('không tồn tại')
@@ -39,7 +52,7 @@ class UserController {
             User.findOne({slug: req.params.slug})
                 .then(data => {
                     if (data) {
-                        res.render('shop.html', {shop: data, check: 0})
+                        res.render('shop.html', {shop: data, check: 0, countCart: 0})
                     }
                     else {
                         res.send('không tồn tại')

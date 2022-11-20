@@ -3,7 +3,24 @@ const User = require('../models/Users')
 
 class NguoiBanController {
     show(req, res, next) {
-        res.render('kenhnguoiban.html')
+        if (req.cookies.token){
+            const token = req.cookies.token
+            const id = jwt.verify(token, 'daisy')
+            User.findOne({_id: id, role: 'seller'})
+            .then(data => {
+                if (data) {
+                    // Thiếu render thêm các bill được tạo
+                    res.render('kenhnguoiban.html', {user: data})
+                } else {
+                    res.render('login.html', {check: 0})
+                }
+            })
+            .catch(err => {
+                res.send('loi')
+            })
+        } else {
+            res.render('login.html', {check: 0})
+        }
     }
 }
 
