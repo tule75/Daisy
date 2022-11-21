@@ -296,7 +296,6 @@
     left: 20%;
     border-radius: 25px;
 
- 
 }
 .company-info-name {
     position: absolute;
@@ -305,6 +304,7 @@
     /* left: 20px; */
     text-align: center;
     font-weight: 700;
+    padding-top: 20px;
 }
 
 /* popular-product */

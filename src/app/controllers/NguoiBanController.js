@@ -1,5 +1,6 @@
 const { render } = require('ejs')
 const User = require('../models/Users')
+const jwt = require('jsonwebtoken')
 
 class NguoiBanController {
     show(req, res, next) {
