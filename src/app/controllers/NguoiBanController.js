@@ -5,6 +5,7 @@ const Bill = require('../models/Bill')
 const mongoose = require('mongoose')
 mongoose.Promise = require('bluebird');
 const jwt = require('jsonwebtoken')
+const { resolve } = require('bluebird')
 
 
 class NguoiBanController {
@@ -59,7 +60,7 @@ class NguoiBanController {
                                         // console.log(product)
                                         console.log(i)
                                         
-                                        pr.push(data.length);
+                                        pr[i] = data.length
                                         // console.log(products)
                                     }
                                     // i++;
@@ -76,7 +77,8 @@ class NguoiBanController {
                             pr = await resolveAfter2Seconds(pr)
                             console.log(-1)
                             // res.render('giohang.html', {products: pr, check: 1, user: user, countCart: counts})
-                            res.render('kenhnguoiban.html', {products: products, user: user, check: 1, countCart: 0, boGio: pr})
+                            // res.render('kenhnguoiban.html', {products: products, user: user, check: 1, countCart: 0, boGio: pr})
+                            res.send(pr)
                         })
                         
                     })
