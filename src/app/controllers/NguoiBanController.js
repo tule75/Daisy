@@ -77,8 +77,8 @@ class NguoiBanController {
                             pr = await resolveAfter2Seconds(pr)
                             console.log(-1)
                             // res.render('giohang.html', {products: pr, check: 1, user: user, countCart: counts})
-                            // res.render('kenhnguoiban.html', {products: products, user: user, check: 1, countCart: 0, boGio: pr})
-                            res.send(pr)
+                            res.render('kenhnguoiban.html', {products: products, user: user, check: 1, countCart: 0, boGio: pr})
+                            // res.send(pr)
                         })
                         
                     })
