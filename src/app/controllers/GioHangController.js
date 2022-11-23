@@ -148,7 +148,6 @@ class GioHangController {
                         })
                         promise.then(async (pr) => {
                             pr = await resolveAfter2Seconds(pr)
-                            console.log(pr)
                             res.render('giohang.html', {products: pr, check: 1, user: user, countCart: counts})
                         })
                         
