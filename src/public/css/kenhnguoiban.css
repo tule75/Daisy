@@ -128,18 +128,28 @@
 }
 .container {
     flex:4;
+    margin-top: 20px;
 }
 .container-list {
     display: flex;
     align-items: center;
     justify-content: center;
     list-style: none;
+    margin-bottom: 0;
     
 }
 .container-content {
     margin: 10px 10px;
     position: relative;
     border-bottom: 1px solid #ccc;
+}
+.container-content:first-child::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    left: -22px;
+    background-color: black;
 }
 .content-header {
     /* background-color:rgb(188, 180, 196); */
@@ -192,6 +202,7 @@
     padding: 0px 20px;
     text-align: center;
     line-height: 32px;
+    position: relative;
 }
 .find-code span {
     padding-top: 3px;
@@ -218,6 +229,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 0px;
 
 }
 .title-date {
@@ -259,31 +271,36 @@
 .body-container {
     margin-top: 20px;
     padding-bottom: 50px;
+    display: none;
 }
 .all-header {
     display: flex ;
     list-style: none;
 
 }
+
 .head-title {
-    background-color: pink;
+    background-color: rgb(225, 218, 219);
     padding-right:20px;
     padding-left:20px;
-    margin-right: 10px;
+    margin-right: 3px;
     cursor: pointer;
+    z-index: 0;
 }
 .head-title:hover {
-    color: red;
+    color: white;
 }
+
 
 .body-wrap {
    padding-left: 0;
    height: auto;
    background-color: rgb(234, 228, 228);
-   margin: 3px 20px;
+   margin: 1px 20px;
     list-style: none;
 }
 .wrap-item {
+    display: none;
     
 }
 .item-first {
@@ -295,6 +312,8 @@
     list-style: none;
 }
 .stateOfgoods {
+    padding-bottom: 0;
+    margin-bottom: 0;
 
 }
 .filter {
@@ -303,14 +322,60 @@
     justify-content: center;
     padding: 5px 10px;
     border: 1px solid black;
+    cursor: pointer;
 }
 .filter p {
     margin-bottom: 0;
 }
 .title-filter {
     /* padding-top: 18px; */
+    padding-right: 5px;
 }
 
+/* wrap-item 3 */
+.filter-has--address{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+.sent-address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    position: relative;
+    padding: 5px 10px;
+    margin-right: 5px;
+    
+}
+.sent-address-title {
+    margin-bottom: 0;
+    padding-right: 15px;
+
+}
+.sent-address--icon {
+    padding: 5px 0px;
+    position: absolute;
+    right: 0;
+    padding-right: 5px;
+}
+
+.title-header {
+    padding-right: 10px;
+}
+
+.range {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    position: relative;
+    padding: 5px 10px;
+}
+/* item-second */
 
 .item-second {
     margin: 0 50px;
@@ -349,4 +414,91 @@
 .fa-rectangle-list {
     font-size: 70px;
     padding-bottom: 15px;
+}
+
+
+/* for js */
+.body-container.active {
+    display: block;
+}
+
+.container-content.active {
+    background-color: white;
+    box-shadow: 0 0 3px 0px #999;
+    color: rgb(45, 106, 51);
+    opacity: 1;
+}
+.head-title.active {
+    color: rgb(45, 106, 51);
+    background-color: white;
+}
+
+.wrap-item.active {
+    display: block;
+}
+
+.all-order {
+    display: flex;
+    flex-direction: column;
+}
+
+.address-choice {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    text-align: center;
+    position: absolute;
+    top: 35px;
+    z-index: 1;
+    display: none;
+    width: 100%;
+}
+.address-choice-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid black;
+    font-size: 13px;
+
+}
+.address-choice-item:last-child {
+    border-bottom: none;
+}
+.address-choice-item:hover {
+    background-color: #888;
+    color: white;
+}
+.sent-address:hover .address-choice {
+    display: block;
+}
+
+.find-code-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    z-index: 100;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+    left: 0;
+    display: none;
+
+}
+.code-list-item {
+    padding: 5px 0;
+    border-bottom: 1px solid black;
+    font-size: 13px;
+}
+.code-list-item:last-child {
+    border: none;
+}
+.code-list-item:hover {
+    background-color: #888;
+    color: white;
+}
+.find-code:hover .find-code-list {
+    display: block;
 }
