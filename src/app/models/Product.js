@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const slug = require('mongoose-slug-generator');
+mongoose.Promise = require('bluebird');
 
 mongoose.plugin(slug)
 const Schema = mongoose.Schema;
@@ -14,6 +15,8 @@ const Product = new Schema({
     img: String,
     guide: String,
     presevartion: String,
+    user_slug: String,
+    countC: Number,
     slug: { type: String, slug: "name", unique: true},
     user_id: String,
     count: Number,
