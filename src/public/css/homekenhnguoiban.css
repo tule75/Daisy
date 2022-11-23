@@ -1,0 +1,367 @@
+.container {
+    /* background-color: rgb(228, 224, 224); */
+    width: 100%;
+    margin: 0;
+
+}
+.forhome {
+    margin: 0 80px;
+    max-width: 748px;
+    z-index: 1;
+    padding-top: 30px;
+    /* height: 1000px; */
+}
+.todolist {
+    /* background:linear-gradient(130deg,white,rgb(218, 213, 213)); */
+    background-color: white;
+    box-shadow: 0 0 4px 0px #ccc;
+}
+.todolist-heading {
+    padding-top: 15px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: bolder;
+}
+.todolist-heading-note {
+    padding-top: 2px;
+    padding-left: 20px;
+    color: rgb(148, 146, 146);
+    font-weight: 200;
+  
+}
+.list-todo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin-left: 40px;
+    padding-left: 0;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.list-todo-item {
+    margin: 5px 10px;
+    position: relative;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.list-todo-item::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    top: 14px;
+    right: -10px;
+    background-color: #ccc;
+}
+.list-todo-item:hover {
+   border-bottom: 1px solid #ccc;
+   box-shadow: 0 0 0px 0 #ccc;
+}
+.has-wrap::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    top: 14px;
+    right: -10px;
+    background-color: transparent;
+
+}
+.quantity-todo {
+    text-align: center;
+    margin-bottom: 0;
+    color: rgb(38, 115, 221);
+    font-weight: bolder;
+  
+}
+.access-todo {
+    color: black;
+}
+.access-todo:hover {
+    color: black;
+}
+
+/* marketing */
+
+.marketing {
+    background-color: white;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 4px 0 #ccc;
+    /* margin-bottom: 100px; */
+
+}
+.marketing-wrap {
+  display: flex;
+}
+.marketing-heading {
+    margin-bottom: 0;
+    padding-top: 12px;
+    /* padding-bottom: 5px; */
+    padding-left: 15px;
+}
+/* calendar */
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  td {
+    padding: 0;
+  }
+  
+  .calendar-container {
+    position: relative;
+    /* width: 250px; */
+  }
+  .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .day {
+    font-size: 2em;
+    font-weight: 900;
+  }
+  
+  .month {
+    font-size: 0.8em;
+    line-height: 1em;
+    text-transform: lowercase;
+    padding-top: 3px;
+  }
+  
+  .calendar {
+    background: #fff;
+    border-radius: 0 0 1em 1em;
+    /* -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff; */
+    /* box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff; */
+    color: #555;
+    display: inline-block;
+    padding: 0.5em;
+  }
+  
+  .calendar thead {
+    color: #e66b6b;
+    font-weight: 700;
+    text-transform: uppercase;
+   
+  }
+  
+.calendar tbody {
+    border: 1px solid black;
+   
+}
+  .calendar td {
+    padding: .5em 1em;
+    text-align: center;
+   
+  }
+  
+  .calendar tbody td:hover {
+    background: #cacaca;
+    color: #fff;
+  }
+  
+  .current-day {
+    color: #e66b6b;
+  }
+  
+  .prev-month,
+  .next-month {
+    color: #cacaca;
+  }
+  
+  .ring-left,
+  .ring-right {
+    position: absolute;
+    top: 230px;
+  }
+  
+  .ring-left { left: 2em; }
+  .ring-right { right: 2em; }
+
+.chuongtrinhgiamgia {
+  border: 1px solid #ccc;
+  margin-right: 15px;
+  position: relative;
+}
+
+.chuongtrinhgiamgia-intro {
+  padding: 10px 10px;
+  font-size: 13px;
+ 
+}
+.intro-day {
+  margin-bottom: 0;
+  color: rgb(105, 102, 102);
+  font-weight: bolder;
+  padding-bottom: 2px;
+}
+.intro-header {
+  font-size: 15px;
+  font-weight: bold;
+}
+.intro-note {
+
+}
+.chuongtrinhgiamgia-btn {
+  border: none;
+  background-color: #e66b6b;
+  color: white;
+  position: absolute;
+  padding: 5px 10px;
+  right: 10px;
+  top: 25%;
+  font-size: 13px;
+}
+.chuongtrinhgiamgia-btn:active {
+  color: white;
+  background-color: #b86262;
+}
+
+.has-event {
+  position: relative;
+}
+.has-event::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  top: -4px;
+  right: 0;
+}
+
+
+
+/* cong cu marketing */
+
+.congcu-marketing {
+   margin-top: 20px;
+  z-index: 1;
+  background-color: white;
+  box-shadow: 0 0 4px 0 #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.congcu-marketing-header {
+  padding: 15px 20px;
+}
+.congcu-wraper-marketing {
+  list-style: none;
+  display: flex;
+  margin-left: 10px;
+  padding-left: 0;
+}
+.wrap-item-marketing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 12px;
+}
+.item-icon-wrap {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 25px;
+}
+.item-icon {
+
+}
+.item-heading{ 
+  padding-top: 10px;
+  font-size: 15px;
+  font-weight: bolder;
+  color: black;
+  text-align: center;
+}
+.item-note {
+  width: 140px;
+  font-weight: lighter;
+  color: rgb(129, 126, 126);
+}
+
+
+
+
+/* footer */
+.footer {
+  margin-top: 100px;
+  display: flex;
+  border-top: 4px solid #5BAB5A;
+  padding-top: 20px;
+  /* margin-bottom: 20px; */
+  background-color: rgb(213, 205, 205);
+ 
+}
+.footer-heading {
+  text-align: left;
+  font-size: 15px;
+  color: rgb(33, 32, 32);
+  font-weight: 900;
+  padding-right: 20px;
+}
+
+.footer-list{
+  list-style: none;
+  padding: 0;
+
+}
+.footer-item {
+  padding: 7px 0;
+}
+.footer-item__link{
+  text-decoration: none;
+  color:rgb(42, 42, 41);
+  font-size: 14px;
+margin-top: 2px 0;
+font-weight: 400;
+}
+.footer-item__link:hover {
+  color: #5BAB5A;
+}
+.footer-item-icon {
+  padding-right: 5px;
+}
+
+.footer-list__pay {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-list__pay-icon {
+  min-width: 20px;
+  font-size: 50px;
+  padding: 0 10px;
+}
+.footer-download {
+  display: flex;
+}
+.footer-item__img {
+  flex: 1;
+  width: 14px;
+}
+.footer-item__link-img {
+  display: flex;
+  text-decoration: none;
+  color: #777;
+  padding: 10px 0;
+  align-items: center;
+}
+.footer-item__link-img:hover {
+  color:#5BAB5A;
+}
+
+
+
+
+
+
+
