@@ -9,6 +9,23 @@ const { resolve } = require('bluebird')
 
 
 class NguoiBanController {
+    //[POST] /kenhnguoiban/create
+    create(req, res, next) {
+        var product = new Product(req.body)
+        product.count = 0;
+        const token = req.cookies.token
+        const id = jwt.verify(token, 'daisy')
+        User.findOne({_id: id})
+        .then(user => {
+            product.user_slug = user.slug
+        })
+        product.price_discount = product.price
+        product.save()
+        .then(() => {res.redirect('/kenhnguoiban')})
+    }
+
+
+    //[GET] /kenhnguoiban
     show(req, res, next) {
         if (req.cookies.token){
             function resolveAfter2Seconds(x) {
