@@ -12,6 +12,7 @@ const Bill = new Schema({
     product_slug: String,
     thoigianban: { type: Date, default: Date.now },
     count: Number,
+    send: Number,
     money: Number,
     sell: Number,
 })

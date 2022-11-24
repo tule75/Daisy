@@ -23,7 +23,7 @@ class ThanhToanController {
             .then(async (user) => {
                 for (let p in req.body) {
                     let product = JSON.parse(req.body[p]);
-                    var bill = await resolveAfter2Seconds(new Bill({user_slug: user.slug, shop_slug: product.user_slug, product_slug: product.slug, count: 1, money: product.price, sell: 0}))
+                    var bill = await resolveAfter2Seconds(new Bill({user_slug: user.slug, shop_slug: product.user_slug, product_slug: product.slug, count: 1, money: product.price, sell: 0, send: 0}))
                     bill.save()
                     .then(() => {
                         console.log('success')

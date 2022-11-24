@@ -11,13 +11,21 @@ const { resolve } = require('bluebird')
 class NguoiBanController {
     show(req, res, next) {
         if (req.cookies.token){
+            function resolveAfter2Seconds(x) {
+                return new Promise((resolve) => {
+                  setTimeout(() => {
+                    resolve(x);
+                  }, 1000);
+                });
+            }
             const token = req.cookies.token
             const id = jwt.verify(token, 'daisy')
             User.findOne({_id: id, role: 'seller'})
             .then(user => {
                 if (user) {
-                    // Thiếu render thêm các bill được tạo
-
+                    let b = []
+                    let user_buy = new Array
+                    let product_buy = new Array
                     // dùng for loop
                     // (Product.find({user_slug: user.slug}))
                     // .then(products => {
@@ -43,16 +51,27 @@ class NguoiBanController {
 
                     Product.find({user_slug: user.slug})
                     .then(products =>{
-                        function resolveAfter2Seconds(x) {
-                            return new Promise((resolve) => {
-                              setTimeout(() => {
-                                resolve(x);
-                              }, 1000);
-                            });
-                        }
-
                         var promise = new Promise( function(resolve, reject) {
                             let pr = [];
+                            Bill.find({shop_slug: user.slug, send: 0, sell: 0})
+                            .then(bills => {
+                                b = bills
+                                bills.forEach((element, i) => {
+                                    User.findOne({slug: element.user_slug})
+                                    .then((user) => {
+                                        user_buy[i] = user
+                                    })
+                                    .catch((err) => {})
+    
+                                    Product.findOne({slug: element.user_slug})
+                                    .then((product) => {
+                                        product_buy[i] = product
+                                    })
+                                    .catch((err) => {})
+                                })
+                            })
+
+                            
                             products.forEach((element, i) => {
                                 GioHang.find({product_slug: element.slug})
                                 .then((data) => {
@@ -67,6 +86,7 @@ class NguoiBanController {
                                 })
                                 .catch(err => {})
                             });
+
                             if (pr) {
                                 resolve(pr)
                             } else {
@@ -75,9 +95,12 @@ class NguoiBanController {
                         })
                         promise.then(async (pr) => {
                             pr = await resolveAfter2Seconds(pr)
+                            console.log(b)
+                            console.log(product_buy)
+                            console.log(user_buy)
                             console.log(-1)
                             // res.render('giohang.html', {products: pr, check: 1, user: user, countCart: counts})
-                            res.render('kenhnguoiban.html', {products: products, user: user, check: 1, countCart: 0, boGio: pr})
+                            res.render('kenhnguoiban.html', {products: products, user: user, check: 1, countCart: 0, boGio: pr, users_buy: user_buy, products_buy: product_buy, bills: b})
                             //res.send(pr)
 
                         })
