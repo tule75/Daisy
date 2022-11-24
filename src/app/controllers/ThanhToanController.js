@@ -1,13 +1,44 @@
 const User = require('../models/Users')
 const Product = require('../models/Product')
 const GioHang = require('../models/GioHang')
+const Bill = require('../models/Bill')
 const jwt = require('jsonwebtoken')
 
 
 class ThanhToanController {
     //[POST] /thanhtoan/create
     push(req, res, next) {
-        
+        if (req.body) {
+            function resolveAfter2Seconds(x) {
+                return new Promise((resolve) => {
+                  setTimeout(() => {
+                    resolve(x);
+                  }, 1000);
+                });
+            }
+            var customer = new Object();;
+            const token = req.cookies.token
+            const id = jwt.verify(token, 'daisy')
+            User.findOne({_id: id})
+            .then(async (user) => {
+                for (let p in req.body) {
+                    let product = JSON.parse(req.body[p]);
+                    var bill = await resolveAfter2Seconds(new Bill({user_slug: user.slug, shop_slug: product.user_slug, product_slug: product.slug, count: 1, money: product.price, sell: 0}))
+                    bill.save()
+                    .then(() => {
+                        console.log('success')
+                        res.redirect('/')
+                    })
+                    .catch(err => {})
+                }
+            })
+            .catch(err => {})
+
+            
+
+            //lấy key từ req.body
+            
+        }
     }
 
     //[GET] /thanhtoan/cart?q=...
