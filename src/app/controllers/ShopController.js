@@ -31,7 +31,7 @@ class UserController {
                         if (shop) {
                             Product.find({user_slug: shop.slug})
                             .then(products => {
-                                res.render('shop.html', {shop: data, check: 1, user: customer, countCart: counts, products: products});
+                                res.render('shop.html', {shop: shop, check: 1, user: customer, countCart: counts, products: products});
                             })
                         }
                         else {
@@ -44,7 +44,7 @@ class UserController {
                         if (shop) {
                             Product.find({user_slug: shop.slug})
                             .then(products => {
-                                res.render('shop.html', {shop: data, check: 0, countCart: 0, products: products});
+                                res.render('shop.html', {shop: shop, check: 0, countCart: 0, products: products});
                             })
                         }
                         else {
@@ -62,7 +62,7 @@ class UserController {
                     if (shop) {
                         Product.find({user_slug: shop.slug})
                         .then(products => {
-                            res.render('shop.html', {shop: data, check: 0, countCart: 0, products: products});
+                            res.render('shop.html', {shop: shop, check: 0, countCart: 0, products: products});
                         })
                     }
                     else {
