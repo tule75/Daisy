@@ -1,5 +1,7 @@
 const User = require('../models/Users')
 const Product = require('../models/Product')
+const GioHang = require('../models/GioHang')
+const jwt = require('jsonwebtoken')
 
 
 class ThanhToanController {
@@ -8,16 +10,25 @@ class ThanhToanController {
         
     }
 
-    //[GET] /thanhtoan/cart
+    //[GET] /thanhtoan/cart?q=...
     showC(req, res, next) {
         if (req.cookies.token){
+            // var products_slug = req.query.p
+            if (Array.isArray(req.query.q)){
+                var products_slug = req.query.q
+            }
+            else {
+                var products_slug = new Array
+                products_slug.push(req.query.q)
+            }
+
             const token = req.cookies.token
             const id = jwt.verify(token, 'daisy')
             User.findOne({_id: id})
             .then(user => {
                 if (user) {
                     var counts = 0
-                    GioHang.find({user_slug: data.slug})
+                    GioHang.find({user_slug: user.slug})
                     .then(dataa => {
                         if (dataa) {
                             for (var i = 0; i < dataa.length; i++) {
@@ -29,6 +40,54 @@ class ThanhToanController {
                         }
                     })
                     .catch()
+
+                    function resolveAfter2Seconds(x) {
+                        return new Promise((resolve) => {
+                          setTimeout(() => {
+                            resolve(x);
+                          }, 1000);
+                        });
+                    }
+    
+                    var promise = new Promise( function(resolve, reject) {
+                        let pr = [];
+                        products_slug.forEach((element, i) => {
+                            Product.findOne({slug: element})
+                            .then((product) => {
+                                if (product != null){
+                                    // var p = {};
+                                    // p.name = product.name;
+                                    // p.slug = product.slug;
+                                    // p.price = product.price;
+                                    // p.count = cart[i].count;
+                                    // p.img = product.img;
+                                    // p.user_id = product.user_id;
+                                    // console.log(product)
+                                    // console.log(p)
+                                    
+                                    pr[i] = product;
+                                    // console.log(products)
+                                }
+                                // i++;
+                            })
+                            .catch(err => {})
+                        });
+                        if (pr) {
+                            resolve(pr)
+                        } else {
+                            reject()
+                        }
+                    })
+                    promise.then(async (pr) => {
+                        pr = await resolveAfter2Seconds(pr)
+                        res.render('thanhtoan.html', {products: pr, check: 1, user: user, countCart: counts})
+                        // res.send(pr)
+                        // res.send(pr)
+                        // res.send(req.query.p)
+                    })
+
+                    // res.send(req.query.p)
+                    
 
                     // Product.findOne({slug: req.params.slug})
                     // .then(product => {
@@ -44,7 +103,8 @@ class ThanhToanController {
                 }
             })
             .catch(err => {
-                res.send('loi')
+                console.error(err)
+                res.send('loi ne')
             })
         } else {
             res.render('login.html', {check: 0})
