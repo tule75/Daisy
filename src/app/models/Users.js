@@ -11,6 +11,7 @@ const user = new Schema({
     password: String,
     role: String,
     email: String,
+    img: String,
     name: String,
     province: String,
     district: String,

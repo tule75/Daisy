@@ -30,16 +30,24 @@ class SiteController {
                     })
                     .catch()
                     const user = data
+
+                    var shops = []
+                    User.find({role: 'seller'})
+                    .then(data => {shops = data})
+
                     Product.find()
                         .then(products => {
-                            res.render('home.html', {products: products, check: 1, user: user, countCart: counts})
+                            res.render('home.html', {products: products, check: 1, user: user, countCart: counts, shops: shops})
                             // res.json(products)
                         })
                         .catch(err => {res.send(err)})
                 } else {
                     Product.find()
                         .then(products => {
-                            res.render('home.html', {products: products, check: 0, countCart: 0})
+                            var shops = []
+                            User.find({role: 'seller'})
+                            .then(data => {shops = data})
+                            res.render('home.html', {products: products, check: 0, countCart: 0, shops: shops})
                             // res.json(products)
                         })
                         .catch(err => {res.send('loi')})
@@ -51,7 +59,10 @@ class SiteController {
         } else {
             Product.find()
                 .then(products => {
-                    res.render('home.html', {products: products, check: 0, countCart: 0})
+                    var shops = []
+                    User.find({role: 'seller'})
+                    .then(data => {shops = data})
+                    res.render('home.html', {products: products, check: 0, countCart: 0, shops: shops})
                     // res.json(products)
                 })
                 .catch(err => {res.send('loi')})
