@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang ='en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>daisy</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/assets/css/seller-login.css">
+		<link rel="stylesheet" href="/assets/fonts/fontawesome-free-6.2.0-web/css/all.css">
+    </head>
+
+    <body>
+        <!-- multistep form -->
+        <form id="msform">
+            <!-- progressbar -->
+            <ul id="progressbar">
+            <li class="js-progressbar active">Cài đặt thông tin cửa hàng</li>
+            <li class="js-progressbar">Cài đặt vận chuyển</li>
+            <li class="js-progressbar">Đăng bán sản phẩm</li>
+            </ul>
+            <!-- fieldsets -->
+            <fieldset class="shop-info js-content on">
+				<h2 class="fs-title">Cửa hàng của bạn</h2>
+				<h3 class="fs-subtitle">Cài đặt thông tin cho cửa hàng của bạn</h3>
+
+				<div class="shop-info__body">
+					<div class="shop-info__headings">
+						<li class="shop-info__heading">Tên cửa hàng: </li>
+						<li class="shop-info__heading">Địa chỉ lấy hàng: </li>
+						<li class="shop-info__heading">Email: </li>
+						<li class="shop-info__heading"> Số điện thoại: </li>
+						<li class="shop-info__heading">Hình thức: </li>
+					</div>
+	
+					<div class="shop-info__inputs">
+						<input type="text" name="name"/>
+						<input type="text" name="address"/>
+						<input type="text" name="email"/>
+						<input type="number" name="phone">
+
+						<select name="type" id="" class="shop-info__input">
+							<option value="FBD">FBD</option>
+							<option value="FBM">FBM</option>
+						</select>
+					</div>
+				</div>
+
+				<input type="button" name="next" class="next action-button" value="Next" />
+            </fieldset>
+
+            <fieldset class="shop-delivery js-content">
+            <h2 class="fs-title">Cài đặt vận chuyển</h2>
+			<h3 class="fs-subtitle">Cài đặt thông tin vận chuyển cho cửa hàng của bạn</h3>
+
+			<div class="shop-delivery__items">
+				<h3 class="delivery-name">Hỏa tốc</h3>
+
+				<div class="shop-delivery__item">
+					<div class="left">beDelivery</div>
+					
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider"></span>
+					</label>
+				</div>
+
+				<div class="shop-delivery__item">
+					<div class="left">Daisy Xpress Instant</div>
+					
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider"></span>
+					</label>
+				</div>
+				
+				<div class="shop-delivery__item">
+					<div class="left">Grab Xpress</div>
+					
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider"></span>
+					</label>
+				</div>
+
+			</div>
+
+			<div class="shop-delivery__items">
+				<h3 class="delivery-name">Nhanh</h3>
+
+				<div class="shop-delivery__item">
+					<div class="left">Daisy Xpress</div>
+					
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider"></span>
+					</label>
+				</div>
+
+				<div class="shop-delivery__item">
+					<div class="left">BEST Express</div>
+					
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider"></span>
+					</label>
+				</div>
+				
+				<div class="shop-delivery__item">
+					<div class="left">Giao Hàng Nhanh</div>
+					
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider"></span>
+					</label>
+				</div>
+
+				<div class="shop-delivery__item">
+					<div class="left">Giao Hàng Tiết Kiệm</div>
+					
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider"></span>
+					</label>
+				</div>
+
+				<div class="shop-delivery__item">
+					<div class="left">Ninja Van</div>
+					
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider"></span>
+					</label>
+				</div>
+
+				<div class="shop-delivery__item">
+					<div class="left">Viettel Post</div>
+					
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider"></span>
+					</label>
+				</div>
+
+				<div class="shop-delivery__item">
+					<div class="left">VNPost Nhanh</div>
+					
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider"></span>
+					</label>
+				</div>
+
+				<div class="shop-delivery__item">
+					<div class="left">J&T Express</div>
+					
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider"></span>
+					</label>
+				</div>
+
+				<div class="shop-delivery__item">
+					<div class="left">Đang điều phối ĐVVC</div>
+					
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider"></span>
+					</label>
+				</div>
+
+			</div>
+
+			<div class="shop-delivery__items">
+				<h3 class="delivery-name">Tiết Kiệm</h3>
+
+				<div class="shop-delivery__item">
+					<div class="left">Giao Hàng Nhanh</div>
+					
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider"></span>
+					</label>
+				</div>
+
+				<div class="shop-delivery__item">
+					<div class="left">Ninja Van</div>
+					
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider"></span>
+					</label>
+				</div>
+				
+				<div class="shop-delivery__item">
+					<div class="left">VNPost Tiết Kiệm</div>
+					
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider"></span>
+					</label>
+				</div>
+
+			</div>
+
+			<div class="shop-delivery__btn">
+				<input type="button" name="previous" class="previous action-button" value="Previous" />
+				<input type="button" name="next" class="next action-button" value="Next" />
+			</div>
+
+            </fieldset>
+
+            <fieldset class="shop-product-post js-content">
+            <h2 class="fs-title">Đăng bán sản phẩm</h2>
+			<h3 class="fs-subtitle">Hoàn Thành</h3>
+
+			<div class="product-post__ic">
+				<i class="fa-sharp fa-solid fa-circle-check"></i>
+				<h3 class="fs-subtitle">Bắt đầu đăng bán sản phẩm</h3>
+			</div>
+
+			<div class="shop-product__btn">
+				<input type="button" name="previous" class="previous action-button" value="Previous" />
+				<input type="submit" name="submit" class="submit action-button" value="Submit" />
+			</div>
+            </fieldset>
+        </form>
+
+		<script>
+			const $ = document.querySelector.bind(document)
+			const $$ = document.querySelectorAll.bind(document)
+
+			const nextBtns = $$('.next')
+			const contents = $$('.js-content')
+			const progressbars = $$('.js-progressbar')
+			const previousBtns = $$('.previous')
+
+			nextBtns.forEach((nextBtn, index) => {
+				const content = contents[index + 1]
+				const progressbar  = progressbars[index + 1]
+				
+				nextBtn.onclick = function() {
+					$('.js-progressbar.active').classList.remove('active')
+					$('.js-content.on').classList.remove('on')
+
+					progressbar.classList.add('active')
+					content.classList.add('on')
+				}
+			});
+
+			previousBtns.forEach((previousBtn, index) => {
+				const content = contents[index]
+				const progressbar = progressbars[index]
+
+				previousBtn.onclick = function() {
+					$('.js-progressbar.active').classList.remove('active')
+					$('.js-content.on').classList.remove('on')
+
+					progressbar.classList.add('active')
+					content.classList.add('on')
+				}	
+			});
+
+
+
+
+		</script>
+		
+</body>
+</html>

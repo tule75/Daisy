@@ -1,0 +1,291 @@
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+html {
+	height: 1024px;
+	/*Image only BG fallback*/
+	
+	/*background = gradient + image pattern combo*/
+	/* background: linear-gradient(rgba(52, 172, 91, 0.6), rgba(52, 150, 91, 1)); */
+}
+
+body {
+	font-family: montserrat, arial, verdana;
+	background: linear-gradient(rgba(52, 172, 91, 0.6), rgba(52, 150, 91, 1));
+
+}
+
+/*form styles*/
+#msform {
+	width: 800px;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+}
+
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	
+	/*stacking fieldsets above each other*/
+	position: relative;
+	/* display: flex; */
+	flex-direction: column;
+	animation: formDisappear ease 1s;
+}
+
+.shop-info {
+	display: none;
+	margin-bottom: 100px;
+}
+
+.shop-info__body {
+	display: flex;
+	flex-direction: row;
+	font-size: 15px;
+	justify-content: space-between;
+}
+
+.shop-info__headings {
+	width: 30%;
+	list-style: none;
+	text-align: end;
+	padding-right: 100px;
+	display: flex;
+	flex-direction: column;
+}
+
+.shop-info__heading {
+	margin-bottom: 20px;
+}
+
+
+.shop-info__inputs {
+	width: 70%;
+}
+
+.shop-info__input {
+	width: 100%;
+	height: 28px;
+	text-align: center;
+}
+
+.shop__type {
+	display: flex;
+	flex-direction: row;
+}
+
+
+
+.shop-delivery {
+	display: none;
+
+}
+
+.shop-delivery__items {
+
+}
+
+.shop-delivery__item {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 8px;
+}
+
+.delivery-name {
+	font-weight: bold;
+	font-size: 15px;
+	color: #000;
+	margin-bottom: 10px;
+	transform: translateX(-250px);
+}
+
+.left {
+	font-size: 13px;
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 20px;
+	margin: 0 10px;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: .4s;
+	border-radius: 34px;
+}
+
+.switch input {
+	display: none;
+}
+
+.slider::before {
+	position: absolute;
+	content: "";
+	height: 18px;
+	width: 18px;
+	left: 5px;
+	bottom: 1px;
+	background-color: white;
+	transition: 0.4s;
+	border-radius: 50px;
+}
+
+input:checked + .slider {
+	background-color: #27AE60;
+}
+
+input:checked + .slider::before {
+	transform: translateX(35px);
+}
+
+.shop-product-post {
+	display: none;
+}
+
+.product-post__ic {
+	margin-top: 30px;
+}
+
+.fa-circle-check {
+	font-size: 100px;
+	color: #27AE60;
+	margin-bottom: 8px;
+}
+
+.on {
+	display: flex;
+}
+
+
+/*Hide all except first fieldset*/
+/* #msform fieldset:not(:first-of-type) {
+	display: none;
+} */
+
+/*inputs*/
+#msform input, #msform textarea {
+	padding: 4px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+	align-self: center;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 33.33%;
+	float: left;
+	position: relative;
+}
+
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #27AE60;
+	color: white;
+}
+
+@keyframes formDisappear {
+	from {
+        opacity: 0.5;
+        transform: translateX(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
