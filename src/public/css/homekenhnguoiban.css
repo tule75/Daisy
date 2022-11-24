@@ -10,6 +10,7 @@
     z-index: 1;
     padding-top: 30px;
     /* height: 1000px; */
+    display: none;
 }
 .todolist {
     /* background:linear-gradient(130deg,white,rgb(218, 213, 213)); */
@@ -44,6 +45,8 @@
     position: relative;
     padding: 10px 15px;
     cursor: pointer;
+    width: 140px;
+    text-align: center;
 }
 .list-todo-item::after {
     content: '';

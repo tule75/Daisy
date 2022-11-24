@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/home.css">
    <link rel="stylesheet" href="css/base.css">
+   <link rel="stylesheet" href="css/responsive.css">
 
 </head>
 <body>
@@ -113,9 +114,12 @@
             <div class="company-container">
                 <% for (let i = 0; i < shops.length; i++) {%> 
                     <div class="company-info">
-                        <a href="/shop/<%-shops[i].slug%>"><div class="company-info-pic">
+                        <a href="/shop/<%-shops[i].slug%>">
+                            <div class="company-info-pic">
                             <img class="Anxuan-info" src="/img/<%-shops[i].img%>" alt="">
-                        </div></a>
+                           </div>
+                        </a>
+                    
                         <h1 class="company-info-name">
                             <a href="/shop/<%-shops[i].slug%>" class="link-color"> <%=shops[i].name%></a>
                         </h1>
@@ -352,11 +356,12 @@
 
                                         <div class="btn-buy">
                                             <form action="/" method="POST">
-                                            <button class="btn-buy-item" name="slug" value="<%-products[i].slug %>">
+                                            <button class="btn-buy-item add-gh" name="slug" value="<%-products[i].slug %>">
                                                 <i class="fa fa-regular fa-bag-shopping"></i>
                                             </button>
                                             </form> 
-                                            <a href="/thanhtoan/<%-products[i].slug %> "><button class="btn-buy-item has--plus">
+                                            <a href="/thanhtoan/<%-products[i].slug %> ">
+                                                <button class="btn-buy-item has--plus">
                                                 Buy Now!
                                             </button></a>
                                         </div>
@@ -440,7 +445,7 @@
                             
                         </ul>
                     </div>
-                    <div class="grid__col-2-4">
+                    <div class="grid__col-2-4 thanhtoandaisy">
                         <h4 class="footer-heading">
                           Thanh Toán
                         </h4>
