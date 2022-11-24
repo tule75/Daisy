@@ -46,8 +46,10 @@ class SiteController {
                         .then(products => {
                             var shops = []
                             User.find({role: 'seller'})
-                            .then(data => {shops = data})
+                            .then(data => {shops = data
                             res.render('home.html', {products: products, check: 0, countCart: 0, shops: shops})
+                            })
+                            // res.render('home.html', {products: products, check: 0, countCart: 0, shops: shops})
                             // res.json(products)
                         })
                         .catch(err => {res.send('loi')})
@@ -61,8 +63,10 @@ class SiteController {
                 .then(products => {
                     var shops = []
                     User.find({role: 'seller'})
-                    .then(data => {shops = data})
-                    res.render('home.html', {products: products, check: 0, countCart: 0, shops: shops})
+                    .then(data => {shops = data
+                        res.render('home.html', {products: products, check: 0, countCart: 0, shops: shops})
+                    })
+                    // res.render('home.html', {products: products, check: 0, countCart: 0, shops: shops})
                     // res.json(products)
                 })
                 .catch(err => {res.send('loi')})

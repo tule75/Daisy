@@ -454,3 +454,6 @@ margin-bottom: 0;
 .link-color {
   color: black;
 }
+.link-color:hover  {
+  color: black;
+}

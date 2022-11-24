@@ -113,11 +113,14 @@
             <div class="company-container">
                 <% for (let i = 0; i < shops.length; i++) {%> 
                     <div class="company-info">
-                        <a href="/shop/<%-shops[i].slug%>"><div class="company-info-pic">
+                        <a href="/shop/<%-shops[i].slug%>">
+                            <div class="company-info-pic">
                             <img class="Anxuan-info" src="/img/<%-shops[i].img%>" alt="">
-                        </div></a>
+                           </div>
+                        </a>
+                    
                         <h1 class="company-info-name">
-                            <a href="/shop/<%-shops[i].slug%>" class="link-color"> <%=shops.name%></a>
+                            <a href="/shop/<%-shops[i].slug%>" class="link-color"> <%=shops[i].name%></a>
                         </h1>
                     </div>
                 <% } %> 

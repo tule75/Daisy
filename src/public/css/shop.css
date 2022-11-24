@@ -231,9 +231,11 @@
     border-radius: 50%;
 
 }
-/* .shop-name {
-
-} */
+.shop-name {
+    font-size: 17px;
+    font-weight: bolder;
+    padding-top: 10px;
+}
 
 .shop-follow{
     display: flex;
@@ -257,9 +259,7 @@
 }
 .btn--chat {
     position: absolute;
-
-    right: -7px;
-
+    right: -10px;
     top: 4px;
     font-size: 24px;
 }

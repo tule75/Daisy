@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/kenhnguoiban.css">
     <link rel="stylesheet" href="css/homekenhnguoiban.css">
+    <link rel="stylesheet" href="css/quanlydonhang.css">
 
 </head>
 <body>
@@ -82,7 +83,7 @@
                     <li class="other-navbar-item navbar-item">
                         <i class="fa-solid fa-chart-line"></i>
                        <h7 class="other-navbar-item-title ">
-                            Du lieu
+                            Dữ Liệu
                         </h7>
                     </li>
                     <li class="other-navbar-item navbar-item">
@@ -105,47 +106,47 @@
             <div class="container ">    
                 <div class="forhome">
                     <div class="todolist">
-                        <h5 class="todolist-heading">Nhung viec can lam</h5>
-                        <p class="todolist-heading-note">Nhung viec ban se phai lam</p>
+                        <h5 class="todolist-heading">Danh sách cần làm</h5>
+                        <p class="todolist-heading-note">Những việc bạn sẽ phải làm</p>
                         <ul class="list-todo">
                             <li class="list-todo-item">
                                 <p class="quantity-todo">0</p>
-                                <a class="access-todo">Cho nhan hang</a>
+                                <a class="access-todo">Chờ nhận hàng</a>
                             </li>
                             <li class="list-todo-item">
                                 <p class="quantity-todo">0</p>
-                                <a class="access-todo">Cho nhan hang</a>
+                                <a class="access-todo">Chờ xác nhận</a>
                             </li>
                             <li class="list-todo-item">
                                 <p class="quantity-todo">0</p>
-                                <a class="access-todo">Cho nhan hang</a>
+                                <a class="access-todo">Chờ xử lý</a>
                             </li>
                             <li class="list-todo-item  has-wrap">
                                 <p class="quantity-todo">0</p>
-                                <a class="access-todo">Cho nhan hang</a>
+                                <a class="access-todo">Đơn huỷ</a>
                             </li>
                             <li class="list-todo-item">
                                 <p class="quantity-todo">0</p>
-                                <a class="access-todo">Cho nhan hang</a>
+                                <a class="access-todo">Đang giao</a>
                             </li>
                             <li class="list-todo-item">
                                 <p class="quantity-todo">0</p>
-                                <a class="access-todo">Cho nhan hang</a>
+                                <a class="access-todo">Trong giỏ</a>
                             </li>
                             <li class="list-todo-item">
                                 <p class="quantity-todo">0</p>
-                                <a class="access-todo">Cho nhan hang</a>
+                                <a class="access-todo">Đơn bị khoá</a>
                             </li>
                             <li class="list-todo-item has-wrap">
                                 <p class="quantity-todo">0</p>
-                                <a class="access-todo">Cho nhan hang</a>
+                                <a class="access-todo">Hết hàng</a>
                             </li>
 
                         </ul>
                     </div>
                     
                     <div class="marketing">
-                        <h5 class="marketing-heading">Kenh marketing</h5>
+                        <h5 class="marketing-heading">Kênh marketing</h5>
                         
                       <div class="marketing-wrap">
                         <div class="calendar">
@@ -154,7 +155,7 @@
                               <header class="heading">
                                 
                                 <div class="day">1</div>
-                                <div class="month">November</div>
+                                <div class="month">Tháng 12</div>
                           
                               </header>
                           
@@ -240,9 +241,9 @@
                             <div class="chuongtrinhgiamgia-intro">
                                 <p class="intro-day">25/12</p>
                                 <h5 class="intro-header">BlackFriday [25.12]</h5>
-                                <p class="intro-note">Chuong trinh ket thuc trong 1 ngay</p>
+                                <p class="intro-note">Chương trình kết thúc trong 1 ngày</p>
                             </div>
-                            <button class="chuongtrinhgiamgia-btn">Dang ky ngay</button>
+                            <button class="chuongtrinhgiamgia-btn">Đăng ký ngay</button>
                         </div>
 
                        
@@ -285,85 +286,175 @@
                             </ul>
                       </div>
 
-               <div class="forshipment ">
-                <ul class="container-list">
-                    <li class="container-content active">
-                        <h7 class="content-header">Tat ca</h7>
-                    </li>
-                    <li class="container-content">
-                        <h7 class="content-header">Cho xac nhan</h7>
-                    </li>
-                    <li id="cholayhang" class="container-content show">
-                        <h7 class="content-header"> Cho lay hang </h7>
-                    </li>
-                    <li class="container-content">
-                        <h7 class="content-header">Dang giao</h7>
-                    </li>
-                    <li class="container-content">
-                        <h7 class="content-header">Da giao</h7>
-                    </li>
-                    <li class="container-content">
-                        <h7 class="content-header">Don huy</h7>
-                    </li>
-                    <li class="container-content">
-                        <h7 class="content-header">Tra hang/hoan tien</h7>
-                    </li>
-                </ul>
-
-                <ul class="container-showing">
-                    <li class="container-item">
-                       <div class="header-container">
-                        <div class="code-hang">
-                            <div class="find-code">
-                                 Ma don hang
-                                <span>
-                                    <i class="fa-regular fa-angle-down"></i>
-                                </span>
-
-                                <ul class="find-code-list">
-                                    <li class="code-list-item">Ma don hang</li>
-                                    <li class="code-list-item">Ten nguoi mua</li>
-                                    <li class="code-list-item">San pham</li>
-                                    <li class="code-list-item">Ma van don</li>
-                                </ul>
+                </div>
+                <div class="forshipment ">
+                    <ul class="container-list">
+                        <li class="container-content active">
+                            <h7 class="content-header">Tất cả</h7>
+                        </li>
+                        <li class="container-content">
+                            <h7 class="content-header">Chờ xác nhận</h7>
+                        </li>
+                        <li id="cholayhang" class="container-content show">
+                            <h7 class="content-header"> Chờ lấy hàng </h7>
+                        </li>
+                        <li class="container-content">
+                            <h7 class="content-header">Đang giao</h7>
+                        </li>
+                        <li class="container-content">
+                            <h7 class="content-header">Đã giao</h7>
+                        </li>
+                        <li class="container-content">
+                            <h7 class="content-header">Đơn huỷ</h7>
+                        </li>
+                        <li class="container-content">
+                            <h7 class="content-header">Trả hàng/Hoàn tiền</h7>
+                        </li>
+                    </ul>
+    
+                    <ul class="container-showing">
+                        <li class="container-item">
+                           <div class="header-container">
+                            <div class="code-hang">
+                                <div class="find-code">
+                                     Ma don hang
+                                    <span>
+                                        <i class="fa-regular fa-angle-down"></i>
+                                    </span>
+    
+                                    <ul class="find-code-list">
+                                        <li class="code-list-item">Ma don hang</li>
+                                        <li class="code-list-item">Ten nguoi mua</li>
+                                        <li class="code-list-item">San pham</li>
+                                        <li class="code-list-item">Ma van don</li>
+                                    </ul>
+                                </div>
+                               <div class="search">
+                                    <input type="text" class="input-code" placeholder="Tim ma don hang">
+                                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                                </input>
+                               </div>
                             </div>
-                           <div class="search">
-                                <input type="text" class="input-code" placeholder="Tim ma don hang">
-                                <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                            </input>
+                            <div class="order-date">
+                                <p class="title-date"> Ngay dat hang: </p>
+                               <div class="setdate">
+                                     <i class="fa-regular fa-calendar calendar-icon"></i>
+                                     <input type="date" class="fromdate" id="">
+                                                          -
+                                     <input type="date" class="todate" id="">
+                                </div>
+                            </div>
+                            <div class="xuat">Xuat</div>
                            </div>
-                        </div>
-                        <div class="order-date">
-                            <p class="title-date"> Ngay dat hang: </p>
-                           <div class="setdate">
-                                 <i class="fa-regular fa-calendar calendar-icon"></i>
-                                 <input type="date" class="fromdate" id="">
-                                                      -
-                                 <input type="date" class="todate" id="">
-                            </div>
-                        </div>
-                        <div class="xuat">Xuat</div>
-                       </div>
-                       
-                      <div class="body-list">
-                        <!-- 1 -->
-                            <div class="body-container active ">
-                                <ul class="all-header">
-                                    <li class="head-title  active">Tat ca</li>
-                                    <li class="head-title ">Chua xu ly</li>
-                                    <li class="head-title">Da xu ly</li>
-                                </ul>
-
-                                <ul class="body-wrap">
-                                <li class="wrap-item  active">
+                           
+                          <div class="body-list">
+                            <!-- 1 -->
+                                <div class="body-container active ">
+                                    <ul class="all-header">
+                                        <li class="head-title  active">Tat ca</li>
+                                        <li class="head-title ">Chua xu ly</li>
+                                        <li class="head-title">Da xu ly</li>
+                                    </ul>
+    
+                                    <ul class="body-wrap">
+                                    <li class="wrap-item  active">
+                                            <div class="item-first">
+                                                <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
+                                                <div class="filter">
+                                                    <p class="title-filter">Sap xep theo</p>
+                                                    <i class="fa-solid fa-filter"></i>
+                                                </div>
+                                            </div>
+    
+                                            <div class="item-second">
+                                                <ul class="list-filter">
+                                                    <li class="item-filter">
+                                                        San Pham 
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Tong cong
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Trang thai
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Dem nguoc
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Tat ca DVVC
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Thao tac
+                                                    </li>
+                                                </ul>
+                                            </div>
+    
+                                            <div class="item-footer">
+                                                <i class="fa-solid fa-rectangle-list"></i>
+                                                <h6 class="note">Chua co san pham nao</h6>
+                                            </div>
+    
+                                    </li>
+                                    <li class="wrap-item ">
                                         <div class="item-first">
-                                            <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
+                                            <h4 class="stateOfgoods"><span>0</span>Đơn hàng</h4>
                                             <div class="filter">
-                                                <p class="title-filter">Sap xep theo</p>
+                                                <p class="title-filter">Sắp xếp theo</p>
                                                 <i class="fa-solid fa-filter"></i>
                                             </div>
                                         </div>
-
+    
+                                        <div class="item-second">
+                                            <ul class="list-filter">
+                                                <li class="item-filter">
+                                                    Sản phẩm 
+                                                </li>
+                                                <li class="item-filter">
+                                                    Tổng cộng
+                                                </li>
+                                                <li class="item-filter">
+                                                Trang thai
+                                                </li>
+                                                <li class="item-filter">
+                                                Dem nguoc
+                                                </li>
+                                                <li class="item-filter">
+                                                Tat ca DVVC
+                                                </li>
+                                                <li class="item-filter">
+                                                    Thao tac
+                                                </li>
+                                            </ul>
+                                        </div>
+    
+                                        <div class="item-footer">
+                                            <i class="fa-solid fa-rectangle-list"></i>
+                                            <h6 class="note">Chưa có sản phẩm nào</h6>
+                                        </div>
+    
+                                    </li>
+                                    <li class="wrap-item ">
+                                        <div class="item-first">
+                                            <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
+                                            <div class="filter-has--address">
+                                                 <p class="sent-address-title title-header">Chon hang giao tai buu cuc:</p>
+                                                
+                                                    <div class="sent-address">
+                                                        <p class="sent-address-title">Tat ca don hang</p>
+                                                        <i class="fa-solid fa-angle-down sent-address--icon"></i>
+                                                        <ul class="address-choice">
+                                                            <li class="address-choice-item">Tat ca don hang</li>
+                                                            <li class="address-choice-item">Chon tai buu cuc</li>
+                                                        </ul>
+                                                    </div>
+                                   
+                                                    <div class="range">
+                                                        <p class="sent-address-title">Sap xep theo</p>
+                                                        <i class="fa-solid fa-filter"></i>
+                                                    </div>
+                                            </div>
+                                        </div>
+    
                                         <div class="item-second">
                                             <ul class="list-filter">
                                                 <li class="item-filter">
@@ -386,116 +477,65 @@
                                                 </li>
                                             </ul>
                                         </div>
-
+    
                                         <div class="item-footer">
                                             <i class="fa-solid fa-rectangle-list"></i>
                                             <h6 class="note">Chua co san pham nao</h6>
                                         </div>
-
-                                </li>
-                                <li class="wrap-item ">
-                                    <div class="item-first">
-                                        <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                        <div class="filter">
-                                            <p class="title-filter">Sap xep theo</p>
-                                            <i class="fa-solid fa-filter"></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="item-second">
-                                        <ul class="list-filter">
-                                            <li class="item-filter">
-                                                San Pham 
-                                            </li>
-                                            <li class="item-filter">
-                                                Tong cong
-                                            </li>
-                                            <li class="item-filter">
-                                            Trang thai
-                                            </li>
-                                            <li class="item-filter">
-                                            Dem nguoc
-                                            </li>
-                                            <li class="item-filter">
-                                            Tat ca DVVC
-                                            </li>
-                                            <li class="item-filter">
-                                                Thao tac
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="item-footer">
-                                        <i class="fa-solid fa-rectangle-list"></i>
-                                        <h6 class="note">Chua co san pham nao</h6>
-                                    </div>
-
-                                </li>
-                                <li class="wrap-item ">
-                                    <div class="item-first">
-                                        <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                        <div class="filter-has--address">
-                                             <p class="sent-address-title title-header">Chon hang giao tai buu cuc:</p>
-                                            
-                                                <div class="sent-address">
-                                                    <p class="sent-address-title">Tat ca don hang</p>
-                                                    <i class="fa-solid fa-angle-down sent-address--icon"></i>
-                                                    <ul class="address-choice">
-                                                        <li class="address-choice-item">Tat ca don hang</li>
-                                                        <li class="address-choice-item">Chon tai buu cuc</li>
-                                                    </ul>
-                                                </div>
-                               
-                                                <div class="range">
-                                                    <p class="sent-address-title">Sap xep theo</p>
+    
+                                     </li>
+                                    
+                                    </ul>
+                                </div>
+    
+                                <!-- 2 -->
+                                <div class="body-container ">
+                                    <ul class="all-header">
+                                        <li class="head-title active">Tat ca</li>
+                                        <li class="head-title ">Chua xu ly</li>
+                                        <li class="head-title">Da xu ly</li>
+                                    </ul>
+    
+                                    <ul class="body-wrap">
+                                    <li class="wrap-item">
+                                            <div class="item-first">
+                                                <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
+                                                <div class="filter">
+                                                    <p class="title-filter">Sap xep theo</p>
                                                     <i class="fa-solid fa-filter"></i>
                                                 </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item-second">
-                                        <ul class="list-filter">
-                                            <li class="item-filter">
-                                                San Pham 
-                                            </li>
-                                            <li class="item-filter">
-                                                Tong cong
-                                            </li>
-                                            <li class="item-filter">
-                                            Trang thai
-                                            </li>
-                                            <li class="item-filter">
-                                            Dem nguoc
-                                            </li>
-                                            <li class="item-filter">
-                                            Tat ca DVVC
-                                            </li>
-                                            <li class="item-filter">
-                                                Thao tac
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="item-footer">
-                                        <i class="fa-solid fa-rectangle-list"></i>
-                                        <h6 class="note">Chua co san pham nao</h6>
-                                    </div>
-
-                                 </li>
-                                
-                                </ul>
-                            </div>
-
-                            <!-- 2 -->
-                            <div class="body-container ">
-                                <ul class="all-header">
-                                    <li class="head-title active">Tat ca</li>
-                                    <li class="head-title ">Chua xu ly</li>
-                                    <li class="head-title">Da xu ly</li>
-                                </ul>
-
-                                <ul class="body-wrap">
-                                <li class="wrap-item">
+                                            </div>
+    
+                                            <div class="item-second">
+                                                <ul class="list-filter">
+                                                    <li class="item-filter">
+                                                        San Pham 
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Tong cong
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Trang thai
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Dem nguoc
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Tat ca DVVC
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Thao tac
+                                                    </li>
+                                                </ul>
+                                            </div>
+    
+                                            <div class="item-footer">
+                                                <i class="fa-solid fa-rectangle-list"></i>
+                                                <h6 class="note">Chua co san pham nao</h6>
+                                            </div>
+    
+                                    </li>
+                                    <li class="wrap-item  active">
                                         <div class="item-first">
                                             <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
                                             <div class="filter">
@@ -503,7 +543,7 @@
                                                 <i class="fa-solid fa-filter"></i>
                                             </div>
                                         </div>
-
+    
                                         <div class="item-second">
                                             <ul class="list-filter">
                                                 <li class="item-filter">
@@ -526,122 +566,35 @@
                                                 </li>
                                             </ul>
                                         </div>
-
+    
                                         <div class="item-footer">
                                             <i class="fa-solid fa-rectangle-list"></i>
                                             <h6 class="note">Chua co san pham nao</h6>
                                         </div>
-
-                                </li>
-                                <li class="wrap-item  active">
-                                    <div class="item-first">
-                                        <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                        <div class="filter">
-                                            <p class="title-filter">Sap xep theo</p>
-                                            <i class="fa-solid fa-filter"></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="item-second">
-                                        <ul class="list-filter">
-                                            <li class="item-filter">
-                                                San Pham 
-                                            </li>
-                                            <li class="item-filter">
-                                                Tong cong
-                                            </li>
-                                            <li class="item-filter">
-                                            Trang thai
-                                            </li>
-                                            <li class="item-filter">
-                                            Dem nguoc
-                                            </li>
-                                            <li class="item-filter">
-                                            Tat ca DVVC
-                                            </li>
-                                            <li class="item-filter">
-                                                Thao tac
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="item-footer">
-                                        <i class="fa-solid fa-rectangle-list"></i>
-                                        <h6 class="note">Chua co san pham nao</h6>
-                                    </div>
-
-                                </li>
-                                <li class="wrap-item ">
-                                    <div class="item-first">
-                                        <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                        <div class="filter-has--address">
-                                             <p class="sent-address-title title-header">Chon hang giao tai buu cuc:</p>
-                                            
-                                                <div class="sent-address">
-                                                    <p class="sent-address-title">Tat ca don hang</p>
-                                                    <i class="fa-solid fa-angle-down sent-address--icon"></i>
-                                                    <ul class="address-choice">
-                                                        <li class="address-choice-item">Tat ca don hang</li>
-                                                        <li class="address-choice-item">Chon tai buu cuc</li>
-                                                    </ul>
-                                                </div>
-                               
-                                                <div class="range">
-                                                    <p class="sent-address-title">Sap xep theo</p>
-                                                    <i class="fa-solid fa-filter"></i>
-                                                </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item-second">
-                                        <ul class="list-filter">
-                                            <li class="item-filter">
-                                                San Pham 
-                                            </li>
-                                            <li class="item-filter">
-                                                Tong cong
-                                            </li>
-                                            <li class="item-filter">
-                                            Trang thai
-                                            </li>
-                                            <li class="item-filter">
-                                            Dem nguoc
-                                            </li>
-                                            <li class="item-filter">
-                                            Tat ca DVVC
-                                            </li>
-                                            <li class="item-filter">
-                                                Thao tac
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="item-footer">
-                                        <i class="fa-solid fa-rectangle-list"></i>
-                                        <h6 class="note">Chua co san pham nao</h6>
-                                    </div>
-
-                                 </li>
-                                
-                                </ul>
-                            </div>
-                            <div class="body-container ">
-                                <ul class="all-header">
-                                    <li class="head-title  active">Tat ca</li>
-                                    <li class="head-title ">Chua xu ly</li>
-                                    <li class="head-title">Da xu ly</li>
-                                </ul>
-
-                                <ul class="body-wrap">
-                                <li class="wrap-item">
+    
+                                    </li>
+                                    <li class="wrap-item ">
                                         <div class="item-first">
                                             <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                            <div class="filter">
-                                                <p class="title-filter">Sap xep theo</p>
-                                                <i class="fa-solid fa-filter"></i>
+                                            <div class="filter-has--address">
+                                                 <p class="sent-address-title title-header">Chon hang giao tai buu cuc:</p>
+                                                
+                                                    <div class="sent-address">
+                                                        <p class="sent-address-title">Tat ca don hang</p>
+                                                        <i class="fa-solid fa-angle-down sent-address--icon"></i>
+                                                        <ul class="address-choice">
+                                                            <li class="address-choice-item">Tat ca don hang</li>
+                                                            <li class="address-choice-item">Chon tai buu cuc</li>
+                                                        </ul>
+                                                    </div>
+                                   
+                                                    <div class="range">
+                                                        <p class="sent-address-title">Sap xep theo</p>
+                                                        <i class="fa-solid fa-filter"></i>
+                                                    </div>
                                             </div>
                                         </div>
-
+    
                                         <div class="item-second">
                                             <ul class="list-filter">
                                                 <li class="item-filter">
@@ -664,114 +617,63 @@
                                                 </li>
                                             </ul>
                                         </div>
-
+    
                                         <div class="item-footer">
                                             <i class="fa-solid fa-rectangle-list"></i>
                                             <h6 class="note">Chua co san pham nao</h6>
                                         </div>
-
-                                </li>
-                                <li class="wrap-item  active">
-                                    <div class="item-first">
-                                        <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                        <div class="filter">
-                                            <p class="title-filter">Sap xep theo</p>
-                                            <i class="fa-solid fa-filter"></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="item-second">
-                                        <ul class="list-filter">
-                                            <li class="item-filter">
-                                                San Pham 
-                                            </li>
-                                            <li class="item-filter">
-                                                Tong cong
-                                            </li>
-                                            <li class="item-filter">
-                                            Trang thai
-                                            </li>
-                                            <li class="item-filter">
-                                            Dem nguoc
-                                            </li>
-                                            <li class="item-filter">
-                                            Tat ca DVVC
-                                            </li>
-                                            <li class="item-filter">
-                                                Thao tac
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="item-footer">
-                                        <i class="fa-solid fa-rectangle-list"></i>
-                                        <h6 class="note">Chua co san pham nao</h6>
-                                    </div>
-
-                                </li>
-                                <li class="wrap-item ">
-                                    <div class="item-first">
-                                        <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                        <div class="filter-has--address">
-                                             <p class="sent-address-title title-header">Chon hang giao tai buu cuc:</p>
-                                            
-                                                <div class="sent-address">
-                                                    <p class="sent-address-title">Tat ca don hang</p>
-                                                    <i class="fa-solid fa-angle-down sent-address--icon"></i>
-                                                    <ul class="address-choice">
-                                                        <li class="address-choice-item">Tat ca don hang</li>
-                                                        <li class="address-choice-item">Chon tai buu cuc</li>
-                                                    </ul>
-                                                </div>
-                               
-                                                <div class="range">
-                                                    <p class="sent-address-title">Sap xep theo</p>
+    
+                                     </li>
+                                    
+                                    </ul>
+                                </div>
+                                <div class="body-container ">
+                                    <ul class="all-header">
+                                        <li class="head-title  active">Tat ca</li>
+                                        <li class="head-title ">Chua xu ly</li>
+                                        <li class="head-title">Da xu ly</li>
+                                    </ul>
+    
+                                    <ul class="body-wrap">
+                                    <li class="wrap-item">
+                                            <div class="item-first">
+                                                <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
+                                                <div class="filter">
+                                                    <p class="title-filter">Sap xep theo</p>
                                                     <i class="fa-solid fa-filter"></i>
                                                 </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item-second">
-                                        <ul class="list-filter">
-                                            <li class="item-filter">
-                                                San Pham 
-                                            </li>
-                                            <li class="item-filter">
-                                                Tong cong
-                                            </li>
-                                            <li class="item-filter">
-                                            Trang thai
-                                            </li>
-                                            <li class="item-filter">
-                                            Dem nguoc
-                                            </li>
-                                            <li class="item-filter">
-                                            Tat ca DVVC
-                                            </li>
-                                            <li class="item-filter">
-                                                Thao tac
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="item-footer">
-                                        <i class="fa-solid fa-rectangle-list"></i>
-                                        <h6 class="note">Chua co san pham nao</h6>
-                                    </div>
-
-                                 </li>
-                                
-                                </ul>
-                            </div>
-                            <div class="body-container ">
-                                <ul class="all-header">
-                                    <li class="head-title  active">Tat ca</li>
-                                    <li class="head-title ">Chua xu ly</li>
-                                    <li class="head-title">Da xu ly</li>
-                                </ul>
-
-                                <ul class="body-wrap">
-                                <li class="wrap-item">
+                                            </div>
+    
+                                            <div class="item-second">
+                                                <ul class="list-filter">
+                                                    <li class="item-filter">
+                                                        San Pham 
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Tong cong
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Trang thai
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Dem nguoc
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Tat ca DVVC
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Thao tac
+                                                    </li>
+                                                </ul>
+                                            </div>
+    
+                                            <div class="item-footer">
+                                                <i class="fa-solid fa-rectangle-list"></i>
+                                                <h6 class="note">Chua co san pham nao</h6>
+                                            </div>
+    
+                                    </li>
+                                    <li class="wrap-item  active">
                                         <div class="item-first">
                                             <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
                                             <div class="filter">
@@ -779,7 +681,7 @@
                                                 <i class="fa-solid fa-filter"></i>
                                             </div>
                                         </div>
-
+    
                                         <div class="item-second">
                                             <ul class="list-filter">
                                                 <li class="item-filter">
@@ -802,122 +704,35 @@
                                                 </li>
                                             </ul>
                                         </div>
-
+    
                                         <div class="item-footer">
                                             <i class="fa-solid fa-rectangle-list"></i>
                                             <h6 class="note">Chua co san pham nao</h6>
                                         </div>
-
-                                </li>
-                                <li class="wrap-item  active">
-                                    <div class="item-first">
-                                        <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                        <div class="filter">
-                                            <p class="title-filter">Sap xep theo</p>
-                                            <i class="fa-solid fa-filter"></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="item-second">
-                                        <ul class="list-filter">
-                                            <li class="item-filter">
-                                                San Pham 
-                                            </li>
-                                            <li class="item-filter">
-                                                Tong cong
-                                            </li>
-                                            <li class="item-filter">
-                                            Trang thai
-                                            </li>
-                                            <li class="item-filter">
-                                            Dem nguoc
-                                            </li>
-                                            <li class="item-filter">
-                                            Tat ca DVVC
-                                            </li>
-                                            <li class="item-filter">
-                                                Thao tac
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="item-footer">
-                                        <i class="fa-solid fa-rectangle-list"></i>
-                                        <h6 class="note">Chua co san pham nao</h6>
-                                    </div>
-
-                                </li>
-                                <li class="wrap-item ">
-                                    <div class="item-first">
-                                        <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                        <div class="filter-has--address">
-                                             <p class="sent-address-title title-header">Chon hang giao tai buu cuc:</p>
-                                            
-                                                <div class="sent-address">
-                                                    <p class="sent-address-title">Tat ca don hang</p>
-                                                    <i class="fa-solid fa-angle-down sent-address--icon"></i>
-                                                    <ul class="address-choice">
-                                                        <li class="address-choice-item">Tat ca don hang</li>
-                                                        <li class="address-choice-item">Chon tai buu cuc</li>
-                                                    </ul>
-                                                </div>
-                               
-                                                <div class="range">
-                                                    <p class="sent-address-title">Sap xep theo</p>
-                                                    <i class="fa-solid fa-filter"></i>
-                                                </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item-second">
-                                        <ul class="list-filter">
-                                            <li class="item-filter">
-                                                San Pham 
-                                            </li>
-                                            <li class="item-filter">
-                                                Tong cong
-                                            </li>
-                                            <li class="item-filter">
-                                            Trang thai
-                                            </li>
-                                            <li class="item-filter">
-                                            Dem nguoc
-                                            </li>
-                                            <li class="item-filter">
-                                            Tat ca DVVC
-                                            </li>
-                                            <li class="item-filter">
-                                                Thao tac
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="item-footer">
-                                        <i class="fa-solid fa-rectangle-list"></i>
-                                        <h6 class="note">Chua co san pham nao</h6>
-                                    </div>
-
-                                 </li>
-                                
-                                </ul>
-                            </div>
-                            <div class="body-container ">
-                                <ul class="all-header">
-                                    <li class="head-title  active">Tat ca</li>
-                                    <li class="head-title ">Chua xu ly</li>
-                                    <li class="head-title">Da xu ly</li>
-                                </ul>
-
-                                <ul class="body-wrap">
-                                <li class="wrap-item">
+    
+                                    </li>
+                                    <li class="wrap-item ">
                                         <div class="item-first">
                                             <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                            <div class="filter">
-                                                <p class="title-filter">Sap xep theo</p>
-                                                <i class="fa-solid fa-filter"></i>
+                                            <div class="filter-has--address">
+                                                 <p class="sent-address-title title-header">Chon hang giao tai buu cuc:</p>
+                                                
+                                                    <div class="sent-address">
+                                                        <p class="sent-address-title">Tat ca don hang</p>
+                                                        <i class="fa-solid fa-angle-down sent-address--icon"></i>
+                                                        <ul class="address-choice">
+                                                            <li class="address-choice-item">Tat ca don hang</li>
+                                                            <li class="address-choice-item">Chon tai buu cuc</li>
+                                                        </ul>
+                                                    </div>
+                                   
+                                                    <div class="range">
+                                                        <p class="sent-address-title">Sap xep theo</p>
+                                                        <i class="fa-solid fa-filter"></i>
+                                                    </div>
                                             </div>
                                         </div>
-
+    
                                         <div class="item-second">
                                             <ul class="list-filter">
                                                 <li class="item-filter">
@@ -940,114 +755,63 @@
                                                 </li>
                                             </ul>
                                         </div>
-
+    
                                         <div class="item-footer">
                                             <i class="fa-solid fa-rectangle-list"></i>
                                             <h6 class="note">Chua co san pham nao</h6>
                                         </div>
-
-                                </li>
-                                <li class="wrap-item  active">
-                                    <div class="item-first">
-                                        <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                        <div class="filter">
-                                            <p class="title-filter">Sap xep theo</p>
-                                            <i class="fa-solid fa-filter"></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="item-second">
-                                        <ul class="list-filter">
-                                            <li class="item-filter">
-                                                San Pham 
-                                            </li>
-                                            <li class="item-filter">
-                                                Tong cong
-                                            </li>
-                                            <li class="item-filter">
-                                            Trang thai
-                                            </li>
-                                            <li class="item-filter">
-                                            Dem nguoc
-                                            </li>
-                                            <li class="item-filter">
-                                            Tat ca DVVC
-                                            </li>
-                                            <li class="item-filter">
-                                                Thao tac
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="item-footer">
-                                        <i class="fa-solid fa-rectangle-list"></i>
-                                        <h6 class="note">Chua co san pham nao</h6>
-                                    </div>
-
-                                </li>
-                                <li class="wrap-item ">
-                                    <div class="item-first">
-                                        <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                        <div class="filter-has--address">
-                                             <p class="sent-address-title title-header">Chon hang giao tai buu cuc:</p>
-                                            
-                                                <div class="sent-address">
-                                                    <p class="sent-address-title">Tat ca don hang</p>
-                                                    <i class="fa-solid fa-angle-down sent-address--icon"></i>
-                                                    <ul class="address-choice">
-                                                        <li class="address-choice-item">Tat ca don hang</li>
-                                                        <li class="address-choice-item">Chon tai buu cuc</li>
-                                                    </ul>
-                                                </div>
-                               
-                                                <div class="range">
-                                                    <p class="sent-address-title">Sap xep theo</p>
+    
+                                     </li>
+                                    
+                                    </ul>
+                                </div>
+                                <div class="body-container ">
+                                    <ul class="all-header">
+                                        <li class="head-title  active">Tat ca</li>
+                                        <li class="head-title ">Chua xu ly</li>
+                                        <li class="head-title">Da xu ly</li>
+                                    </ul>
+    
+                                    <ul class="body-wrap">
+                                    <li class="wrap-item">
+                                            <div class="item-first">
+                                                <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
+                                                <div class="filter">
+                                                    <p class="title-filter">Sap xep theo</p>
                                                     <i class="fa-solid fa-filter"></i>
                                                 </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item-second">
-                                        <ul class="list-filter">
-                                            <li class="item-filter">
-                                                San Pham 
-                                            </li>
-                                            <li class="item-filter">
-                                                Tong cong
-                                            </li>
-                                            <li class="item-filter">
-                                            Trang thai
-                                            </li>
-                                            <li class="item-filter">
-                                            Dem nguoc
-                                            </li>
-                                            <li class="item-filter">
-                                            Tat ca DVVC
-                                            </li>
-                                            <li class="item-filter">
-                                                Thao tac
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="item-footer">
-                                        <i class="fa-solid fa-rectangle-list"></i>
-                                        <h6 class="note">Chua co san pham nao</h6>
-                                    </div>
-
-                                 </li>
-                                
-                                </ul>
-                            </div>
-                            <div class="body-container ">
-                                <ul class="all-header">
-                                    <li class="head-title  active">Tat ca</li>
-                                    <li class="head-title ">Chua xu ly</li>
-                                    <li class="head-title">Da xu ly</li>
-                                </ul>
-
-                                <ul class="body-wrap">
-                                <li class="wrap-item">
+                                            </div>
+    
+                                            <div class="item-second">
+                                                <ul class="list-filter">
+                                                    <li class="item-filter">
+                                                        San Pham 
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Tong cong
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Trang thai
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Dem nguoc
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Tat ca DVVC
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Thao tac
+                                                    </li>
+                                                </ul>
+                                            </div>
+    
+                                            <div class="item-footer">
+                                                <i class="fa-solid fa-rectangle-list"></i>
+                                                <h6 class="note">Chua co san pham nao</h6>
+                                            </div>
+    
+                                    </li>
+                                    <li class="wrap-item  active">
                                         <div class="item-first">
                                             <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
                                             <div class="filter">
@@ -1055,7 +819,7 @@
                                                 <i class="fa-solid fa-filter"></i>
                                             </div>
                                         </div>
-
+    
                                         <div class="item-second">
                                             <ul class="list-filter">
                                                 <li class="item-filter">
@@ -1078,123 +842,35 @@
                                                 </li>
                                             </ul>
                                         </div>
-
+    
                                         <div class="item-footer">
                                             <i class="fa-solid fa-rectangle-list"></i>
                                             <h6 class="note">Chua co san pham nao</h6>
                                         </div>
-
-                                </li>
-                                <li class="wrap-item  active">
-                                    <div class="item-first">
-                                        <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                        <div class="filter">
-                                            <p class="title-filter">Sap xep theo</p>
-                                            <i class="fa-solid fa-filter"></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="item-second">
-                                        <ul class="list-filter">
-                                            <li class="item-filter">
-                                                San Pham 
-                                            </li>
-                                            <li class="item-filter">
-                                                Tong cong
-                                            </li>
-                                            <li class="item-filter">
-                                            Trang thai
-                                            </li>
-                                            <li class="item-filter">
-                                            Dem nguoc
-                                            </li>
-                                            <li class="item-filter">
-                                            Tat ca DVVC
-                                            </li>
-                                            <li class="item-filter">
-                                                Thao tac
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="item-footer">
-                                        <i class="fa-solid fa-rectangle-list"></i>
-                                        <h6 class="note">Chua co san pham nao</h6>
-                                    </div>
-
-                                </li>
-                                <li class="wrap-item ">
-                                    <div class="item-first">
-                                        <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                        <div class="filter-has--address">
-                                             <p class="sent-address-title title-header">Chon hang giao tai buu cuc:</p>
-                                            
-                                                <div class="sent-address">
-                                                    <p class="sent-address-title">Tat ca don hang</p>
-                                                    <i class="fa-solid fa-angle-down sent-address--icon"></i>
-                                                    <ul class="address-choice">
-                                                        <li class="address-choice-item">Tat ca don hang</li>
-                                                        <li class="address-choice-item">Chon tai buu cuc</li>
-                                                    </ul>
-                                                </div>
-                               
-                                                <div class="range">
-                                                    <p class="sent-address-title">Sap xep theo</p>
-                                                    <i class="fa-solid fa-filter"></i>
-                                                </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item-second">
-                                        <ul class="list-filter">
-                                            <li class="item-filter">
-                                                San Pham 
-                                            </li>
-                                            <li class="item-filter">
-                                                Tong cong
-                                            </li>
-                                            <li class="item-filter">
-                                            Trang thai
-                                            </li>
-                                            <li class="item-filter">
-                                            Dem nguoc
-                                            </li>
-                                            <li class="item-filter">
-                                            Tat ca DVVC
-                                            </li>
-                                            <li class="item-filter">
-                                                Thao tac
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="item-footer">
-                                        <i class="fa-solid fa-rectangle-list"></i>
-                                        <h6 class="note">Chua co san pham nao</h6>
-                                    </div>
-
-                                 </li>
-                                
-                                </ul>
-                            </div>
-                            <!-- Hoan tra -->
-                            <div class="body-container ">
-                                <ul class="all-header">
-                                    <li class="head-title  active">Tat ca</li>
-                                    <li class="head-title ">Chua xu ly</li>
-                                    <li class="head-title">Da xu ly</li>
-                                </ul>
-
-                                <ul class="body-wrap">
-                                <li class="wrap-item">
+    
+                                    </li>
+                                    <li class="wrap-item ">
                                         <div class="item-first">
                                             <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                            <div class="filter">
-                                                <p class="title-filter">Sap xep theo</p>
-                                                <i class="fa-solid fa-filter"></i>
+                                            <div class="filter-has--address">
+                                                 <p class="sent-address-title title-header">Chon hang giao tai buu cuc:</p>
+                                                
+                                                    <div class="sent-address">
+                                                        <p class="sent-address-title">Tat ca don hang</p>
+                                                        <i class="fa-solid fa-angle-down sent-address--icon"></i>
+                                                        <ul class="address-choice">
+                                                            <li class="address-choice-item">Tat ca don hang</li>
+                                                            <li class="address-choice-item">Chon tai buu cuc</li>
+                                                        </ul>
+                                                    </div>
+                                   
+                                                    <div class="range">
+                                                        <p class="sent-address-title">Sap xep theo</p>
+                                                        <i class="fa-solid fa-filter"></i>
+                                                    </div>
                                             </div>
                                         </div>
-
+    
                                         <div class="item-second">
                                             <ul class="list-filter">
                                                 <li class="item-filter">
@@ -1217,115 +893,476 @@
                                                 </li>
                                             </ul>
                                         </div>
-
+    
                                         <div class="item-footer">
                                             <i class="fa-solid fa-rectangle-list"></i>
                                             <h6 class="note">Chua co san pham nao</h6>
                                         </div>
-
-                                </li>
-                                <li class="wrap-item  active">
-                                    <div class="item-first">
-                                        <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                        <div class="filter">
-                                            <p class="title-filter">Sap xep theo</p>
-                                            <i class="fa-solid fa-filter"></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="item-second">
-                                        <ul class="list-filter">
-                                            <li class="item-filter">
-                                                San Pham 
-                                            </li>
-                                            <li class="item-filter">
-                                                Tong cong
-                                            </li>
-                                            <li class="item-filter">
-                                            Trang thai
-                                            </li>
-                                            <li class="item-filter">
-                                            Dem nguoc
-                                            </li>
-                                            <li class="item-filter">
-                                            Tat ca DVVC
-                                            </li>
-                                            <li class="item-filter">
-                                                Thao tac
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="item-footer">
-                                        <i class="fa-solid fa-rectangle-list"></i>
-                                        <h6 class="note">Chua co san pham nao</h6>
-                                    </div>
-
-                                </li>
-                                <li class="wrap-item ">
-                                    <div class="item-first">
-                                        <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                        <div class="filter-has--address">
-                                             <p class="sent-address-title title-header">Chon hang giao tai buu cuc:</p>
-                                            
-                                                <div class="sent-address">
-                                                    <p class="sent-address-title">Tat ca don hang</p>
-                                                    <i class="fa-solid fa-angle-down sent-address--icon"></i>
-                                                    <ul class="address-choice">
-                                                        <li class="address-choice-item">Tat ca don hang</li>
-                                                        <li class="address-choice-item">Chon tai buu cuc</li>
-                                                    </ul>
-                                                </div>
-                               
-                                                <div class="range">
-                                                    <p class="sent-address-title">Sap xep theo</p>
+    
+                                     </li>
+                                    
+                                    </ul>
+                                </div>
+                                <div class="body-container ">
+                                    <ul class="all-header">
+                                        <li class="head-title  active">Tat ca</li>
+                                        <li class="head-title ">Chua xu ly</li>
+                                        <li class="head-title">Da xu ly</li>
+                                    </ul>
+    
+                                    <ul class="body-wrap">
+                                    <li class="wrap-item">
+                                            <div class="item-first">
+                                                <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
+                                                <div class="filter">
+                                                    <p class="title-filter">Sap xep theo</p>
                                                     <i class="fa-solid fa-filter"></i>
                                                 </div>
+                                            </div>
+    
+                                            <div class="item-second">
+                                                <ul class="list-filter">
+                                                    <li class="item-filter">
+                                                        San Pham 
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Tong cong
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Trang thai
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Dem nguoc
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Tat ca DVVC
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Thao tac
+                                                    </li>
+                                                </ul>
+                                            </div>
+    
+                                            <div class="item-footer">
+                                                <i class="fa-solid fa-rectangle-list"></i>
+                                                <h6 class="note">Chua co san pham nao</h6>
+                                            </div>
+    
+                                    </li>
+                                    <li class="wrap-item  active">
+                                        <div class="item-first">
+                                            <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
+                                            <div class="filter">
+                                                <p class="title-filter">Sap xep theo</p>
+                                                <i class="fa-solid fa-filter"></i>
+                                            </div>
                                         </div>
-                                    </div>
+    
+                                        <div class="item-second">
+                                            <ul class="list-filter">
+                                                <li class="item-filter">
+                                                    San Pham 
+                                                </li>
+                                                <li class="item-filter">
+                                                    Tong cong
+                                                </li>
+                                                <li class="item-filter">
+                                                Trang thai
+                                                </li>
+                                                <li class="item-filter">
+                                                Dem nguoc
+                                                </li>
+                                                <li class="item-filter">
+                                                Tat ca DVVC
+                                                </li>
+                                                <li class="item-filter">
+                                                    Thao tac
+                                                </li>
+                                            </ul>
+                                        </div>
+    
+                                        <div class="item-footer">
+                                            <i class="fa-solid fa-rectangle-list"></i>
+                                            <h6 class="note">Chua co san pham nao</h6>
+                                        </div>
+    
+                                    </li>
+                                    <li class="wrap-item ">
+                                        <div class="item-first">
+                                            <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
+                                            <div class="filter-has--address">
+                                                 <p class="sent-address-title title-header">Chon hang giao tai buu cuc:</p>
+                                                
+                                                    <div class="sent-address">
+                                                        <p class="sent-address-title">Tat ca don hang</p>
+                                                        <i class="fa-solid fa-angle-down sent-address--icon"></i>
+                                                        <ul class="address-choice">
+                                                            <li class="address-choice-item">Tat ca don hang</li>
+                                                            <li class="address-choice-item">Chon tai buu cuc</li>
+                                                        </ul>
+                                                    </div>
+                                   
+                                                    <div class="range">
+                                                        <p class="sent-address-title">Sap xep theo</p>
+                                                        <i class="fa-solid fa-filter"></i>
+                                                    </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="item-second">
+                                            <ul class="list-filter">
+                                                <li class="item-filter">
+                                                    San Pham 
+                                                </li>
+                                                <li class="item-filter">
+                                                    Tong cong
+                                                </li>
+                                                <li class="item-filter">
+                                                Trang thai
+                                                </li>
+                                                <li class="item-filter">
+                                                Dem nguoc
+                                                </li>
+                                                <li class="item-filter">
+                                                Tat ca DVVC
+                                                </li>
+                                                <li class="item-filter">
+                                                    Thao tac
+                                                </li>
+                                            </ul>
+                                        </div>
+    
+                                        <div class="item-footer">
+                                            <i class="fa-solid fa-rectangle-list"></i>
+                                            <h6 class="note">Chua co san pham nao</h6>
+                                        </div>
+    
+                                     </li>
+                                    
+                                    </ul>
+                                </div>
+                                <div class="body-container ">
+                                    <ul class="all-header">
+                                        <li class="head-title  active">Tat ca</li>
+                                        <li class="head-title ">Chua xu ly</li>
+                                        <li class="head-title">Da xu ly</li>
+                                    </ul>
+    
+                                    <ul class="body-wrap">
+                                    <li class="wrap-item">
+                                            <div class="item-first">
+                                                <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
+                                                <div class="filter">
+                                                    <p class="title-filter">Sap xep theo</p>
+                                                    <i class="fa-solid fa-filter"></i>
+                                                </div>
+                                            </div>
+    
+                                            <div class="item-second">
+                                                <ul class="list-filter">
+                                                    <li class="item-filter">
+                                                        San Pham 
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Tong cong
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Trang thai
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Dem nguoc
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Tat ca DVVC
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Thao tac
+                                                    </li>
+                                                </ul>
+                                            </div>
+    
+                                            <div class="item-footer">
+                                                <i class="fa-solid fa-rectangle-list"></i>
+                                                <h6 class="note">Chua co san pham nao</h6>
+                                            </div>
+    
+                                    </li>
+                                    <li class="wrap-item  active">
+                                        <div class="item-first">
+                                            <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
+                                            <div class="filter">
+                                                <p class="title-filter">Sap xep theo</p>
+                                                <i class="fa-solid fa-filter"></i>
+                                            </div>
+                                        </div>
+    
+                                        <div class="item-second">
+                                            <ul class="list-filter">
+                                                <li class="item-filter">
+                                                    San Pham 
+                                                </li>
+                                                <li class="item-filter">
+                                                    Tong cong
+                                                </li>
+                                                <li class="item-filter">
+                                                Trang thai
+                                                </li>
+                                                <li class="item-filter">
+                                                Dem nguoc
+                                                </li>
+                                                <li class="item-filter">
+                                                Tat ca DVVC
+                                                </li>
+                                                <li class="item-filter">
+                                                    Thao tac
+                                                </li>
+                                            </ul>
+                                        </div>
+    
+                                        <div class="item-footer">
+                                            <i class="fa-solid fa-rectangle-list"></i>
+                                            <h6 class="note">Chua co san pham nao</h6>
+                                        </div>
+    
+                                    </li>
+                                    <li class="wrap-item ">
+                                        <div class="item-first">
+                                            <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
+                                            <div class="filter-has--address">
+                                                 <p class="sent-address-title title-header">Chon hang giao tai buu cuc:</p>
+                                                
+                                                    <div class="sent-address">
+                                                        <p class="sent-address-title">Tat ca don hang</p>
+                                                        <i class="fa-solid fa-angle-down sent-address--icon"></i>
+                                                        <ul class="address-choice">
+                                                            <li class="address-choice-item">Tat ca don hang</li>
+                                                            <li class="address-choice-item">Chon tai buu cuc</li>
+                                                        </ul>
+                                                    </div>
+                                   
+                                                    <div class="range">
+                                                        <p class="sent-address-title">Sap xep theo</p>
+                                                        <i class="fa-solid fa-filter"></i>
+                                                    </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="item-second">
+                                            <ul class="list-filter">
+                                                <li class="item-filter">
+                                                    San Pham 
+                                                </li>
+                                                <li class="item-filter">
+                                                    Tong cong
+                                                </li>
+                                                <li class="item-filter">
+                                                Trang thai
+                                                </li>
+                                                <li class="item-filter">
+                                                Dem nguoc
+                                                </li>
+                                                <li class="item-filter">
+                                                Tat ca DVVC
+                                                </li>
+                                                <li class="item-filter">
+                                                    Thao tac
+                                                </li>
+                                            </ul>
+                                        </div>
+    
+                                        <div class="item-footer">
+                                            <i class="fa-solid fa-rectangle-list"></i>
+                                            <h6 class="note">Chua co san pham nao</h6>
+                                        </div>
+    
+                                     </li>
+                                    
+                                    </ul>
+                                </div>
+                                <!-- Hoan tra -->
+                                <div class="body-container ">
+                                    <ul class="all-header">
+                                        <li class="head-title  active">Tat ca</li>
+                                        <li class="head-title ">Chua xu ly</li>
+                                        <li class="head-title">Da xu ly</li>
+                                    </ul>
+    
+                                    <ul class="body-wrap">
+                                    <li class="wrap-item">
+                                            <div class="item-first">
+                                                <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
+                                                <div class="filter">
+                                                    <p class="title-filter">Sap xep theo</p>
+                                                    <i class="fa-solid fa-filter"></i>
+                                                </div>
+                                            </div>
+    
+                                            <div class="item-second">
+                                                <ul class="list-filter">
+                                                    <li class="item-filter">
+                                                        San Pham 
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Tong cong
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Trang thai
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Dem nguoc
+                                                    </li>
+                                                    <li class="item-filter">
+                                                    Tat ca DVVC
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Thao tac
+                                                    </li>
+                                                </ul>
+                                            </div>
+    
+                                            <div class="item-footer">
+                                                <i class="fa-solid fa-rectangle-list"></i>
+                                                <h6 class="note">Chua co san pham nao</h6>
+                                            </div>
+    
+                                    </li>
+                                    <li class="wrap-item  active">
+                                        <div class="item-first">
+                                            <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
+                                            <div class="filter">
+                                                <p class="title-filter">Sap xep theo</p>
+                                                <i class="fa-solid fa-filter"></i>
+                                            </div>
+                                        </div>
+    
+                                        <div class="item-second">
+                                            <ul class="list-filter">
+                                                <li class="item-filter">
+                                                    San Pham 
+                                                </li>
+                                                <li class="item-filter">
+                                                    Tong cong
+                                                </li>
+                                                <li class="item-filter">
+                                                Trang thai
+                                                </li>
+                                                <li class="item-filter">
+                                                Dem nguoc
+                                                </li>
+                                                <li class="item-filter">
+                                                Tat ca DVVC
+                                                </li>
+                                                <li class="item-filter">
+                                                    Thao tac
+                                                </li>
+                                            </ul>
+                                        </div>
+    
+                                        <div class="item-footer">
+                                            <i class="fa-solid fa-rectangle-list"></i>
+                                            <h6 class="note">Chua co san pham nao</h6>
+                                        </div>
+    
+                                    </li>
+                                    <li class="wrap-item ">
+                                        <div class="item-first">
+                                            <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
+                                            <div class="filter-has--address">
+                                                 <p class="sent-address-title title-header">Chon hang giao tai buu cuc:</p>
+                                                
+                                                    <div class="sent-address">
+                                                        <p class="sent-address-title">Tat ca don hang</p>
+                                                        <i class="fa-solid fa-angle-down sent-address--icon"></i>
+                                                        <ul class="address-choice">
+                                                            <li class="address-choice-item">Tat ca don hang</li>
+                                                            <li class="address-choice-item">Chon tai buu cuc</li>
+                                                        </ul>
+                                                    </div>
+                                   
+                                                    <div class="range">
+                                                        <p class="sent-address-title">Sap xep theo</p>
+                                                        <i class="fa-solid fa-filter"></i>
+                                                    </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="item-second">
+                                            <ul class="list-filter">
+                                                <li class="item-filter">
+                                                    San Pham 
+                                                </li>
+                                                <li class="item-filter">
+                                                    Tong cong
+                                                </li>
+                                                <li class="item-filter">
+                                                Trang thai
+                                                </li>
+                                                <li class="item-filter">
+                                                Dem nguoc
+                                                </li>
+                                                <li class="item-filter">
+                                                Tat ca DVVC
+                                                </li>
+                                                <li class="item-filter">
+                                                    Thao tac
+                                                </li>
+                                            </ul>
+                                        </div>
+    
+                                        <div class="item-footer">
+                                            <i class="fa-solid fa-rectangle-list"></i>
+                                            <h6 class="note">Chua co san pham nao</h6>
+                                        </div>
+    
+                                     </li>
+                                    
+                                    </ul>
+                                </div>
+                            
+                          </div>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="formanagement">
+                    <h4 class="formanagement-title">San pham duoc chu y</h4>
 
-                                    <div class="item-second">
-                                        <ul class="list-filter">
-                                            <li class="item-filter">
-                                                San Pham 
-                                            </li>
-                                            <li class="item-filter">
-                                                Tong cong
-                                            </li>
-                                            <li class="item-filter">
-                                            Trang thai
-                                            </li>
-                                            <li class="item-filter">
-                                            Dem nguoc
-                                            </li>
-                                            <li class="item-filter">
-                                            Tat ca DVVC
-                                            </li>
-                                            <li class="item-filter">
-                                                Thao tac
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="item-footer">
-                                        <i class="fa-solid fa-rectangle-list"></i>
-                                        <h6 class="note">Chua co san pham nao</h6>
-                                    </div>
-
-                                 </li>
-                                
-                                </ul>
-                            </div>
-                        
-                      </div>
-                    </li>
-                </ul>
-               </div>
-
-               <div class="forgiaohang">
-                    
-               </div>
-            </div>
+                    <table class="product-incart-wrap">
+                        <h4 class="incart-quantity">0 <span>San pham</span></h4>
+                        <tr class="cart-navbar">
+                            <td class="cart-navbar-title">Ten san pham</td>
+                            <td class="cart-navbar-title">So luong</td>
+                            <td class="cart-navbar-title right-little">Phan loai hang</td>
+                            <td class="cart-navbar-title price-right">Gia</td>
+                            <td class="cart-navbar-title">Kho hang</td>
+                            <td class="cart-navbar-title">Thao tac</td>
+                        </tr>
+                        <tr class="cart-navbar-item-wrap">
+                            <td class="cart-navbar-item">Bun dong</td>
+                            <td class="cart-navbar-item">5</td>
+                            <td class="cart-navbar-item right-little-item">Do kho</td>
+                            <td class="cart-navbar-item price-right">65.000</td>
+                            <td class="cart-navbar-item">Con hang</td>
+                            <td class="cart-navbar-item has--discount "> Discount</td>
+                        </tr>
+                        <tr class="cart-navbar-item-wrap">
+                            <td class="cart-navbar-item">Bun dong</td>
+                            <td class="cart-navbar-item">5</td>
+                            <td class="cart-navbar-item right-little-item">Do kho</td>
+                            <td class="cart-navbar-item price-right">65.000</td>
+                            <td class="cart-navbar-item">Con hang</td>
+                            <td class="cart-navbar-item has--discount">Discount</td>
+                        </tr>
+                        <tr class="cart-navbar-item-wrap">
+                            <td class="cart-navbar-item">Bun dong</td>
+                            <td class="cart-navbar-item">5</td>
+                            <td class="cart-navbar-item right-little-item">Do kho</td>
+                            <td class="cart-navbar-item price-right">65.000</td>
+                            <td class="cart-navbar-item">Con hang</td>
+                            <td class="cart-navbar-item has--discount">Discount</td>
+                        </tr>
+                    </table>
+                </div>
         </div>
         
          </div>
