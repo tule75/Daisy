@@ -1,5 +1,6 @@
 const User = require('../models/Users')
 var jwt = require('jsonwebtoken')
+const Product = require('../models/Product')
 const GioHang = require('../models/GioHang')
 
 class UserController {
@@ -26,9 +27,12 @@ class UserController {
                     .catch()
 
                     User.findOne({slug: req.params.slug})
-                    .then(data => {
-                        if (data) {
-                            res.render('shop.html', {shop: data, check: 1, user: customer, countCart: counts});
+                    .then(shop => {
+                        if (shop) {
+                            Product.find({user_slug: shop.slug})
+                            .then(products => {
+                                res.render('shop.html', {shop: data, check: 1, user: customer, countCart: counts, products: products});
+                            })
                         }
                         else {
                             res.send('không tồn tại')
@@ -36,9 +40,12 @@ class UserController {
                     })
                 } else {
                     User.findOne({slug: req.params.slug})
-                    .then(data => {
-                        if (data) {
-                            res.render('shop.html', {shop: data, check: 0, countCart: 0})
+                    .then(shop => {
+                        if (shop) {
+                            Product.find({user_slug: shop.slug})
+                            .then(products => {
+                                res.render('shop.html', {shop: data, check: 0, countCart: 0, products: products});
+                            })
                         }
                         else {
                             res.send('không tồn tại')
@@ -51,9 +58,12 @@ class UserController {
             })
         } else {
             User.findOne({slug: req.params.slug})
-                .then(data => {
-                    if (data) {
-                        res.render('shop.html', {shop: data, check: 0, countCart: 0})
+                .then(shop => {
+                    if (shop) {
+                        Product.find({user_slug: shop.slug})
+                        .then(products => {
+                            res.render('shop.html', {shop: data, check: 0, countCart: 0, products: products});
+                        })
                     }
                     else {
                         res.send('không tồn tại')
