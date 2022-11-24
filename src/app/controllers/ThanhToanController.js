@@ -80,7 +80,11 @@ class ThanhToanController {
                     })
                     promise.then(async (pr) => {
                         pr = await resolveAfter2Seconds(pr)
-                        res.render('thanhtoan.html', {products: pr, check: 1, user: user, countCart: counts})
+                        User.findOne({slug: pr.user_slug})
+                        .then(shop => {
+                            res.render('thanhtoan.html', {check: 1, product: pr, user: user, countCart: counts, shop: shop})
+                        })
+                        .catch(err => res.send('loi'))
                         // res.send(pr)
                         // res.send(pr)
                         // res.send(req.query.p)
@@ -119,7 +123,7 @@ class ThanhToanController {
             .then(user => {
                 if (user) {
                     var counts = 0
-                    GioHang.find({user_slug: data.slug})
+                    GioHang.find({user_slug: user.slug})
                     .then(dataa => {
                         if (dataa) {
                             for (var i = 0; i < dataa.length; i++) {
@@ -146,6 +150,7 @@ class ThanhToanController {
                 }
             })
             .catch(err => {
+                console.error(err)
                 res.send('loi')
             })
         } else {

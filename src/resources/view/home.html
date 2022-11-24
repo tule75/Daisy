@@ -343,7 +343,7 @@
                                         <% const y = x.replace("/view?usp=share_link","",40)%>
                            
                                 <div class="grid__col-2-4">
-                                    <a href="/<%-products[i].slug %> " class="addhref">
+                                    <a href="/<%-products[i].slug %>" class="addhref">
                                     <div class="home-product__item">
                                          <img class="home-product__item-img" src="<%-y%>" alt="">
                                         <h4 class="home-product__item-name"><%=products[i].name%></h4>
@@ -371,9 +371,9 @@
                                                 <i class="fa fa-regular fa-bag-shopping"></i>
                                             </button>
                                             </form> 
-                                            <button class="btn-buy-item has--plus">
+                                            <a href="/thanhtoan/<%-products[i].slug %> "><button class="btn-buy-item has--plus">
                                                 Buy Now!
-                                            </button>
+                                            </button></a>
                                         </div>
                                         
                                      </div>
