@@ -1,7 +1,7 @@
 const GioHang = require('../models/GioHang')
 const User = require('../models/Users')
-var jwt = require('jsonwebtoken');
 const Product = require('../models/Product')
+const jwt = ('jsonwebtoken')
 
 class GioHangController {
     // [POST] /...

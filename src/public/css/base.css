@@ -350,7 +350,7 @@ margin-bottom: 0;
   height: auto;
   background-color: rgb(237, 233, 233);
   position: absolute;
-  top: 75%;
+  top: 82%;
   right: 30px;
   padding-left: 0;
   list-style: none;
@@ -417,17 +417,23 @@ margin-bottom: 0;
 
 .header-has-seller {
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 150px;
-  color: rgb(220, 211, 211);
-  font-size: 13px;
+  color: rgb(253, 253, 253);
+  font-size: 15px;
   cursor: pointer;
 }
 
 .paya {
   color: white;
 }
-
+.paya:hover{
+  color: white;
+  /* background: linear-gradient(130deg,#ccc, #999); */
+}
+.paya:active{
+  color: white;
+}
 .addhref {
   color: black;
 }
@@ -435,7 +441,22 @@ margin-bottom: 0;
   color: black;
 }
 
+.addhref:active {
+  color: black;
+}
+
 .home-product__item:hover {
   transform: translateY(-10px);
   box-shadow: 0 2px 5px #ccc;
+}
+
+
+.has-account {
+  color: black;
+}
+.has-account:active {
+  color: black;
+}
+.has-account:hover {
+  color: black;
 }

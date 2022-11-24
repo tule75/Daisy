@@ -22,7 +22,7 @@
          <div class="header">
             <div class="header-left"> 
              <img class="header-logo" src="img/Rectangle 30 (1).svg" alt="">
-             <p class="header-has-seller">Kenh nguoi ban</p>
+             <a href="/kenhnguoiban"><p class="header-has-seller">Kenh nguoi ban</p></a>
             </div>
              <div class="header-search">
                  <input class="header-search-input" type="text" placeholder="Search">
@@ -369,5 +369,27 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const order = document.querySelector('.ending')
+        const momo = document.querySelector('.momo')
+        const khiThanhToan = document.querySelector('.khinhanhang')
+        const internetBanking = document.querySelector('.internet-banking')
+
+        order.addEventListener('click', () => {
+            alert('Bạn đã đặt hành thành công!')
+        })
+        momo.addEventListener('click', () => {
+            alert('Bạn đã chọn Thanh toán bằng Ví Momo!')
+        })
+        khiThanhToan.addEventListener('click', () => {
+            alert('Bạn đã chọn Thanh toán khi nhận hàng')
+        })
+        internetBanking.addEventListener('click', () => {
+            alert('Bạn đã chọn Thanh toán bằng Internet Banking!')
+        })
+
+
+    </script>
 </body>
 </html>
