@@ -9,25 +9,25 @@ class UserController {
             const token = req.cookies.token
             const id = jwt.verify(token, 'daisy')
             User.findOne({_id: id})
-            .then(data => {
-                if (data) {
-                    const customer = data
+            .then(customer => {
+                if (customer) {
+                    var counts = 0
+                    GioHang.find({user_slug: customer.slug})
+                    .then(dataa => {
+                        if (dataa) {
+                            for (var i = 0; i < dataa.length; i++) {
+                                counts += dataa[i].count;
+                            }
+                        }
+                        else {
+                            counts = counts;
+                        }
+                    })
+                    .catch()
+
                     User.findOne({slug: req.params.slug})
                     .then(data => {
                         if (data) {
-                            var counts = 0
-                            GioHang.find({user_slug: data.slug})
-                            .then(dataa => {
-                                if (dataa) {
-                                    for (var i = 0; i < dataa.length; i++) {
-                                        counts += dataa[i].count;
-                                    }
-                                }
-                                else {
-                                    counts = counts;
-                                }
-                            })
-                            .catch()
                             res.render('shop.html', {shop: data, check: 1, user: customer, countCart: counts});
                         }
                         else {
