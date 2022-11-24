@@ -600,6 +600,7 @@
 
 .content__form-voucher__list {
     width: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     /* justify-content:space-between; */
@@ -607,7 +608,7 @@
 }
 
 .voucher-status {
-    width: 14.28%;
+    width: 25%;
     height: fit-content;
     font-size: 14px;
     /* border-right-style: solid; */
@@ -615,9 +616,80 @@
     /* border-right: 4px; */
     border-style: none;
     background-color: #fff;
-    text-align: center;
+    align-self: center ;
     cursor: pointer;
     padding: 0 0;
+}
+
+.voucher-list {
+    /* display: flex; */
+    flex-wrap: wrap;
+    margin-top: 40px;
+    display: none;
+}
+
+.voucher {
+    width: 350px;
+    height: 80px;
+    background-color: #fff;
+    border-right: none;
+    border-bottom: none;
+    border-top: none;
+    border-left:dashed 2px #5BAB5A;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* box-shadow: rgba(0, 0, 0, 0.8); */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+    margin: 0 20px 12px 20px;
+}
+
+.voucher-left {
+    width: 25%;    
+    height: 100%;
+    background-color: #5BAB5A;
+    /* border-left-style:dashed; */
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.voucher-middle {
+    width: 60%;
+    list-style: none;
+    font-size: 12px;
+    padding-left: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.voucher-discript {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.voucher-count {
+    width: 100px;
+    color: red;
+    border: solid red 1px;
+}
+
+.voucher-right {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.voucher-btn {
+    margin-right: 4px;
+    color: blue;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 /* --------------------- */
@@ -630,6 +702,21 @@
     display: flex;
 }
 
+.next {
+    color: #5BAB5A;
+}
+
+.nextto {
+    display: flex;
+}
+
+.change {
+    color: #5BAB5A;
+}
+
+.changecontent {
+    display: flex;
+}
 /*-------------------------Footer-----------------------*/
 .footer {
     width: 100%;
@@ -777,14 +864,4 @@
         transform: translateY(0);
     }
  }
-
-
-
-
-
-
-
-
-
-
 
