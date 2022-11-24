@@ -111,15 +111,17 @@
            <!-- company-show -->
 
             <div class="company-container">
+                <% for (let i = 0; i < shops.length; i++) {%> 
                     <div class="company-info">
-                        <a href="/shop/anxuan123"><div class="company-info-pic">
-                            <img class="Anxuan-info" src="https://cagaileoanxuan.vn/wp-content/uploads/2020/08/Logo-cagaileo.png" alt="">
+                        <a href="/shop/<%-shops[i].slug%>"><div class="company-info-pic">
+                            <img class="Anxuan-info" src="/img/<%-shops[i].img%>" alt="">
                         </div></a>
                         <h1 class="company-info-name">
-                            <a href="/shop/anxuan123" class="link-color"> An Xuân</a>
+                            <a href="/shop/<%-shops[i].slug%>" class="link-color"> <%=shops.name%></a>
                         </h1>
                     </div>
-                    <div class="company-info">
+                <% } %> 
+                    <!-- <div class="company-info">
                         <a href="/shop/phanhoang123"><div class="company-info-pic">
                             <img class="Anxuan-info" src="https://cagaileoanxuan.vn/wp-content/uploads/2020/08/Logo-cagaileo.png" alt="">
                         </div>
@@ -162,7 +164,7 @@
                                 <a href="/shop/huongque123" class="link-color"> Dũng Hà</a>  
                             </h1>
                         
-                    </div>
+                    </div> -->
                    
             </div>
            
