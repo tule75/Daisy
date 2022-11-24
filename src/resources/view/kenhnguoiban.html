@@ -40,20 +40,26 @@
         <div class="body">
             <div class="nav-bar">
                <ul class="navbar-list ">
+                    <li class="navbar-item shipment-list  manage-item">
+                        <i class="fa-solid fa-house"></i> 
+                        <h7 class="ship-title "> 
+                            Trang Chu
+                        </h7>
+                    </li>
                     <li class="navbar-item shipment-list ">
                         <i class="fa-sharp fa-solid fa-truck"></i>
                            <h7 class="ship-title "> Vận chuyển
                                 <!-- <span><i class="fa-regular fa-angle-up control-icon "></i></span> -->
                             </h7>
                             <ul class="ship-list-2">
-                                <li class="ship-contain has--manageship">
+                                <li class="ship-contain has--manageship manage-item">
                                     Quản lý vận chuyển
                                 </li>
-                                <li class="ship-contain">Cài đặt vận chuyển</li>
+                                <li class="ship-contain set-manageship manage-item">Cài đặt vận chuyển</li>
 
                             </ul>
                     </li>
-                    <li class=" navbar-item manage-list">
+                    <li class="navbar-item manage-list">
                         <i class="fa-solid fa-bag-shopping"></i>
                            <h7 class="manage-product-title ">
                                 Quản lý đơn hàng
@@ -104,7 +110,7 @@
 
 
             <div class="container ">    
-                <div class="forhome">
+                <div class="forhome for-item active ">
                     <div class="todolist">
                         <h5 class="todolist-heading">Danh sách cần làm</h5>
                         <p class="todolist-heading-note">Những việc bạn sẽ phải làm</p>
@@ -287,7 +293,7 @@
                       </div>
 
                 </div>
-                <div class="forshipment ">
+                <div class="forshipment for-item ">
                     <ul class="container-list">
                         <li class="container-content active">
                             <h7 class="content-header">Tất cả</h7>
@@ -1323,8 +1329,13 @@
                         </li>
                     </ul>
                 </div>
-    
-                <div class="formanagement">
+                <div class="forSetShipment for-item">
+                    <h4>Cai dat van chuyen</h4>
+                </div>
+                <div class="forAll for-item">
+                    <h4>tat ca</h4>
+                </div>
+                <div class="formanagement for-item">
                     <h4 class="formanagement-title">San pham duoc chu y</h4>
 
                     <table class="product-incart-wrap">
@@ -1363,7 +1374,8 @@
                         </tr>
                     </table>
                 </div>
-        </div>
+
+             </div>
         
          </div>
 
@@ -1523,11 +1535,7 @@
 
     </div>
 
-    <script>
-        const $ = document.querySelector.bind(document);
-        const $$ = document.querySelectorAll.bind(document);
-
-    
+    <script src="javascript/kenhnguoiban.js">
     </script>
     
 </body> 
