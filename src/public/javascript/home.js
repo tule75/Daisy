@@ -1,4 +1,4 @@
-        
+
         var btns = document.querySelectorAll('.btn');
         var paginationWrapper = document.querySelector('.pagination-wrapper');
         var bigDotContainer = document.querySelector('.big-dot-container');
@@ -26,34 +26,32 @@
             }
     }
 
+    // luu vouchers
+    const getVouchers = document.querySelectorAll(".coupon-btn")
 
-
-
-    // const btnAdd = document.querySelector('.btn')
-    const voucherText1 = document.querySelector('.coupontext1')
-    const voucherText2 = document.querySelector('.coupontext2')
-    const voucherText3 = document.querySelector('.coupontext3')
-
-    const btnVouchers = document.querySelectorAll('.coupon-btn')
-    const coupon1 = document.querySelector('.coupon-1')
-    const coupon2 = document.querySelector('.coupon-2')
-    const coupon3 = document.querySelector('.coupon-3')
-
-    btnVouchers.forEach((voucher) => {
-        // console.log(voucher)
-        voucher.addEventListener('click', couponClick);
-    })
-     
-
-    function couponClick() {
-        if(this.classList.contains('coupon-1')) {
-            voucherText1.innerHTML='oke'
-           
-        } 
-        if (this.classList.contains('coupon-2')) {
-            voucherText2.innerHTML='okela'
+   getVouchers.forEach((voucher) => {
+        voucher.onclick = function () {
+            if(voucher.value == "Lưu mã") {
+                voucher.value = "Đã Lưu"
+            }
+            else {
+                const value2 = "Lưu mã"
+                voucher.value = value2
+            }
         }
-        if (this.classList.contains('coupon-3')) {
-            voucherText3.innerHTML='okelala'
-        }
+   })
+   
+    const follow = document.querySelector(".btn--follow")
+    var value = document.querySelector(".btn--follow").value
+
+    follow.onclick = function () {
+       if(follow.value == "Theo dõi") {
+            const value = "Đã Theo Dõi"
+            follow.value = value
+       }
+       else {
+            const value2 = "Theo dõi"
+            follow.value = value2
+       }
     }
+   
