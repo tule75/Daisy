@@ -1,0 +1,168 @@
+@media screen and (min-width: 1948px){
+    .header {
+        position: fixed;
+        width: 100%;
+        height: 89px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #5BAB5A;
+        z-index: 100;
+    }
+    .header-logo {
+        transform: translate(100px,18px);
+        width: 200px;
+        height: 200px;
+    }
+
+.header-has-seller {
+    position: absolute;
+    top: 2px;
+    left: 13%;
+    color: rgb(253, 253, 253);
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .header-search {
+    background-color: rgba(22,24,35,0.4) ;
+    position: relative;
+    border-radius: 13px;
+    transform: translateX(100px);
+}
+.header-search-input {
+    min-width: 710px;
+}
+.header-search-history{
+    width: 660px;
+}
+.header-user {
+    transform: translateX(-50px);
+}
+
+.user-item {
+    margin: 0 10px;
+    padding: 8px 20px;
+}
+.slide-show {
+    transform: translateY(14%);
+    min-width:70%;
+    height:370px;
+}
+.Anxuan {
+    /* width: 00%; */
+    animation: slideShow 16s infinite;
+  transform: translateY(0%);
+  transform: translateX(160px);
+  
+}
+
+
+@keyframes slideShow {
+    20% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: -150%;
+    }
+    40% {
+        margin-left: -150%;
+    }
+    50% {
+        margin-left: -250%;
+    }
+    60% {
+        margin-left: -250%;
+    }
+    70% {
+        margin-left: -350%;
+    }
+    80% {
+        margin-left: -350%;
+    }
+    90% {
+        margin-left: -450%;
+    }
+    100% {
+        margin-left: -450%;
+    }
+
+    
+}
+.slide-show-pic {
+    float: left;
+    height: 608px;
+    width: 1008px;
+
+    /* flex-direction: column; */
+    
+}
+.company-info {
+    margin:  0 20px;
+    width: 200px;
+    height: 190px;
+   /* border: 1px solid #ccc; */
+
+
+}
+.Anxuan-info{
+    width: 120px;
+    height: 140px;
+}
+.company-info-name {
+    position: absolute;
+    font-size: 20px;
+    bottom: 5px;
+
+}
+.popular-info {
+    margin:0 45px;
+    flex-direction: row;
+}
+.product-1 {
+    width: 250px;
+    height: 250px;
+}
+.popular-name {
+    font-size: 29px;
+    font-weight: bold;
+}
+.popular-content {
+    padding-left: 20px;
+    font-size: 20px;
+}
+.add-button {
+    padding: 15px 20px;
+   transform: translate(0,100px);
+   background-color: transparent;
+    border: 1px solid #ccc;
+    /* border-radius: 50%; */
+
+}
+/* .grid__col-2 */
+.grid {
+    width: 90%;
+}
+.add-gh{
+    padding: 5px 50px;
+}
+.home-product__item-img {
+    width: 280px;
+    height:188px;
+}
+.grid__col-2-4 {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.footer {
+   padding-left: 80px;
+   /* font-size: 20px; */
+}
+.footer-heading {
+    font-weight: bolder;
+    font-size: 22px;
+}
+.thanhtoandaisy{
+    padding-left: 0;
+    transform: translateX(-10px);
+}
+}
