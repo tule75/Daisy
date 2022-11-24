@@ -56,6 +56,9 @@
   border: 1px solid black;
 
 }
+
+/* SET LOGO ALL */
+
  /* pagnition product */
 
 .pagination-wrapper {
@@ -254,7 +257,7 @@ a {
 .cart-announcement {
   position: absolute;
   width: 350px;
-  height: auto;
+  height: 300px;
   top: 55px;
   right: 170px;
   animation: headerNotiGrowth ease 0.4s;
@@ -289,12 +292,10 @@ margin-bottom: 0;
   display: flex;
   /* justify-content: space-between; */
   align-items: center;
-  padding-top: 15px;
-  padding-left:  10px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid black;
-  cursor: pointer; 
- 
+  justify-content: center;
+  padding: 100px 0;
+  font-weight: bold;
+  color: #777;
 
 }
 
@@ -302,10 +303,7 @@ margin-bottom: 0;
   background-color: transparent;
   border: none;
 }
-.announ-item:hover {
-  background-color:#476650 ;
 
-}
 .announ-pic {
   width: 100px;
   height: 90px;
@@ -331,13 +329,6 @@ margin-bottom: 0;
 .note {
 
   padding-top: 5px;
-}
-.announ-item:last-child {
-  padding-bottom: 15px;
-  margin-bottom: 15px;
-}
-.announ-item:first-child {
-  padding-top: 0;
 }
 
 /* user-box */
@@ -458,5 +449,8 @@ margin-bottom: 0;
   color: black;
 }
 .has-account:hover {
+  color: black;
+}
+.link-color {
   color: black;
 }
