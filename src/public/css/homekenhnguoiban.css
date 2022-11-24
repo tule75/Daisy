@@ -247,7 +247,7 @@
   z-index: 1;
   background-color: white;
   box-shadow: 0 0 4px 0 #ccc;
-  padding-bottom: 15px;
+  /* padding-bottom: 15px; */
   margin-bottom: 20px;
 }
 
@@ -282,9 +282,11 @@
   font-weight: bolder;
   color: black;
   text-align: center;
+  /* height:200px; */
 }
 .item-note {
-  width: 140px;
+  width: 150px;
+  height:150px;
   font-weight: lighter;
   color: rgb(129, 126, 126);
 }

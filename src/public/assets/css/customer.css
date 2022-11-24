@@ -201,6 +201,7 @@
     padding-bottom: 8px;
     border-style: none;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .content__side-bar--choice-btn:hover,
@@ -212,6 +213,7 @@
     padding-bottom: 8px;
     border-style: none;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .content__side-bar--ic {

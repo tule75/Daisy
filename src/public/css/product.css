@@ -23,10 +23,11 @@
     z-index: 1;
 }
 .header-logo {
-    width: 90px;
-    height: 100px;
-    margin-left: 50px;
-    transform: translateY(-23px);
+    width: 160px;
+    height: 160px;
+    margin-left: 10px;
+    transform: translateY(14px);
+    position: relative;
 
 }
 .header-search {
