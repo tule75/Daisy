@@ -297,7 +297,7 @@
     position: absolute;
     top: -35px;
     left: 20%;
-    border-radius: 50%;
+    border-radius: 0%;
 }
 .company-info-name {
     position: absolute;
@@ -531,7 +531,9 @@
 
 /* footer */
 .footer {
+    width: 100%;
     margin-top: 100px;
+    margin-left: 0;
     display: flex;
     border-top: 4px solid #5BAB5A;
     padding-top: 20px;

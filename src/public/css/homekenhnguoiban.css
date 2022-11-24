@@ -10,7 +10,7 @@
     z-index: 1;
     padding-top: 30px;
     /* height: 1000px; */
-    display: none;
+    /* display: none; */
 }
 .todolist {
     /* background:linear-gradient(130deg,white,rgb(218, 213, 213)); */
@@ -368,5 +368,10 @@ font-weight: 400;
 
 
 
+.for-item {
+  display: none;
+}
 
-
+.for-item.active {
+  display: block;
+}
