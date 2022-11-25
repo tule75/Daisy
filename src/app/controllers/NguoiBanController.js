@@ -80,7 +80,7 @@ class NguoiBanController {
                                     })
                                     .catch((err) => {})
     
-                                    Product.findOne({slug: element.user_slug})
+                                    Product.findOne({slug: element.product_slug})
                                     .then((product) => {
                                         product_buy[i] = product
                                     })
