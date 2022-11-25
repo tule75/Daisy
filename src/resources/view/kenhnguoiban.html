@@ -28,6 +28,10 @@
                 <div class="seller-account">
                     <img class="seller-avt" src="https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/316182758_3560323187547272_2736166690037173098_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=pYyquu0RpXIAX8Xg0Ck&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfC3WK-uEFSBfG67CqGzuoM6DJYJyhVhbgtXTbPpWv2TnQ&oe=637D50FD" alt="">
                     <p class="seller-name">Daisyseller</p>
+                    <ul class="seller-logout">
+                        <li class="logout-item">Profile</li>
+                        <li class="logout-item"><a class="color-link" href="/logout">Log out</a></li>
+                    </ul>
                 </div>
                <div> <i class="fa-regular fa-bell bell-icon"></i></div>
                 <div class="seller-message">
@@ -43,7 +47,7 @@
                     <li class="navbar-item shipment-list  manage-item">
                         <i class="fa-solid fa-house"></i> 
                         <h7 class="ship-title "> 
-                            Trang Chu
+                           Trang chủ
                         </h7>
                     </li>
                     <li class="navbar-item shipment-list ">
@@ -1041,54 +1045,57 @@
                     <h4>tat ca</h4>
                 </div>
                 <div class="formanagement for-item">
-                    <h4 class="formanagement-title">San pham duoc chu y</h4>
+                    <h4 class="formanagement-title">SẢN PHẨM ĐƯỢC CHÚ Ý</h4>
 
                     <table class="product-incart-wrap">
-                        <h4 class="incart-quantity">0 <span>San pham</span></h4>
+                        <h4 class="incart-quantity">0 <span>Sản phẩm</span></h4>
                         <tr class="cart-navbar">
-                            <td class="cart-navbar-title">Ten san pham</td>
-                            <td class="cart-navbar-title">So luong</td>
-                            <td class="cart-navbar-title right-little">Phan loai hang</td>
-                            <td class="cart-navbar-title price-right">Gia</td>
-                            <td class="cart-navbar-title">Kho hang</td>
-                            <td class="cart-navbar-title">Thao tac</td>
+                            <td class="cart-navbar-title">Tên SP</td>
+                            <td class="cart-navbar-title">Số lượng</td>
+                            <td class="cart-navbar-title right-little">Phân loại</td>
+                            <td class="cart-navbar-title price-right">Giá</td>
+                            <td class="cart-navbar-title">Trình trạng</td>
+                            <td class="cart-navbar-title">Thao tác</td>
                         </tr>
-                        <!-- 
-                             <div class="company-container">
-              
-                         -->
+                     
                          <% for (let i = 0; i < products.length; i++) {%> 
                         <tr class="cart-navbar-item-wrap">
                             <td class="cart-navbar-item"><%=products[i].name%></td>
                             <td class="cart-navbar-item"><%=boGio[i]%></td>
-                            <td class="cart-navbar-item right-little-item">Do kho</td>
+
+                            <td class="cart-navbar-item right-little-item">Đồ khô</td>
 
                             <td class="cart-navbar-item price-right"><%=(products[i].price * boGio[i])%></td>
-                            <td class="cart-navbar-item">Con hang</td>
+                            <td class="cart-navbar-item">Còn hàng</td>
                             <td class="cart-navbar-item has--discount "> Discount</td>
                         </tr>
                         <% } %> 
-                        <!-- <tr class="cart-navbar-item-wrap">
-                            <td class="cart-navbar-item">Bun dong</td>
-                            <td class="cart-navbar-item">5</td>
-                            <td class="cart-navbar-item right-little-item">Do kho</td>
-                            <td class="cart-navbar-item price-right">65.000</td>
-                            <td class="cart-navbar-item">Con hang</td>
-                            <td class="cart-navbar-item has--discount">Discount</td>
-                        </tr>
-                        <tr class="cart-navbar-item-wrap">
-                            <td class="cart-navbar-item">Bun dong</td>
-                            <td class="cart-navbar-item">5</td>
-                            <td class="cart-navbar-item right-little-item">Do kho</td>
-                            <td class="cart-navbar-item price-right">65.000</td>
-                            <td class="cart-navbar-item">Con hang</td>
-                            <td class="cart-navbar-item has--discount">Discount</td>
-                        </tr> -->
+                         
                     </table>
                 </div>
 
              </div>
         
+         </div>
+
+         <div class="modal">
+            <div class="modal-container">
+
+                <div class="header-modal">
+                    
+                    DISCOUNT FOR CUSTOMER
+                    <div class="icon-close"><i class="fa-regular fa-circle-xmark"></i></div>
+                </div>
+                
+                    <form class="body-modal" action="">
+                        <p class="body-heading">Nhập mã giảm giá: </p>
+                    <input class="modal-input" type="number" min="1" max="100" checked value="" placeholder='Phần trăm'>
+                    </form>
+                
+                <div class="footer-modal">
+                    <div class="btn-apply">Ap dung</div>
+                </div>
+            </div>
          </div>
 
 

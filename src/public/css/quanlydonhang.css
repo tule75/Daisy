@@ -9,9 +9,12 @@
 }
 
 .product-incart-wrap {
-    background-color: white;
-    box-shadow: 0 0 4px 0 #ccc;
-    margin-left: 30px;
+    /* background-color: white; */
+    /* box-shadow: 0 0 4px 0 #ccc; */
+    /* margin-left: 30px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 .incart-quantity {
@@ -19,8 +22,11 @@
     padding-left: 20px;
 }
 .cart-navbar {
+    padding: 5px 10px;
+    padding-right: 20px;
+
+    /* width: 100px; */
     display: flex;
-    justify-content: center;
     align-items: center;
     border: 1px solid #ccc;
    
@@ -28,24 +34,27 @@
 .cart-navbar-title{
     margin: 10px 30px;
     padding: 0;
-    width: 135px;
+    width: auto;
     position: relative;
     font-weight: bolder;
+    text-align: center;
+    padding: 0 17px;
+    /* border-right: 1px solid #ccc; */
 }
 .cart-navbar-title::after {
-    content: '';
+    /* content: '';
     position: absolute;
     width: 1px;
     height: 60px;
     background-color: black;
     right: 0;
-    top: -10px;
+    top: -10px; */
 }
 
 .cart-navbar-title:last-child::after {
-    content: '';
+    /* content: '';
     position: absolute;
-    background-color: transparent;
+    background-color: transparent; */
 }
 .price-right {
     padding-left: 33px;
@@ -60,22 +69,23 @@
 .cart-navbar-item {
     margin: 0px 30px;
     padding: 10px 15px;
-    width: 135px;
+    width: 100px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    position: relative;
+    /* position: relative; */
     cursor: pointer;
+    text-align: center;
 
 }
 .cart-navbar-item::after {
-    content: '';
+    /* content: '';
     position: absolute;
     width: 1px;
     height: 100px;
     background-color: black;
     right: 0;
-    top: -6px;
+    top: -6px; */
 }
 
 .cart-navbar-item:last-child::after {
@@ -90,4 +100,126 @@
 
 .has--discount:hover {
     color: red;
+}
+
+
+/* modal */
+.modal  {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(51, 51, 51, 0.302);
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: 0.5s all ease-out;
+    transition-delay: 0.2s;
+    display: none;
+   
+}
+.modal.open {
+    display: flex;
+}
+
+.modal-container {
+    position: relative;
+    background-color: white;
+    width: 600px;
+    z-index: 10;
+    height: auto;
+    opacity: 2;
+    padding-bottom: 10px;
+}
+.header-modal {
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(172, 74, 74);
+    position: relative;
+}
+.body-modal {
+   padding: 0 15px;
+
+}
+.body-heading {
+    padding-top: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2;
+    font-size: 19px;
+    color: rgb(117, 56, 56);
+    padding-bottom: 8px;
+    margin-bottom: 0;
+}
+.modal-input {
+    width: 100%;
+    outline: none;
+    padding: 5px 10px;
+}
+
+.footer-modal {
+    cursor: pointer;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px 17px;
+    float: right;
+    margin-right: 40px;
+    color: rgb(117, 56, 56);
+
+}
+.footer-modal:hover {
+    background-color:rgb(166, 144, 144) ;
+    color: black;
+    opacity: 0.9;
+}
+.footer-modal:active {
+    background-color:rgb(117, 56, 56) ;
+    color: white;
+}
+
+.icon-close {
+    position: absolute;
+    right: -5px;
+    top: -14px;
+    z-index: 1;
+
+    cursor: pointer;
+}
+.icon-close:active {
+    color: red;
+}
+
+.seller-logout {
+    position: absolute;
+    top: 53px;
+    list-style: none;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 0 4px 0 #ccc;
+    padding-left: 0;
+    display: none;
+}
+
+.logout-item {
+    text-align: center;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+.logout-item:hover {
+    background-color: #ccc;
+}
+.color-link, .color-link:hover {
+    color: black;
+   
+}
+
+.seller-account:hover .seller-logout {
+    transition-duration: 0.4s;
+    display: block;
+
 }
