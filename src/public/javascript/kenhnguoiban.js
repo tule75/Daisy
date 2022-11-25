@@ -5,13 +5,16 @@
 
  const getContainers = $$(".container-content")
     const navbars = $$(".navbar-item")
-    const shipment = $(".forshipment")
-    const hasShipment = $(".has--manageship")
-    const setShip = $(".set-manageship")
-    const forHome = $(".forhome")
-    const forSetShip = $(".forSetShipment")
     const forItems = $$(".for-item")
     const setManageItems = $$(".manage-item")
+    const containerContents = $$(".container-content")
+    const containerItems  = $$(".container-item")
+
+    const headerTitles = $$(".head-title")
+    const titleItems = $$(".wrap-item")
+
+    const cholayhang = $(".cholayhang")
+    const isContainerItem = $(".has-giaohang")
 
    setManageItems.forEach((manageItem,index) => {
         const  forItem = forItems[index];
@@ -20,3 +23,27 @@
             forItem.classList.add("active")
         }
    }) 
+
+   containerContents.forEach((content,index) => {
+        const contentItem = containerItems[index]
+        content.onclick = function () {
+            $(".container-content.active").classList.remove("active")
+            $(".container-item.active").classList.remove("active")
+            this.classList.add("active")
+            contentItem.classList.add("active")
+        }
+   })
+
+   headerTitles.forEach((headerTitle,index) => {
+    const headerTitleItem = titleItems[index]
+    headerTitle.onclick = function () {
+        $(".wrap-item.active").classList.remove("active")
+        $(".head-title.active").classList.remove("active")
+
+        this.classList.add("active")
+        headerTitleItem.classList.add("active")
+      
+    }
+})
+
+    

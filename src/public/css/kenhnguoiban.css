@@ -173,6 +173,7 @@
     padding: 10px 20px;
     position: relative;
     border-bottom: 1px solid #ccc;
+    cursor: pointer;
     border-top: 1px solid #ccc;
     transform: translateX(-7px);
 }
@@ -194,8 +195,10 @@
 }
 
 .container-item {
-
-
+    display: none;
+}
+.container-item.active {
+    display: block;
 }
 .header-container {
     display: flex;
@@ -455,6 +458,7 @@
 
 
 .container-content.active {
+
     background-color: white;
     box-shadow: 0 0 3px 0px #999;
     color: rgb(45, 106, 51);
