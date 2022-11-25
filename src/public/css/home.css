@@ -320,10 +320,18 @@
     /* margin-bottom: 100px; */
 
 }
-
+.popular-info-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.popular-info-wrap.show {
+    display: flex;
+}
 .popular-info {
     margin:0 15px;
-    display: none;
+    /* display: none; */
     flex-direction: row;
 
 }

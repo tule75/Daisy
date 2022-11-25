@@ -47,3 +47,17 @@
 })
 
     
+// show discount
+    const hasDiscounts = $$(".has--discount")
+    const modalShow = $(".modal")
+    const modalClose = $(".icon-close")
+
+    hasDiscounts.forEach((hasDiscount,index) => {
+    hasDiscount.onclick = function () {
+        modalShow.classList.add("open")
+    }
+    })
+
+    modalClose.onclick = function () {
+        $(".modal.open").classList.remove("open")
+    }
