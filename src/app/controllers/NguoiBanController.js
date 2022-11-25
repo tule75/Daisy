@@ -119,6 +119,7 @@ class NguoiBanController {
                             // res.render('giohang.html', {products: pr, check: 1, user: user, countCart: counts})
                             res.render('kenhnguoiban.html', {products: products, user: user, check: 1, countCart: 0, boGio: pr, users_buy: user_buy, products_buy: product_buy, bills: b})
                             //res.send(pr)
+                            
 
                         })
                         
