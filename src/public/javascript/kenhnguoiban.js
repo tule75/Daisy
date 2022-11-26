@@ -34,6 +34,7 @@
         }
    })
 
+
    headerTitles.forEach((headerTitle,index) => {
     const headerTitleItem = titleItems[index]
     headerTitle.onclick = function () {
@@ -48,9 +49,11 @@
 
     
 // show discount
-    const hasDiscounts = $$(".has--discount")
+    const hasDiscounts = $$(".discount-is")
     const modalShow = $(".modal")
     const modalClose = $(".icon-close")
+    const apply = $(".btn-apply")
+    const trasher = $(".trasher")
 
     hasDiscounts.forEach((hasDiscount,index) => {
     hasDiscount.onclick = function () {
@@ -58,6 +61,20 @@
     }
     })
 
-    modalClose.onclick = function () {
+    // modalClose.onclick = function () {
+    //         alert("Ap dung ma thanh cong")
+    // }
+
+    apply.onclick = function () {
+        alert("Ap dung ma thanh cong")
         $(".modal.open").classList.remove("open")
+        trasher.style.display = 'block'
+    }
+
+// show noti
+    const homeContainer = $(".forhome-container")
+    const noti = $(".forhome-noti-order")
+
+    if(noti.classList.contains("showing")) {
+        homeContainer.classList.remove("center")
     }

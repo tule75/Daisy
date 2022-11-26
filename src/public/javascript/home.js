@@ -7,13 +7,7 @@
         const popularWrappers = document.querySelectorAll(".popular-info-wrap")
     
 
-    btn.onclick = function () {
-        popularWrappers.forEach((popularWrapper,index)=> {
-            $(".popular-info-wrap.show").classList.remove("show")
-            popularWrapper.classList.add("show")
-        })
-    }
-
+ 
             for(var i = 0; i < btns.length; i++) {
             btns[i].addEventListener('click', btnClick);
 
@@ -44,19 +38,6 @@
 
     // luu vouchers
     const getVouchers = document.querySelectorAll(".coupon-btn")
-
-   getVouchers.forEach((voucher) => {
-        voucher.onclick = function () {
-            if(voucher.value == "Lưu mã") {
-                voucher.value = "Đã Lưu"
-            }
-            else {
-                const value2 = "Lưu mã"
-                voucher.value = value2
-            }
-        }
-   })
-   
     const follow = document.querySelector(".btn--follow")
     var value = document.querySelector(".btn--follow").value
 
@@ -70,6 +51,20 @@
             follow.value = value2
        }
     }
+
+   getVouchers.forEach((voucher) => {
+        voucher.onclick = function () {
+            if(voucher.value == "Lưu mã") {
+                voucher.value = "Đã Lưu"
+            }
+            else {
+                const value2 = "Lưu mã"
+                voucher.value = value2
+            }
+        }
+   })
+   
+  
 
 
     // 

@@ -56,10 +56,8 @@
                                 <!-- <span><i class="fa-regular fa-angle-up control-icon "></i></span> -->
                             </h7>
                             <ul class="ship-list-2">
-                                <li class="ship-contain has--manageship manage-item">
-                                    Quản lý vận chuyển
-                                </li>
-                                <li class="ship-contain set-manageship manage-item">Cài đặt vận chuyển</li>
+                                
+                                <!-- <li class="ship-contain set-manageship manage-item">Cài đặt vận chuyển</li> -->
 
                             </ul>
                     </li>
@@ -73,7 +71,7 @@
                                 <li class="manage-item">
                                     Tất cả 
                                 </li>
-                                <li class="manage-item">
+                                <li id="isorder" class=" manage-item isbot">
                                     Đơn trong giỏ
                                 </li>
                             </ul>
@@ -111,193 +109,220 @@
                     </li>
                </ul>
             </div>
-
-
             <div class="container ">    
                 <div class="forhome for-item active ">
-                    <div class="todolist">
-                        <h5 class="todolist-heading">Danh sách cần làm</h5>
-                        <p class="todolist-heading-note">Những việc bạn sẽ phải làm</p>
-                        <ul class="list-todo">
-                            <li class="list-todo-item">
-                                <p class="quantity-todo">0</p>
-                                <a class="access-todo">Chờ nhận hàng</a>
-                            </li>
-                            <li class="list-todo-item">
-                                <p class="quantity-todo">0</p>
-                                <a class="access-todo">Chờ xác nhận</a>
-                            </li>
-                            <li class="list-todo-item">
-                                <p class="quantity-todo">0</p>
-                                <a class="access-todo">Chờ lay hang</a>
-                            </li>
-                            <li class="list-todo-item  has-wrap">
-                                <p class="quantity-todo">0</p>
-                                <a class="access-todo">Đơn huỷ</a>
-                            </li>
-                            <li class="list-todo-item">
-                                <p class="quantity-todo">0</p>
-                                <a class="access-todo">Đang giao</a>
-                            </li>
-                            <li class="list-todo-item">
-                                <p class="quantity-todo">0</p>
-                                <a class="access-todo">Trong giỏ</a>
-                            </li>
-                            <li class="list-todo-item">
-                                <p class="quantity-todo">0</p>
-                                <a class="access-todo">Đơn bị khoá</a>
-                            </li>
-                            <li class="list-todo-item has-wrap">
-                                <p class="quantity-todo">0</p>
-                                <a class="access-todo">Hết hàng</a>
-                            </li>
-
-                        </ul>
-                    </div>
-                    
-                    <div class="marketing">
-                        <h5 class="marketing-heading">Kênh marketing</h5>
-                        
-                      <div class="marketing-wrap">
-                        <div class="calendar">
-                            <div class="calendar-container">
-                          
-                              <header class="heading">
-                                
-                                <div class="day">1</div>
-                                <div class="month">Tháng 12</div>
-                          
-                              </header>
-                          
-                              <table class="calendar">
-                                
-                                <thead>
-                          
-                                  <tr>
-                          
-                                    <td>Mon</td>
-                                    <td>Tue</td>
-                                    <td>Wed</td>
-                                    <td>Thu</td>
-                                    <td>Fri</td>
-                                    <td>Sat</td>
-                                    <td>Sun</td>
-                          
-                                  </tr>
-                          
-                                </thead>
-                          
-                                <tbody>
-                          
-                                  <tr>
-                                    <td class="prev-month">29</td>
-                                    <td class="prev-month">30</td>
-                                    <td class="prev-month">31</td>
-                                    <td class="current-day">1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                  </tr>
-                          
-                                  <tr>
-                                    <td>5</td>
-                                    <td>6</td>
-                                    <td>7</td>
-                                    <td>8</td>
-                                    <td>9</td>
-                                    <td>10</td>
-                                    <td>11</td>
-                                  </tr>
-                          
-                                  <tr>
-                                    <td>12</td>
-                                    <td>13</td>
-                                    <td>14</td>
-                                    <td>15</td>
-                                    <td>16</td>
-                                    <td>17</td>
-                                    <td >18</td>
-                                  </tr>
-                          
-                                  <tr>
-                                    <td>19</td>
-                                    <td>20</td>
-                                    <td>21</td>
-                                    <td>22</td>
-                                    <td>23</td>
-                                    <td>24</td>
-                                    <td class="has-event">25</td>
-                                  </tr>
-                          
-                                  <tr>
-                                    <td>26</td>
-                                    <td>27</td>
-                                    <td>28</td>
-                                    <td>29</td>
-                                    <td>30</td>
-                                    <td>31</td>
-                                    <td class="next-month">1</td>
-                                  </tr>
-                          
-                                </tbody>
-                          
-                              </table>
-                          
-                              <div class="ring-left"></div>
-                              <div class="ring-right"></div>
-                        </div>
-                        </div>
-                        <div class="chuongtrinhgiamgia">
-                            <div class="chuongtrinhgiamgia-intro">
-                                <p class="intro-day">25/12</p>
-                                <h5 class="intro-header">BlackFriday [25.12]</h5>
-                                <p class="intro-note">Chương trình kết thúc trong 1 ngày</p>
+                    <div class="home-container">
+                        <div class="forhome-container center">
+                            <div class="todolist">
+                                <h5 class="todolist-heading">Danh sách cần làm</h5>
+                                <p class="todolist-heading-note">Những việc bạn sẽ phải làm</p>
+                                <ul class="list-todo">
+                                    <li class="list-todo-item">
+                                        <p class="quantity-todo">0</p>
+                                        <a class="access-todo">Chờ nhận hàng</a>
+                                    </li>
+                                    <li class="list-todo-item">
+                                        <p class="quantity-todo">0</p>
+                                        <a class="access-todo">Chờ xác nhận</a>
+                                    </li>
+                                    <li class="list-todo-item">
+                                        <p class="quantity-todo">0</p>
+                                        <a class="access-todo">Chờ lay hang</a>
+                                    </li>
+                                    <li class="list-todo-item  has-wrap">
+                                        <p class="quantity-todo">0</p>
+                                        <a class="access-todo">Đơn huỷ</a>
+                                    </li>
+                                    <li class="list-todo-item">
+                                        <p class="quantity-todo">0</p>
+                                        <a class="access-todo">Đang giao</a>
+                                    </li>
+                                    <li class="list-todo-item">
+                                        <p class="quantity-todo">0</p>
+                                        <a class="access-todo">Trong giỏ</a>
+                                    </li>
+                                    <li class="list-todo-item">
+                                        <p class="quantity-todo">0</p>
+                                        <a class="access-todo">Đơn bị khoá</a>
+                                    </li>
+                                    <li class="list-todo-item has-wrap">
+                                        <p class="quantity-todo">0</p>
+                                        <a class="access-todo">Hết hàng</a>
+                                    </li>
+    
+                                </ul>
                             </div>
-                            <button class="chuongtrinhgiamgia-btn">Đăng ký ngay</button>
-                        </div>
+                            
+                            <div class="marketing">
+                                <h5 class="marketing-heading">Kênh marketing</h5>
+                                
+                            <div class="marketing-wrap">
+                                <div class="calendar">
+                                    <div class="calendar-container">
+                                
+                                    <header class="heading">
+                                        
+                                        <div class="day">1</div>
+                                        <div class="month">Tháng 12</div>
+                                
+                                    </header>
+                                
+                                    <table class="calendar">
+                                        
+                                        <thead>
+                                
+                                        <tr>
+                                
+                                            <td>Mon</td>
+                                            <td>Tue</td>
+                                            <td>Wed</td>
+                                            <td>Thu</td>
+                                            <td>Fri</td>
+                                            <td>Sat</td>
+                                            <td>Sun</td>
+                                
+                                        </tr>
+                                
+                                        </thead>
+                                
+                                        <tbody>
+                                
+                                        <tr>
+                                            <td class="prev-month">29</td>
+                                            <td class="prev-month">30</td>
+                                            <td class="prev-month">31</td>
+                                            <td class="current-day">1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                        </tr>
+                                
+                                        <tr>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                        </tr>
+                                
+                                        <tr>
+                                            <td>12</td>
+                                            <td>13</td>
+                                            <td>14</td>
+                                            <td>15</td>
+                                            <td>16</td>
+                                            <td>17</td>
+                                            <td >18</td>
+                                        </tr>
+                                
+                                        <tr>
+                                            <td>19</td>
+                                            <td>20</td>
+                                            <td>21</td>
+                                            <td>22</td>
+                                            <td>23</td>
+                                            <td>24</td>
+                                            <td class="has-event">25</td>
+                                        </tr>
+                                
+                                        <tr>
+                                            <td>26</td>
+                                            <td>27</td>
+                                            <td>28</td>
+                                            <td>29</td>
+                                            <td>30</td>
+                                            <td>31</td>
+                                            <td class="next-month">1</td>
+                                        </tr>
+                                
+                                        </tbody>
+                                
+                                    </table>
+                                
+                                    <div class="ring-left"></div>
+                                    <div class="ring-right"></div>
+                                </div>
+                                </div>
+                                <div class="chuongtrinhgiamgia">
+                                    <div class="chuongtrinhgiamgia-intro">
+                                        <p class="intro-day">25/12</p>
+                                        <h5 class="intro-header">BlackFriday [25.12]</h5>
+                                        <p class="intro-note">Chương trình kết thúc trong 1 ngày</p>
+                                    </div>
+                                    <button class="chuongtrinhgiamgia-btn">Đăng ký ngay</button>
+                                </div>
+    
+                            
+                            </div>
+    
+                            </div>
+    
+                            <div class="congcu-marketing">
+                                <h5 class="congcu-marketing-header">Công cụ marketing </h5>
+                                    <ul class="congcu-wraper-marketing">
+                                        <li class="wrap-item-marketing">
+                                            <div class="item-icon-wrap">
+                                                <i class="fa-solid fa-barcode item-icon"></i>
+                                            </div>
+                                            <h6 class="item-heading">Mã Giảm Giá Của Shop</h6>
+                                            <p class="item-note">Công cụ tăng đơn hàng bằng cách tạo mã giảm giá cho người mua</p>
+                                        </li>
+                                        <li class="wrap-item-marketing">
+                                            <div class="item-icon-wrap">
+                                                <i class="fa-solid fa-tags item-icon"></i>
+                                            </div>
+                                            <h6 class="item-heading">Combo Khuyến Mãi</h6>
+                                            <p class="item-note">Tạo Combo khuyến mãi để tăng giá trị đơn hàng trên mỗi Người mua</p>
+                                        </li>
+                                        <li class="wrap-item-marketing">
+                                            <div class="item-icon-wrap">
+                                                <i class="fa-solid fa-gift  item-icon"></i>
+                                            </div>
+                                            <h6 class="item-heading">Flash Sale Của Shop</h6>
+                                            <p class="item-note">Công cụ giúp tăng doanh số bằng cách tạo khuyến mãi khủng trong các khung giờ nhất định</p>
+                                        </li>
+                                        <li class="wrap-item-marketing">
+                                            <div class="item-icon-wrap">
+                                                <i class="fa-solid fa-sailboat  item-icon"></i>
+                                            </div>
+                                            <h6 class="item-heading">Ưu đãi Follower</h6>
+                                            <p class="item-note">Khuyến khích người mua theo dõi Shop bằng cách tặng voucher cho Người theo dõi mới</p>
+                                        </li>
+                                    
+                                    </ul>
+                            </div>
+                        </div> 
 
-                       
-                      </div>
-
-                    </div>
-
-                    <div class="congcu-marketing">
-                        <h5 class="congcu-marketing-header">Công cụ marketing </h5>
-                            <ul class="congcu-wraper-marketing">
-                                <li class="wrap-item-marketing">
-                                    <div class="item-icon-wrap">
-                                        <i class="fa-solid fa-barcode item-icon"></i>
+                        <% for (let i = 0; i < products.length; i++) {%> 
+                            <% if(boGio[i] >= 2 ) { %> 
+                         <div class="forhome-noti-order showing">
+                            <h6 class="noti-order-header">
+                                Thông báo dành riêng cho bạn
+                            </h6>
+                            <ul  class="noti-order-list ">
+                                
+                                <li class="noti-order-item">
+                                    <div class="order-alert">
+                                        <i class="fa-solid fa-bolt"></i>
+                                        <span>Kiểm tra ngay sản phẩm</span>
                                     </div>
-                                    <h6 class="item-heading">Mã Giảm Giá Của Shop</h6>
-                                    <p class="item-note">Công cụ tăng đơn hàng bằng cách tạo mã giảm giá cho người mua</p>
-                                </li>
-                                <li class="wrap-item-marketing">
-                                    <div class="item-icon-wrap">
-                                        <i class="fa-solid fa-tags item-icon"></i>
+                                    <div class="order-note">
+                                        <p class="">Sản phẩm : <span class="letter-span"><%=products[i].name%></span> đang được chú ý</p>
                                     </div>
-                                    <h6 class="item-heading">Combo Khuyến Mãi</h6>
-                                    <p class="item-note">Tạo Combo khuyến mãi để tăng giá trị đơn hàng trên mỗi Người mua</p>
                                 </li>
-                                <li class="wrap-item-marketing">
-                                    <div class="item-icon-wrap">
-                                        <i class="fa-solid fa-gift  item-icon"></i>
-                                    </div>
-                                    <h6 class="item-heading">Flash Sale Của Shop</h6>
-                                    <p class="item-note">Công cụ giúp tăng doanh số bằng cách tạo khuyến mãi khủng trong các khung giờ nhất định</p>
-                                </li>
-                                <li class="wrap-item-marketing">
-                                    <div class="item-icon-wrap">
-                                        <i class="fa-solid fa-sailboat  item-icon"></i>
-                                    </div>
-                                    <h6 class="item-heading">Ưu đãi Follower</h6>
-                                    <p class="item-note">Khuyến khích người mua theo dõi Shop bằng cách tặng voucher cho Người theo dõi mới</p>
-                                </li>
-                              
                             </ul>
-                      </div>
+                        </div>
+                        <% } else { %> 
+                            <div class="forhome-noti-order">
+                            </div>
+                                <% } %>
 
+                            <% } %>
+                    </div>
                 </div>
-                <div class="forshipment for-item ">
+                <div class="forAll for-item ">
                     <ul class="container-list">
                         <li class="container-content active ">
                             <h7 class="content-header">Tất cả</h7>
@@ -1038,17 +1063,11 @@
                         </li>
                     </ul>
                 </div>
-                <div class="forSetShipment for-item">
-                    <h4>Cai dat van chuyen</h4>
-                </div>
-                <div class="forAll for-item">
-                    <h4>tat ca</h4>
-                </div>
                 <div class="formanagement for-item">
                     <h4 class="formanagement-title">SẢN PHẨM ĐƯỢC CHÚ Ý</h4>
 
                     <table class="product-incart-wrap">
-                        <h4 class="incart-quantity">0 <span>Sản phẩm</span></h4>
+                        <!-- <h4 class="incart-quantity">0 <span>Sản phẩm</span></h4> -->
                         <tr class="cart-navbar">
                             <td class="cart-navbar-title">Tên SP</td>
                             <td class="cart-navbar-title">Số lượng</td>
@@ -1059,6 +1078,7 @@
                         </tr>
                      
                          <% for (let i = 0; i < products.length; i++) {%> 
+                            <% if(boGio[i] > 0) { %> 
                         <tr class="cart-navbar-item-wrap">
                             <td class="cart-navbar-item"><%=products[i].name%></td>
                             <td class="cart-navbar-item"><%=boGio[i]%></td>
@@ -1067,8 +1087,16 @@
 
                             <td class="cart-navbar-item price-right"><%=(products[i].price * boGio[i])%></td>
                             <td class="cart-navbar-item">Còn hàng</td>
-                            <td class="cart-navbar-item has--discount "> Discount</td>
+                            <td class="cart-navbar-item has--discount "> 
+                                <span class="discount-is"> Discount</span> 
+                                <button class="trasher"> <i class="fa-sharp fa-solid fa-trash "></i></button>
+                            </td>
+                           
+                            
                         </tr>
+                       
+                        <% } %> 
+                           
                         <% } %> 
                          
                     </table>
@@ -1084,7 +1112,7 @@
                 <div class="header-modal">
                     
                     DISCOUNT FOR CUSTOMER
-                    <div class="icon-close"><i class="fa-regular fa-circle-xmark"></i></div>
+                    <!-- <div class="icon-close"><i class="fa-regular fa-circle-xmark"></i></div> -->
                 </div>
                 
                     <form class="body-modal" action="">
