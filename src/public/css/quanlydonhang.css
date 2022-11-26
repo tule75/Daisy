@@ -64,6 +64,7 @@
     border: 1px solid #ccc;
     align-items: center;
 
+
 }
 
 .cart-navbar-item {
@@ -76,6 +77,7 @@
     /* position: relative; */
     cursor: pointer;
     text-align: center;
+    position: relative;
 
 }
 .cart-navbar-item::after {
@@ -222,4 +224,91 @@
     transition-duration: 0.4s;
     display: block;
 
+}
+
+
+/* forhome-noti-order */
+.forhome-noti-order {
+    margin: 0 30px;
+    display: none;
+    flex-direction: column;
+    height: fit-content;
+    box-shadow: 0 0 4px 0 #ccc;
+    cursor: pointer;
+}
+.noti-order-header {
+    color: white;
+    border-bottom: 1px solid black;
+    padding: 20px 20px;
+    background-color: rgb(95, 142, 95);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+}
+.noti-order-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.noti-order-item {
+    padding-left: 10px;
+    border-bottom:  1px solid #ccc;
+    padding-top: 15px;
+}
+.order-alert{
+    color: rgb(139, 41, 41);
+    font-size: 15px;
+    font-weight: 500;
+}
+.order-note {
+    padding-top: 5px;
+    font-weight: lighter;
+    padding-left: 22px;
+    width: 300px;
+    white-space: wrap;
+}
+.fa-bolt {
+    padding-right: 5px;
+    color: black;
+}
+.noti-order-item:last-child {
+    border: none;
+}
+
+.forhome-noti-order.showing {
+    display: block;
+}
+.letter-span {
+    font-weight: bolder;
+}
+
+
+.has--discount:hover {
+    color: black;
+}
+.has--discount {
+    margin: 0;
+    width: 120px;
+}
+.discount-is:hover {
+    color: red;
+}
+
+.discount-is{
+    position: relative;
+}
+.trasher {
+    position: absolute;
+    transform: translateX(2px);
+    z-index: 1;
+    right:-5px;
+    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+    display:none;
+    top: 9px;
+}
+
+.trasher:hover {
+    color: black;
 }
