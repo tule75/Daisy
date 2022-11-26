@@ -68,7 +68,7 @@
     apply.onclick = function () {
         alert("Ap dung ma thanh cong")
         $(".modal.open").classList.remove("open")
-        trasher.style.display = 'block'
+        // trasher.style.display = 'block'
     }
 
 // show noti
