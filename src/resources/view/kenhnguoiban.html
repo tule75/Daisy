@@ -1089,8 +1089,33 @@
                             <td class="cart-navbar-item">Còn hàng</td>
                             <td class="cart-navbar-item has--discount "> 
                                 <span class="discount-is"> Discount</span> 
-                                <button class="trasher"> <i class="fa-sharp fa-solid fa-trash "></i></button>
+                                <form action="/product/discount/delete" method="POST">
+                                    <input type="text" name="slug" value="<%=products[i].slug %>" style="display: none;">
+                                    <button class="trasher"> <i class="fa-sharp fa-solid fa-trash "></i></button>
+                                </form>
                             </td>
+
+                            <div class="modal">
+                                <div class="modal-container">
+                    
+                                    <div class="header-modal">
+                                        
+                                        DISCOUNT FOR CUSTOMER
+                                        <!-- <div class="icon-close"><i class="fa-regular fa-circle-xmark"></i></div> -->
+                                    </div>
+                                    
+                                        <form class="body-modal" action="/product/discount" method="POST">
+                                            <input type="text" style="display: none;" name="slug" value="<%=products[i].slug %>">
+                                            <p class="body-heading">Nhập mã giảm giá: </p>
+                                            <input class="modal-input" type="number" min="1" max="100" checked name="discount" value="" placeholder='Phần trăm'>
+                                            <div class="footer-modal">
+                                                <button type="submit"><div class="btn-apply">Ap dung</div></button>
+                                            </div>
+                                        </form>
+                                    
+                                    
+                                </div>
+                             </div>
                            
                             
                         </tr>
@@ -1108,28 +1133,6 @@
              </div>
         
          </div>
-
-
-         <div class="modal">
-            <div class="modal-container">
-
-                <div class="header-modal">
-                    
-                    DISCOUNT FOR CUSTOMER
-                    <!-- <div class="icon-close"><i class="fa-regular fa-circle-xmark"></i></div> -->
-                </div>
-                
-                    <form class="body-modal" action="">
-                        <p class="body-heading">Nhập mã giảm giá: </p>
-                    <input class="modal-input" type="number" min="1" max="100" checked value="" placeholder='Phần trăm'>
-                    </form>
-                
-                <div class="footer-modal">
-                    <div class="btn-apply">Ap dung</div>
-                </div>
-            </div>
-         </div>
-
 
 
          <div class="footer">

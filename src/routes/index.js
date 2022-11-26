@@ -11,8 +11,8 @@ const newRouteDiscount = require("./discount")
 
 function route(app) {
     app.get('/test', (req, res) => {
-        var x = [{slug: 'foo', value: 'bar', price: 100}, {slug: 'tu', value: 'le', price: 29}]
-        res.render('test.html', {product: x})
+        // var x = [{slug: 'foo', value: 'bar', price: 100}, {slug: 'tu', value: 'le', price: 29}]
+        res.render('vouchertest.html')
     })
     app.use("/product/discount", newRouteDiscount)
     app.use("/sellerlogin", newRouteSellerLogin)

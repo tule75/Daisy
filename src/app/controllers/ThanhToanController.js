@@ -3,6 +3,7 @@ const Product = require('../models/Product')
 const GioHang = require('../models/GioHang')
 const Bill = require('../models/Bill')
 const jwt = require('jsonwebtoken')
+const Voucher = require('../models/Voucher')
 
 
 class ThanhToanController {
@@ -58,6 +59,7 @@ class ThanhToanController {
             User.findOne({_id: id})
             .then(user => {
                 if (user) {
+                    var vouchers = []
                     var counts = 0
                     GioHang.find({user_slug: user.slug})
                     .then(dataa => {
@@ -86,6 +88,16 @@ class ThanhToanController {
                             Product.findOne({slug: element})
                             .then((product) => {
                                 if (product != null){
+                                    var voucher = []
+
+                                    Voucher.find({product_slug: product.slug})
+                                    .then((data) => {
+                                        voucher = data
+                                    })
+                                    .catch(() => {res.send('loi')})
+
+                                    vouchers[i] = voucher
+
                                     // var p = {};
                                     // p.name = product.name;
                                     // p.slug = product.slug;
@@ -113,7 +125,7 @@ class ThanhToanController {
                         pr = await resolveAfter2Seconds(pr)
                         User.findOne({slug: pr.user_slug})
                         .then(shop => {
-                            res.render('thanhtoan.html', {check: 1, product: pr, user: user, countCart: counts, shop: shop})
+                            res.render('thanhtoan.html', {check: 1, product: pr, user: user, countCart: counts, shop: shop, vouchers: vouchers})
                         })
                         .catch(err => res.send('loi'))
                         // res.send(pr)
@@ -148,6 +160,7 @@ class ThanhToanController {
     //[GET] /thanhtoan/:slug
     showO(req, res, next) {
         if (req.cookies.token){
+            let vouchers;
             const token = req.cookies.token
             const id = jwt.verify(token, 'daisy')
             User.findOne({_id: id})
@@ -169,9 +182,16 @@ class ThanhToanController {
 
                     Product.findOne({slug: req.params.slug})
                     .then(product => {
+
+                        Voucher.find({product_slug: product.slug})
+                        .then(voucher => {
+                            vouchers = voucher
+                        })
+                        .catch(error => {})
+
                         User.findOne({slug: product.user_slug})
                         .then(shop => {
-                            res.render('thanhtoan.html', {check: 1, product: product, user: user, countCart: counts, shop: shop})
+                            res.render('thanhtoan.html', {check: 1, product: product, user: user, countCart: counts, shop: shop, vouchers: vouchers})
                         })
                         .catch(err => res.send('loi'))
                     })
