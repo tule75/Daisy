@@ -1069,6 +1069,28 @@
                             <td class="cart-navbar-item">Còn hàng</td>
                             <td class="cart-navbar-item has--discount "> Discount</td>
                         </tr>
+
+
+                        <div class="modal">
+                            <div class="modal-container">
+                
+                                <div class="header-modal">
+                                    DISCOUNT FOR CUSTOMER
+                                    <div class="icon-close"><i class="fa-regular fa-circle-xmark"></i></div>
+                                </div>
+                                
+                                    <form class="body-modal" action="/product/discount" method="post">
+                                        <p class="body-heading">Nhập mã giảm giá: </p>
+                                        <input class="modal-input" type="number" min="1" max="100" checked name="discount" placeholder='Phần trăm'>
+                                        <input type="text" style="display: none;" name="slug" value="<%=products[i].slug %>">
+                                
+                                        <div class="footer-modal">
+                                            <div class="btn-apply"><button onclick="alert('Đã áp dụng giảm giá')" type="submit">Áp Dụng</button></div>
+                                        </div>
+                                    </form>
+                            </div>
+                         </div>
+
                         <% } %> 
                          
                     </table>
@@ -1078,25 +1100,7 @@
         
          </div>
 
-         <div class="modal">
-            <div class="modal-container">
-
-                <div class="header-modal">
-                    
-                    DISCOUNT FOR CUSTOMER
-                    <div class="icon-close"><i class="fa-regular fa-circle-xmark"></i></div>
-                </div>
-                
-                    <form class="body-modal" action="">
-                        <p class="body-heading">Nhập mã giảm giá: </p>
-                    <input class="modal-input" type="number" min="1" max="100" checked value="" placeholder='Phần trăm'>
-                    </form>
-                
-                <div class="footer-modal">
-                    <div class="btn-apply">Ap dung</div>
-                </div>
-            </div>
-         </div>
+         
 
 
          <div class="footer">

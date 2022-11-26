@@ -32,7 +32,7 @@ class NguoiBanController {
                 return new Promise((resolve) => {
                   setTimeout(() => {
                     resolve(x);
-                  }, 1000);
+                  }, 2000);
                 });
             }
             const token = req.cookies.token
@@ -95,8 +95,11 @@ class NguoiBanController {
                                     if (data != null){
                                         // console.log(product)
                                         console.log(i)
+                                        pr[i] = 0
                                         
-                                        pr[i] = data.length
+                                        for (let j = 0; j < data.length; j++) {
+                                            pr[i] += data[j].count
+                                        }
                                         // console.log(products)
                                     }
                                     // i++;
@@ -112,7 +115,7 @@ class NguoiBanController {
                         })
                         promise.then(async (pr) => {
                             pr = await resolveAfter2Seconds(pr)
-                            console.log(b)
+                            console.log(pr)
                             console.log(product_buy)
                             console.log(user_buy)
                             console.log(-1)
