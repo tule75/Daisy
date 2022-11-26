@@ -120,7 +120,7 @@ class GioHangController {
                             let pr = [];
                             cart.forEach((element, i) => {
                                 counts += element.count
-                                Product.findOne({slug: element.product_slug})
+                                Product.findOne({slug: element.product_slug})   
                                 .then((product) => {
                                     if (product != null){
                                         var p = {};
