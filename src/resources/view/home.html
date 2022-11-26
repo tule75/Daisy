@@ -335,7 +335,12 @@
                                          <img class="home-product__item-img" src="<%-y%>" alt="">
                                         <h4 class="home-product__item-name"><%=products[i].name%></h4>
                                          <div class="home-product__item-price"> 
-                                            <span class="popular-price"><%=products[i].price%></span>
+                                            <% if (products[i].price == products[i].price_discount) {%> 
+                                                <span class="popular-price"><%=products[i].price%></span>
+                                            <% } else { %>
+                                                <!-- in ra là giá gốc bị gạch cho đẹp cũng dc -->
+                                                <span class="popular-price"><%=products[i].price_discount%></span>
+                                            <% } %>  
                                             <span class="home-product__item-quatity">1,1k Đã bán</span>
                                          </div>
                                         
