@@ -78,3 +78,25 @@
     if(noti.classList.contains("showing")) {
         homeContainer.classList.remove("center")
     }
+
+    const has_noti = $(".noti-order-item") 
+    const has_notiShowing = $(".noti-order-item.show") 
+    if(has_notiShowing.classList.contains("show")) {
+        noti.classList.add("showing")
+        homeContainer.classList.remove("center")
+    }
+    else {
+        homeContainer.classList.add("center")
+        $(".forhome-noti-order.showing").classList.remove("showing")
+    }
+
+    // link-to gio hang
+
+    const notiItems = $$(".noti-order-item")
+    const linkto = $(".to-link")
+
+    // notiItems.forEach((notiItem,index) => {
+    //     notiItem.onclick = function () {
+    //         linkto.style.display ='block'
+    //     }
+    // })
