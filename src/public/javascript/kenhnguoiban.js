@@ -129,3 +129,18 @@
     } else {
         iconFooter.style.display ='flex'
     }
+
+    const accepts = $$(".accept")
+    const waiting = $$(".waiting")
+
+    accepts.forEach((accept,index) => {
+        const wait = waiting[index]
+        accept.onclick = function () {
+            this.classList.remove("accept")
+            this.classList.add("accepted")
+            wait.innerHTML ='Đã xử lý'
+            this.innerHTML = 'Đã xác nhận'
+            
+        }
+    })
+    
