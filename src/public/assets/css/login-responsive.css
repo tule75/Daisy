@@ -1,0 +1,70 @@
+/* Mobile */
+@media only screen and (max-width: 740px) {
+    .container__half-col
+        {
+            display: none;
+        }
+
+    .container__half-col-signin {
+        width: 100%;
+    }
+
+    .signin__heading {
+        display: none;
+    }
+
+    .signin__heading-mobile {
+        display: block;
+        font-family: 'Sansita Swashed', cursive;
+        margin-top: 16px;
+        margin-bottom: 40px;
+        font-size: 50px;
+        font-weight: bold;
+        color: #60B95E;
+
+    }
+
+
+    .signup {
+        width: 100%;
+    }
+
+    .signup__container {
+        width: 80%;
+    }
+
+    .signup__container-content {
+        font-size: 24px;
+    }
+
+    .footer {
+        padding: 0 0;
+    }
+
+    .footer-heading {
+        margin-bottom: 12px;
+    }
+
+    .footer-list {
+        padding-left: 0;
+    }
+
+    .footer-list__pay-icon {
+        font-size: 30px;
+    }
+
+    .footer-item{
+        width: 100%;
+    }
+
+    .footer-item__link{
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .footer-item__link-img {
+        font-size: 10px;
+    }
+
+
+}
