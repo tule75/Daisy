@@ -90,13 +90,13 @@
         $(".forhome-noti-order.showing").classList.remove("showing")
     }
 
-    // link-to gio hang
+    const isShow = $(".isshow") 
+    const nothing = $(".nothing-case")
+    const itemWrap = $(".cart-navbar-item-wrap")
 
-    const notiItems = $$(".noti-order-item")
-    const linkto = $(".to-link")
-
-    // notiItems.forEach((notiItem,index) => {
-    //     notiItem.onclick = function () {
-    //         linkto.style.display ='block'
-    //     }
-    // })
+    if(itemWrap.classList.contains("isshow")) {
+        nothing.style.display = 'none'
+    }
+    else {
+        nothing.style.display =' block '
+    }

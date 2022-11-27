@@ -1075,9 +1075,10 @@
                             <td class="cart-navbar-title">Thao tác</td>
                         </tr>
                      
+
                          <% for (let i = 0; i < products.length; i++) {%> 
-                            <% if(boGio[i] >=1) { %> 
-                            <tr class="cart-navbar-item-wrap">
+                            <% if(boGio[i] >=100) { %> 
+                            <tr class="cart-navbar-item-wrap isshow">
                                 <td class="cart-navbar-item"><%=products[i].name%></td>
                                 <td class="cart-navbar-item"><%=boGio[i]%></td>
 
@@ -1116,16 +1117,14 @@
                              </div>
                            
                             
-                        </tr>
-
-                       
+                            </tr>
+                            <% } %> 
                         <% } %> 
-                           
-
-
-                        <% } %> 
-                         
                     </table>
+                    <div class="nothing-case">
+                        <i class="fa-solid fa-rectangle-list"></i>
+                        <h6 class="nothing-note">Chua co san pham nao</h6>
+                    </div>
                 </div>
 
              </div>
