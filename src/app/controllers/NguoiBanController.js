@@ -9,13 +9,30 @@ const { resolve } = require('bluebird')
 
 
 class NguoiBanController {
+    //[POST] /kenhnguoiban/create
+    create(req, res, next) {
+        var product = new Product(req.body)
+        product.count = 0;
+        const token = req.cookies.token
+        const id = jwt.verify(token, 'daisy')
+        User.findOne({_id: id})
+        .then(user => {
+            product.user_slug = user.slug
+        })
+        product.price_discount = product.price
+        product.save()
+        .then(() => {res.redirect('/kenhnguoiban')})
+    }
+
+
+    //[GET] /kenhnguoiban
     show(req, res, next) {
         if (req.cookies.token){
             function resolveAfter2Seconds(x) {
                 return new Promise((resolve) => {
                   setTimeout(() => {
                     resolve(x);
-                  }, 1000);
+                  }, 2000);
                 });
             }
             const token = req.cookies.token
@@ -63,7 +80,7 @@ class NguoiBanController {
                                     })
                                     .catch((err) => {})
     
-                                    Product.findOne({slug: element.user_slug})
+                                    Product.findOne({slug: element.product_slug})
                                     .then((product) => {
                                         product_buy[i] = product
                                     })
@@ -78,8 +95,11 @@ class NguoiBanController {
                                     if (data != null){
                                         // console.log(product)
                                         console.log(i)
+                                        pr[i] = 0
                                         
-                                        pr[i] = data.length
+                                        for (let j = 0; j < data.length; j++) {
+                                            pr[i] += data[j].count
+                                        }
                                         // console.log(products)
                                     }
                                     // i++;
@@ -95,13 +115,14 @@ class NguoiBanController {
                         })
                         promise.then(async (pr) => {
                             pr = await resolveAfter2Seconds(pr)
-                            console.log(b)
+                            console.log(pr)
                             console.log(product_buy)
                             console.log(user_buy)
                             console.log(-1)
                             // res.render('giohang.html', {products: pr, check: 1, user: user, countCart: counts})
                             res.render('kenhnguoiban.html', {products: products, user: user, check: 1, countCart: 0, boGio: pr, users_buy: user_buy, products_buy: product_buy, bills: b})
                             //res.send(pr)
+                            
 
                         })
                         
