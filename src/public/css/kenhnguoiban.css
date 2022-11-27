@@ -538,9 +538,9 @@
     border: 1px solid black;
     cursor: pointer;
 }
-.filter p {
+/* .filter p {
     margin-bottom: 0;
-}
+} */
 .title-filter {
     /* padding-top: 18px; */
     padding-right: 5px;
