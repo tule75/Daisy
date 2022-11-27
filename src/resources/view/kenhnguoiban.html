@@ -302,7 +302,7 @@
                                 </h6>
                             <ul  class="noti-order-list ">
                                 <% for (let i = 0; i < products.length; i++) {%> 
-                                    <% if(boGio[i] >= 1 ) { %> 
+                                    <% if(boGio[i] >= 5 ) { %> 
                                 <li class="noti-order-item show">
                                     <div class="order-alert">
                                         <i class="fa-solid fa-bolt"></i>
@@ -322,13 +322,10 @@
                 </div>
                 <div class="forAll for-item ">
                     <ul class="container-list">
-                        <li class="container-content active ">
-                            <h7 class="content-header">Tất cả</h7>
-                        </li>
-                        <li class="container-content">
+                        <li class="container-content active">
                             <h7 class="content-header">Chờ xác nhận</h7>
                         </li>
-                        <li id="cholayhang" class="container-content">
+                        <li  class="container-content">
                             <h7 class="content-header"> Chờ lấy hàng </h7>
                         </li>
                         <li class="container-content">
@@ -347,205 +344,28 @@
     
                     <ul class="container-showing">
                         <li class="container-item active">
-                           <div class="header-container">
-                            <div class="code-hang">
-                                <div class="find-code">
-                                     Ma don hang
-                                    <span>
-                                        <i class="fa-regular fa-angle-down"></i>
-                                    </span>
-    
-                                    <ul class="find-code-list">
-                                        <li class="code-list-item">Ma don hang</li>
-                                        <li class="code-list-item">Ten nguoi mua</li>
-                                        <li class="code-list-item">San pham</li>
-                                        <li class="code-list-item">Ma van don</li>
-                                    </ul>
-                                </div>
-                               <div class="search">
-                                    <input type="text" class="input-code" placeholder="Tim ma don hang">
-                                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                                </input>
-                               </div>
-                            </div>
-                            <div class="order-date">
-                                <p class="title-date"> Ngay dat hang: </p>
-                               <div class="setdate">
-                                     <i class="fa-regular fa-calendar calendar-icon"></i>
-                                     <input type="date" class="fromdate" id="">
-                                                          -
-                                     <input type="date" class="todate" id="">
-                                </div>
-                            </div>
-                            <div class="xuat">Xuat</div>
-                           </div>
-                           
-                          <div class="body-list">
-                            <!-- 1 -->
-                                <div class="body-container active ">
-                                    <ul class="all-header">
-                                        <li class="head-title  active">Tat ca</li>
-                                        <li class="head-title ">Chua xu ly</li>
-                                        <li class="head-title">Da xu ly</li>
-                                    </ul>
-    
-                                    <ul class="body-wrap">
-                                    <li class="wrap-item  active">
-                                            <div class="item-first">
-                                                <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                                <div class="filter">
-                                                    <p class="title-filter">Sap xep theo</p>
-                                                    <i class="fa-solid fa-filter"></i>
-                                                </div>
-                                            </div>
-    
-                                            <div class="item-second">
-                                                <ul class="list-filter">
-                                                    <li class="item-filter">
-                                                        San Pham 
-                                                    </li>
-                                                    <li class="item-filter">
-                                                        Tong cong
-                                                    </li>
-                                                    <li class="item-filter">
-                                                    Trang thai
-                                                    </li>
-                                                    <li class="item-filter">
-                                                    Dem nguoc
-                                                    </li>
-                                                    <li class="item-filter">
-                                                    Tat ca DVVC
-                                                    </li>
-                                                    <li class="item-filter">
-                                                        Thao tac
-                                                    </li>
-                                                </ul>
-                                            </div>
-    
-                                            <div class="item-footer">
-                                                <i class="fa-solid fa-rectangle-list"></i>
-                                                <h6 class="note">Chua co san pham nao</h6>
-                                            </div>
-    
-                                    </li>
-                                    <li class="wrap-item ">
-                                        <div class="item-first">
-                                            <h4 class="stateOfgoods"><span>0</span>Đơn hàng</h4>
-                                            <div class="filter">
-                                                <p class="title-filter">Sắp xếp theo</p>
-                                                <i class="fa-solid fa-filter"></i>
-                                            </div>
-                                        </div>
-    
-                                        <div class="item-second">
-                                            <ul class="list-filter">
-                                                <li class="item-filter">
-                                                    Sản phẩm 
-                                                </li>
-                                                <li class="item-filter">
-                                                    Tổng cộng
-                                                </li>
-                                                <li class="item-filter">
-                                                Trang thai
-                                                </li>
-                                                <li class="item-filter">
-                                                Dem nguoc
-                                                </li>
-                                                <li class="item-filter">
-                                                Tat ca DVVC
-                                                </li>
-                                                <li class="item-filter">
-                                                    Thao tac
-                                                </li>
-                                            </ul>
-                                        </div>
-    
-                                        <div class="item-footer">
-                                            <i class="fa-solid fa-rectangle-list"></i>
-                                            <h6 class="note">Chưa có sản phẩm nào</h6>
-                                        </div>
-    
-                                    </li>
-                                    <li class="wrap-item ">
-                                        <div class="item-first">
-                                            <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                            <div class="filter-has--address">
-                                                 <p class="sent-address-title title-header">Chon hang giao tai buu cuc:</p>
-                                                
-                                                    <div class="sent-address">
-                                                        <p class="sent-address-title">Tat ca don hang</p>
-                                                        <i class="fa-solid fa-angle-down sent-address--icon"></i>
-                                                        <ul class="address-choice">
-                                                            <li class="address-choice-item">Tat ca don hang</li>
-                                                            <li class="address-choice-item">Chon tai buu cuc</li>
-                                                        </ul>
-                                                    </div>
-                                   
-                                                    <div class="range">
-                                                        <p class="sent-address-title">Sap xep theo</p>
-                                                        <i class="fa-solid fa-filter"></i>
-                                                    </div>
-                                            </div>
-                                        </div>
-    
-                                        <div class="item-second">
-                                            <ul class="list-filter">
-                                                <li class="item-filter">
-                                                    San Pham 
-                                                </li>
-                                                <li class="item-filter">
-                                                    Tong cong
-                                                </li>
-                                                <li class="item-filter">
-                                                Trang thai
-                                                </li>
-                                                <li class="item-filter">
-                                                Dem nguoc
-                                                </li>
-                                                <li class="item-filter">
-                                                Tat ca DVVC
-                                                </li>
-                                                <li class="item-filter">
-                                                    Thao tac
-                                                </li>
-                                            </ul>
-                                        </div>
-    
-                                        <div class="item-footer">
-                                            <i class="fa-solid fa-rectangle-list"></i>
-                                            <h6 class="note">Chua co san pham nao</h6>
-                                        </div>
-    
-                                     </li>
-                                    
-                                    </ul>
-                                </div>
-                          </div>
-                        </li>
-                        <li class="container-item">
                             <div class="header-container">
                                 <div class="code-hang">
                                     <div class="find-code">
-                                         Ma don hang
+                                         Mã đơn hàng
                                         <span>
                                             <i class="fa-regular fa-angle-down"></i>
                                         </span>
         
                                         <ul class="find-code-list">
-                                            <li class="code-list-item">Ma don hang</li>
-                                            <li class="code-list-item">Ten nguoi mua</li>
-                                            <li class="code-list-item">San pham</li>
-                                            <li class="code-list-item">Ma van don</li>
+                                            <li class="code-list-item"> Mã đơn hàng</li>
+                                            <li class="code-list-item">Sản phẩm</li>
+                                            <li class="code-list-item">Mã vận đơn</li>
                                         </ul>
                                     </div>
                                    <div class="search">
-                                        <input type="text" class="input-code" placeholder="Tim ma don hang">
+                                        <input type="text" value="" class="input-code" placeholder="Tìm mã đơn hàng">
                                         <i class="fa-solid fa-magnifying-glass search-icon"></i>
                                     </input>
                                    </div>
                                 </div>
                                 <div class="order-date">
-                                    <p class="title-date"> Ngay dat hang: </p>
+                                    <p class="title-date"> Ngày đặt hàng: </p>
                                    <div class="setdate">
                                          <i class="fa-regular fa-calendar calendar-icon"></i>
                                          <input type="date" class="fromdate" id="">
@@ -553,24 +373,24 @@
                                          <input type="date" class="todate" id="">
                                     </div>
                                 </div>
-                                <div class="xuat">Xuat</div>
+                                <div class="xuat">XUẤT</div>
                                </div>
                                
                               <div class="body-list">
                                 <!-- 1 -->
                                     <div class="body-container active ">
                                         <ul class="all-header">
-                                            <li class="head-title  active">Tat ca</li>
-                                            <li class="head-title ">Chua xu ly</li>
-                                            <li class="head-title">Da xu ly</li>
+                                            <li class="head-title  active">Tất cả</li>
+                                            <li class="head-title ">Chưa xử lý</li>
+                                            <li class="head-title">Đã xử lý</li>
                                         </ul>
         
                                         <ul class="body-wrap">
+                                            <!-- all -->
                                         <li class="wrap-item  active">
                                                 <div class="item-first">
-                                                    <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
                                                     <div class="filter">
-                                                        <p class="title-filter">Sap xep theo</p>
+                                                        <p class="title-filter">Sắp xếp theo</p>
                                                         <i class="fa-solid fa-filter"></i>
                                                     </div>
                                                 </div>
@@ -578,480 +398,179 @@
                                                 <div class="item-second">
                                                     <ul class="list-filter">
                                                         <li class="item-filter">
-                                                            San Pham 
+                                                            Sản phẩm
                                                         </li>
                                                         <li class="item-filter">
-                                                            Tong cong
+                                                            Tổng cộng
                                                         </li>
                                                         <li class="item-filter">
-                                                        Trang thai
+                                                            Trạng thái
                                                         </li>
                                                         <li class="item-filter">
-                                                        Dem nguoc
-                                                        </li>
-                                                        <li class="item-filter">
-                                                        Tat ca DVVC
-                                                        </li>
-                                                        <li class="item-filter">
-                                                            Thao tac
+                                                            Thao tác
                                                         </li>
                                                     </ul>
                                                 </div>
-        
-                                                <div class="item-footer">
-                                                    <i class="fa-solid fa-rectangle-list"></i>
-                                                    <h6 class="note">Chua co san pham nao</h6>
-                                                </div>
+                                                <!-- TAT CA -->
+                                              
+                                                    <% for (let i = 0; i <  bills.length; i++) {%> 
+                                                        <div class="item-has-product isProcess">
+                                                        <ul class="list-filter">
+                                                            <li class="item-filter">
+                                                                <div class="filter-wrapper">
+                                                                    <img class="filter-img" src="img/DSC_0976.jpg" alt="">
+                                                                    <p class="filter-name"><%=bills[i].name%></p>
+                                                                </div>
+                                                            </li>
+                                                            <li class="item-filter">
+                                                                <%=bills[i].count%>
+                                                            </li>
+                                                            <%if (bills[i].send == 1) {%>
+                                                                <li class="item-filter">
+                                                                  Dang Xử lý
+                                                                </li>
+                                                            <li class="item-filter">
+                                                                <button class="accept">Xác nhận</button>
+                                                            </li>
+                                                            <%} else {%>
+                                                            <li class="item-filter">
+                                                                Xử lý
+                                                             </li>
+                                                            <li class="item-filter">
+                                                                <button class="accepted">Đã xác nhận</button>
+                                                            </li>
+                                                            <%}%>
+                                                            </ul>
+                                                        </div> 
+                                                        <%}%>
+                                            
         
                                         </li>
-                                        <li class="wrap-item ">
+
+                                        <!-- daang xu ly -->
+                                        <li class="wrap-item  ">
                                             <div class="item-first">
-                                                <h4 class="stateOfgoods"><span>0</span>Đơn hàng</h4>
                                                 <div class="filter">
                                                     <p class="title-filter">Sắp xếp theo</p>
                                                     <i class="fa-solid fa-filter"></i>
                                                 </div>
                                             </div>
-        
+    
                                             <div class="item-second">
                                                 <ul class="list-filter">
                                                     <li class="item-filter">
-                                                        Sản phẩm 
+                                                        Sản phẩm
                                                     </li>
                                                     <li class="item-filter">
                                                         Tổng cộng
                                                     </li>
                                                     <li class="item-filter">
-                                                    Trang thai
+                                                        Trạng thái
                                                     </li>
                                                     <li class="item-filter">
-                                                    Dem nguoc
-                                                    </li>
-                                                    <li class="item-filter">
-                                                    Tat ca DVVC
-                                                    </li>
-                                                    <li class="item-filter">
-                                                        Thao tac
+                                                        Thao tác
                                                     </li>
                                                 </ul>
                                             </div>
-        
-                                            <div class="item-footer">
-                                                <i class="fa-solid fa-rectangle-list"></i>
-                                                <h6 class="note">Chưa có sản phẩm nào</h6>
-                                            </div>
-        
+                                             
+                                            <% for (let i = 0; i <  bills.length; i++) {%> 
+                                                <div class="item-has-product isProcess">
+                                                <ul class="list-filter">
+                                                    <li class="item-filter">
+                                                        <div class="filter-wrapper">
+                                                            <img class="filter-img" src="img/DSC_0976.jpg" alt="">
+                                                            <p class="filter-name"><%=bills[i].name%></p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        <%=bills[i].count%>
+                                                    </li>
+                                                    <%if (bills[i].send == 1) {%>
+                                                        <li class="item-filter">
+                                                           Dang Xử lý
+                                                         </li>
+                                                        <li class="item-filter">
+                                                            <button class="accept">Đang xác nhận</button>
+                                                        </li>
+                                                    <%} %>
+                                                    </ul>
+                                                </div>
+                                                <%}%>
+                                           
+                                                <div class="item-footer">
+                                                    <i class="fa-solid fa-rectangle-list"></i>
+                                                    <h6 class="note">Chưa có sản phẩm nào</h6>
+                                                </div>
                                         </li>
-                                        <li class="wrap-item ">
+                                           
+    
+                                        <li class="wrap-item  ">
                                             <div class="item-first">
-                                                <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                                <div class="filter-has--address">
-                                                     <p class="sent-address-title title-header">Chon hang giao tai buu cuc:</p>
-                                                    
-                                                        <div class="sent-address">
-                                                            <p class="sent-address-title">Tat ca don hang</p>
-                                                            <i class="fa-solid fa-angle-down sent-address--icon"></i>
-                                                            <ul class="address-choice">
-                                                                <li class="address-choice-item">Tat ca don hang</li>
-                                                                <li class="address-choice-item">Chon tai buu cuc</li>
-                                                            </ul>
-                                                        </div>
-                                       
-                                                        <div class="range">
-                                                            <p class="sent-address-title">Sap xep theo</p>
-                                                            <i class="fa-solid fa-filter"></i>
-                                                        </div>
+                                                <div class="filter">
+                                                    <p class="title-filter">Sắp xếp theo</p>
+                                                    <i class="fa-solid fa-filter"></i>
                                                 </div>
                                             </div>
-        
+    
                                             <div class="item-second">
                                                 <ul class="list-filter">
                                                     <li class="item-filter">
-                                                        San Pham 
+                                                        Sản phẩm
                                                     </li>
                                                     <li class="item-filter">
-                                                        Tong cong
+                                                        Tổng cộng
                                                     </li>
                                                     <li class="item-filter">
-                                                    Trang thai
+                                                        Trạng thái
                                                     </li>
                                                     <li class="item-filter">
-                                                    Dem nguoc
-                                                    </li>
-                                                    <li class="item-filter">
-                                                    Tat ca DVVC
-                                                    </li>
-                                                    <li class="item-filter">
-                                                        Thao tac
+                                                        Thao tác
                                                     </li>
                                                 </ul>
                                             </div>
-        
-                                            <div class="item-footer">
-                                                <i class="fa-solid fa-rectangle-list"></i>
-                                                <h6 class="note">Chua co san pham nao</h6>
-                                            </div>
-        
-                                         </li>
-                                        
+                                       
+                                                 
+                                            <% for (let i = 0; i <  bills.length; i++) {%> 
+                                                <div class="item-has-product isProcess"></div>
+                                                <ul class="list-filter">
+                                                    <li class="item-filter">
+                                                        <div class="filter-wrapper">
+                                                            <img class="filter-img" src="img/DSC_0976.jpg" alt="">
+                                                            <p class="filter-name"><%=bills[i].name%></p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        <%=bills[i].count%>
+                                                    </li>
+                                                    <%if (bills[i].send == 0) {%>
+                                                        <li class="item-filter">
+                                                            Xử lý
+                                                         </li>
+                                                        <li class="item-filter">
+                                                            <button class="accepted">Đã xác nhận</button>
+                                                        </li>
+                                                    <%} %>
+                                                    </ul>
+                                                
+                                                <%}%>
+                                                <div class="item-footer">
+                                                    <i class="fa-solid fa-rectangle-list"></i>
+                                                    <h6 class="note">Chưa có sản phẩm nào</h6>
+                                                </div>
+    
+                                        </li>
                                         </ul>
                                     </div>
                               </div>
                         </li>
                         <li  id="cholayhang" class="container-item has-giaohang">
-                            <div class="header-container">
-                                <div class="code-hang">
-                                    <div class="find-code">
-                                         Ma don hang
-                                        <span>
-                                            <i class="fa-regular fa-angle-down"></i>
-                                        </span>
-        
-                                        <ul class="find-code-list">
-                                            <li class="code-list-item">Ma don hang</li>
-                                            <li class="code-list-item">Ten nguoi mua</li>
-                                            <li class="code-list-item">San pham</li>
-                                            <li class="code-list-item">Ma van don</li>
-                                        </ul>
-                                    </div>
-                                   <div class="search">
-                                        <input type="text" class="input-code" placeholder="Tim ma don hang">
-                                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                                    </input>
-                                   </div>
-                                </div>
-                                <div class="order-date">
-                                    <p class="title-date"> Ngay dat hang: </p>
-                                   <div class="setdate">
-                                         <i class="fa-regular fa-calendar calendar-icon"></i>
-                                         <input type="date" class="fromdate" id="">
-                                                              -
-                                         <input type="date" class="todate" id="">
-                                    </div>
-                                </div>
-                                <div class="xuat">Xuat</div>
-                               </div>
-                               
-                              <div class="body-list">
-                                <!-- 1 -->
-                                    <div class="body-container active ">
-                                        <ul class="all-header">
-                                            <li class="head-title  active">Tat ca</li>
-                                            <li class="head-title ">Chua xu ly</li>
-                                            <li class="head-title">Da xu ly</li>
-                                        </ul>
-        
-                                        <ul class="body-wrap">
-                                        <li class="wrap-item  active">
-                                                <div class="item-first">
-                                                    <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                                    <div class="filter">
-                                                        <p class="title-filter">Sap xep theo</p>
-                                                        <i class="fa-solid fa-filter"></i>
-                                                    </div>
-                                                </div>
-        
-                                                <div class="item-second">
-                                                    <ul class="list-filter">
-                                                        <li class="item-filter">
-                                                            San Pham 
-                                                        </li>
-                                                        <li class="item-filter">
-                                                            Tong cong
-                                                        </li>
-                                                        <li class="item-filter">
-                                                        Trang thai
-                                                        </li>
-                                                        <li class="item-filter">
-                                                        Dem nguoc
-                                                        </li>
-                                                        <li class="item-filter">
-                                                        Tat ca DVVC
-                                                        </li>
-                                                        <li class="item-filter">
-                                                            Thao tac
-                                                        </li>
-                                                    </ul>
-                                                </div>
-        
-                                                <div class="item-footer">
-                                                    <i class="fa-solid fa-rectangle-list"></i>
-                                                    <h6 class="note">Chua co san pham nao</h6>
-                                                </div>
-        
-                                        </li>
-                                        <li class="wrap-item ">
-                                            <div class="item-first">
-                                                <h4 class="stateOfgoods"><span>0</span>Đơn hàng</h4>
-                                                <div class="filter">
-                                                    <p class="title-filter">Sắp xếp theo</p>
-                                                    <i class="fa-solid fa-filter"></i>
-                                                </div>
-                                            </div>
-        
-                                            <div class="item-second">
-                                                <ul class="list-filter">
-                                                    <li class="item-filter">
-                                                        Sản phẩm 
-                                                    </li>
-                                                    <li class="item-filter">
-                                                        Tổng cộng
-                                                    </li>
-                                                    <li class="item-filter">
-                                                    Trang thai
-                                                    </li>
-                                                    <li class="item-filter">
-                                                    Dem nguoc
-                                                    </li>
-                                                    <li class="item-filter">
-                                                    Tat ca DVVC
-                                                    </li>
-                                                    <li class="item-filter">
-                                                        Thao tac
-                                                    </li>
-                                                </ul>
-                                            </div>
-        
-                                            <div class="item-footer">
-                                                <i class="fa-solid fa-rectangle-list"></i>
-                                                <h6 class="note">Chưa có sản phẩm nào</h6>
-                                            </div>
-        
-                                        </li>
-                                        <li class="wrap-item ">
-                                            <div class="item-first">
-                                                <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                                <div class="filter-has--address">
-                                                     <p class="sent-address-title title-header">Chon hang giao tai buu cuc:</p>
-                                                    
-                                                        <div class="sent-address">
-                                                            <p class="sent-address-title">Tat ca don hang</p>
-                                                            <i class="fa-solid fa-angle-down sent-address--icon"></i>
-                                                            <ul class="address-choice">
-                                                                <li class="address-choice-item">Tat ca don hang</li>
-                                                                <li class="address-choice-item">Chon tai buu cuc</li>
-                                                            </ul>
-                                                        </div>
-                                       
-                                                        <div class="range">
-                                                            <p class="sent-address-title">Sap xep theo</p>
-                                                            <i class="fa-solid fa-filter"></i>
-                                                        </div>
-                                                </div>
-                                            </div>
-        
-                                            <div class="item-second">
-                                                <ul class="list-filter">
-                                                    <li class="item-filter">
-                                                        San Pham 
-                                                    </li>
-                                                    <li class="item-filter">
-                                                        Tong cong
-                                                    </li>
-                                                    <li class="item-filter">
-                                                    Trang thai
-                                                    </li>
-                                                    <li class="item-filter">
-                                                    Dem nguoc
-                                                    </li>
-                                                    <li class="item-filter">
-                                                    Tat ca DVVC
-                                                    </li>
-                                                    <li class="item-filter">
-                                                        Thao tac
-                                                    </li>
-                                                </ul>
-                                            </div>
-        
-                                            <div class="item-footer">
-                                                <i class="fa-solid fa-rectangle-list"></i>
-                                                <h6 class="note">Chua co san pham nao</h6>
-                                            </div>
-        
-                                         </li>
-                                        
-                                        </ul>
-                                    </div>
-                              </div>
+                           
                         </li>
                         <li class="container-item">
-                            <div class="header-container">
-                                <div class="code-hang">
-                                    <div class="find-code">
-                                         Ma don hang
-                                        <span>
-                                            <i class="fa-regular fa-angle-down"></i>
-                                        </span>
-        
-                                        <ul class="find-code-list">
-                                            <li class="code-list-item">Ma don hang</li>
-                                            <li class="code-list-item">Ten nguoi mua</li>
-                                            <li class="code-list-item">San pham</li>
-                                            <li class="code-list-item">Ma van don</li>
-                                        </ul>
-                                    </div>
-                                   <div class="search">
-                                        <input type="text" class="input-code" placeholder="Tim ma don hang">
-                                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                                    </input>
-                                   </div>
-                                </div>
-                                <div class="order-date">
-                                    <p class="title-date"> Ngay dat hang: </p>
-                                   <div class="setdate">
-                                         <i class="fa-regular fa-calendar calendar-icon"></i>
-                                         <input type="date" class="fromdate" id="">
-                                                              -
-                                         <input type="date" class="todate" id="">
-                                    </div>
-                                </div>
-                                <div class="xuat">Xuat</div>
-                               </div>
-                               
-                              <div class="body-list">
-                                <!-- 1 -->
-                                    <div class="body-container active ">
-                                        <ul class="all-header">
-                                            <li class="head-title  active">Tat ca</li>
-                                            <li class="head-title ">Chua xu ly</li>
-                                            <li class="head-title">Da xu ly</li>
-                                        </ul>
-        
-                                        <ul class="body-wrap">
-                                        <li class="wrap-item  active">
-                                                <div class="item-first">
-                                                    <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                                    <div class="filter">
-                                                        <p class="title-filter">Sap xep theo</p>
-                                                        <i class="fa-solid fa-filter"></i>
-                                                    </div>
-                                                </div>
-        
-                                                <div class="item-second">
-                                                    <ul class="list-filter">
-                                                        <li class="item-filter">
-                                                            San Pham 
-                                                        </li>
-                                                        <li class="item-filter">
-                                                            Tong cong
-                                                        </li>
-                                                        <li class="item-filter">
-                                                        Trang thai
-                                                        </li>
-                                                        <li class="item-filter">
-                                                        Dem nguoc
-                                                        </li>
-                                                        <li class="item-filter">
-                                                        Tat ca DVVC
-                                                        </li>
-                                                        <li class="item-filter">
-                                                            Thao tac
-                                                        </li>
-                                                    </ul>
-                                                </div>
-        
-                                                <div class="item-footer">
-                                                    <i class="fa-solid fa-rectangle-list"></i>
-                                                    <h6 class="note">Chua co san pham nao</h6>
-                                                </div>
-        
-                                        </li>
-                                        <li class="wrap-item ">
-                                            <div class="item-first">
-                                                <h4 class="stateOfgoods"><span>0</span>Đơn hàng</h4>
-                                                <div class="filter">
-                                                    <p class="title-filter">Sắp xếp theo</p>
-                                                    <i class="fa-solid fa-filter"></i>
-                                                </div>
-                                            </div>
-        
-                                            <div class="item-second">
-                                                <ul class="list-filter">
-                                                    <li class="item-filter">
-                                                        Sản phẩm 
-                                                    </li>
-                                                    <li class="item-filter">
-                                                        Tổng cộng
-                                                    </li>
-                                                    <li class="item-filter">
-                                                    Trang thai
-                                                    </li>
-                                                    <li class="item-filter">
-                                                    Dem nguoc
-                                                    </li>
-                                                    <li class="item-filter">
-                                                    Tat ca DVVC
-                                                    </li>
-                                                    <li class="item-filter">
-                                                        Thao tac
-                                                    </li>
-                                                </ul>
-                                            </div>
-        
-                                            <div class="item-footer">
-                                                <i class="fa-solid fa-rectangle-list"></i>
-                                                <h6 class="note">Chưa có sản phẩm nào</h6>
-                                            </div>
-        
-                                        </li>
-                                        <li class="wrap-item ">
-                                            <div class="item-first">
-                                                <h4 class="stateOfgoods"><span>0</span> Don hang</h4>
-                                                <div class="filter-has--address">
-                                                     <p class="sent-address-title title-header">Chon hang giao tai buu cuc:</p>
-                                                    
-                                                        <div class="sent-address">
-                                                            <p class="sent-address-title">Tat ca don hang</p>
-                                                            <i class="fa-solid fa-angle-down sent-address--icon"></i>
-                                                            <ul class="address-choice">
-                                                                <li class="address-choice-item">Tat ca don hang</li>
-                                                                <li class="address-choice-item">Chon tai buu cuc</li>
-                                                            </ul>
-                                                        </div>
-                                       
-                                                        <div class="range">
-                                                            <p class="sent-address-title">Sap xep theo</p>
-                                                            <i class="fa-solid fa-filter"></i>
-                                                        </div>
-                                                </div>
-                                            </div>
-        
-                                            <div class="item-second">
-                                                <ul class="list-filter">
-                                                    <li class="item-filter">
-                                                        San Pham 
-                                                    </li>
-                                                    <li class="item-filter">
-                                                        Tong cong
-                                                    </li>
-                                                    <li class="item-filter">
-                                                    Trang thai
-                                                    </li>
-                                                    <li class="item-filter">
-                                                    Dem nguoc
-                                                    </li>
-                                                    <li class="item-filter">
-                                                    Tat ca DVVC
-                                                    </li>
-                                                    <li class="item-filter">
-                                                        Thao tac
-                                                    </li>
-                                                </ul>
-                                            </div>
-        
-                                            <div class="item-footer">
-                                                <i class="fa-solid fa-rectangle-list"></i>
-                                                <h6 class="note">Chua co san pham nao</h6>
-                                            </div>
-        
-                                         </li>
-                                        
-                                        </ul>
-                                    </div>
-                              </div>
+                            
                         </li>
                         <li class="container-item">
-                            body5
+                            body2
                         </li>
                         <li class="container-item">
                             body6
@@ -1061,6 +580,7 @@
                         </li>
                     </ul>
                 </div>
+            
                 <div class="formanagement for-item">
                     <h4 class="formanagement-title">SẢN PHẨM ĐƯỢC CHÚ Ý</h4>
 
@@ -1077,7 +597,7 @@
                      
 
                          <% for (let i = 0; i < products.length; i++) {%> 
-                            <% if(boGio[i] >=100) { %> 
+                            <% if(boGio[i] >=5) { %> 
                             <tr class="cart-navbar-item-wrap isshow">
                                 <td class="cart-navbar-item"><%=products[i].name%></td>
                                 <td class="cart-navbar-item"><%=boGio[i]%></td>

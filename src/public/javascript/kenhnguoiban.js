@@ -43,6 +43,7 @@
 
         this.classList.add("active")
         headerTitleItem.classList.add("active")
+        // headerTitle.style.color = 'rgb(57, 137, 57)'
       
     }
 })
@@ -99,4 +100,32 @@
     }
     else {
         nothing.style.display =' block '
+    }
+
+
+    // for all sp
+    const inputPlaceholder = $(".input-code")
+    const codelistItems = $$(".code-list-item")
+    codelistItems.forEach((listItem,index) => {
+        listItem.onclick = function () {
+            if(index == 0 ) {
+            inputPlaceholder.placeholder = 'Tim mã đơn hàng' 
+            } 
+            else if(index ==1 ) {
+                inputPlaceholder.placeholder = 'Tìm tên sản phẩm' 
+            } 
+            else if (index == 2 ) {
+                inputPlaceholder.placeholder = 'Tìm mã vận đơn' 
+            }
+        }
+    }) 
+
+    const isProcess = $(".isProcess")
+    const wrapItem = $(".item-has-product")
+    const iconFooter = $(".item-footer")
+
+    if(wrapItem.classList.contains("isProcess")) {
+        iconFooter.style.display = 'none'
+    } else {
+        iconFooter.style.display ='flex'
     }
