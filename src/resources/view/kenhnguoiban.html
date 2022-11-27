@@ -71,7 +71,7 @@
                                 <li class="manage-item">
                                     Tất cả 
                                 </li>
-                                <li id="isorder" class=" manage-item isbot">
+                                <li class=" manage-item to-link">
                                     Đơn trong giỏ
                                 </li>
                             </ul>
@@ -295,15 +295,15 @@
                             </div>
                         </div> 
 
-                        <% for (let i = 0; i < products.length; i++) {%> 
-                            <% if(boGio[i] >= 2 ) { %> 
-                         <div class="forhome-noti-order showing">
-                            <h6 class="noti-order-header">
-                                Thông báo dành riêng cho bạn
-                            </h6>
+                        
+                         <div class="forhome-noti-order ">
+                                <h6 class="noti-order-header">
+                                    Thông báo dành riêng cho bạn
+                                </h6>
                             <ul  class="noti-order-list ">
-                                
-                                <li class="noti-order-item">
+                                <% for (let i = 0; i < products.length; i++) {%> 
+                                    <% if(boGio[i] >= 1 ) { %> 
+                                <li class="noti-order-item show">
                                     <div class="order-alert">
                                         <i class="fa-solid fa-bolt"></i>
                                         <span>Kiểm tra ngay sản phẩm</span>
@@ -312,14 +312,12 @@
                                         <p class="">Sản phẩm : <span class="letter-span"><%=products[i].name%></span> đang được chú ý</p>
                                     </div>
                                 </li>
+                                        <% } %>
+        
+                                    <% } %>
                             </ul>
                         </div>
-                        <% } else { %> 
-                            <div class="forhome-noti-order">
-                            </div>
-                                <% } %>
-
-                            <% } %>
+                       
                     </div>
                 </div>
                 <div class="forAll for-item ">
@@ -1078,22 +1076,22 @@
                         </tr>
                      
                          <% for (let i = 0; i < products.length; i++) {%> 
-                            <% if(boGio[i] >=2) { %> 
-                        <tr class="cart-navbar-item-wrap">
-                            <td class="cart-navbar-item"><%=products[i].name%></td>
-                            <td class="cart-navbar-item"><%=boGio[i]%></td>
+                            <% if(boGio[i] >=1) { %> 
+                            <tr class="cart-navbar-item-wrap">
+                                <td class="cart-navbar-item"><%=products[i].name%></td>
+                                <td class="cart-navbar-item"><%=boGio[i]%></td>
 
-                            <td class="cart-navbar-item right-little-item">Đồ khô</td>
+                                <td class="cart-navbar-item right-little-item">Đồ khô</td>
 
-                            <td class="cart-navbar-item price-right"><%=(products[i].price * boGio[i])%></td>
-                            <td class="cart-navbar-item">Còn hàng</td>
-                            <td class="cart-navbar-item has--discount "> 
-                                <span class="discount-is"> Discount</span> 
-                                <form action="/product/discount/delete" method="POST">
-                                    <input type="text" name="slug" value="<%=products[i].slug %>" style="display: none;">
-                                    <button class="trasher"> <i class="fa-sharp fa-solid fa-trash "></i></button>
-                                </form>
-                            </td>
+                                <td class="cart-navbar-item price-right"><%=(products[i].price * boGio[i])%></td>
+                                <td class="cart-navbar-item">Còn hàng</td>
+                                <td class="cart-navbar-item has--discount "> 
+                                    <span class="discount-is"> Discount</span> 
+                                    <form action="/product/discount/delete" method="POST">
+                                        <input type="text" name="slug" value="<%=products[i].slug %>" style="display: none;">
+                                        <button class="trasher"> <i class="fa-sharp fa-solid fa-trash "></i></button>
+                                    </form>
+                                </td>
 
                             <div class="modal">
                                 <div class="modal-container">
