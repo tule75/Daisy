@@ -112,14 +112,17 @@
                 <div class="customer-side">
                     <ul class="customer-infor">
                         <li class="customer-infor-showing">
-                            <h5>Nguyễn Văn An</h5>
+                            <h5><%-user.firstname%> <%-user.lastname%></h5>
                         </li>
-                        <li class="customer-infor-showing"><h6>036658356660</h6></li>
+                        <li class="customer-infor-showing"><h6><%=user.phone%></h6></li>
                         <li class="customer-infor-showing"><button class="change-add">Đổi địa chỉ</button></li>
                     </ul>
                     <div class="customer-add">
                         <h5 class="customer-add--title">Giao hàng tới :</h5>
-                        <p class="customer-add-show">Ktx Khu B, Đường Nguyễn Du, Khu Phố 6, Phường Linh Trung, Thành Phố Thủ Đức, TP. Hồ Chí Minh</p>
+                        <p class="customer-add-show">Tỉnh thành: <%-user.province %></p>
+                        <p class="customer-add-show">Quận, huyện: <%-user.district %></p>
+                        <p class="customer-add-show">Phường, xã: <%-user.award %></p>
+                        <p class="customer-add-show">Địa chỉ: <%-user.address %></p>
                     </div>
                 </div>
                 <div class="shipment-side">
@@ -132,21 +135,48 @@
                     <div class="shipment-fee">Giá vận chuyển: <span>20.000</span></div>
                 </div>
             </div>
-
+            <form action="/thanhtoan/create" method="post">
+            <% let tien = 0 %> 
+            <% if (Array.isArray(product)) {%> 
+                <% for (let i = 0; i < product.length; i++) {%> 
+                    <%const x = product[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                    <% const y = x.replace("/view?usp=share_link","",40)%>
+                    <% tien += product[i].price %> 
             <div class="product-wrap">
                 <div class="product-list">
-                    <h5 class="product-name">Ten shop 1</h5>
+                    <h5 class="product-name"><%=shop.name %></h5>
                     <div class="product-container">
-                        <img class="product-img" src="/img/DSC_0976.jpg" alt="">
+                        <input type="radio" name="p<%-i %>" value="<%=JSON.stringify({user_slug: user.slug, product_slug: product[i].slug , shop_slug: product[i].user_slug , send: 0, sell: 0, price: product[i].price }) %>">
+                        <img class="product-img" src="<%-y%>" alt="">
                         <div class="product-item">
-                            <h5 class="name">Bun gao</h5>
-                            <p class="quantity">Số lượng : <span>3</span></p>
-                            <p class="dongia">Đơn giá: <span>100.000</span></p>
-                            <div class="total">Thành tiền: <span>100.000</span></div>
+                            <h5 class="name">><%=product[i].name%></h5>
+                            <p class="quantity">Số lượng : <span>1</span></p>
+                            <p class="dongia">Đơn giá: <span><%=product[i].price%></span></p>
+                            <div class="total">Thành tiền: <span><%=product[i].price%></span></div>
                         </div>
                     </div>
                 </div>
-                <div class="product-list">
+
+            <% }} else { %> 
+                <% tien = product.price %> 
+                <%const x = product.img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                <% const y = x.replace("/view?usp=share_link","",40)%>
+        <div class="product-wrap">
+            <div class="product-list">
+                <h5 class="product-name"><%=shop.name %> </h5>
+                <div class="product-container">
+                    <input type="text" style="display: none;" name="p" value="<%=JSON.stringify({user_slug: user.slug, product_slug: product.slug , shop_slug: product.user_slug , send: 0, sell: 0, price: product.price }) %>">
+                    <img class="product-img" src="<%-y%>" alt="">
+                    <div class="product-item">
+                        <h5 class="name">><%=product.name%></h5>
+                        <p class="quantity">Số lượng : <span>1</span></p>
+                        <p class="dongia">Đơn giá: <span><%=product.price%></span></p>
+                        <div class="total">Thành tiền: <span><%=product.price%></span></div>
+                    </div>
+                </div>
+            </div>
+            <% } %> 
+                <!-- <div class="product-list">
                     <h5 class="product-name">Tên shop 1</h5>
                     <div class="product-container">
                         <img class="product-img" src="/img/DSC_0976.jpg" alt="">
@@ -170,7 +200,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="voucher-wrap">
                 <div class="voucher-shop">
@@ -203,17 +233,17 @@
             <div class="total-wrap">
                 <h4 class="header-total">Tổng chi phí</h4>
                 <ul class="total-detail">
-                    <li class="total-item">Tiền hàng : <span>300.000</span></li>
+                    <li class="total-item">Tiền hàng : <span><%=tien%></span></li>
                     <li class="total-item">Tiền vận chuyển : <span>20.000</span></li>
-                    <li class="total-item total-add">Tổng cộng : <span>320.000</span></li>
+                    <li class="total-item total-add">Tổng cộng : <span><%=tien + 20000%></span></li>
                 </ul>
-                <button class="ending">ĐẶT HÀNG</button>
+                <button class="ending" type="submit">ĐẶT HÀNG</button>
                 <button class="ending_2"><a href="/"> Quay lai trang chu</a></button>
             </div>
 
            
          </div>
-
+        </form>
          <div class="footer">
             <div class="grid">
                 <div class="grid__row">
