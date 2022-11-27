@@ -63,6 +63,7 @@
     display: flex;
     border: 1px solid #ccc;
     align-items: center;
+    height: 60px;
 
 
 }
@@ -254,6 +255,7 @@
     padding-left: 10px;
     border-bottom:  1px solid #ccc;
     padding-top: 15px;
+    padding-right: 10px;
 }
 .order-alert{
     color: rgb(139, 41, 41);
