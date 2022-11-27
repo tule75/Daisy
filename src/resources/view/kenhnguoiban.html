@@ -388,13 +388,7 @@
                                         <ul class="body-wrap">
                                             <!-- all -->
                                         <li class="wrap-item  active">
-                                                <div class="item-first">
-                                                    <div class="filter">
-                                                        <p class="title-filter">Sắp xếp theo</p>
-                                                        <i class="fa-solid fa-filter"></i>
-                                                    </div>
-                                                </div>
-        
+                                                
                                                 <div class="item-second">
                                                     <ul class="list-filter">
                                                         <li class="item-filter">
@@ -420,17 +414,18 @@
                                                                 <div class="filter-wrapper">
                                                                     <img class="filter-img" src="img/DSC_0976.jpg" alt="">
                                                                     <p class="filter-name"><%=products_buy[i].name%></p>
+
                                                                 </div>
                                                             </li>
                                                             <li class="item-filter">
                                                                 <%=bills[i].count%>
                                                             </li>
                                                             <%if (bills[i].send == 0) {%>
-                                                                <li class="item-filter">
+                                                                <li class="item-filter waiting">
                                                                   Đang chờ Xử lý
                                                                 </li>
                                                             <li class="item-filter">
-                                                                <button class="accept">Xác nhận</button>
+                                                                <button class="accept">Đang Xác nhận</button>
                                                             </li>
                                                             <%} else {%>
                                                             <li class="item-filter">
@@ -439,6 +434,7 @@
                                                             <li class="item-filter">
                                                                 <button class="accepted">Đã xác nhận</button>
                                                             </li>
+
                                                             <%}%>
                                                             </ul>
                                                         </div> 
@@ -449,12 +445,7 @@
 
                                         <!-- daang xu ly -->
                                         <li class="wrap-item  ">
-                                            <div class="item-first">
-                                                <div class="filter">
-                                                    <p class="title-filter">Sắp xếp theo</p>
-                                                    <i class="fa-solid fa-filter"></i>
-                                                </div>
-                                            </div>
+                                            
     
                                             <div class="item-second">
                                                 <ul class="list-filter">
@@ -487,8 +478,8 @@
                                                         <%=bills[i].count%>
                                                     </li>
                                                     
-                                                        <li class="item-filter">
-                                                           Dang Xử lý
+                                                        <li class="item-filter waiting">
+                                                            Đang xử lý
                                                          </li>
                                                         <li class="item-filter">
                                                             <button class="accept">Đang xác nhận</button>
@@ -507,13 +498,7 @@
                                            
     
                                         <li class="wrap-item  ">
-                                            <div class="item-first">
-                                                <div class="filter">
-                                                    <p class="title-filter">Sắp xếp theo</p>
-                                                    <i class="fa-solid fa-filter"></i>
-                                                </div>
-                                            </div>
-    
+                                            
                                             <div class="item-second">
                                                 <ul class="list-filter">
                                                     <li class="item-filter">
@@ -533,8 +518,8 @@
                                        
                                                  
                                             <% for (let i = 0; i <  bills.length; i++) {%> 
-                                                <%if (bills[i].send === 1) {%>
-                                                <div class="item-has-product isProcess"></div>
+                                                <%if (bills[i].send == 1) {%>
+                                                <div class="item-has-product isProcess">
                                                 <ul class="list-filter">
                                                     <li class="item-filter">
                                                         <div class="filter-wrapper">
@@ -547,13 +532,15 @@
                                                     </li>
                                                     
                                                         <li class="item-filter">
-                                                            Xử lý
+                                                          Đã Xử lý
                                                          </li>
-                                                         <button class="accepted">Đã xác nhận</button>
+                                                        <li class="item-filter">
+                                                            <button class="accepted">Đã xác nhận</button>
+                                                        </li>
                                                     
-
                                                     </ul>
-                                                    <%} %>
+                                                </div>
+                                                <%} %> 
                                                 <%}%>
                                                 <div class="item-footer">
                                                     <i class="fa-solid fa-rectangle-list"></i>
@@ -565,14 +552,410 @@
                                     </div>
                               </div>
                         </li>
-                        <li  id="cholayhang" class="container-item has-giaohang">
-                           
+                        <li class="container-item ">
+                            <div class="header-container">
+                                <div class="code-hang">
+                                    <div class="find-code">
+                                         Mã đơn hàng
+                                        <span>
+                                            <i class="fa-regular fa-angle-down"></i>
+                                        </span>
+        
+                                        <ul class="find-code-list">
+                                            <li class="code-list-item"> Mã đơn hàng</li>
+                                            <li class="code-list-item">Sản phẩm</li>
+                                            <li class="code-list-item">Mã vận đơn</li>
+                                        </ul>
+                                    </div>
+                                   <div class="search">
+                                        <input type="text" value="" class="input-code" placeholder="Tìm mã đơn hàng">
+                                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                                    </input>
+                                   </div>
+                                </div>
+                                <div class="order-date">
+                                    <p class="title-date"> Ngày đặt hàng: </p>
+                                   <div class="setdate">
+                                         <i class="fa-regular fa-calendar calendar-icon"></i>
+                                         <input type="date" class="fromdate" id="">
+                                                              -
+                                         <input type="date" class="todate" id="">
+                                    </div>
+                                </div>
+                                <div class="xuat">XUẤT</div>
+                               </div>
+                               
+                              <div class="body-list">
+                                <!-- 1 -->
+                                    <div class="body-container active ">
+                                        <ul class="all-header">
+                                            <li class="head-title  active">Tất cả</li>
+                                            <li class="head-title ">Đang chờ lấy hàng</li>
+                                            <li class="head-title">Đã lấy hàng </li>
+                                        </ul>
+        
+                                        <ul class="body-wrap">
+                                            <!-- all -->
+                                        <li class="wrap-item  active">
+                                                
+                                                <div class="item-second">
+                                                    <ul class="list-filter">
+                                                        <li class="item-filter">
+                                                            Sản phẩm
+                                                        </li>
+                                                        <li class="item-filter">
+                                                            Tổng cộng
+                                                        </li>
+                                                        <li class="item-filter">
+                                                            Địa chỉ
+                                                        </li>
+                                                        <li class="item-filter">
+                                                            Trạng thái
+                                                        </li>
+                                                       
+                                                    </ul>
+                                                </div>
+                                                <!-- TAT CA -->
+                                              
+                                                    <% for (let i = 0; i <  bills.length; i++) {%> 
+                                                        <div class="item-has-product isProcess">
+                                                        <ul class="list-filter">
+                                                            <li class="item-filter">
+                                                                <div class="filter-wrapper">
+                                                                    <img class="filter-img" src="img/DSC_0976.jpg" alt="">
+                                                                    <p class="filter-name"><%=products_buy[i].name%></p>
+
+                                                                </div>
+                                                            </li>
+                                                            <li class="item-filter">
+                                                                <%=bills[i].count%>
+                                                            </li>
+                                                            <li class="item-filter">
+                                                               <p> dia chi</p>
+                                                        
+                                                            </li>
+                                                            <%if (bills[i].send == 0) {%>
+                                                                <li class="item-filter waiting">
+                                                                  Đang chờ lấy hàng
+                                                                </li>
+                                                                
+                                                            <%} else {%>
+                                                            <li class="item-filter">
+                                                                Đã lấy hàng
+                                                             </li>
+                                                           
+                                                            <%}%>
+                                                            </ul>
+                                                        </div> 
+                                                        <%}%>
+                                            
+        
+                                        </li>
+
+                                        <!-- daang xu ly -->
+                                        <li class="wrap-item  ">
+                                            
+    
+                                            <div class="item-second">
+                                                <ul class="list-filter">
+                                                    <li class="item-filter">
+                                                        Sản phẩm
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Tổng cộng
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Trạng thái
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Thao tác
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                             
+                                            <% for (let i = 0; i <  bills.length; i++) {%> 
+                                                <%if (bills[i].send == 0) {%>
+                                                <div class="item-has-product isProcess">
+                                                <ul class="list-filter">
+                                                    <li class="item-filter">
+                                                        <div class="filter-wrapper">
+                                                            <img class="filter-img" src="img/DSC_0976.jpg" alt="">
+                                                            <p class="filter-name"><%=products_buy[i].name%></p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        <%=bills[i].count%>
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        <p> dia chi</p>
+                                                 
+                                                     </li>
+                                                        <li class="item-filter waiting">
+                                                            Đang chờ lấy hàng
+                                                         </li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <%} %> 
+                                                <%}%>
+                                           
+                                                <div class="item-footer">
+                                                    <i class="fa-solid fa-rectangle-list"></i>
+                                                    <h6 class="note">Chưa có sản phẩm nào</h6>
+                                                </div>
+                                        </li>
+                                           
+    
+                                        <li class="wrap-item  ">
+                                            
+                                            <div class="item-second">
+                                                <ul class="list-filter">
+                                                    <li class="item-filter">
+                                                        Sản phẩm
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Tổng cộng
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Trạng thái
+                                                    </li>
+                                                   
+                                                </ul>
+                                            </div>
+                                       
+                                                 
+                                            <% for (let i = 0; i <  bills.length; i++) {%> 
+                                                <%if (bills[i].send == 1) {%>
+                                                <div class="item-has-product isProcess">
+                                                <ul class="list-filter">
+                                                    <li class="item-filter">
+                                                        <div class="filter-wrapper">
+                                                            <img class="filter-img" src="img/DSC_0976.jpg" alt="">
+                                                            <p class="filter-name"><%=products_buy[i].name%></p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        <%=bills[i].count%>
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        <p> dia chi</p>
+                                                 
+                                                     </li>
+                                                        <li class="item-filter">
+                                                          Đã lấy hàng
+                                                         </li>
+                                                      
+                                                    </ul>
+                                                </div>
+                                                <%} %> 
+                                                <%}%>
+                                                <div class="item-footer">
+                                                    <i class="fa-solid fa-rectangle-list"></i>
+                                                    <h6 class="note">Chưa có sản phẩm nào</h6>
+                                                </div>
+    
+                                        </li>
+                                        </ul>
+                                    </div>
+                              </div>
                         </li>
-                        <li class="container-item">
-                            
+                        <li class="container-item ">
+                            <div class="header-container">
+                                <div class="code-hang">
+                                    <div class="find-code">
+                                         Mã đơn hàng
+                                        <span>
+                                            <i class="fa-regular fa-angle-down"></i>
+                                        </span>
+        
+                                        <ul class="find-code-list">
+                                            <li class="code-list-item"> Mã đơn hàng</li>
+                                            <li class="code-list-item">Sản phẩm</li>
+                                            <li class="code-list-item">Mã vận đơn</li>
+                                        </ul>
+                                    </div>
+                                   <div class="search">
+                                        <input type="text" value="" class="input-code" placeholder="Tìm mã đơn hàng">
+                                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                                    </input>
+                                   </div>
+                                </div>
+                                <div class="order-date">
+                                    <p class="title-date"> Ngày đặt hàng: </p>
+                                   <div class="setdate">
+                                         <i class="fa-regular fa-calendar calendar-icon"></i>
+                                         <input type="date" class="fromdate" id="">
+                                                              -
+                                         <input type="date" class="todate" id="">
+                                    </div>
+                                </div>
+                                <div class="xuat">XUẤT</div>
+                               </div>
+                               
+                              <div class="body-list">
+                                <!-- 1 -->
+                                    <div class="body-container active ">
+                                        <ul class="all-header">
+                                            <li class="head-title active ">Đang giao</li>
+                                        </ul>
+        
+                                        <ul class="body-wrap">
+                                     
+                                        <!-- dang giao -->
+                                        <li class="wrap-item active ">
+                                            
+    
+                                            <div class="item-second">
+                                                <ul class="list-filter">
+                                                    <li class="item-filter">
+                                                        Sản phẩm
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Tổng cộng
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Trạng thái
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Thao tác
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                             
+                                            <% for (let i = 0; i <  bills.length; i++) {%> 
+                                                <%if (bills[i].send == 0) {%>
+                                                <div class="item-has-product isProcess">
+                                                <ul class="list-filter">
+                                                    <li class="item-filter">
+                                                        <div class="filter-wrapper">
+                                                            <img class="filter-img" src="img/DSC_0976.jpg" alt="">
+                                                            <p class="filter-name"><%=products_buy[i].name%></p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        <%=bills[i].count%>
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        <p> dia chi</p>
+                                                 
+                                                     </li>
+                                                        <li class="item-filter waiting">
+                                                            Đang giao 
+                                                         </li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <%} %> 
+                                                <%}%>
+                                           
+                                                <div class="item-footer">
+                                                    <i class="fa-solid fa-rectangle-list"></i>
+                                                    <h6 class="note">Chưa có sản phẩm nào</h6>
+                                                </div>
+                                        </li>
+                                           
+                                        </ul>
+                                    </div>
+                              </div>
                         </li>
-                        <li class="container-item">
-                            body2
+                        <li class="container-item ">
+                            <div class="header-container">
+                                <div class="code-hang">
+                                    <div class="find-code">
+                                         Mã đơn hàng
+                                        <span>
+                                            <i class="fa-regular fa-angle-down"></i>
+                                        </span>
+        
+                                        <ul class="find-code-list">
+                                            <li class="code-list-item"> Mã đơn hàng</li>
+                                            <li class="code-list-item">Sản phẩm</li>
+                                            <li class="code-list-item">Mã vận đơn</li>
+                                        </ul>
+                                    </div>
+                                   <div class="search">
+                                        <input type="text" value="" class="input-code" placeholder="Tìm mã đơn hàng">
+                                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                                    </input>
+                                   </div>
+                                </div>
+                                <div class="order-date">
+                                    <p class="title-date"> Ngày đặt hàng: </p>
+                                   <div class="setdate">
+                                         <i class="fa-regular fa-calendar calendar-icon"></i>
+                                         <input type="date" class="fromdate" id="">
+                                                              -
+                                         <input type="date" class="todate" id="">
+                                    </div>
+                                </div>
+                                <div class="xuat">XUẤT</div>
+                               </div>
+                               
+                              <div class="body-list">
+                                <!-- 1 -->
+                                    <div class="body-container active ">
+                                        <ul class="all-header">
+                                            <li class="head-title active ">Đa giao</li>
+                                        </ul>
+        
+                                        <ul class="body-wrap">
+                                     
+                                        <!-- dang giao -->
+                                        <li class="wrap-item active ">
+                                            
+    
+                                            <div class="item-second">
+                                                <ul class="list-filter">
+                                                    <li class="item-filter">
+                                                        Sản phẩm
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Tổng cộng
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Trạng thái
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        Thao tác
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                             
+                                            <% for (let i = 0; i <  bills.length; i++) {%> 
+                                                <%if (bills[i].send == 1) {%>
+                                                <div class="item-has-product isProcess">
+                                                <ul class="list-filter">
+                                                    <li class="item-filter">
+                                                        <div class="filter-wrapper">
+                                                            <img class="filter-img" src="img/DSC_0976.jpg" alt="">
+                                                            <p class="filter-name"><%=products_buy[i].name%></p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        <%=bills[i].count%>
+                                                    </li>
+                                                    <li class="item-filter">
+                                                        <p> dia chi</p>
+                                                 
+                                                     </li>
+                                                        <li class="item-filter waiting">
+                                                            Đa giao 
+                                                         </li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <%} %> 
+                                                <%}%>
+                                           
+                                                <div class="item-footer">
+                                                    <i class="fa-solid fa-rectangle-list"></i>
+                                                    <h6 class="note">Chưa có sản phẩm nào</h6>
+                                                </div>
+                                        </li>
+                                           
+                                        </ul>
+                                    </div>
+                              </div>
                         </li>
                         <li class="container-item">
                             body6
@@ -630,7 +1013,7 @@
                                             <p class="body-heading">Nhập mã giảm giá: </p>
                                             <input class="modal-input" type="number" min="1" max="100" checked name="discount" value="" placeholder='Phần trăm'>
                                             <div class="footer-modal">
-                                                <button type="submit"><div class="btn-apply">Ap dung</div></button>
+                                                <button type="submit" class="btn-apply"><div class="">Ap dung</div></button>
                                             </div>
                                         </form>
                                     
