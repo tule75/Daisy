@@ -419,22 +419,22 @@
                                                             <li class="item-filter">
                                                                 <div class="filter-wrapper">
                                                                     <img class="filter-img" src="img/DSC_0976.jpg" alt="">
-                                                                    <p class="filter-name"><%=bills[i].name%></p>
+                                                                    <p class="filter-name"><%=products_buy[i].name%></p>
                                                                 </div>
                                                             </li>
                                                             <li class="item-filter">
                                                                 <%=bills[i].count%>
                                                             </li>
-                                                            <%if (bills[i].send == 1) {%>
+                                                            <%if (bills[i].send == 0) {%>
                                                                 <li class="item-filter">
-                                                                  Dang Xử lý
+                                                                  Đang chờ Xử lý
                                                                 </li>
                                                             <li class="item-filter">
                                                                 <button class="accept">Xác nhận</button>
                                                             </li>
                                                             <%} else {%>
                                                             <li class="item-filter">
-                                                                Xử lý
+                                                                Đã xử lý
                                                              </li>
                                                             <li class="item-filter">
                                                                 <button class="accepted">Đã xác nhận</button>
@@ -474,27 +474,29 @@
                                             </div>
                                              
                                             <% for (let i = 0; i <  bills.length; i++) {%> 
+                                                <%if (bills[i].send == 0) {%>
                                                 <div class="item-has-product isProcess">
                                                 <ul class="list-filter">
                                                     <li class="item-filter">
                                                         <div class="filter-wrapper">
                                                             <img class="filter-img" src="img/DSC_0976.jpg" alt="">
-                                                            <p class="filter-name"><%=bills[i].name%></p>
+                                                            <p class="filter-name"><%=products_buy[i].name%></p>
                                                         </div>
                                                     </li>
                                                     <li class="item-filter">
                                                         <%=bills[i].count%>
                                                     </li>
-                                                    <%if (bills[i].send == 1) {%>
+                                                    
                                                         <li class="item-filter">
                                                            Dang Xử lý
                                                          </li>
                                                         <li class="item-filter">
                                                             <button class="accept">Đang xác nhận</button>
                                                         </li>
-                                                    <%} %>
+                                                    
                                                     </ul>
                                                 </div>
+                                                <%} %> 
                                                 <%}%>
                                            
                                                 <div class="item-footer">
@@ -531,27 +533,27 @@
                                        
                                                  
                                             <% for (let i = 0; i <  bills.length; i++) {%> 
+                                                <%if (bills[i].send === 1) {%>
                                                 <div class="item-has-product isProcess"></div>
                                                 <ul class="list-filter">
                                                     <li class="item-filter">
                                                         <div class="filter-wrapper">
                                                             <img class="filter-img" src="img/DSC_0976.jpg" alt="">
-                                                            <p class="filter-name"><%=bills[i].name%></p>
+                                                            <p class="filter-name"><%=products_buy[i].name%></p>
                                                         </div>
                                                     </li>
                                                     <li class="item-filter">
                                                         <%=bills[i].count%>
                                                     </li>
-                                                    <%if (bills[i].send == 0) {%>
+                                                    
                                                         <li class="item-filter">
                                                             Xử lý
                                                          </li>
-                                                        <li class="item-filter">
-                                                            <button class="accepted">Đã xác nhận</button>
-                                                        </li>
-                                                    <%} %>
+                                                         <button class="accepted">Đã xác nhận</button>
+                                                    
+
                                                     </ul>
-                                                
+                                                    <%} %>
                                                 <%}%>
                                                 <div class="item-footer">
                                                     <i class="fa-solid fa-rectangle-list"></i>
