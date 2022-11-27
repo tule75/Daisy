@@ -19,71 +19,89 @@
 <body>
     <div class="app">
         <div class="header">
-           <div class="header-left"> 
-            <!-- <img class="header__logo" src="/assets/image/logo3.png" alt=""> -->
-
-            <img class="header-logo" src="/assets/image/logo3.png" alt="">
-            <a href="/kenhnguoiban"><p class="header-has-seller">Kenh nguoi ban</p></a>
-           </div>
-            <div class="header-search">
-                <input class="header-search-input" type="text" placeholder="Search">
-
-                <!-- search-history -->
-                <div class="header-search-history">
-                    <h3 class="header-search-history-heading">
-                        Lịch sử Tìm kiếm
-                    </h3> 
-                    <ul class="header-search-history-list">
-                        <li class="header-search-history-item">
-                            <a class="search-history-item-link" href="">Mien dong</a>
-                        </li>
-                        <li class="header-search-history-item">
-                            <a class="search-history-item-link" href="">Bun dong</a>
-                        </li>
-                    </ul>
-                </div>
-               <button class="input-enter">
-                <i class="fa fa-solid fa-magnifying-glass input-icon"></i>
-               </button>
-            </div>
-            <div class="header-user">
-                <ul class="user-list">
-                    <a href="/giohang" class="has-cart">
-                        <li class="user-item ">
-                        <!-- <i class="fa fa-regular fa-bell "></i><i class="fa-regular fa-cart-shopping-fast"></i> -->
-                        <button class="noti-btn"><i class="fa fa-light fa-cart-shopping"></i></button>
-                        <div class="cartAmount"><%=countCart%> </div>
-                        </li>
-                    </a>
-                   
-                   
-                    <% if (check != 0) {%> 
-                        <li class="user-item has--noti ">
-                            <i class="fa fa-regular fa-bell "></i>
-                            <ul class="cart-announcement">
-                                <h4 class="product-title-announ">Thong bao</h4>
-                                <li class="announ-item">
-                                    <h5>Ban khong co thong bao nao</h5>
-                                </li>
-                            </ul>
-                        </li>
-                            <li class="user-item has--content" >
-                                <i class="fa fa-solid fa-user"></i>
-                             
-                             <ul class="box-list">
-                                <li class="box-list--item"><a href="/user/<%-user.slug %>" class="has-account">Tài khoản </a></li>
-                                <li class="box-list--item">Đơn hàng</li>
-                                 <li class="box-list--item"><a class="box-link" href="/logout">Đăng xuất</a></li>
-                            </ul>
+                <div class="header-left"> 
+                    <!-- <img class="header__logo" src="/assets/image/logo3.png" alt=""> -->
+    
+                    <img class="header-logo" src="/assets/image/logo3.png" alt="">
+                    <a href="/kenhnguoiban"><p class="header-has-seller">Kenh nguoi ban</p></a>
+               </div>
+    
+                <div class="header-search">
+                    <input class="header-search-input" type="text" placeholder="Search">
+    
+                    <!-- search-history -->
+                    <div class="header-search-history">
+                        <h3 class="header-search-history-heading">
+                            Lịch sử Tìm kiếm
+                        </h3> 
+                        <ul class="header-search-history-list">
+                            <li class="header-search-history-item">
+                                <a class="search-history-item-link" href="">Mien dong</a>
                             </li>
-                        
-                    <% } else { %> 
-                    <button class="user-button"><a href="/login" class="user-button">Sign in</a></button>
-                    <% } %> 
-                </ul>
+                            <li class="header-search-history-item">
+                                <a class="search-history-item-link" href="">Bun dong</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                   <button class="input-enter">
+                        <i class="fa fa-solid fa-magnifying-glass input-icon"></i>
+                   </button>
+                </div>
                 
-            </div>
+                <div class="header-user">
+                    <ul class="user-list">
+                        <a href="/giohang" class="has-cart">
+                            <li class="user-item ">
+                            <!-- <i class="fa fa-regular fa-bell "></i><i class="fa-regular fa-cart-shopping-fast"></i> -->
+                            <button class="noti-btn"><i class="fa fa-light fa-cart-shopping"></i></button>
+                            <div class="cartAmount"><%=countCart%> </div>
+                            </li>
+                        </a>
+                       
+                       
+                        <% if (check != 0) {%> 
+    
+                            <li class="user-item has--bar">
+                                <i class="fa-solid fa-bars"></i>
+                            </li>
+    
+                            <li class="user-item has--noti ">
+                                <i class="fa fa-regular fa-bell "></i>
+                                <ul class="cart-announcement">
+                                    <h4 class="product-title-announ">Thong bao</h4>
+                                    <li class="announ-item">
+                                        <h5>Ban khong co thong bao nao</h5>
+                                    </li>
+                                </ul>
+                            </li>
+    
+                            <li class="user-item has--content" >
+                                 <i class="fa fa-solid fa-user"></i>
+                                 
+                                <ul class="box-list">
+                                    <li class="box-list--item"><a href="/user/<%-user.slug %>" class="has-account">Tài khoản </a></li>
+                                    <li class="box-list--item">Đơn hàng</li>
+                                    <li class="box-list--item"><a class="box-link" href="/logout">Đăng xuất</a></li>
+                                </ul>
+                            </li>
+                            
+                        <% } else { %> 
+                        <button class="user-button"><a href="/login" class="user-button user-button-text">Sign in</a></button>
+                        <% } %> 
+                    </ul>
+                    
+                </div>
         </div>
+
+        <ul class="header-nav">
+            <li class="header-nav__item">Thông báo</li>
+            <li class="header-nav__item">Giỏ hàng</li>
+            <li class="header-nav__item">Tài khoản của bạn</li>
+            <li class="header-nav__item">Đơn hàng của bạn</li>
+            <li class="header-nav__item">Kênh người bán</li>
+            <li class="header-nav__item">Đăng xuất</li>
+        </ul>
 
         <!-- body -->
         <div class="body">
@@ -209,7 +227,8 @@
                         </button>
                     </div>
                 </div>
-                <div class="popular-info active">
+
+                <div class="popular-info active res-po">
                     <div class="popular-picture">
                         <img class="product-1" src="img/DSC_0976.jpg" alt="">
                     </div>
@@ -222,7 +241,8 @@
                         </button>
                     </div>
                 </div>
-                <div class="popular-info active">
+
+                <div class="popular-info active res-po">
                     <div class="popular-picture">
                         <img class="product-1" src="img/DSC_0976.jpg" alt="">
                     </div>
@@ -235,6 +255,7 @@
                         </button>
                     </div>
                 </div>
+
                 <svg class="btn btn--next" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
                     <path d="M0-.25h24v24H0z" fill="none"/>
@@ -303,7 +324,7 @@
                                         Đồ khô
                                      </a>
                                  </li>
-                             </ul>
+                            </ul>
                          </nav>
                      </div>
                      <div id="shop" class="grid__col-10">
@@ -506,7 +527,7 @@
                         </ul>
                     </div>
     
-                    <div class="grid__col-2-4">
+                    <div class="grid__col-2-4 sign-in">
                         <h4 class="footer-heading">
                           Đăng nhập Daisy ngay thôi
                         </h4>
@@ -535,6 +556,46 @@
     </div>
 
     <script src="javascript/home.js"> </script>
+
+    <script>
+        const headerBar = document.querySelector('.has--bar')
+        const headerNav = document.querySelector('.header-nav')
+        const closeNav = document.querySelector('.app')
+        const $ = document.querySelector.bind(document)
+
+        function showHeaderNav() {
+            headerNav.classList.add('open')
+        }
+
+        function hideHeaderNav() {
+            headerNav.classList.remove('open')
+        }
+
+        headerBar.onclick = function() {{
+            if($('.header-nav.open')) {
+                headerNav.classList.remove('open')
+            }
+            else {
+                headerNav.classList.add('open')
+            }
+        }}
+
+        // headerBar.addEventListener('click', showHeaderNav)
+
+        closeNav.addEventListener('click', hideHeaderNav)
+
+         headerNav.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
+
+        headerBar.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
+
+
+
+
+    </script>
     
 </body>
 </html>
