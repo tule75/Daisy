@@ -9,6 +9,21 @@ const { resolve } = require('bluebird')
 
 
 class NguoiBanController {
+    //[POST] /kenhnguoiban/sendproduct
+    sent(req, res, next) {
+        let bill = JSON.parse(req.body.bill)
+        Bill.findOne(bill)
+        .then(() => {
+            bill.send = 1;
+            bill.save()
+            .then(() => {
+                console.log('success', bill)
+                res.redirect('/kenhnguoiban')
+            })
+        })
+    }
+
+
     //[POST] /kenhnguoiban/create
     create(req, res, next) {
         var product = new Product(req.body)
