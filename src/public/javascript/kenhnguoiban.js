@@ -11,7 +11,9 @@
     const containerItems  = $$(".container-item")
 
     const headerTitles = $$(".head-title")
+    const headerTitles_2 = $$(".head-title-2")
     const titleItems = $$(".wrap-item")
+    const titleItems_2 = $$(".wrap-item-2")
 
     const cholayhang = $(".cholayhang")
     const isContainerItem = $(".has-giaohang")
@@ -47,6 +49,20 @@
       
     }
 })
+
+headerTitles_2.forEach((headerTitle_2,index) => {
+    const headerTitleItem = titleItems_2[index]
+    headerTitle_2.onclick = function () {
+        $(".wrap-item-2.active").classList.remove("active")
+        $(".head-title-2.active").classList.remove("active")
+
+        this.classList.add("active")
+        headerTitleItem.classList.add("active")
+        // headerTitle.style.color = 'rgb(57, 137, 57)'
+      
+    }
+})
+
 
     
 // show discount
