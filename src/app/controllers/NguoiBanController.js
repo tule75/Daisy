@@ -24,7 +24,7 @@ class NguoiBanController {
                 })
             }
             else {
-                res.send('cập nhật không thành công')
+                res.status(204).send('cập nhật không thành công')
             }
         })
     }

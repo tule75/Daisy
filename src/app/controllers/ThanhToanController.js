@@ -90,14 +90,15 @@ class ThanhToanController {
     //[GET] /thanhtoan/cart?q=...
     showC(req, res, next) {
         if (req.cookies.token){
+            var products_slug = []
             // var products_slug = req.query.p
-            if (Array.isArray(req.query.q)){
-                var products_slug = req.query.q
+            if (req.query) {
+                for (let p in req.query) {
+                    products_slug.push(req.query[p])
+                }
             }
-            else {
-                var products_slug = new Array
-                products_slug.push(req.query.q)
-            }
+
+            console.log(products_slug)
 
             const token = req.cookies.token
             const id = jwt.verify(token, 'daisy')
@@ -134,6 +135,12 @@ class ThanhToanController {
                             .then((product) => {
                                 if (product != null){
                                     var voucher = []
+
+                                    // GioHang.findOne({product_slug: product.slug, user_slug: user.slug})
+                                    // .then((data) => {
+                                    //     product.count = data.count
+                                    // })
+                                    // .catch(() => {})
 
                                     Voucher.find({product_slug: product.slug})
                                     .then((data) => {

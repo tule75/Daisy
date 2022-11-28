@@ -232,10 +232,12 @@
     flex-direction: row;
     padding: 10px 0;
     border-bottom: 1px solid #ccc;
+    position: relative;
+
 }
 
 .cart-product-infor {
-display: flex;
+    display: flex;
 
 }
 .cart-product-img{
@@ -437,6 +439,12 @@ display: flex;
 
 .first-child {
     transform: translateX(-50%);
+}
+.checkbox {
+    position: absolute;
+    top: 50%;
+    left: -26px;
+
 }
 
 /* for btn */

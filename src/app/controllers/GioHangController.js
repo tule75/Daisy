@@ -4,6 +4,55 @@ const Product = require('../models/Product')
 const jwt = require('jsonwebtoken')
 
 class GioHangController {
+    //[POST] /giohang/delete
+    delete(req, res, next) {
+        GioHang.deleteOne({product_slug: req.body.ps, user_slug: req.body.us})
+        .then(data => {
+                res.status(204).send('đẫ xóa')
+            })
+        .catch(err => {
+            res.status(500).send('loi')
+        })
+    }
+
+    //[POST] /giohang/plus
+    plus(req, res, next) {
+        GioHang.findOne({product_slug: req.body.ps, user_slug: req.body.us})
+        .then(data => {
+            if (data) {
+                data.count += 1
+                data.save()
+                .then(() => {
+                    res.status(204).send('plus')
+                })
+                .catch(err => {
+                    res.status(500).send('loi')
+                })
+            } else {
+                res.status(400).send('khong tim thay')
+            }
+        })
+    }
+
+    //[POST] /giohang/minus
+    minus(req, res, next) {
+        GioHang.findOne({product_slug: req.body.ps, user_slug: req.body.us})
+        .then(data => {
+            if (data) {
+                data.count -= 1
+                data.save()
+                .then(() => {
+                    res.status(204).send('minus')
+                })
+                .catch(err => {
+                    res.status(500).send('loi')
+                })
+            } else {
+                res.status(400).send('loi')
+            }
+        })
+    }
+
     // [POST] /...
     add(req, res, next) {
         var user_slug;
