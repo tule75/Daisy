@@ -425,7 +425,10 @@
                                                                   Đang chờ Xử lý
                                                                 </li>
                                                             <li class="item-filter">
-                                                                <button class="accept">Đang Xác nhận</button>
+                                                                <form method="post" class="sendbill">
+                                                                    <input type="text" style="display: none;" name="bill" value="<%=JSON.stringify(bills[i]) %>">
+                                                                    <button type="submit" class="accept">Xác nhận</button>
+                                                                </form>
                                                             </li>
                                                             <%} else {%>
                                                             <li class="item-filter">
@@ -482,7 +485,10 @@
                                                             Đang xử lý
                                                          </li>
                                                         <li class="item-filter">
-                                                            <button class="accept">Đang xác nhận</button>
+                                                            <form method="post" class="sendbill">
+                                                                <input type="text" style="display: none;" class="billsend" value="<%=JSON.stringify(bills[i]) %> ">
+                                                                <button type="submit" class="accept">Xác nhận</button>
+                                                            </form>
                                                         </li>
                                                     
                                                     </ul>
@@ -1193,6 +1199,43 @@
     </div>
 
     <script src="javascript/kenhnguoiban.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        function isJson(str) {
+            try {
+                JSON.parse(str);
+            } catch (e) {
+                return false;
+            }
+            return true;
+        }
+
+        $(document).ready(function() {
+            $('.sendbill').submit(function(e) {
+                e.preventDefault();
+
+                let $input = $('.sendbill: input ');
+                var value;
+                $inputs.each(function() {
+                    if (isJson($(this).val())) {
+                        value = $(this).val();
+                    }
+                });
+                console.log(value);
+                console.log(typeof value)
+
+                $ajax({
+                    url: "/kenhnguoiban",
+                    type: 'POST',
+                    data: {'bill': value},
+                    dataType: 'json',
+                    success: function(data){
+                        alert('success')
+                    }
+                })
+            })
+        })
     </script>
     
 </body> 
