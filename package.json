@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/UIT-21522738/Daisy#readme",
   "devDependencies": {
+    "axios": "^1.2.0",
     "bluebird": "^3.7.2",
     "bootstrap": "^5.2.2",
     "cookie-parser": "^1.4.6",

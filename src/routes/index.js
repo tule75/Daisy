@@ -8,12 +8,14 @@ const newRouteThanhToan = require("./thanhtoan")
 const newRouteSellerLogin = require("./seller-login.js")
 const newRouteKenhNguoiBan = require("./kenhnguoiban")
 const newRouteDiscount = require("./discount")
+const newRouteTest = require("./test")
 
 function route(app) {
     app.get('/test', (req, res) => {
         var x = [{user_slug: "foo", product_slug: "bar", money: 100, send: 0}, {user_slug: "foo", product_slug: "bar", money: 500, send: 0}]
         res.render('test.html', {product: x})
     })
+    app.use('/testmomo', newRouteTest)
     app.use("/product/discount", newRouteDiscount)
     app.use("/sellerlogin", newRouteSellerLogin)
     app.use("/thanhtoan", newRouteThanhToan);
