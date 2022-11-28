@@ -14,13 +14,13 @@
 }
 
 .heading {
-        padding: 10px 20px;
+        padding: 20px 20px;
         display: flex;
         align-items: center;
         justify-content: center;
 }
 .information-wrap {
-    background-color: rgb(210, 209, 209);
+    background-color: rgb(240, 237, 237);
     display: flex;
     justify-content: space-between;
     margin: 0 80px;
@@ -84,6 +84,7 @@
 }
 .shipment-title {
    padding-top: 10px;
+   font-size: 19px;
 
 
 }
@@ -110,20 +111,24 @@
 
 .product-wrap {
     margin: 30px 80px;
-    background-color: rgb(210, 209, 209);
+    background-color: rgb(242, 241, 241);
 
 }
 .product-list {
      padding-top: 15px;
     padding-bottom: 30px;
-    border-bottom: 1px solid rgb(41, 39, 39);
+    /* border-bottom: 1px solid rgb(41, 39, 39); */
     padding-left: 20px;
+    position: relative;
+
 }
 .product-name {
+    font-weight: bolder;
 
 }
 .product-container {
     display: flex;
+    /* position: relative; */
 
 }
 .product-img {
@@ -140,6 +145,7 @@
 .name {
     font-size: 20px;
     padding-bottom: 5px;
+    font-weight: bolder;
 }
 .quantity {
 }
@@ -159,7 +165,7 @@
     display: flex;
     margin: 20px 80px;
     justify-content: space-between;
-    background-color: #ccc;
+    background-color: rgb(247, 246, 246);
     padding: 10px 20px;
 }
 .voucher-shop {
@@ -198,7 +204,8 @@
 
     margin: 20px 80px;
     padding: 10px 10px;
-    background-color: #ccc;
+    background-color: rgb(247, 246, 246);
+
 }
 .header-thanhtoan {
     padding-left: 10px;
@@ -229,7 +236,7 @@
 .total-wrap {
     padding: 10px 10px;
     margin: 20px 80px;
-    background-color: #ccc;
+    background-color: rgb(247, 246, 246);
     position: relative;
 }
 .header-total {
@@ -272,4 +279,11 @@
 }
 .ending_2 a {
     color: white;
+}
+.product-check {
+    position: absolute;
+    left: -18px;
+    top: 50%;
+    padding-right: 10px;
+    font-size: 20px;
 }

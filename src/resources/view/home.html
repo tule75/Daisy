@@ -23,7 +23,7 @@
                     <!-- <img class="header__logo" src="/assets/image/logo3.png" alt=""> -->
     
                     <img class="header-logo" src="/assets/image/logo3.png" alt="">
-                    <a href="/kenhnguoiban"><p class="header-has-seller">Kenh nguoi ban</p></a>
+                    <a href="/kenhnguoiban"><p class="header-has-seller">Kênh người bán</p></a>
                </div>
     
                 <div class="header-search">
@@ -143,59 +143,15 @@
                         </h1>
                     </div>
                 <% } %> 
-                    <!-- <div class="company-info">
-                        <a href="/shop/phanhoang123"><div class="company-info-pic">
-                            <img class="Anxuan-info" src="https://cagaileoanxuan.vn/wp-content/uploads/2020/08/Logo-cagaileo.png" alt="">
-                        </div>
-                        </a>
-                        
-                            <h1 class="company-info-name">
-                                <a href="/shop/phanhoang123" class="link-color">Phan Hoàng</a>
-                            </h1>
-                    </div>
-                    <div class="company-info">
-                        <a href="/shop/taynguyendato123">
-                            <div class="company-info-pic">
-                            <img class="Anxuan-info" src="https://cagaileoanxuan.vn/wp-content/uploads/2020/08/Logo-cagaileo.png" alt="">
-                            </div>
-                        </a>
-                        
-                            <h1 class="company-info-name">
-                                <a href="/shop/taynguyendato123" class="link-color"> An Xuân</a>  
-                             </h1>
-                    </div>
-                   
-                    <div class="company-info">
-                        <a href="/shop/huongque123">
-                            <div class="company-info-pic">
-                            <img class="Anxuan-info" src="https://cagaileoanxuan.vn/wp-content/uploads/2020/08/Logo-cagaileo.png" alt="">
-                             </div>
-                        </a>
-                        
-                            <h1 class="company-info-name">
-                                <a href="/shop/huongque123" class="link-color"> Tây Nguyên</a>  
-                            </h1>
-                    </div>
-                    <div class="company-info">
-                        <a href="/shop/dungha123">
-                            <div class="company-info-pic">
-                            <img class="Anxuan-info" src="https://cagaileoanxuan.vn/wp-content/uploads/2020/08/Logo-cagaileo.png" alt="">
-                            </div>
-                        </a>
-                            <h1 class="company-info-name">
-                                <a href="/shop/huongque123" class="link-color"> Dũng Hà</a>  
-                            </h1>
-                        
-                    </div> -->
-                   
+                  
             </div>
            
             <!-- popular product -->
             <div class="popular-product">
-                <svg class="btn btn--prev" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg">
+                <!-- <svg class="btn btn--prev" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/>
                     <path d="M0-.5h24v24H0z" fill="none"/>
-                  </svg>
+                  </svg> -->
 
                <!-- <% for (var i = 0; i < products.length; i++) { %> 
                 <div class="popular-info">
@@ -256,14 +212,14 @@
                     </div>
                 </div>
 
-                <svg class="btn btn--next" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg">
+                <!-- <svg class="btn btn--next" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
                     <path d="M0-.25h24v24H0z" fill="none"/>
-                  </svg>
+                  </svg> -->
             </div> 
 
             <!-- pagination -->
-            <div class="pagination-wrapper">
+            <!-- <div class="pagination-wrapper">
                 
                 <div class="pagination-container">
                   <div class="little-dot  little-dot--first"></div>
@@ -275,7 +231,7 @@
                   <div class="little-dot  little-dot--last"></div>
                 </div>
                 
-              </div>
+              </div> -->
 
             <!-- product list -->
             <div class="product__container">
@@ -330,24 +286,6 @@
                      <div id="shop" class="grid__col-10">
                         <div  class="home-product">
                             <div class="grid__row">
-                               
-               <!-- <% for (var i = 0; i < products.length; i++) { %> 
-                <div class="popular-info">
-                    <div class="popular-picture">
-                        <img class="product-1" src="img/sanpham/<%-products[i].img%>.jpg" alt="">
-                    </div>
-                    <div class="popular-content">
-                        <h4 class="popular-name"><%=products[i].name%></h4>
-                        <p class="popular-price"><%=products[i].price%></p>
-                        <button class="add-button">
-                            <i class="fa fa-regular fa-bag-shopping"></i>
-                            Thêm vào giỏ hàng
-                        </button>
-
-                    </div>const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=") %>
-                                 const y = x.replace("/view?usp=share_link","",40); console.log(y)
-                </div>
-                <% } %>   -->
                 <% for (var i = 0; i < products.length; i++) { %> 
                     <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
                                         <% const y = x.replace("/view?usp=share_link","",40)%>
