@@ -28,11 +28,22 @@
     padding-right: 5px;
     width: 20%;
 }
+.grid__col-2-6 {
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 20.33333%;
+}
 .grid__col-10 {
     padding-left: 5px;
     padding-right: 5px;
     width: 83.3334%;
 }
+.grid__col-12 {
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 100%;
+}
+
 
 .has--plus {
     background-color: rgb(220, 60, 60);

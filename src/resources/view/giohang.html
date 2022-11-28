@@ -107,7 +107,7 @@
                 <div id="xoa<%=i %>">
                 <div class="cart-product-wrap">
                    <div class="cart-product-infor">
-                        <input type="checkbox" name="q<%=i %>" value="<%-products[i].slug %>">
+                        <input class="checkbox" type="checkbox" name="q<%=i %>" value="<%-products[i].slug %>">
                             <img class="cart-product-img"  src="<%-y%>" alt="">
                            <div class="product-content">
                             <h5 class="cart-product-name">
@@ -117,6 +117,7 @@
                            </div>
                    </div>
                    
+
                     <div class="cart-product-quantity first-child">
                         <button  class="btn quantity-minus" type="button" value="<%=i %>">
                             <i class="fa-solid fa-minus"></i>
@@ -124,9 +125,10 @@
                             
                             <h1 style="display: none;" id="slug<%=i %>"><%=products[i].slug %></h1>
                             <h4 class="quantity-number" id="count<%=i %>"><%=products[i].count%></h4>
-                        <button class="btn quantity-add" type="button" value="<%=i %>">
+                            <button class="btn quantity-add" type="button" value="<%=i %>">
                             <i class="fa-solid fa-plus"></i>
                         </button>
+
                     </div>
 
                         <p class="total">  65.000 </p>
