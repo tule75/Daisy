@@ -425,7 +425,7 @@
                                                                   Đang chờ Xử lý
                                                                 </li>
                                                             <li class="item-filter">
-                                                                <form method="post" class="sendbill">
+                                                                <form method="post" class="sendbill" action="/kenhnguoiban">
                                                                     <input type="text" style="display: none;" name="bill" value="<%=JSON.stringify(bills[i]) %>">
                                                                     <button type="submit" class="accept">Xác nhận</button>
                                                                 </form>
@@ -485,7 +485,7 @@
                                                             Đang xử lý
                                                          </li>
                                                         <li class="item-filter">
-                                                            <form method="post" class="sendbill">
+                                                            <form method="post" class="sendbill" action="/kenhnguoiban">
                                                                 <input type="text" style="display: none;" class="billsend" value="<%=JSON.stringify(bills[i]) %> ">
                                                                 <button type="submit" class="accept">Xác nhận</button>
                                                             </form>

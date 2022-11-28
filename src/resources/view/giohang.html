@@ -82,7 +82,7 @@
                  
              </div>
          </div>
-
+         <form method="GET" class="thanhtoantien" action="/thanhtoan/cart">
         <div class="cart-body">
                 <h4 class="car-body-heading">
                     Giỏ hàng của bạn
@@ -100,35 +100,41 @@
                        Xoá
                     </li>
                 </ul>
+                <h2 style="display: none;" id="userslug"><%=user.slug %></h2>
                 <% for (var i = 0; i < products.length; i++) { %> 
                     <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
                     <% const y = x.replace("/view?usp=share_link","",40)%>
+                <div id="xoa<%=i %>">
                 <div class="cart-product-wrap">
                    <div class="cart-product-infor">
+                        <input type="checkbox" name="q<%=i %>" value="<%-products[i].slug %>">
                             <img class="cart-product-img"  src="<%-y%>" alt="">
                            <div class="product-content">
                             <h5 class="cart-product-name">
                                 <%=products[i].name%>
                             </h5>
-                            <p class="cart-product-price"><%=products[i].price%></p>
+                            <p class="cart-product-price"><%=products[i].price * products[i].count%></p>
                            </div>
                    </div>
                    
-                   <div class="cart-product-quantity first-child">
-                    <button onclick="decrease()"  class="btn quantity-minus">
-                        <i class="fa-solid fa-minus"></i>
-                    </button>
-                        <h4 class="quantity-number" name="<%-products[i].slug%>"><%=products[i].count%></h4>
-                    <button onclick="increase()"  class="btn quantity-add">
-                        <i class="fa-solid fa-plus"></i>
-                    </button>
+                    <div class="cart-product-quantity first-child">
+                        <button  class="btn quantity-minus" type="button" value="<%=i %>">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                            
+                            <h1 style="display: none;" id="slug<%=i %>"><%=products[i].slug %></h1>
+                            <h4 class="quantity-number" id="count<%=i %>"><%=products[i].count%></h4>
+                        <button class="btn quantity-add" type="button" value="<%=i %>">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
                     </div>
 
                         <p class="total">  65.000 </p>
-                    <button class="btn product-trash">
-                        <i class="fa-solid fa-trash"></i>
+                    <button class="btn product-trash" value="<%=i %>">
+                        <i class="fa-solid fa-trash delete"></i>
                     </button>
                
+                </div>
                 </div>
                 <% } %>  
               
@@ -144,12 +150,12 @@
     
                     </ul>
                     <div class="button-thanhtoan">
-                        <button class=" pay">
-                            <a href="/thanhtoan" class="paya">Thanh Toán</a>
-                        </button>
+                        <button class=" pay" type="submit">Thanh Toán</button>
                     </div>
                 </div>
+                
         </div>
+        </form>
 
          <!-- footer -->
          <div class="footer">
@@ -305,7 +311,105 @@
             </div>
         </div>
 
-        <script src="/javascript/giohang.js"></script>
+        <!-- <script src="/javascript/giohang.js"></script> -->
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <!-- <script>
+            $(document).ready(function() {
+                $('.thanhtoantien').submit(function(e) {
+                    e.preventDefault();
+                    let $input = $('.thanhtoantien: input ');
+                    var value = [];
+                    $inputs.each(function(i) {
+                        if (isJson($(this).val())) {
+                            value[i][this.name] = $(this).val();
+                        }
+                    });
+                    console.log(value);
+                    console.log(typeof value)
+
+                    $ajax({
+                        url: "/thanhtoan/cart",
+                        type: 'GET',
+                        data: {},
+                        dataType: 'json',
+                        success: function(data){
+                            alert('success')
+                        }
+                    })
+                })
+        })
+        </script> -->
+
+        <script>
+            $(document).ready(function() {
+                $('.product-trash').click(function() {
+                    let x = $(this).val();
+                    let slug = $('#slug' + s).text();
+                    $.ajax({
+                        url: "/giohang/plus",
+                        type: 'POST',
+                        data: {'ps': slug,
+                        'us': $('#userslug').text(),},
+                        success: function(data){
+                            
+                            $('#xoa' + x).remove();
+                        },
+                        error: function(e) {
+                            alert('loi')
+                        }
+                    })
+                    e.preventDefault();
+                })
+
+                $('.quantity-add').click(function(e){
+                    let s = $(this).val()
+                    
+                    let slug = $('#slug' + s).text();
+                    $.ajax({
+                        url: "/giohang/plus",
+                        type: 'POST',
+                        data: {'ps': slug,
+                        'us': $('#userslug').text(),},
+                        success: function(data){
+                            
+                            let num = parseInt($('#count' + s).text())
+                            console.log($('#count' + s).text())
+                            $('#count' + s).text(num + 1)
+                        },
+                        error: function(e) {
+                            alert('loi')
+                        }
+                    })
+                    e.preventDefault();
+                })
+
+                $('.quantity-minus').click(function(e){
+                    let s = $(this).val()
+                    
+                    
+
+                    let slug = $('#slug' + s).text();
+                    console.log(slug);
+                    e.preventDefault();
+                    $.ajax({
+                        url: "/giohang/minus",
+                        type: 'POST',
+                        data: {'ps': slug,
+                            'us': $('#userslug').text(),
+                        },
+                        success: function(data){
+                            let num = parseInt($('#count' + s).text())
+                            console.log($('#count' + s).text())
+                            $('#count' + s).text(num - 1)
+                        },
+                        error: function(e) {
+                            alert('loi')
+                        }
+                    })
+                })
+            })
+        </script>
+
 
     </div>
 </body>
