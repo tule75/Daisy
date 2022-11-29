@@ -410,9 +410,11 @@
 .first-child {
     transform: translateX(-50%);
 }
+
 .checkbox {
     position: absolute;
     top: 50%;
     left: -26px;
 
 }
+
