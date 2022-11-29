@@ -113,7 +113,7 @@
                             <h5 class="cart-product-name">
                                 <%=products[i].name%>
                             </h5>
-                            <p class="cart-product-price"><%=products[i].price * products[i].count%></p>
+                            <p class="cart-product-price"><%=products[i].price%></p>
                            </div>
                    </div>
                    
@@ -130,11 +130,12 @@
                         </button>
 
                     </div>
+                    
 
-                        <p class="total">  65.000 </p>
-                    <button class="btn product-trash" value="<%=i %>">
-                        <i class="fa-solid fa-trash delete"></i>
-                    </button>
+                        <p class="total"> <%=products[i].price * products[i].count%></p>
+                        <button class="btn product-trash" value="<%=i %>">
+                            <i class="fa-solid fa-trash delete"></i>
+                        </button>
                
                 </div>
                 </div>
