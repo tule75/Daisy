@@ -1,8 +1,26 @@
 const User = require('../models/Users')
 const WishList = require('../models/WishList')
+const Product = require('../models/Product')
 const jwt = require('jsonwebtoken')
 
 class WLController{
+    //[POST] /wishlist/find
+    find(req, res, next) {
+        const phone = req.body.phone
+        console.log(phone)
+        User.findOne({phone: phone})
+        .then(data => {
+            console.log(data)
+            if (data) {
+                res.redirect('/wishlist/' + data.slug)
+            } else {
+                res.send('tài khoản không tồn tại' +  phone)
+            }
+        })
+        .catch(err => {res.send('loi cmnr')})
+    }
+
+
     //[POST] /wishlist/add
     add(req, res, next) {
         var user_slug;
@@ -67,7 +85,7 @@ class WLController{
                 if (data) {
                     user = data
                     if (user.slug === req.params.slug) {
-                        res.redirect('/user' + req.params.slug)
+                        res.redirect('/user/' + req.params.slug)
                     } else {
                         User.findOne({slug: req.params.slug})
                         .then(data => {
