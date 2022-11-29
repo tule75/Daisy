@@ -70,7 +70,6 @@
 .header-search-history-item {
     text-decoration: none;
     height: 38px;
-    /* background-color: #999; */
     padding: 0 12px;
       line-height: 38px;
 }
@@ -168,7 +167,6 @@
 }
 .user-button {
     margin-left: 10px;
-    /* margin-right: 5px; */
     border: none;
     font-size: 17px;
     padding: 8px 23px;
@@ -232,10 +230,12 @@
     flex-direction: row;
     padding: 10px 0;
     border-bottom: 1px solid #ccc;
+    position: relative;
+
 }
 
 .cart-product-infor {
-display: flex;
+    display: flex;
 
 }
 .cart-product-img{
@@ -263,44 +263,16 @@ display: flex;
 
 }
 .quantity-minus {
-   /* margin-bottom: 4px; */
-   /* padding: 0 12px; */
    border-radius: none;
    position: relative;
-   /* transform: translateX(-10px); */
 }
-/* .quantity-minus::after {
-    position: absolute;
-    content: '';
-    right: 0px;
-    top: -7px;
-    width: 1px;
-    height: 38px;
-    background-color: #ccc;
-} */
-
-/* .quantity-number {
+.quantity-number {
     padding: 0 20px;
     border: none;
     background-color: transparent;
-
+    margin-bottom: 0;
 }
 
-.quantity-add{
-   padding: 0 15px; 
-   border-radius: none;
-   position: relative;
-
-} */
-/* .quantity-add::before {
-    position: absolute;
-    content: '';
-    left: 0px;
-    top: -7px;
-    width: 1px;
-    height: 38px;
-    background-color: #ccc;
-} */
 .btn:active{
     color: #666;
 }
@@ -439,49 +411,10 @@ display: flex;
     transform: translateX(-50%);
 }
 
-/* for btn */
-/* .buttons_added {
-    opacity:1;
-    display:inline-block;
-    display:-ms-inline-flexbox;
-    display:inline-flex;
-    white-space:nowrap;
-    vertical-align:top;
+.checkbox {
+    position: absolute;
+    top: 50%;
+    left: -26px;
+
 }
-.is-form {
-    overflow:hidden;
-    position:relative;
-    background-color:#f9f9f9;
-    height:2.2rem;
-    width:1.9rem;
-    padding:0;
-    text-shadow:1px 1px 1px #fff;
-    border:1px solid #ddd;
-}
-.is-form:focus,.input-text:focus {
-    outline:none;
-}
-.is-form.minus {
-    border-radius:4px 0 0 4px;
-}
-.is-form.plus {
-    border-radius:0 4px 4px 0;
-}
-.input-qty {
-    background-color:#fff;
-    height:2.2rem;
-    text-align:center;
-    font-size:1rem;
-    display:inline-block;
-    vertical-align:top;
-    margin:0;
-    border-top:1px solid #ddd;
-    border-bottom:1px solid #ddd;
-    border-left:0;
-    border-right:0;
-    padding:0;
-}
-.input-qty::-webkit-outer-spin-button,.input-qty::-webkit-inner-spin-button {
-    -webkit-appearance:none;
-    margin:0;
-} */
+

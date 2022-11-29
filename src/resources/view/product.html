@@ -22,9 +22,7 @@
 
     <div class="app">
         <div class="header">
-            <img class="header-logo" src="/assets/image/logo3.png" alt="">
-
-            <a href="/kenhnguoiban"><p class="header-has-seller">Kenh nguoi ban</p></a>
+           <a href="/"> <img class="header-logo" src="/assets/image/logo3.png" alt=""></a>
             <div class="header-search">
                 <input class="header-search-input" type="text" placeholder="Search">
 
@@ -57,9 +55,9 @@
                     <li class="user-item has--noti ">
                         <i class="fa fa-regular fa-bell "></i>
                         <ul class="cart-announcement">
-                            <h4 class="product-title-announ">Thong bao</h4>
+                            <h4 class="product-title-announ">Thông báo</h4>
                             <li class="announ-item">
-                                <h5>Ban khong co thong bao nao</h5>
+                                <h5>Bạn không có thông báo nào</h5>
                             </li>
                         </ul>
                     </li>
@@ -70,14 +68,14 @@
                             <i class="fa fa-solid fa-user"></i>
                          </a>
                          <ul class="box-list">
-                            <li class="box-list--item">Tai khoan</li>
-                            <li class="box-list--item">Don hang</li>
-                             <li class="box-list--item"><a class="box-link" href="/logout">Dang xuat</a></li>
+                            <li class="box-list--item">Tài khoản</li>
+                            <!-- <li class="box-list--item">Don hang</li> -->
+                             <li class="box-list--item"><a class="box-link" href="/logout">Đăng xuất</a></li>
                         </ul>
                         </li>
                     
                 <% } else { %> 
-                <button class="user-button"><a href="/login" class="user-button">Sign in</a></button>
+                <button class="user-button"><a href="/login" class="user-button">Đăng nhập</a></button>
                 <% } %> 
                 </ul>
                 
@@ -112,8 +110,8 @@
                          <!-- <span class="home-product__item-ship"><i class="fa-regular fa-truck"></i></span> -->
                     </div>
                     <div class="product-has-price">
-                        <span class="price-final">50.000</span>
-                        <span class="price-discount"><%=product.price%> </span>
+                        <span class="price-final"> <%=product.price %> </span>
+                        <span class="price-discount"><%=product.price_discount%> </span>
                         <span class="discount-number" >-75%</span>
                     </div>
                     <div class="voucher">
@@ -169,7 +167,7 @@
                 <div class="shop-introduce">
                     <img src="https://cagaileoanxuan.vn/wp-content/uploads/2020/08/Logo-cagaileo.png" alt="" class="shop-img">
                     <div class="shop-basic-infor">
-                        <h4 class="shop-name">Ten Shop</h4>
+                        <h4 class="shop-name">shop</h4>
                         <p class="shop-active">Online 5 phút trước</p>
                     </div>
                 </div>
@@ -198,17 +196,17 @@
                         Chi tiết sản phẩm
                     </h4>
                     <div class="product-origin-show">
-                        <p class="show-item">Trọng lượng 
-                            <span class="item-content"> 20kg</span>
+                        <p class="show-item">Trọng lượng : 
+                            <span class="item-content">  <%=product.weigh %> kg </span>
                         </p>
                     </div>
                     <div class="product-origin-show">
-                        <p class="show-item">Kho hàng
+                        <p class="show-item">Kho hàng :
                             <span class="item-content"> 49</span>
                         </p>
                     </div>
                     <div class="product-origin-show">
-                        <p class="show-item">Gửi từ
+                        <p class="show-item">Gửi từ :
                             <span class="item-content">Cao Bằng</span>
                         </p>
                     </div>
@@ -216,39 +214,50 @@
                 <div class="product-description">
                     <h4 class="description-title">Mô tả sản phẩm</h4>
                     <p class="desription-list">
-                        Bạn không phải lo lắng về câu hỏi của khách hàng sẽ không được trả lời hoặc bị kẹt trên máy tính hàng giờ để trả lời các câu hỏi và xử lý các vấn đề phát sinh.
-
-        Amazon sẽ xử lý tất cả các vấn đề của khách hàng, bao gồm cả hoàn tiền. Tốt hơn nữa, mọi thiệt hại hoặc mất mát đối với cổ phiếu của bạn sẽ được Amazon bồi hoàn.
-
-        Khách mua hàng được hưởng chế độ chăm sóc khách hàng 24/7 và được sự hỗ trợ đổi trả của Amazon nếu đó là hình thức bán hàng Amazon FBA. Điều này giúp khách hàng yên tâm lựa chọn sản phẩm của bạn hơn so với đối thủ.
-        Bạn không phải lo lắng về câu hỏi của khách hàng sẽ không được trả lời hoặc bị kẹt trên máy tính hàng giờ để trả lời các câu hỏi và xử lý các vấn đề phát sinh.
-
-        Amazon sẽ xử lý tất cả các vấn đề của khách hàng, bao gồm cả hoàn tiền. Tốt hơn nữa, mọi thiệt hại hoặc mất mát đối với cổ phiếu của bạn sẽ được Amazon bồi hoàn.
-
-        Khách mua hàng được hưởng chế độ chăm sóc khách hàng 24/7 và được sự hỗ trợ đổi trả của Amazon nếu đó là hình thức bán hàng Amazon FBA. Điều này giúp khách hàng yên tâm lựa chọn sản phẩm của bạn hơn so với đối thủ.Bạn không phải lo lắng về câu hỏi của khách hàng sẽ không được trả lời hoặc bị kẹt trên máy tính hàng giờ để trả lời các câu hỏi và xử lý các vấn đề phát sinh.
-
-        Amazon sẽ xử lý tất cả các vấn đề của khách hàng, bao gồm cả hoàn tiền. Tốt hơn nữa, mọi thiệt hại hoặc mất mát đối với cổ phiếu của bạn sẽ được Amazon bồi hoàn.
-
-        Khách mua hàng được hưởng chế độ chăm sóc khách hàng 24/7 và được sự hỗ trợ đổi trả của Amazon nếu đó là hình thức bán hàng Amazon FBA. Điều này giúp khách hàng yên tâm lựa chọn sản phẩm của bạn hơn so với đối thủ.
-                    </p>
+                        <%=product.guide %> <br>
+                        <%=product. introduction %><br>
+                        <%=product.presevartion%> <br>
+                        <%=product.effect%> <br>
+                        <%=product.proceduce%> <br>
+                   </p>
+                    <h4 class="description-title">Kiểm chứng an toàn</h4>
                 </div>
                </div>
                <ul class="about-popular-product">
                 <h4 class="about-popular-product-title"> Top sản phẩm bán chạy</h4>
                     <li class="popular-product-container">
-                        <img class="popular-product-img" src="/img/sanpham/1.jpg" alt="">
+                        <img class="popular-product-img" src="img/DSC_0976.jpg" alt="">
                         <h6 class="popular-product-name">Name name</h6>
                         <p class="popular-product-price">50.000</p>
+                        <div class="add-wishlist">
+                            <i class="fa-solid fa-gift"></i>
+                            <button class="add-btn-product" >
+                                <i class="fa fa-regular fa-bag-shopping"></i>
+                                Mua ngay
+                            </button>
+                        </div>
+                       
+                    </li>
+
+                    <li class="popular-product-container">
+                        <img class="popular-product-img" src="img/DSC_0976.jpg" alt="">
+                        <h6 class="popular-product-name">Name name</h6>
+                        <p class="popular-product-price">50.000</p>
+                        <div class="add-wishlist"><i class="fa-solid fa-gift"></i></div>
+                        <button class="add-btn-product" >
+                            <i class="fa fa-regular fa-bag-shopping"></i>
+                            Mua ngay
+                        </button>
                     </li>
                     <li class="popular-product-container">
-                        <img class="popular-product-img" src="/img/sanpham/1.jpg" alt="">
+                        <img class="popular-product-img" src="img/DSC_0976.jpg" alt="">
                         <h6 class="popular-product-name">Name name</h6>
                         <p class="popular-product-price">50.000</p>
-                    </li>
-                    <li class="popular-product-container">
-                        <img class="popular-product-img" src="/img/sanpham/1.jpg" alt="">
-                        <h6 class="popular-product-name">Name name</h6>
-                        <p class="popular-product-price">50.000</p>
+                        <div class="add-wishlist"><i class="fa-solid fa-gift"></i></div>
+                        <button class="add-btn-product" >
+                            <i class="fa fa-regular fa-bag-shopping"></i>
+                           Mua ngay
+                        </button>
                     </li>
                </ul>
             </div>
@@ -270,70 +279,88 @@
                     <!-- chia theo bieu do 12 cot -->
                     <div id="shop" class="grid__col-10">
                        <div  class="home-product">
-                        <h4 class="product-title">Sản phẩm tương tự</h4>
+                        <h4 class="product-title">Sản phẩm cùng hãng</h4>
                            <div class="grid__row">
-                               <div class="grid__col-2">
-                                   <div class="home-product__item">
-                                        <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
-                                        
-                                        <h4 class="home-product__item-name">Bun Dong</h4>
-                                        <div class="home-product__item-price"> 
-                                           <span class="popular-price">65.000</span>
-                                           <span class="home-product__item-quatity">1,1k Đã bán</span>
-                                        </div>
-                                    
-                                     
-                                    </div>
-                                </div> 
+                            <div class="grid__col-2">
+                                <div class="home-product__item">
+                                     <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
+                                     <div class="wishlist-btn"><i class="fa-solid fa-gift"></i></div>
+                                     <h4 class="home-product__item-name">Bun Dong</h4>
+                                     <div class="home-product__item-price"> 
+                                        <span class="popular-price">65.000</span>
+                                        <span class="home-product__item-quatity">1,1k Đã bán</span>
+                                     </div>
+                                     <button class="add-btn-product" >
+                                        <i class="fa fa-regular fa-bag-shopping"></i>
+                                        Thêm vào giỏ
+                                    </button>
+                                 
+                                  
+                                 </div>
+                             </div> 
                                 <div class="grid__col-2">
                                     <div class="home-product__item">
                                          <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
-                                         
+                                         <button class="wishlist-btn"><i class="fa-solid fa-gift"></i></button>
                                          <h4 class="home-product__item-name">Bun Dong</h4>
                                          <div class="home-product__item-price"> 
                                             <span class="popular-price">65.000</span>
                                             <span class="home-product__item-quatity">1,1k Đã bán</span>
                                          </div>
                                      
+                                         <button class="add-btn-product" >
+                                            <i class="fa fa-regular fa-bag-shopping"></i>
+                                            Thêm vào giỏ
+                                        </button>
+                                     </div>
+                                 </div> 
+                                 <div class="grid__col-2">
+                                    <div class="home-product__item">
+                                         <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
+                                         <button class="wishlist-btn"><i class="fa-solid fa-gift"></i></button>
+                                         <h4 class="home-product__item-name">Bun Dong</h4>
+                                         <div class="home-product__item-price"> 
+                                            <span class="popular-price">65.000</span>
+                                            <span class="home-product__item-quatity">1,1k Đã bán</span>
+                                         </div>
+                                         <button class="add-btn-product" >
+                                            <i class="fa fa-regular fa-bag-shopping"></i>
+                                            Thêm vào giỏ
+                                        </button>
                                       
                                      </div>
                                  </div> 
                                  <div class="grid__col-2">
                                     <div class="home-product__item">
                                          <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
+                                         <div class="wishlist-btn"><i class="fa-solid fa-gift"></i></div>
                                          
                                          <h4 class="home-product__item-name">Bun Dong</h4>
                                          <div class="home-product__item-price"> 
                                             <span class="popular-price">65.000</span>
                                             <span class="home-product__item-quatity">1,1k Đã bán</span>
                                          </div>
-                                     
+                                         <button class="add-btn-product" >
+                                            <i class="fa fa-regular fa-bag-shopping"></i>
+                                            Thêm vào giỏ
+                                        </button>
                                       
                                      </div>
                                  </div> 
                                  <div class="grid__col-2">
                                     <div class="home-product__item">
                                          <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
+                                         <div class="wishlist-btn"><i class="fa-solid fa-gift"></i></div>
                                          
                                          <h4 class="home-product__item-name">Bun Dong</h4>
                                          <div class="home-product__item-price"> 
                                             <span class="popular-price">65.000</span>
                                             <span class="home-product__item-quatity">1,1k Đã bán</span>
                                          </div>
-                                     
-                                      
-                                     </div>
-                                 </div> 
-                                 <div class="grid__col-2">
-                                    <div class="home-product__item">
-                                         <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
-                                         
-                                         <h4 class="home-product__item-name">Bun Dong</h4>
-                                         <div class="home-product__item-price"> 
-                                            <span class="popular-price">65.000</span>
-                                            <span class="home-product__item-quatity">1,1k Đã bán</span>
-                                         </div>
-                                     
+                                         <button class="add-btn-product" >
+                                            <i class="fa fa-regular fa-bag-shopping"></i>
+                                            Thêm vào giỏ
+                                        </button>
                                       
                                      </div>
                                  </div> 
@@ -341,19 +368,24 @@
                                  <div class="grid__col-2">
                                     <div class="home-product__item">
                                          <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
+                                         <div class="wishlist-btn"><i class="fa-solid fa-gift"></i></div>
                                          
                                          <h4 class="home-product__item-name">Bun Dong</h4>
                                          <div class="home-product__item-price"> 
                                             <span class="popular-price">65.000</span>
                                             <span class="home-product__item-quatity">1,1k Đã bán</span>
                                          </div>
-                                     
+                                         <button class="add-btn-product" >
+                                            <i class="fa fa-regular fa-bag-shopping"></i>
+                                            Thêm vào giỏ
+                                        </button>
                                       
                                      </div>
                                  </div> 
                                  <div class="grid__col-2">
                                     <div class="home-product__item">
                                          <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
+                                         <div class="wishlist-btn"><i class="fa-solid fa-gift"></i></div>
                                          
                                          <h4 class="home-product__item-name">Bun Dong</h4>
                                          <div class="home-product__item-price"> 
@@ -361,7 +393,10 @@
                                             <span class="home-product__item-quatity">1,1k Đã bán</span>
                                          </div>
                                      
-                                      
+                                         <button class="add-btn-product" >
+                                            <i class="fa fa-regular fa-bag-shopping"></i>
+                                            Thêm vào giỏ
+                                        </button>
                                      </div>
                                  </div> 
                               

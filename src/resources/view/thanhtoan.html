@@ -129,11 +129,11 @@
                         <input type="text" style="display: none;" name="p<%-i %>" value="<%=JSON.stringify({user_slug: user.slug, product_slug: product[i].slug , shop_slug: product[i].user_slug , send: 0, sell: 0, money: product[i].price * product[i].count, count: product[i].count }) %>">
                         <img class="product-img" src="<%-y%>" alt="">
                         <div class="product-item">
-                            <h5 class="name">><%=product[i].name%></h5>
+                            <h5 class="name"><%=product[i].name%></h5>
                             <p class="quantity">Số lượng : <span><%=product[i].count%></span></p>
 
                             <p class="dongia">Đơn giá: <span><%=product[i].price%></span></p>
-                            <div class="total">Thành tiền: <span><%=product[i].price * product[i].count%></span></div>
+                            <div class="total">Thành tiền: <span><%=product[i].price + product[i].count%></span></div>
                         </div>
                     </div>
                 </div>
@@ -151,12 +151,13 @@
                         <img class="product-img" src="<%-y%>" alt="">
                         <div class="product-item">
                             <h5 class="name">><%=product.name%></h5>
-                            <p class="quantity">Số lượng : <span>1</span></p>
+                            <p class="quantity">Số lượng : <span><%=product.count%></span></p>
                             <p class="dongia">Đơn giá: <span><%=product.price%></span></p>
-                            <div class="total">Thành tiền: <span><%=product.price%></span></div>
+                            <div class="total">Thành tiền: <span><%=product.price + product.count%></span></div>
                         </div>
                     </div>
                 </div>
+            </div>
             <% } %> 
                
 

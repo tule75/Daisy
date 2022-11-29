@@ -91,7 +91,7 @@ class GioHangController {
                             // res.cookie('token', token, 20)
 
                             //chuyển đến trang chủ
-                            res.redirect('/')})
+                            res.status(204).send('thêm thành công')})
                         .catch(err => res.send(err))
                     } else {
                         //nếu không thì tạo document mới
@@ -100,7 +100,7 @@ class GioHangController {
                         .then(data => {
                             // res.clearCookie('token')
                             // res.cookie('token', token, 20)
-                            res.redirect('/')})
+                            res.status(204).send('thêm thành công')})
                         .catch(err => res.send('loi'))
                     }
                 })
