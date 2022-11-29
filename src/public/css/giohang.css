@@ -6,6 +6,7 @@
 .app {
     font-family: 'Open Sans', sans-serif;
 }
+
 .header {
     position: fixed;
     width: 100%;
@@ -16,6 +17,7 @@
     background-color: #5BAB5A;
     z-index: 100;
 }
+
 .header-logo {
     width: 160px;
     height: 160px;

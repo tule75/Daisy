@@ -13,7 +13,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/giohang.css">
     <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/assets/css/main.css"> 
+    <!-- <link rel="stylesheet" href="/assets/css/main.css">  -->
+    <link rel="stylesheet" href="/css/giohang-responsive.css">
 </head>
 <body>
     <div class="cart-shopping">
@@ -22,11 +23,12 @@
                <a href="/"><img class="header-logo" src="/assets/image/logo3.png" alt=""></a> 
              <!-- <p class="header-has-seller">Kenh nguoi ban</p> -->
             </div>
-             <div class="header-search">
-                 <input class="header-search-input" type="text" placeholder="Search">
+            
+            <div class="header-search">
+                <input class="header-search-input" type="text" placeholder="Search">
  
                  <!-- search-history -->
-                 <div class="header-search-history">
+                <div class="header-search-history">
                      <h3 class="header-search-history-heading">
                          Lịch sử Tìm kiếm
                      </h3>
@@ -34,24 +36,27 @@
                          <li class="header-search-history-item">
                              <a class="search-history-item-link" href="">Mien dong</a>
                          </li>
+
                          <li class="header-search-history-item">
                              <a class="search-history-item-link" href="">Bun dong</a>
                          </li>
                      </ul>
-                 </div>
+                </div>
+
                 <button class="input-enter">
-                 <i class="fa fa-solid fa-magnifying-glass input-icon"></i>
+                    <i class="fa fa-solid fa-magnifying-glass input-icon"></i>
                 </button>
-             </div>
+            </div>
+
              <div class="header-user">
-                 <ul class="user-list">
-                     <a href="/giohang" class="has-cart">
+                <ul class="user-list">
+                    <a href="/giohang" class="has-cart">
                          <li class="user-item ">
                          <!-- <i class="fa fa-regular fa-bell "></i><i class="fa-regular fa-cart-shopping-fast"></i> -->
-                         <i class="fa fa-light fa-cart-shopping"></i>
-                         <div class="cartAmount"><%=countCart%> </div>
+                            <i class="fa fa-light fa-cart-shopping"></i>
+                            <div class="cartAmount"><%=countCart%> </div>
                          </li>
-                     </a>
+                    </a>
                     
                     
                      <% if (check != 0) {%> 
@@ -64,22 +69,22 @@
                                 </li>
                             </ul>
                         </li>
-                             <li class="user-item has--content" >
-                                 <a href="/user/<%-user.slug %> ">
-                                 <i class="fa fa-solid fa-user"></i>
+
+                        <li class="user-item has--content" >
+                            <a href="/user/<%-user.slug %> "></a>
+                            <i class="fa fa-solid fa-user"></i>
                              
-                              <ul class="box-list">
-                                 <li class="box-list--item"><a href="/user/<%-user.slug %> " class="has-account">Tài khoản</a></li>
-                                 <li class="box-list--item">Đơn hàng</li>
-                                  <li class="box-list--item"><a class="box-link" href="/logout">Đăng xuất</a></li>
-                             </ul>
-                             </li>
+                            <ul class="box-list">
+                                <li class="box-list--item"><a href="/user/<%-user.slug %> " class="has-account">Tài khoản</a></li>
+                                <li class="box-list--item">Đơn hàng</li>
+                                <li class="box-list--item"><a class="box-link" href="/logout">Đăng xuất</a></li>
+                            </ul>
+                        </li>
                          
                      <% } else { %> 
-                     <button class="user-button"><a href="/login" class="user-button">Sign in</a></button>
+                        <button class="user-button"><a href="/login" class="user-button">Sign in</a></button>
                      <% } %> 
-                 </ul>
-                 
+                </ul>
              </div>
          </div>
          <form method="GET" class="thanhtoantien" action="/thanhtoan/cart">
@@ -94,9 +99,11 @@
                     </li>
                     <li class="cart-infor-child">
                         Số lượng
-                    </li><li class="cart-infor-child">
+                    </li>
+                    <li class="cart-infor-child">
                         Tổng tiền
-                    </li><li class="cart-infor-child">
+                    </li>
+                    <li class="cart-infor-child">
                        Xoá
                     </li>
                 </ul>
@@ -141,7 +148,6 @@
                 </div>
                 <% } %>  
               
-
                 <div class="cart-footer">
                     <ul class="thanhtoan">
                         <li class="thanhtoan-item">
@@ -156,12 +162,11 @@
                         <button class=" pay" type="submit">Thanh Toán</button>
                     </div>
                 </div>
-                
         </div>
         </form>
 
          <!-- footer -->
-         <div class="footer">
+        <div class="footer">
             <div class="grid">
                 <div class="grid__row">
                     <div class="grid__col-2-4">
