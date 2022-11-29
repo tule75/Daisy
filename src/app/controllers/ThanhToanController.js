@@ -136,11 +136,11 @@ class ThanhToanController {
                                 if (product != null){
                                     var voucher = []
 
-                                    // GioHang.findOne({product_slug: product.slug, user_slug: user.slug})
-                                    // .then((data) => {
-                                    //     product.count = data.count
-                                    // })
-                                    // .catch(() => {})
+                                    GioHang.findOne({product_slug: product.slug, user_slug: user.slug})
+                                    .then((data) => {
+                                        product.count = data.count
+                                    })
+                                    .catch(() => {})
 
                                     Voucher.find({product_slug: product.slug})
                                     .then((data) => {
