@@ -4,40 +4,85 @@ const GioHang = require('../models/GioHang')
 const Bill = require('../models/Bill')
 const jwt = require('jsonwebtoken')
 const Voucher = require('../models/Voucher')
+const { isObjectIdOrHexString } = require('mongoose')
 
 
 class ThanhToanController {
     //[POST] /thanhtoan/create
     push(req, res, next) {
         if (req.body) {
+            // function resolveAfter2Seconds(x, t = 1000) {
+            //     return new Promise((resolve) => {
+            //       setTimeout(() => {
+            //         resolve(x);
+            //       }, t);
+            //     });
+            // }
+            // var customer = new Object();;
+            // const token = req.cookies.token
+            // const id = jwt.verify(token, 'daisy')
+            // User.findOne({_id: id})
+            // .then(async (user) => {
+            //     for (let p in req.body) {
+            //         let product = JSON.parse(req.body[p]);
+            //         var bill = await resolveAfter2Seconds(new Bill({user_slug: user.slug, shop_slug: product.user_slug, product_slug: product.slug, count: 1, money: product.price, sell: 0, send: 0}))
+            //         bill.save()
+            //         .then(() => {
+            //             console.log('success')
+            //         })
+            //         .catch(err => {})
+            //     }
+            // })
+            // .then(async () => {
+            //     let x = await resolveAfter2Seconds(new Promise(), 3000)
+            //     console.log(-1)
+            //     res.redirect('/')
+            // })
+            // .catch(err => {})
+            // function isJson(str) {
+            //     try {
+            //         JSON.parse(str.toString());
+            //     } catch (e) {
+            //         return false;
+            //     }
+            //     return true;
+            // }
+            
+            console.log(req.body)
             function resolveAfter2Seconds(x) {
                 return new Promise((resolve) => {
                   setTimeout(() => {
                     resolve(x);
-                  }, 1000);
+                  }, 3000);
                 });
             }
-            var customer = new Object();;
-            const token = req.cookies.token
-            const id = jwt.verify(token, 'daisy')
-            User.findOne({_id: id})
-            .then(async (user) => {
-                for (let p in req.body) {
-                    let product = JSON.parse(req.body[p]);
-                    var bill = await resolveAfter2Seconds(new Bill({user_slug: user.slug, shop_slug: product.user_slug, product_slug: product.slug, count: 1, money: product.price, sell: 0, send: 0}))
-                    bill.save()
-                    .then(() => {
-                        console.log('success')
-                        res.redirect('/')
-                    })
-                    .catch(err => {})
+
+            var promise = new Promise(async function(resolve, reject) {
+                let pr = [];
+                let i = 0;
+                for (var p in req.body) {
+                    console.log(req.body[p])
+                    // if (isJson(req.body[p])) {
+                        console.log(1)
+                        pr[i] = JSON.parse(req.body[p]);
+                        i++
+                    // }
+                };
+                if (pr) {
+                    resolve(pr)
+                } else {
+                    reject()
                 }
             })
-            .catch(err => {})
-
-            
-
-            //lấy key từ req.body
+            promise.then(async (pr) => {
+                pr = await resolveAfter2Seconds(pr)
+                console.log(pr)
+                Bill.create(pr)
+                .then(() => {
+                    console.log(-1)
+                    res.redirect('/')
+                })
+            })
             
         }
     }
@@ -45,14 +90,15 @@ class ThanhToanController {
     //[GET] /thanhtoan/cart?q=...
     showC(req, res, next) {
         if (req.cookies.token){
+            var products_slug = []
             // var products_slug = req.query.p
-            if (Array.isArray(req.query.q)){
-                var products_slug = req.query.q
+            if (req.query) {
+                for (let p in req.query) {
+                    products_slug.push(req.query[p])
+                }
             }
-            else {
-                var products_slug = new Array
-                products_slug.push(req.query.q)
-            }
+
+            console.log(products_slug)
 
             const token = req.cookies.token
             const id = jwt.verify(token, 'daisy')
@@ -89,6 +135,12 @@ class ThanhToanController {
                             .then((product) => {
                                 if (product != null){
                                     var voucher = []
+
+                                    GioHang.findOne({product_slug: product.slug, user_slug: user.slug})
+                                    .then((data) => {
+                                        product.count = data.count
+                                    })
+                                    .catch(() => {})
 
                                     Voucher.find({product_slug: product.slug})
                                     .then((data) => {

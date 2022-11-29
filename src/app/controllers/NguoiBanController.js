@@ -9,6 +9,27 @@ const { resolve } = require('bluebird')
 
 
 class NguoiBanController {
+    //[POST] /kenhnguoiban
+    sent(req, res, next) {
+        console.log(req.body)
+        let bills = JSON.parse(req.body.bill)
+        Bill.findOne({user_slug: bills.user_slug, product_slug: bills.product_slug})
+        .then(bill => {
+            if (bill) {
+                bill['send'] = 1;
+                bill.save()
+                .then(() => {
+                    console.log('success', bill)
+                    res.status(204).send('cập nhật thành công')
+                })
+            }
+            else {
+                res.status(204).send('cập nhật không thành công')
+            }
+        })
+    }
+
+
     //[POST] /kenhnguoiban/create
     create(req, res, next) {
         var product = new Product(req.body)
@@ -70,7 +91,7 @@ class NguoiBanController {
                     .then(products =>{
                         var promise = new Promise( function(resolve, reject) {
                             let pr = [];
-                            Bill.find({shop_slug: user.slug, send: 0, sell: 0})
+                            Bill.find({shop_slug: user.slug})
                             .then(bills => {
                                 b = bills
                                 bills.forEach((element, i) => {

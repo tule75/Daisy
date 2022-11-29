@@ -11,7 +11,9 @@
     const containerItems  = $$(".container-item")
 
     const headerTitles = $$(".head-title")
+    const headerTitles_2 = $$(".head-title-2")
     const titleItems = $$(".wrap-item")
+    const titleItems_2 = $$(".wrap-item-2")
 
     const cholayhang = $(".cholayhang")
     const isContainerItem = $(".has-giaohang")
@@ -43,9 +45,24 @@
 
         this.classList.add("active")
         headerTitleItem.classList.add("active")
+        // headerTitle.style.color = 'rgb(57, 137, 57)'
       
     }
 })
+
+headerTitles_2.forEach((headerTitle_2,index) => {
+    const headerTitleItem = titleItems_2[index]
+    headerTitle_2.onclick = function () {
+        $(".wrap-item-2.active").classList.remove("active")
+        $(".head-title-2.active").classList.remove("active")
+
+        this.classList.add("active")
+        headerTitleItem.classList.add("active")
+        // headerTitle.style.color = 'rgb(57, 137, 57)'
+      
+    }
+})
+
 
     
 // show discount
@@ -100,3 +117,46 @@
     else {
         nothing.style.display =' block '
     }
+
+
+    // for all sp
+    const inputPlaceholder = $(".input-code")
+    const codelistItems = $$(".code-list-item")
+    codelistItems.forEach((listItem,index) => {
+        listItem.onclick = function () {
+            if(index == 0 ) {
+            inputPlaceholder.placeholder = 'Tim mã đơn hàng' 
+            } 
+            else if(index ==1 ) {
+                inputPlaceholder.placeholder = 'Tìm tên sản phẩm' 
+            } 
+            else if (index == 2 ) {
+                inputPlaceholder.placeholder = 'Tìm mã vận đơn' 
+            }
+        }
+    }) 
+
+    const isProcess = $(".isProcess")
+    const wrapItem = $(".item-has-product")
+    const iconFooter = $(".item-footer")
+
+    if(wrapItem.classList.contains("isProcess")) {
+        iconFooter.style.display = 'none'
+    } else {
+        iconFooter.style.display ='flex'
+    }
+
+    const accepts = $$(".accept")
+    const waiting = $$(".waiting")
+
+    accepts.forEach((accept,index) => {
+        const wait = waiting[index]
+        accept.onclick = function () {
+            this.classList.remove("accept")
+            this.classList.add("accepted")
+            wait.innerHTML ='Đã xử lý'
+            this.innerHTML = 'Đã xác nhận'
+            
+        }
+    })
+    

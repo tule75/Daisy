@@ -339,25 +339,30 @@
 
 }
 .popular-picture {
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     
 }
 .product-1 {
     width: 150px;
-    height: 150px;
+    min-height: 150px;
 }
 .popular-content {
     padding-left: 20px;
+  
 }
 .popular-name {
     font-weight: 600;
 }
 .popular-price {
-
+    margin-bottom: 0;
+}
+.add-wishlist {
+    padding: 8px 0;
+    cursor: pointer;
 }
 .add-button {
     padding: 10px 10px;
-   transform: translate(0,20px);
+   transform: translate(0,0px);
    background-color: transparent;
     border: 1px solid #ccc;
     /* border-radius: 50%; */
@@ -407,6 +412,7 @@
 
 /* product ---- danh muc -----*/
 .product__container {
+    margin-top: 50px;
    
 }
 .app__content {
@@ -476,7 +482,9 @@
     padding-bottom: 10px;
     margin-bottom: 8px;
    transition: transform 0.5s ;
+   position: relative;
 }
+
 
 .home-product__item-name {
     padding: 7px 8px;
@@ -609,8 +617,90 @@
 }
 
 
+.banner {
+    padding-top: 20px;
 
+    transform: translateX(-80px);
+}
+.banner-img {
+    width: 260px;
 
+    height: 500px;
+}
 
+.addfr {
+    border: none;
+    background-color: transparent;
 
+}
+.modal-add {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(51, 51, 51, 0.302);
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: 0.5s all ease-out;
+    transition-delay: 0.2s;
 
+}
+.modal-add.open {
+    display: flex;
+}
+.modal-container-add {
+    position: relative;
+    background-color: white;
+    width: 600px;
+    z-index: 10;
+    height: auto;
+    opacity: 2;
+    padding-bottom: 10px;
+}
+.header-modal-add {
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(172, 74, 74);
+    position: relative;
+
+}
+.body-modal-add{
+    padding: 0 15px;
+
+}
+.body-add-heading {
+    margin-top: 20px;
+    font-weight: 600;
+    letter-spacing: 0.2;
+    font-size: 17px;
+    color: rgb(117, 56, 56);
+    padding-bottom: 10px;
+    margin-bottom: 3px;
+}
+.phone-input{
+    width: 100%;
+    outline: none;
+    padding: 5px 10px;
+}
+.footer-modal-add {
+    cursor: pointer;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px 17px;
+    float: right;
+    margin-right: 40px;
+    color: rgb(117, 56, 56);
+}
+.icon-close-add {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    cursor: pointer;
+}
