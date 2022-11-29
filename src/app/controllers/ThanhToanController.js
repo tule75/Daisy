@@ -8,46 +8,52 @@ const { isObjectIdOrHexString } = require('mongoose')
 
 
 class ThanhToanController {
+    //[POST] /createbill
+    createbill(req, res, next) {
+        if (req.body.resultCode == 0 || req.body.resultCode == 9000 ) {
+            console.log(req.body)
+            function resolveAfter2Seconds(x) {
+                return new Promise((resolve) => {
+                  setTimeout(() => {
+                    resolve(x);
+                  }, 3000);
+                });
+            }
+
+            var promise = new Promise(async function(resolve, reject) {
+                var pr = []
+                // let data = req.body.extraData.toString('base64').split('&');
+                let data = req.body.extraData.split('&');
+                for (let i = 0; i < data.length; i++) {
+                    // if (isJson(req.body[p])) {
+
+                    pr[i] = JSON.parse(data[i]);
+                    // }
+                };
+                if (pr) {
+                    resolve(pr)
+                } else {
+                    reject()
+                }
+            })
+            promise.then(async (pr) => {
+                pr = await resolveAfter2Seconds(pr)
+                console.log(pr)
+                Bill.create(pr)
+                .then(() => {
+                    console.log(-1)
+                    res.status(204).send('da xong')
+                })
+            })
+
+        } else {
+            res.status(204).send('no request')
+        }
+    }
+
     //[POST] /thanhtoan/create
     push(req, res, next) {
-        if (req.body) {
-            // function resolveAfter2Seconds(x, t = 1000) {
-            //     return new Promise((resolve) => {
-            //       setTimeout(() => {
-            //         resolve(x);
-            //       }, t);
-            //     });
-            // }
-            // var customer = new Object();;
-            // const token = req.cookies.token
-            // const id = jwt.verify(token, 'daisy')
-            // User.findOne({_id: id})
-            // .then(async (user) => {
-            //     for (let p in req.body) {
-            //         let product = JSON.parse(req.body[p]);
-            //         var bill = await resolveAfter2Seconds(new Bill({user_slug: user.slug, shop_slug: product.user_slug, product_slug: product.slug, count: 1, money: product.price, sell: 0, send: 0}))
-            //         bill.save()
-            //         .then(() => {
-            //             console.log('success')
-            //         })
-            //         .catch(err => {})
-            //     }
-            // })
-            // .then(async () => {
-            //     let x = await resolveAfter2Seconds(new Promise(), 3000)
-            //     console.log(-1)
-            //     res.redirect('/')
-            // })
-            // .catch(err => {})
-            // function isJson(str) {
-            //     try {
-            //         JSON.parse(str.toString());
-            //     } catch (e) {
-            //         return false;
-            //     }
-            //     return true;
-            // }
-            
+        if (req.body) {            
             console.log(req.body)
             function resolveAfter2Seconds(x) {
                 return new Promise((resolve) => {
@@ -87,9 +93,149 @@ class ThanhToanController {
         }
     }
 
+    //[GET] /thanhtoan/tang?u=...&q=...
+    showT(req, res, next) {
+        if (req.cookies.token){
+            var shops = []
+            var products_slug = []
+            // var products_slug = req.query.p
+            if (req.query) {
+                let x = req.query.q
+                for (let i = 0; i < x.length; i++) {
+                    products_slug.push(x[i])
+                }
+            }
+
+            let slug = req.query.u
+            var receiver;
+            User.findOne({slug: slug})
+            .then(data => {
+                receiver = data
+            })
+            .catch(err => {})
+
+            console.log(products_slug)
+
+            const token = req.cookies.token
+            const id = jwt.verify(token, 'daisy')
+            User.findOne({_id: id})
+            .then(user => {
+                if (user) {
+                    var vouchers = []
+                    var counts = 0
+                    GioHang.find({user_slug: user.slug})
+                    .then(dataa => {
+                        if (dataa) {
+                            for (var i = 0; i < dataa.length; i++) {
+                                counts += dataa[i].count;
+                            }
+                        }
+                        else {
+                            counts = counts;
+                        }
+                    })
+                    .catch()
+
+                    function resolveAfter2Seconds(x) {
+                        return new Promise((resolve) => {
+                          setTimeout(() => {
+                            resolve(x);
+                          }, 1000);
+                        });
+                    }
+    
+                    var promise = new Promise( function(resolve, reject) {
+                        let pr = [];
+                        
+                        products_slug.forEach((element, i) => {
+                            Product.findOne({slug: element})
+                            .then((product) => {
+                                if (product != null){
+                                    var voucher = []
+
+                                    GioHang.findOne({product_slug: product.slug, user_slug: user.slug})
+                                    .then((data) => {
+                                        product.count = data.count
+                                    })
+                                    .catch(() => {})
+
+                                    Voucher.find({product_slug: product.slug})
+                                    .then((data) => {
+                                        voucher = data
+                                    })
+                                    .catch(() => {res.send('loi ne')})
+
+                                    vouchers[i] = voucher
+
+                                    User.findOne({slug: product.user_slug})
+                                    .then(shop => {
+                                        if (shop != null){
+                                        shops.push(shop)
+                                        }
+                                    })
+                                    .catch(err => res.send('loi ne'))
+
+                                    // var p = {};
+                                    // p.name = product.name;
+                                    // p.slug = product.slug;
+                                    // p.price = product.price;
+                                    // p.count = cart[i].count;
+                                    // p.img = product.img;
+                                    // p.user_id = product.user_id;
+                                    // console.log(product)
+                                    // console.log(p)
+                                    
+                                    pr[i] = product;
+                                    // console.log(products)
+                                }
+                                // i++;
+                            })
+                            .catch(err => {})
+                        });
+                        if (pr) {
+                            resolve(pr)
+                        } else {
+                            reject()
+                        }
+                    })
+                    promise.then(async (pr) => {
+                        pr = await resolveAfter2Seconds(pr)                        
+                        // res.send(pr)
+                        // res.send(pr)
+                        // res.send(req.query.p)
+                        res.render('thanhtoantang.html', {check: 1, product: pr, user: user, receiver: receiver, countCart: counts, shop: shops, vouchers: vouchers})
+
+                    })
+
+                    // res.send(req.query.p)
+                    
+
+                    // Product.findOne({slug: req.params.slug})
+                    // .then(product => {
+                    //     User.findOne({slug: product.user_slug})
+                    //     .then(shop => {
+                    //         res.render('thanhtoan.html', {check: 1, product: product, user: user, countCart: counts, shop: shop})
+                    //     })
+                    //     .catch(err => res.send('loi'))
+                    // })
+                    // .catch(err => {res.send('loi')});
+                } else {
+                    res.render('login.html', {check: 0})
+                }
+            })
+            .catch(err => {
+                console.error(err)
+                res.send('loi ne')
+            })
+        } else {
+            res.render('login.html', {check: 0})
+        }
+    }
+
     //[GET] /thanhtoan/cart?q=...
     showC(req, res, next) {
         if (req.cookies.token){
+            var shops = []
             var products_slug = []
             // var products_slug = req.query.p
             if (req.query) {
@@ -133,7 +279,7 @@ class ThanhToanController {
                         products_slug.forEach((element, i) => {
                             Product.findOne({slug: element})
                             .then((product) => {
-                                if (product != null){
+                                if (product !== null){
                                     var voucher = []
 
                                     GioHang.findOne({product_slug: product.slug, user_slug: user.slug})
@@ -149,6 +295,13 @@ class ThanhToanController {
                                     .catch(() => {res.send('loi')})
 
                                     vouchers[i] = voucher
+
+                                    User.findOne({slug: product.user_slug})
+                                    .then(shop => {
+                                        console.log(shop)
+                                        shops.push(shop)
+                                    })
+                                    .catch(err => res.send('loi ne'))
 
                                     // var p = {};
                                     // p.name = product.name;
@@ -175,11 +328,8 @@ class ThanhToanController {
                     })
                     promise.then(async (pr) => {
                         pr = await resolveAfter2Seconds(pr)
-                        User.findOne({slug: pr.user_slug})
-                        .then(shop => {
-                            res.render('thanhtoan.html', {check: 1, product: pr, user: user, countCart: counts, shop: shop, vouchers: vouchers})
-                        })
-                        .catch(err => res.send('loi'))
+                        res.render('thanhtoan.html', {check: 1, product: pr, user: user, countCart: counts, shop: shops, vouchers: vouchers})
+
                         // res.send(pr)
                         // res.send(pr)
                         // res.send(req.query.p)

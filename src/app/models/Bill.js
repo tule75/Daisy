@@ -8,6 +8,7 @@ const ObjectId = Schema.ObjectId;
 
 const Bill = new Schema({
     user_slug: String,
+    receiver_slug: String,
     shop_slug: String,
     product_slug: String,
     thoigianban: { type: Date, default: Date.now },

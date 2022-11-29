@@ -1,8 +1,8 @@
-const express = require('express');
-const router = express.Router();
+// const express = require('express');
+// const router = express.Router();
 
-const testController = require('../app/controllers/TestController');
+// const testController = require('../app/controllers/MomoController');
 
-router.get('/', testController.test)
+// router.get('/', testController.test)
 
-module.exports = router
+// module.exports = router
