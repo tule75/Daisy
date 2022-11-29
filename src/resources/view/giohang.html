@@ -13,20 +13,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/giohang.css">
     <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/assets/css/main.css"> 
+    <!-- <link rel="stylesheet" href="/assets/css/main.css">  -->
+    <link rel="stylesheet" href="/css/giohang-responsive.css">
 </head>
 <body>
     <div class="cart-shopping">
         <div class="header">
             <div class="header-left"> 
                 <img class="header-logo" src="/assets/image/logo3.png" alt="">
-             <p class="header-has-seller">Kenh nguoi ban</p>
+                <p class="header-has-seller">Kenh nguoi ban</p>
             </div>
-             <div class="header-search">
-                 <input class="header-search-input" type="text" placeholder="Search">
+            
+            <div class="header-search">
+                <input class="header-search-input" type="text" placeholder="Search">
  
                  <!-- search-history -->
-                 <div class="header-search-history">
+                <div class="header-search-history">
                      <h3 class="header-search-history-heading">
                          Lịch sử Tìm kiếm
                      </h3>
@@ -34,24 +36,27 @@
                          <li class="header-search-history-item">
                              <a class="search-history-item-link" href="">Mien dong</a>
                          </li>
+
                          <li class="header-search-history-item">
                              <a class="search-history-item-link" href="">Bun dong</a>
                          </li>
                      </ul>
-                 </div>
+                </div>
+
                 <button class="input-enter">
-                 <i class="fa fa-solid fa-magnifying-glass input-icon"></i>
+                    <i class="fa fa-solid fa-magnifying-glass input-icon"></i>
                 </button>
-             </div>
+            </div>
+
              <div class="header-user">
-                 <ul class="user-list">
-                     <a href="/giohang" class="has-cart">
+                <ul class="user-list">
+                    <a href="/giohang" class="has-cart">
                          <li class="user-item ">
                          <!-- <i class="fa fa-regular fa-bell "></i><i class="fa-regular fa-cart-shopping-fast"></i> -->
-                         <i class="fa fa-light fa-cart-shopping"></i>
-                         <div class="cartAmount"><%=countCart%> </div>
+                            <i class="fa fa-light fa-cart-shopping"></i>
+                            <div class="cartAmount"><%=countCart%> </div>
                          </li>
-                     </a>
+                    </a>
                     
                     
                      <% if (check != 0) {%> 
@@ -64,24 +69,24 @@
                                 </li>
                             </ul>
                         </li>
-                             <li class="user-item has--content" >
-                                 <a href="/user/<%-user.slug %> ">
-                                 <i class="fa fa-solid fa-user"></i>
+
+                        <li class="user-item has--content" >
+                            <a href="/user/<%-user.slug %> "></a>
+                            <i class="fa fa-solid fa-user"></i>
                              
-                              <ul class="box-list">
-                                 <li class="box-list--item"><a href="/user/<%-user.slug %> " class="has-account">Tài khoản</a></li>
-                                 <li class="box-list--item">Đơn hàng</li>
-                                  <li class="box-list--item"><a class="box-link" href="/logout">Đăng xuất</a></li>
-                             </ul>
-                             </li>
+                            <ul class="box-list">
+                                <li class="box-list--item"><a href="/user/<%-user.slug %> " class="has-account">Tài khoản</a></li>
+                                <li class="box-list--item">Đơn hàng</li>
+                                <li class="box-list--item"><a class="box-link" href="/logout">Đăng xuất</a></li>
+                            </ul>
+                        </li>
                          
                      <% } else { %> 
-                     <button class="user-button"><a href="/login" class="user-button">Sign in</a></button>
+                        <button class="user-button"><a href="/login" class="user-button">Sign in</a></button>
                      <% } %> 
-                 </ul>
-                 
+                </ul>
              </div>
-         </div>
+        </div>
 
         <div class="cart-body">
                 <h4 class="car-body-heading">
@@ -94,42 +99,48 @@
                     </li>
                     <li class="cart-infor-child">
                         Số lượng
-                    </li><li class="cart-infor-child">
+                    </li>
+                    <li class="cart-infor-child">
                         Tổng tiền
-                    </li><li class="cart-infor-child">
+                    </li>
+                    <li class="cart-infor-child">
                        Xoá
                     </li>
                 </ul>
+
                 <% for (var i = 0; i < products.length; i++) { %> 
                     <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
                     <% const y = x.replace("/view?usp=share_link","",40)%>
-                <div class="cart-product-wrap">
-                   <div class="cart-product-infor">
-                            <img class="cart-product-img"  src="<%-y%>" alt="">
-                           <div class="product-content">
-                            <h5 class="cart-product-name">
-                                <%=products[i].name%>
-                            </h5>
-                            <p class="cart-product-price"><%=products[i].price%></p>
-                           </div>
-                   </div>
-                   
-                   <div class="cart-product-quantity first-child">
-                    <button onclick="decrease()"  class="btn quantity-minus">
-                        <i class="fa-solid fa-minus"></i>
-                    </button>
-                        <h4 class="quantity-number" name="<%-products[i].slug%>"><%=products[i].count%></h4>
-                    <button onclick="increase()"  class="btn quantity-add">
-                        <i class="fa-solid fa-plus"></i>
-                    </button>
-                    </div>
+                    <div class="cart-product-wrap">
+                        <div class="cart-product-infor">
+                                    <img class="cart-product-img"  src="<%-y%>" alt="">
+                                <div class="product-content">
+                                    <h5 class="cart-product-name">
+                                        <%=products[i].name%>
+                                    </h5>
+                                    <p class="cart-product-price"><%=products[i].price%></p>
+                                </div>
+                        </div>
+                    
+                        <div class="cart-product-quantity first-child">
+                            <button onclick="decrease()"  class="btn quantity-minus">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+
+                            <h4 class="quantity-number" name="<%-products[i].slug%>"><%=products[i].count%></h4>
+
+                            <button onclick="increase()"  class="btn quantity-add">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
 
                         <p class="total">  65.000 </p>
-                    <button class="btn product-trash">
-                        <i class="fa-solid fa-trash"></i>
-                    </button>
-               
-                </div>
+
+                        <button class="btn product-trash">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                
+                    </div>
                 <% } %>  
                 <!-- <div  class="cart-product-wrap">
                     <div class="cart-product-infor">
@@ -186,26 +197,28 @@
                     
                 </div> -->
 
-                <div class="cart-footer">
-                    <ul class="thanhtoan">
-                        <li class="thanhtoan-item">
-                            Thanh toán
-                        </li>
-                        <li class="thanhtoan-item">
-                            65.000
-                        </li>
-    
-                    </ul>
-                    <div class="button-thanhtoan">
-                        <button class=" pay">
-                            <a href="/thanhtoan" class="paya">Thanh Toán</a>
-                        </button>
-                    </div>
-                </div>
+            <div class="cart-footer">
+                        <ul class="thanhtoan">
+                            <li class="thanhtoan-item">
+                                Thanh toán
+                            </li>
+
+                            <li class="thanhtoan-item">
+                                65.000
+                            </li>
+        
+                        </ul>
+
+                        <div class="button-thanhtoan">
+                            <button class=" pay">
+                                <a href="/thanhtoan" class="paya">Thanh Toán</a>
+                            </button>
+                        </div>
+            </div>
         </div>
 
          <!-- footer -->
-         <div class="footer">
+        <div class="footer">
             <div class="grid">
                 <div class="grid__row">
                     <div class="grid__col-2-4">
