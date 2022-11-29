@@ -445,10 +445,19 @@ margin-bottom: 0;
   color: black;
 }
 
-.home-product__item:hover {
+.home-product__item:hover{
   transform: translateY(-10px);
   box-shadow: 0 2px 5px #ccc;
+  display: block;
 }
+
+.home-product__item:hover .wishlist-btn{
+  transform: translateY(-10px);
+  box-shadow: 0 2px 5px #ccc;
+  border-bottom: 3px dashed white;
+  display: block;
+}
+
 
 
 .has-account {

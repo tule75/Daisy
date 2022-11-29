@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daisy</title>
+    <title>Daisy | Mua và Bán an toàn</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Itim|Lobster|Montserrat:500|Noto+Serif|Nunito|Patrick+Hand|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab|Saira" rel="stylesheet">
@@ -71,7 +71,7 @@
                                 <ul class="cart-announcement">
                                     <h4 class="product-title-announ">Thong bao</h4>
                                     <li class="announ-item">
-                                        <h5>Ban khong co thong bao nao</h5>
+                                        <h5>Bạn không có thông báo nào</h5>
                                     </li>
                                 </ul>
                             </li>
@@ -81,7 +81,7 @@
                                  
                                 <ul class="box-list">
                                     <li class="box-list--item"><a href="/user/<%-user.slug %>" class="has-account">Tài khoản </a></li>
-                                    <li class="box-list--item">Đơn hàng</li>
+                                    <!-- <li class="box-list--item">Đơn hàng</li> -->
                                     <li class="box-list--item"><a class="box-link" href="/logout">Đăng xuất</a></li>
                                 </ul>
                             </li>
@@ -148,27 +148,7 @@
            
             <!-- popular product -->
             <div class="popular-product">
-                <!-- <svg class="btn btn--prev" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/>
-                    <path d="M0-.5h24v24H0z" fill="none"/>
-                  </svg> -->
-
-               <!-- <% for (var i = 0; i < products.length; i++) { %> 
-                <div class="popular-info">
-                    <div class="popular-picture">
-                        <img class="product-1" src="img/sanpham/<%-products[i].img%>.jpg" alt="">
-                    </div>
-                    <div class="popular-content">
-                        <h4 class="popular-name"><%=products[i].name%></h4>
-                        <p class="popular-price"><%=products[i].price%></p>
-                        <button class="add-button">
-                            <i class="fa fa-regular fa-bag-shopping"></i>
-                            Thêm vào giỏ hàng
-                        </button>
-                    </div>
-                </div>
-
-                <% } %>   -->
+            
 
                 <div class="popular-info active">
                     <div class="popular-picture">
@@ -177,6 +157,7 @@
                     <div class="popular-content">
                         <h3 class="popular-name">Miến dong</h3>
                         <p class="popular-price">65.000</p>
+                        <div class="add-wishlist"><i class="fa-solid fa-gift"></i></div>
                         <button class="add-button">
                             <i class="fa fa-regular fa-bag-shopping"></i>
                             Thêm vào giỏ 
@@ -191,6 +172,7 @@
                     <div class="popular-content">
                         <h3 class="popular-name">Miến dong</h3>
                         <p class="popular-price">65.000</p>
+                        <div class="add-wishlist"><i class="fa-solid fa-gift"></i></div>
                         <button class="add-button">
                             <i class="fa fa-regular fa-bag-shopping"></i>
                             Thêm vào giỏ 
@@ -205,34 +187,16 @@
                     <div class="popular-content">
                         <h3 class="popular-name">Miến dong</h3>
                         <p class="popular-price">65.000</p>
+                        <div class="add-wishlist"><i class="fa-solid fa-gift"></i></div>
                         <button class="add-button" >
                             <i class="fa fa-regular fa-bag-shopping"></i>
                             Thêm vào giỏ
                         </button>
                     </div>
                 </div>
-
-                <!-- <svg class="btn btn--next" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
-                    <path d="M0-.25h24v24H0z" fill="none"/>
-                  </svg> -->
             </div> 
 
-            <!-- pagination -->
-            <!-- <div class="pagination-wrapper">
-                
-                <div class="pagination-container">
-                  <div class="little-dot  little-dot--first"></div>
-                  <div class="little-dot">
-                    <div class="big-dot-container">
-                      <div class="big-dot"></div>
-                    </div>
-                  </div>
-                  <div class="little-dot  little-dot--last"></div>
-                </div>
-                
-              </div> -->
-
+         
             <!-- product list -->
             <div class="product__container">
                 <div class="grid">
@@ -298,6 +262,8 @@
                                     <a href="/<%-products[i].slug %>" class="addhref">
                                     <div class="home-product__item">
                                          <img class="home-product__item-img" src="<%-y%>" alt="">
+                                     <button class="wishlist-btn"><i class="fa-solid fa-gift"></i></button>
+                                         
                                         <h4 class="home-product__item-name"><%=products[i].name%></h4>
                                          <div class="home-product__item-price"> 
                                             <span class="popular-price"><%=products[i].price%></span>
