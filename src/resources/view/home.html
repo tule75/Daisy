@@ -81,7 +81,7 @@
                                  
                                 <ul class="box-list">
                                     <li class="box-list--item"><a href="/user/<%-user.slug %>" class="has-account">Tài khoản </a></li>
-                                    <!-- <li class="box-list--item">Đơn hàng</li> -->
+                                    <li class="box-list--item"> <button class="addfr"> Tìm bạn</button></li>
                                     <li class="box-list--item"><a class="box-link" href="/logout">Đăng xuất</a></li>
                                 </ul>
                             </li>
@@ -254,10 +254,10 @@
                      <div id="shop" class="grid__col-10">
                         <div  class="home-product">
                             <div class="grid__row">
-                <% for (var i = 0; i < products.length; i++) { %> 
-                    <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
-                                        <% const y = x.replace("/view?usp=share_link","",40)%>
-                           
+                            <% for (var i = 0; i < products.length; i++) { %> 
+                                <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                                    <% const y = x.replace("/view?usp=share_link","",40)%>
+                                    
                                 <div class="grid__col-2-4">
                                     <a href="/<%-products[i].slug %>" class="addhref">
                                     <div class="home-product__item">
@@ -284,8 +284,8 @@
 
 
                                         <div class="btn-buy">
-                                            <form class="themvaogiohang" action="/" method="POST">
-                                            <button type="submit" class="btn-buy-item add-gh" name="slug" value="<%-products[i].slug %>">
+                                            <form action="/" method="POST">
+                                            <button class="btn-buy-item add-gh" name="slug" value="<%-products[i].slug %>">
                                                 <i class="fa fa-regular fa-bag-shopping"></i>
                                             </button>
                                             </form> 
@@ -306,7 +306,29 @@
                  </div>
              </div>
             </div>
+            <!-- modal -->
+            <div class="modal-add">
+                <div class="modal-container-add">
+    
+                    <div class="header-modal-add">
+                        
+                        Kết Nối Người Quen
+                        <div class="icon-close-add"><i class="fa-regular fa-circle-xmark"></i></div>
+                    </div>
+                    <div class="body-modal-add">
+                        <p class="body-add-heading">
+                            Tìm qua số điện thoại
+                        </p>
+                        <input type="text" class="phone-input" placeholder="Nhập số điện thoại ">
+                    </div>
+                    <button class="footer-modal-add">
+                        Tìm
+                    </button>
 
+                    
+                        
+                </div>
+             </div>
         </div>
         <!-- footer -->
         <div class="footer">
@@ -461,10 +483,11 @@
                 </div>
             </div>
         </div>
+
     </div>
 
     <script src="javascript/home.js"> </script>
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
     <script>
         const headerBar = document.querySelector('.has--bar')
         const headerNav = document.querySelector('.header-nav')
@@ -499,20 +522,22 @@
         headerBar.addEventListener('click', function(event) {
             event.stopPropagation()
         })
-        $(document).ready(function() {
-            $('.btn-buy-item .add-gh').click(function(){
-                let x = parseInt($('div.cartAmount').text())
-                console.log(x)
-                $('div.cartAmount').text(x+1)
-            })
-        })
 
+
+        const btnAddfr = $(".addfr")
+        const closeAddfr = $(".icon-close-add")
+        const modaladd = $(".modal-add")
+
+        btnAddfr.onclick = function() {
+            modaladd.classList.add("open")
+        }
+
+        closeAddfr.onclick = function () {
+            modaladd.classList.remove("open")
+        }
 
 
     </script>
     
-    
-    
-
 </body>
 </html>
