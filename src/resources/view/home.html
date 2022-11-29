@@ -318,8 +318,8 @@
 
 
                                         <div class="btn-buy">
-                                            <form action="/" method="POST">
-                                            <button class="btn-buy-item add-gh" name="slug" value="<%-products[i].slug %>">
+                                            <form class="themvaogiohang" action="/" method="POST">
+                                            <button type="submit" class="btn-buy-item add-gh" name="slug" value="<%-products[i].slug %>">
                                                 <i class="fa fa-regular fa-bag-shopping"></i>
                                             </button>
                                             </form> 
@@ -498,7 +498,7 @@
     </div>
 
     <script src="javascript/home.js"> </script>
-
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script>
         const headerBar = document.querySelector('.has--bar')
         const headerNav = document.querySelector('.header-nav')
@@ -533,11 +533,20 @@
         headerBar.addEventListener('click', function(event) {
             event.stopPropagation()
         })
-
+        $(document).ready(function() {
+            $('.btn-buy-item .add-gh').click(function(){
+                let x = parseInt($('div.cartAmount').text())
+                console.log(x)
+                $('div.cartAmount').text(x+1)
+            })
+        })
 
 
 
     </script>
     
+    
+    
+
 </body>
 </html>
