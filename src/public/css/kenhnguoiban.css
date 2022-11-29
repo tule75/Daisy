@@ -155,7 +155,7 @@
     cursor: pointer;
     padding-top: 7px;
 }
-.ship-contain:hover, .manage-item:hover {
+.ship-contain:active, .manage-item:active {
     color: rgb(100, 150, 100);
 }
 .container {
@@ -306,31 +306,43 @@
     cursor: pointer;
     z-index: 0;
 }
+.head-title-2 {
+    background-color: rgb(225, 218, 219);
+    padding-right:25px;
+    padding-left:25px;
+    margin-right: 3px;
+    cursor: pointer;
+    z-index: 0;
+}
+
 
 .head-title:hover {
     color: rgb(57, 137, 57);
 }
+.head-title-2:hover {
+    color: rgb(57, 137, 57);
+}
+
 
 
 .body-wrap {
    padding-left: 0;
    height: auto;
-   background-color: rgb(234, 228, 228);
+   /* background-color: rgb(234, 228, 228); */
    margin: 1px 20px;
     list-style: none;
 }
 .wrap-item {
     display: none;
-    
+    padding-top: 20px;
+    box-shadow: 0 0 4px 0 #ccc;
 }
-.item-first {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* background-color: rgb(234, 228, 228); */
-    padding: 20px 20px;
-    list-style: none;
+.wrap-item-2 {
+    display: none;
+    padding-top: 20px;
+    box-shadow: 0 0 4px 0 #ccc;
 }
+
 .stateOfgoods {
     padding-bottom: 0;
     margin-bottom: 0;
@@ -384,7 +396,9 @@
 
 .item-second {
     margin: 0 50px;
-    background-color: #888;
+    /* padding-top: 10px; */
+    background-color: #ccc;
+    /* box-shadow:  0 0 4px 0 #ccc; */
 }
 .item-has-product {
     margin: 0 50px;
@@ -424,6 +438,15 @@
     color: #999;
     padding-bottom: 30px;
 }
+.item-footer-cancel {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #999;
+    padding-bottom: 30px;
+}
 .fa-rectangle-list {
     font-size: 70px;
     padding-bottom: 15px;
@@ -449,12 +472,21 @@
     background-color: white;
     font-weight: bolder;
 }
+.head-title-2.active {
+    color: rgb(45, 106, 51);
+    background-color: white;
+    font-weight: bolder;
+}
 
 /* --- */
 
 .wrap-item.active {
     display: block;
 }
+.wrap-item-2.active {
+    display: block;
+}
+
 
 .all-order {
     display: flex;
@@ -556,6 +588,7 @@
 }
 
 .filter-name {
+    width: 100px;
     padding: 0px 7px;
     margin-bottom: 0;
     font-weight: bold;
@@ -578,4 +611,35 @@
     border: none;
     background-color: transparent;
     color: green;
+}
+
+.active-shadow {
+    box-shadow: 0 0 4px 0 #ccc;
+}
+.user_name, .isaddress , .user_quantity {
+    margin-bottom: 0;
+    padding: 2px 0;
+    text-align: none;
+    
+    font-size: 13px;
+}
+.user-information {
+    /* display: flex; */
+}
+.has-infor {
+    width: 175px;
+}
+.user-span{ 
+    font-weight: bold;
+    max-width: 175px;
+}
+.body-list {
+    max-width: 950px;
+}
+.icon-span {
+
+}
+.user_name {
+    display: flex;
+    flex-direction:column;
 }

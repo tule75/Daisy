@@ -9,17 +9,23 @@ const { resolve } = require('bluebird')
 
 
 class NguoiBanController {
-    //[POST] /kenhnguoiban/sendproduct
+    //[POST] /kenhnguoiban
     sent(req, res, next) {
-        let bill = JSON.parse(req.body.bill)
-        Bill.findOne(bill)
-        .then(() => {
-            bill.send = 1;
-            bill.save()
-            .then(() => {
-                console.log('success', bill)
-                res.redirect('/kenhnguoiban')
-            })
+        console.log(req.body)
+        let bills = JSON.parse(req.body.bill)
+        Bill.findOne({user_slug: bills.user_slug, product_slug: bills.product_slug})
+        .then(bill => {
+            if (bill) {
+                bill['send'] = 1;
+                bill.save()
+                .then(() => {
+                    console.log('success', bill)
+                    res.status(204).send('cập nhật thành công')
+                })
+            }
+            else {
+                res.status(204).send('cập nhật không thành công')
+            }
         })
     }
 

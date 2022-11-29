@@ -204,6 +204,8 @@
 
 .shop-info{
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex: 1;
     /* justify-content: center; */
     align-items: center;
@@ -216,7 +218,7 @@
     width: 1px;
     position: absolute;
     top: -20.8px;
-    right: 0px;
+    right: -46px;
     margin-right: 20px;
 
     background-color: #ccc;
@@ -224,6 +226,7 @@
 }
 .shop-avt {
    margin-top: -14px;
+   text-align: center;
 }
 .shop-img{
     width: 90px;
@@ -235,14 +238,14 @@
     font-size: 17px;
     font-weight: bolder;
     padding-top: 10px;
+    text-align: center;
 }
 
 .shop-follow{
     display: flex;
     flex-direction: column;
     position: relative;
-
-    padding: 0 20px;
+    padding: 0 10px;
 
 }
 .btn--follow{
@@ -259,7 +262,7 @@
 }
 .btn--chat {
     position: absolute;
-    right: -10px;
+    right: -17px;
     top: 4px;
     font-size: 24px;
 }

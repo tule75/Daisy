@@ -12,3 +12,5 @@ class VoucherController{
         }
     }
 }
+
+module.exports = new VoucherController()
