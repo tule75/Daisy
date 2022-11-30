@@ -708,10 +708,16 @@
     background-color: rgb(241, 62, 62);
     color: rgb(241, 234, 234);
     border: none;
+    margin-bottom: 5px;
 }
 .add-btn-product:active {
     padding: 7px 16px;
     margin: 0 20px;
     background-color: rgb(159, 96, 96);
     color: rgb(235, 229, 229);
+}
+.intro {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 4px;
 }
