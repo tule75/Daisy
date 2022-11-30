@@ -184,7 +184,6 @@
     }
 
     .header {
-        /* width: 100%; */
         max-width: 414px;
         justify-content: flex-start;
         /* position: fixed; */

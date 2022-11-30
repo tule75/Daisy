@@ -75,7 +75,7 @@ class WLController{
 
     //[GET] /wishlist/:slug
     show(req, res, next) {
-        var customer;
+        var receiver;
         var user;
         if (req.cookies.token){
             const token = req.cookies.token
@@ -89,10 +89,10 @@ class WLController{
                     } else {
                         User.findOne({slug: req.params.slug})
                         .then(data => {
-                            customer = data;
+                            receiver = data;
                         })
 
-                        WishList.find({user_slug: data.slug})
+                        WishList.find({user_slug: req.params.slug})
                         .then(wl => {
                             //sản phẩm trong giỏ
                             var counts = 0
@@ -102,7 +102,7 @@ class WLController{
                                 return new Promise((resolve) => {
                                 setTimeout(() => {
                                     resolve(x);
-                                }, 1000);
+                                }, 1500);
                                 });
                             }
 
@@ -112,18 +112,12 @@ class WLController{
                                     counts += element.count
                                     Product.findOne({slug: element.product_slug})   
                                     .then((product) => {
-                                        if (product != null){
-                                            var p = {};
-                                            p.name = product.name;
-                                            p.slug = product.slug;
-                                            p.price = product.price;
-                                            p.count = cart[i].count;
-                                            p.img = product.img;
-                                            p.user_id = product.user_id;
-                                            // console.log(product)
+                                        if (product !== null){
+                                                                                       
                                             // console.log(p)
                                             
-                                            pr.push(p);
+                                            pr.push(product);
+                                            console.log(product) 
                                             // console.log(products)
                                         }
                                         // i++;
@@ -138,8 +132,10 @@ class WLController{
                             })
                             promise.then(async (pr) => {
                                 pr = await resolveAfter2Seconds(pr)
-                                res.render('wishlist.html', {products: pr,customer: customer, check: 1, user: user, countCart: counts})
+                                console.log(pr)
+                                res.render('wishlist.html', {products: pr,receiver: receiver, check: 1, user: user, countCart: counts})
                             })
+                            .catch(err => {res.send('loi')})
                             
                             
                         })
