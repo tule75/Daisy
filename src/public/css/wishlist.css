@@ -298,16 +298,18 @@
     background-color: #ccc;
 }
 .wishlist-wrap {
+    padding-left: 0;
     
 }
 .wishlist-item {
     border: 1px solid rgb(186, 182, 182);
     position: relative;
-    height: 240px;
+    height: auto;
     margin-top: 15px;
     cursor: pointer;
     transition: top 0.2s ease ;
     top: 0;
+    padding-bottom: 10px;
 
 }
 .wishlist-item:hover {
@@ -322,24 +324,47 @@
     padding-top: 5px;
     padding-left: 10px;
     font-weight: bolder;
-    font-size: 17px;
+    font-size: 14px;
     padding-bottom: 2px;
     margin-bottom: 0;
+    color: black;
 }
 .wishlist-product-infor{
     padding-left: 10px;
 
 }
+.price-choice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-bottom: 7px;
+    padding-top: 5px;
+}
 .price {
     margin-bottom: 0;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
+}
+.btn-wish{
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+    margin-left: 0;
+    padding-left: 0;
+    margin-right: 5px;
 }
 .add-button {
-    padding: 8px 10px;
-    font-size: 15px;
-    margin-bottom: 0px;
+    padding: 5px 10px;
+    border: none;
+    margin-right: 5px;
 }
-
+.btn-gift {
+    padding: 5px 10px;
+    border: none;
+    margin-right: 5px;
+    background-color: rgb(229, 55, 55);
+    color: white;
+}
 
 /* footer */
 .footer {

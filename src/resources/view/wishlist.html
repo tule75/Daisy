@@ -98,7 +98,7 @@
                     <div class="side-avt">
                         <img class="avt-img" src="/img/Instagram post - 3.jpg" alt="">
 
-                        <h5 class="avt-name">User</h5>
+                        <h5 class="avt-name"><%user.name%></h5>
 
                     </div>
                     <div class="side-active">
@@ -144,7 +144,7 @@
                                                 <h1>Chưa có sản phẩm nào</h1>
                                             <% } else {%> 
                                                 <form action="/thanhtoan/tang" method="GET">
-                                                    <button type="submit" class="btn" >Tặng quà</button>
+                                                   
                                                 <input type="text" style="display: none" name="u" value="<%=receiver.slug %>">
                                                 <% for (let i = 0; i < products.length; i++) {%> 
                                                     <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
@@ -155,14 +155,23 @@
                                                             <p class="wishlist-shop"><%=products[i].name %></p>
                                                         </a>
                                                             <div class="wishlist-product-infor">
-                                                                <p class="price"><%=products[i].price%></p>
+                                                                <div class="price-choice">
+                                                                    <p class="price"><%=products[i].price%></p>
+                                                                   <input type="checkbox" name="q" value="<%=products[i].slug %>">
+                                                                </div>
                                                                 <div>
-                                                                    <input type="checkbox" name="q" value="<%=products[i].slug %>">
+                                                                   
                                                                     <form action="/" method="POST">
-                                                                        <button class="add-button" name="slug" value="<%=products[i].slug %>">
-                                                                            <i class="fa fa-regular fa-bag-shopping"></i>
-                                                                                            Thêm vào giỏ hàng
-                                                                        </button>
+                                                                            <div class="btn-wish">
+                                                                                <button class="add-button" name="slug" value="<%=products[i].slug %>">
+                                                                                    <i class="fa fa-regular fa-bag-shopping"></i>
+                                                                                                    Thêm vào giỏ 
+                                                                                </button>
+                                                                                <button type="submit" class="btn-gift" >
+                                                                                    <i class="fa-solid fa-gift"></i>                               
+                                                                                        Tặng quà
+                                                                                </button>
+                                                                            </div>
                                                                     </form>
                                                                 </div>
                                                             </div>
@@ -173,138 +182,7 @@
                                                 </form>
                                             <% } %>  
                                             
-                                            <!-- <div class="wishlist-item">
-
-                                                <img class="wishlist-img" src="/img/DSC_0976.jpg" alt="">
-                                                <p class="wishlist-shop">An xuan</p>
-                                                     <div class="wishlist-product-infor">
-                                                        <p class="price">65.000</p>
-                                                        <button class="add-button">
-                                                             <i class="fa fa-regular fa-bag-shopping"></i>
-                                                                            Thêm vào giỏ hàng
-                                                        </button>
-                                                     </div>
-                                            </div>
-                                        </div>
-                                        <div class="grid__col-2">
-                                            <div class="wishlist-item">
-                                                <img class="wishlist-img" src="/img/DSC_0976.jpg" alt="">
-                                                <p class="wishlist-shop">An xuan</p>
-                                                     <div class="wishlist-product-infor">
-                                                        <p class="price">65.000</p>
-                                                        <button class="add-button">
-                                                             <i class="fa fa-regular fa-bag-shopping"></i>
-                                                                            Thêm vào giỏ hàng
-                                                        </button>
-                                                     </div>
-                                            </div>
-                                            <div class="wishlist-item">
-                                                <img class="wishlist-img" src="/img/DSC_0976.jpg" alt="">
-                                                <p class="wishlist-shop">An xuan</p>
-                                                     <div class="wishlist-product-infor">
-                                                        <p class="price">65.000</p>
-                                                        <button class="add-button">
-                                                             <i class="fa fa-regular fa-bag-shopping"></i>
-                                                                            Thêm vào giỏ hàng
-                                                        </button>
-                                                     </div>
-                                            </div>
-                                        </div>
-                                        <div class="grid__col-2">
-                                            <div class="wishlist-item">
-                                                <img class="wishlist-img" src="/img/DSC_0976.jpg" alt="">
-                                                <p class="wishlist-shop">An xuan</p>
-                                                     <div class="wishlist-product-infor">
-                                                        <p class="price">65.000</p>
-                                                        <button class="add-button">
-                                                             <i class="fa fa-regular fa-bag-shopping"></i>
-                                                                            Thêm vào giỏ hàng
-                                                        </button>
-                                                     </div>
-                                            </div>
-                                            <div class="wishlist-item">
-                                                <img class="wishlist-img" src="/img/DSC_0976.jpg" alt="">
-                                                <p class="wishlist-shop">An xuan</p>
-                                                     <div class="wishlist-product-infor">
-                                                        <p class="price">65.000</p>
-                                                        <button class="add-button">
-                                                             <i class="fa fa-regular fa-bag-shopping"></i>
-                                                                            Thêm vào giỏ hàng
-                                                        </button>
-                                                     </div>
-                                            </div>
-                                        </div>
-                                        <div class="grid__col-2">
-                                            <div class="wishlist-item">
-                                                <img class="wishlist-img" src="/img/DSC_0976.jpg" alt="">
-                                                <p class="wishlist-shop">An xuan</p>
-                                                     <div class="wishlist-product-infor">
-                                                        <p class="price">65.000</p>
-                                                        <button class="add-button">
-                                                             <i class="fa fa-regular fa-bag-shopping"></i>
-                                                                            Thêm vào giỏ hàng
-                                                        </button>
-                                                     </div>
-                                            </div>
-                                            <div class="wishlist-item">
-                                                <img class="wishlist-img" src="/img/DSC_0976.jpg" alt="">
-                                                <p class="wishlist-shop">An xuan</p>
-                                                     <div class="wishlist-product-infor">
-                                                        <p class="price">65.000</p>
-                                                        <button class="add-button">
-                                                             <i class="fa fa-regular fa-bag-shopping"></i>
-                                                                            Thêm vào giỏ hàng
-                                                        </button>
-                                                     </div>
-                                            </div>
-                                        </div>
-                                        <div class="grid__col-2">
-                                            <div class="wishlist-item">
-                                                <img class="wishlist-img" src="/img/DSC_0976.jpg" alt="">
-                                                <p class="wishlist-shop">An xuan</p>
-                                                     <div class="wishlist-product-infor">
-                                                        <p class="price">65.000</p>
-                                                        <button class="add-button">
-                                                             <i class="fa fa-regular fa-bag-shopping"></i>
-                                                                            Thêm vào giỏ hàng
-                                                        </button>
-                                                     </div>
-                                            </div>
-                                            <div class="wishlist-item">
-                                                <img class="wishlist-img" src="/img/DSC_0976.jpg" alt="">
-                                                <p class="wishlist-shop">An xuan</p>
-                                                     <div class="wishlist-product-infor">
-                                                        <p class="price">65.000</p>
-                                                        <button class="add-button">
-                                                             <i class="fa fa-regular fa-bag-shopping"></i>
-                                                                            Thêm vào giỏ hàng
-                                                        </button>
-                                                     </div>
-                                            </div>
-                                        </div>
-                                        <div class="grid__col-2">
-                                            <div class="wishlist-item">
-                                                <img class="wishlist-img" src="/img/DSC_0976.jpg" alt="">
-                                                <p class="wishlist-shop">An xuan</p>
-                                                     <div class="wishlist-product-infor">
-                                                        <p class="price">65.000</p>
-                                                        <button class="add-button">
-                                                             <i class="fa fa-regular fa-bag-shopping"></i>
-                                                                            Thêm vào giỏ hàng
-                                                        </button>
-                                                     </div>
-                                            </div>
-                                            <div class="wishlist-item">
-                                                <img class="wishlist-img" src="/img/DSC_0976.jpg" alt="">
-                                                <p class="wishlist-shop">An xuan</p>
-                                                     <div class="wishlist-product-infor">
-                                                        <p class="price">65.000</p>
-                                                        <button class="add-button">
-                                                             <i class="fa fa-regular fa-bag-shopping"></i>
-                                                                            Thêm vào giỏ hàng
-                                                        </button>
-                                                     </div>
-                                            </div> -->
+                                          
                                         </div>
                                     </div>
                                 </div>
