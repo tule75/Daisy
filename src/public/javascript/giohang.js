@@ -4,10 +4,10 @@ const btnAddfr = document.querySelector(".btn-follow-user")
 
 
 btnAddfr.onclick = function () {
-    if(btnAddfr.value === "Ket ban") {
-        btnAddfr.value = 'Da Ket ban'
+    if(btnAddfr.value === "Kết bạn") {
+        btnAddfr.value = 'Bạn bè'
     }
     else {
-        btnAddfr.value = "Ket ban"
+        btnAddfr.value = "Kết bạn"
     }
 }
