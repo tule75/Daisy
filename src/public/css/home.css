@@ -629,11 +629,6 @@
     height: 500px;
 }
 
-.addfr {
-    border: none;
-    background-color: transparent;
-
-}
 .modal-add {
     display: none;
     position: fixed;

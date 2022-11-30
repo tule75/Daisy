@@ -497,3 +497,8 @@ margin-bottom: 0;
 .link-color:hover  {
   color: black;
 }
+.addfr {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
