@@ -1,5 +1,6 @@
 const Product = require('../models/Product')
 const User = require('../models/Users')
+const GioHang = require('../models/GioHang')
 
 class SlugController {
     show(req, res, next) {
@@ -28,17 +29,43 @@ class SlugController {
                     Product.findOne({slug: req.params.slug})
                     .then(data => {
                         if (data) {
-                            res.render('product.html', {product: data, check: 1, user: customer, countCart: counts})
+                            User.findOne({slug: data.user_slug})
+                            .then(shop => {
+                                if (shop) {
+                                    console.log(1)
+                                    console.log(shop)
+                                    res.render('product.html', {product: data, check: 1, shop: shop, user: customer, countCart: counts})
+                                }
+                                else {
+                                    res.send('sai link')
+                                }
+                            })
+                            .catch(err => {
+                                res.send('loi')
+                            })
                         }
                         else {
                             res.send('không tồn tại')
                         }
                     })
                 } else {
-                    User.findOne({slug: req.params.slug})
+                    Product.findOne({slug: req.params.slug})
                     .then(data => {
                         if (data) {
-                            res.render('product.html', {product: data, check: 0, countCart: 0})
+                            User.findOne({slug: data.user_slug})
+                            .then(shop => {
+                                if (shop) {
+                                    console.log(1)
+                                    console.log(shop)
+                                    res.render('product.html', {product: data,shop: shop, check: 0, countCart: 0})
+                                }
+                                else {
+                                    res.send('sai link')
+                                }
+                            })
+                            .catch(err => {
+                                res.send('loi')
+                            })
                         }
                         else {
                             res.send('không tồn tại')
@@ -50,10 +77,23 @@ class SlugController {
                 res.send('loi')
             })
         } else {
-            User.findOne({slug: req.params.slug})
+            Product.findOne({slug: req.params.slug})
                 .then(data => {
                     if (data) {
-                        res.render('product.html', {product: data, check: 0, countCart: 0})
+                        User.findOne({slug: data.user_slug})
+                        .then(shop => {
+                            if (shop) {
+                                console.log(1)
+                                console.log(shop)
+                                res.render('product.html', {product: data,shop: shop, check: 0, countCart: 0})
+                            }
+                            else {
+                                res.send('sai link')
+                            }
+                        })
+                        .catch(err => {
+                            res.send('loi')
+                        })
                     }
                     else {
                         res.send('không tồn tại')
