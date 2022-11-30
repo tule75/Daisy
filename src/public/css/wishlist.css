@@ -432,3 +432,22 @@
 .footer-item__link-img:hover {
     color:#5BAB5A;
 }
+
+.empty-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    transform: translateX(230%);
+    
+}
+.fa-bug {
+    font-size: 80px;
+    color: #999;
+}
+.empty-note {
+    width: 200px;
+    font-size: 18px;
+    padding-top: 10px;
+}
