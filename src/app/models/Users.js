@@ -12,6 +12,8 @@ const user = new Schema({
     role: String,
     email: String,
     img: String,
+    lastname: String,
+    firstname: String,
     name: String,
     phone: String,
     province: String,
