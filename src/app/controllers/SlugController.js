@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken')
 
 class SlugController {
     show(req, res, next) {
+        let shop_products = []
         if (req.cookies.token){
             const token = req.cookies.token
             const id = jwt.verify(token, 'daisy')
@@ -33,9 +34,18 @@ class SlugController {
                             User.findOne({slug: data.user_slug})
                             .then(shop => {
                                 if (shop) {
-                                    console.log(1)
-                                    console.log(shop)
-                                    res.render('product.html', {product: data, check: 1, shop: shop, user: customer, countCart: counts})
+                                    Product.find({user_slug: shop.slug})
+                                    .then((products) => {
+                                        if (products) {
+                                            res.render('product.html', {product: data, check: 1, shop: shop, user: customer, countCart: counts, products: products});
+                                        }
+                                        else {
+                                            res.render('product.html', {product: data, check: 1, shop: shop, user: customer, countCart: counts, products: []});
+                                        }
+                                    })
+                                    .catch(err => {
+                                        res.send('loi')
+                                    })
                                 }
                                 else {
                                     res.send('sai link')
@@ -56,9 +66,18 @@ class SlugController {
                             User.findOne({slug: data.user_slug})
                             .then(shop => {
                                 if (shop) {
-                                    console.log(1)
-                                    console.log(shop)
-                                    res.render('product.html', {product: data,shop: shop, check: 0, countCart: 0})
+                                    Product.findOne({user_slug: shop.slug})
+                                    .then((products => {
+                                        if (products) {
+                                            res.render('product.html', {product: data,shop: shop, check: 0, countCart: 0, products: products});
+                                        }
+                                        else {
+                                            res.render('product.html', {product: data,shop: shop, check: 0, countCart: 0, products: []})
+                                        }
+                                    }))
+                                    .catch(err => {
+                                        res.send('loi')
+                                    })
                                 }
                                 else {
                                     res.send('sai link')
@@ -84,9 +103,18 @@ class SlugController {
                         User.findOne({slug: data.user_slug})
                         .then(shop => {
                             if (shop) {
-                                console.log(1)
-                                console.log(shop)
-                                res.render('product.html', {product: data,shop: shop, check: 0, countCart: 0})
+                                Product.findOne({user_slug: shop.slug})
+                                .then((products => {
+                                    if (products) {
+                                        res.render('product.html', {product: data,shop: shop, check: 0, countCart: 0, products: products});
+                                    }
+                                    else {
+                                        res.render('product.html', {product: data,shop: shop, check: 0, countCart: 0, products: []})
+                                    }
+                                }))
+                                .catch(err => {
+                                    res.send('loi')
+                                })
                             }
                             else {
                                 res.send('sai link')
