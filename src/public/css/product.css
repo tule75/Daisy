@@ -425,11 +425,12 @@
     left: 0;
 }
 .shop-img {
-    width: 150px;
+    width: 110px;
     height: 150px;
 }
 
 .shop-basic-infor {
+    padding-left: 30px;
     position: relative;
 }
 .shop-basic-infor::after {
@@ -720,4 +721,20 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 4px;
+}
+.btn-buy-add {
+
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn-buy-item {
+    margin-top: 3px;
+    padding: 7px 20px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+}
+.has--plus {
+    background-color: rgb(220, 60, 60);
+    color: #cce8d4;
+    border: none;
 }
