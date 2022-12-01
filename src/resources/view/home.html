@@ -210,40 +210,31 @@
                                  <h4 class="category__heading"> Danh mục </h4>
                                 </div>
                                  <li class="category-item category-item--active">
-                                         <a href="" class="category-item_link">
+                                       
                                              Tất cả đặc sản
-                                         </a>
+                                       
                                  </li>
                                  <li class="category-item">
-                                    <a href="" class="category-item_link">
+                                   
                                         ĐS Cao Bằng
-                                    </a>
+                                    
                                  </li>
                                  <li class="category-item">
-                                     <a href="" class="category-item_link">
-                                        ĐS Tây Nguyên
-                                     </a>
+                                    
+                                       Đồ khô
+                                     
                                   </li>
                                  <li class="category-item">
-                                     <a href="" class="category-item_link">
+                                    
                                         Giày dép
-                                     </a>
+                                     
                                  </li>
                                  <li class="category-item">
-                                     <a href="" class="category-item_link">
-                                         Sức khoẻ
-                                     </a>
-                                 </li>
-                                 <li class="category-item">
-                                     <a href="" class="category-item_link">
+                                    
                                          Trà
-                                     </a>
+                                     
                                  </li>
-                                 <li class="category-item">
-                                     <a href="" class="category-item_link">
-                                        Đồ khô
-                                     </a>
-                                 </li>
+                                 
                             </ul>
                             
                          </nav>
@@ -253,7 +244,7 @@
                      </div>
                      <div id="shop" class="grid__col-10">
                         <div  class="home-product">
-                            <div class="grid__row">
+                            <div class="grid__row grid__row-item active">
                             <% for (var i = 0; i < products.length; i++) { %> 
                                 <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
                                                     <% const y = x.replace("/view?usp=share_link","",40)%>
@@ -300,6 +291,54 @@
                         </a>
                 <% } %>  
                          
+                            </div>
+                            <div class="grid__row grid__row-item">
+                                <% for (var i = 0; i < products.length; i++) { %> 
+                                    <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                                        <% const y = x.replace("/view?usp=share_link","",40)%>
+                                        
+                                    <div class="grid__col-2-4">
+                                        <a href="/<%-products[i].slug %>" class="addhref">
+                                        <div class="home-product__item">
+                                             <img class="home-product__item-img" src="<%-y%>" alt="">
+                                            <button class="wishlist-btn"><i class="fa-solid fa-gift"></i></button>
+                                             
+                                            <h4 class="home-product__item-name"><%=products[i].name%></h4>
+                                             <div class="home-product__item-price"> 
+                                                <span class="popular-price"><%=products[i].price%></span>
+                                                <span class="home-product__item-quatity">1,1k Đã bán</span>
+                                             </div>
+                                            
+                                             <div class="home-product__item-orgigin">
+    
+                                                    <span class="home-product__item-evaluate">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </span>
+    
+                                                        <span class="home-product__item-ship"><i class="fa-regular fa-truck"></i></span>
+                                                </div>
+    
+    
+                                            <div class="btn-buy">
+                                                <form action="/" method="POST">
+                                                <button class="btn-buy-item add-gh" name="slug" value="<%-products[i].slug %>">
+                                                    <i class="fa fa-regular fa-bag-shopping"></i>
+                                                </button>
+                                                </form> 
+                                                <a href="/thanhtoan/<%-products[i].slug %> ">
+                                                    <button class="btn-buy-item has--plus">
+                                                    Buy Now!
+                                                </button></a>
+                                            </div>
+                                            
+                                         </div>
+                                     </div> 
+                            </a>
+                    <% } %>  
+                             
                             </div>
                         </div>
                     </div>
@@ -538,6 +577,18 @@
             modaladd.classList.remove("open")
         }
 
+        const categoryActives = $$(".category-item")
+        const gridShows = $$(".grid__row-item")
+
+        categoryActives.forEach((categoryActive, item) => {
+            const gridItem = gridShows[index]
+
+            categoryActive.onclick = function () {
+                $(".grid__row-item.active").classList.remove("active")
+
+                gridItem.classList.add(".active")
+            }
+        })
 
     </script>
     
