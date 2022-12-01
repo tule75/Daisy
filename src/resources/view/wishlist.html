@@ -132,9 +132,10 @@
                 <h4 class="wishlist-header">Wishlist</h4>
                 
                 <div class="grid">
+                    <form action="/thanhtoan/tang" method="get">
                     <div class="buttons">
-                        <button class="choose"><i class="fa-solid fa-pen-to-square"></i> Chon san pham</button>
-                        <button class="buy"><i class="fa-solid fa-check"></i>Mua</button>
+                        <button class="choose" type="button"><i class="fa-solid fa-pen-to-square"></i> Chon san pham</button>
+                        <button class="buy" name="u" value="<%=receiver.slug %>"><i class="fa-solid fa-check"></i>Mua</button>
                     </div>
 
                     <div class="grid__row">
@@ -158,18 +159,22 @@
                                                     <input class="check" type="checkbox" name="q" value="<%=products[i].slug %>">
                                                 </div>
                                             
-                                                <form action="/" method="POST">
+                                                
                                                 <div class="btn-wish">
-                                                    <button class="add-button" name="slug" value="<%=products[i].slug %>">
-                                                        <i class="fa fa-regular fa-bag-shopping"></i>
-                                                                        Thêm vào giỏ 
-                                                    </button>
-                                                    <button type="submit" class="btn-gift" >
-                                                        <i class="fa-solid fa-gift"></i>                               
-                                                            Tặng quà
-                                                    </button>
-                                                    </div>
-                                                </form>
+                                                    <form action="/" method="POST">
+                                                        <button class="add-button" name="slug" value="<%=products[i].slug %>">
+                                                            <i class="fa fa-regular fa-bag-shopping"></i>
+                                                                            Thêm vào giỏ 
+                                                        </button>
+                                                    </form>
+                                                    <form action="/thanhtoan/tang" method="get">
+                                                        <button type="submit" class="btn-gift" name="u" value="<%=receiver.slug %>">
+                                                            <input type="text" name="q" value="<%=products[i].slug%>" style="display: none;">
+                                                            <i class="fa-solid fa-gift"></i>                               
+                                                                Tặng quà
+                                                        </button>
+                                                    </form>
+                                                </div>
                                             </div>
                                        </div>
                                      </a>
@@ -182,7 +187,9 @@
                            </div>
                        </div>
                     </div>
-                   </div>
+                </form>
+                </div>
+                
             </div>
         </div>
 
