@@ -9,13 +9,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Itim|Lobster|Montserrat:500|Noto+Serif|Nunito|Patrick+Hand|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab|Saira" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/giohang.css">
     <link rel="stylesheet" href="/css/base.css">
     <!-- <link rel="stylesheet" href="/assets/css/main.css">  -->
     <link rel="stylesheet" href="/css/giohang-responsive.css">
 </head>
+
 <body>
     <div class="cart-shopping">
         <div class="header">
@@ -48,8 +49,9 @@
                 </button>
             </div>
 
-             <div class="header-user">
+            <div class="header-user">
                 <ul class="user-list">
+
                     <a href="/giohang" class="has-cart">
                          <li class="user-item ">
                          <!-- <i class="fa fa-regular fa-bell "></i><i class="fa-regular fa-cart-shopping-fast"></i> -->
@@ -57,9 +59,12 @@
                             <div class="cartAmount"><%=countCart%> </div>
                          </li>
                     </a>
-                    
-                    
+        
                      <% if (check != 0) {%> 
+                        <li class="user-item has--bar">
+                            <i class="fa-solid fa-bars"></i>
+                        </li>
+
                         <li class="user-item has--noti ">
                             <i class="fa fa-regular fa-bell "></i>
                             <ul class="cart-announcement">
@@ -85,10 +90,22 @@
                         <button class="user-button"><a href="/login" class="user-button">Sign in</a></button>
                      <% } %> 
                 </ul>
-             </div>
-         </div>
-         <form method="GET" class="thanhtoantien" action="/thanhtoan/cart">
-        <div class="cart-body">
+            </div>
+        </div>
+
+        <ul class="header-nav">
+            <li class="header-nav__item">Thông báo</li>
+            <li class="header-nav__item">Giỏ hàng</li>
+            <li class="header-nav__item">Tài khoản của bạn</li>
+            <li class="header-nav__item">Đơn hàng của bạn</li>
+            <li class="header-nav__item">Kênh người bán</li>
+            <li class="header-nav__item">Đăng xuất</li>
+        </ul>
+
+
+        <form method="GET" class="thanhtoantien" action="/thanhtoan/cart">
+
+            <div class="cart-body">
                 <h4 class="car-body-heading">
                     Giỏ hàng của bạn
                 </h4>
@@ -107,44 +124,42 @@
                        Xoá
                     </li>
                 </ul>
+
                 <h2 style="display: none;" id="userslug"><%=user.slug %></h2>
                 <% for (var i = 0; i < products.length; i++) { %> 
                     <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
                     <% const y = x.replace("/view?usp=share_link","",40)%>
                 <div id="xoa<%=i %>">
-                <div class="cart-product-wrap">
-                   <div class="cart-product-infor">
-                        <input class="checkbox" type="checkbox" name="q<%=i %>" value="<%-products[i].slug %>">
+                    <div class="cart-product-wrap">
+                        <div class="cart-product-infor">
+                            <input class="checkbox" type="checkbox" name="q<%=i %>" value="<%-products[i].slug %>">
                             <img class="cart-product-img"  src="<%-y%>" alt="">
-                           <div class="product-content">
-                            <h5 class="cart-product-name">
-                                <%=products[i].name%>
-                            </h5>
-                            <p class="cart-product-price"><%=products[i].price%></p>
-                           </div>
-                   </div>
-                   
-
-                    <div class="cart-product-quantity first-child">
-                        <button  class="btn quantity-minus" type="button" value="<%=i %>">
-                            <i class="fa-solid fa-minus"></i>
-                        </button>
-                            
+                            <div class="product-content">
+                                <h5 class="cart-product-name">
+                                    <%=products[i].name%>
+                                </h5>
+                                <p class="cart-product-price"><%=products[i].price%></p>
+                            </div>
+                        </div>
+                    
+                        <div class="cart-product-quantity first-child">
+                            <button  class="btn quantity-minus" type="button" value="<%=i %>">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+        
                             <h1 style="display: none;" id="slug<%=i %>"><%=products[i].slug %></h1>
                             <h4 class="quantity-number" id="count<%=i %>"><%=products[i].count%></h4>
+
                             <button class="btn quantity-add" type="button" value="<%=i %>">
-                            <i class="fa-solid fa-plus"></i>
-                        </button>
-
-                    </div>
-                    
-
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                        
                         <p class="total"> <%=products[i].price * products[i].count%></p>
                         <button class="btn product-trash" value="<%=i %>">
                             <i class="fa-solid fa-trash delete"></i>
                         </button>
-               
-                </div>
+                    </div>
                 </div>
                 <% } %>  
               
@@ -156,13 +171,12 @@
                         <li class="thanhtoan-item">
                             0
                         </li>
-    
                     </ul>
                     <div class="button-thanhtoan">
                         <button class=" pay" type="submit">Thanh Toán</button>
                     </div>
                 </div>
-        </div>
+            </div>
         </form>
 
          <!-- footer -->
@@ -417,6 +431,57 @@
                 })
             })
         </script>
+
+<script>
+    const headerBar = document.querySelector('.has--bar')
+    const headerNav = document.querySelector('.header-nav')
+    const closeNav = document.querySelector('.app')
+    const $ = document.querySelector.bind(document)
+
+    function showHeaderNav() {
+        headerNav.classList.add('open')
+    }
+
+    function hideHeaderNav() {
+        headerNav.classList.remove('open')
+    }
+
+    headerBar.onclick = function() {{
+        if($('.header-nav.open')) {
+            headerNav.classList.remove('open')
+        }
+        else {
+            headerNav.classList.add('open')
+        }
+    }}
+
+    // headerBar.addEventListener('click', showHeaderNav)
+
+    closeNav.addEventListener('click', hideHeaderNav)
+
+     headerNav.addEventListener('click', function(event) {
+        event.stopPropagation()
+    })
+
+    headerBar.addEventListener('click', function(event) {
+        event.stopPropagation()
+    })
+
+
+    const btnAddfr = $(".addfr")
+    const closeAddfr = $(".icon-close-add")
+    const modaladd = $(".modal-add")
+
+    btnAddfr.onclick = function() {
+        modaladd.classList.add("open")
+    }
+
+    closeAddfr.onclick = function () {
+        modaladd.classList.remove("open")
+    }
+
+
+</script>
 
 
     </div>
