@@ -327,6 +327,9 @@
     padding-bottom: 2px;
     margin-bottom: 0;
     color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .wishlist-product-infor{
     padding-left: 10px;
