@@ -101,8 +101,13 @@ class ThanhToanController {
             // var products_slug = req.query.p
             if (req.query) {
                 let x = req.query.q
-                for (let i = 0; i < x.length; i++) {
-                    products_slug.push(x[i])
+                if (Array.isArray(x)) {
+                    for (let i = 0; i < x.length; i++) {
+                        products_slug.push(x[i])
+                    }
+                }
+                else {
+                    products_slug.push(x)
                 }
             }
 
