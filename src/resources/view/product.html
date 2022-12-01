@@ -147,7 +147,6 @@
                         <div class="phanloai-seperate">
                             <button class="btn-phanloai">Loại 1</button>
                             <button class="btn-phanloai">Loại 2</button>
-    
                         </div>
                     </div>
                     <div class="buy-btn">
@@ -166,7 +165,7 @@
 
             <div class="shop-show">
                 <div class="shop-introduce">
-                    <img src="https://cagaileoanxuan.vn/wp-content/uploads/2020/08/Logo-cagaileo.png" alt="" class="shop-img">
+                    <img src="/img/<%-shop.img%>" alt="" class="shop-img">
                     <div class="shop-basic-infor">
 
                         <h4 class="shop-name"><%=shop.name%></h4>
@@ -205,12 +204,12 @@
                     </div>
                     <div class="product-origin-show">
                         <p class="show-item">Kho hàng :
-                            <span class="item-content"> 49</span>
+                            <span class="item-content">  <%=shop.count%></span>
                         </p>
                     </div>
                     <div class="product-origin-show">
                         <p class="show-item">Gửi từ :
-                            <span class="item-content">Cao Bằng</span>
+                            <span class="item-content"> <%=shop.address%>, <%=shop.award%>, <%=shop.district%>,  <%=shop.province%></span>
                         </p>
                     </div>
                 </div>
@@ -218,7 +217,7 @@
                     <h4 class="description-title">Mô tả sản phẩm</h4>
                     <p class="desription-list">
                         <%=product.guide %> <br>
-                        <%=product. introduction %><br>
+                        <%=product.introduction %><br>
                         <%=product.presevartion%> <br>
                         <%=product.effect%> <br>
                         <%=product.proceduce%> <br>

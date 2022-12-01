@@ -130,70 +130,53 @@
 
             <div class="body-wishlist">
                 <h4 class="wishlist-header">Wishlist</h4>
-
-                
-                    <div class="grid">
-                        <div class="grid__row">
-                         
-                            <div class="grid__col-12">
-                                <div class="wishlist-wrap">
-                                    <div class="grid__row">
-                                        <div class="grid__col-2">
-
-                                            <% if (products[0] === undefined) {%>
-                                                <div class="empty-cart">
-                                                    <i class="fa-solid fa-bug"></i>
-                                                    <h5 class="empty-note">Chưa có sản phẩm nào!</h5>
-                                                </div>
-                                            <% } else {%> 
-                                                <form action="/thanhtoan/tang" method="GET">
-                                                   
-                                                <input type="text" style="display: none" name="u" value="<%=receiver.slug %>">
-                                                <% for (let i = 0; i < products.length; i++) {%> 
-                                                    <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
-                                                    <% const y = x.replace("/view?usp=share_link","",40)%>
-                                                    <div class="wishlist-item">
-                                                        <a href="/<%-products[i].slug %>" >
-                                                            <img class="wishlist-img" src="<%-y %>" alt="">
-                                                            <p class="wishlist-shop"><%=products[i].name %></p>
-                                                        </a>
-                                                            <div class="wishlist-product-infor">
-                                                                <div class="price-choice">
-                                                                    <p class="price"><%=products[i].price%></p>
-                                                                   <input type="checkbox" name="q" value="<%=products[i].slug %>">
-                                                                </div>
-                                                                <div>
-                                                                   
-                                                                    <form action="/" method="POST">
-                                                                            <div class="btn-wish">
-                                                                                <button class="add-button" name="slug" value="<%=products[i].slug %>">
-                                                                                    <i class="fa fa-regular fa-bag-shopping"></i>
-                                                                                                    Thêm vào giỏ 
-                                                                                </button>
-                                                                                <button type="submit" class="btn-gift" >
-                                                                                    <i class="fa-solid fa-gift"></i>                               
-                                                                                        Tặng quà
-                                                                                </button>
-                                                                            </div>
-                                                                    </form>
-                                                                </div>
-                                                            </div>
-                                                    </div>
-                                                    <% } %>
-                                                    
-                                                    
-                                                </form>
-                                            <% } %>  
+                <div class="grid">
+                    <div class="grid__row">
+                        <!-- chia theo bieu do 12 cot -->
+                        <div id="shop" class="grid__col-12">
+                           <div  class="wishlist-wrap">
+                               <div class="grid__row">
+                                    <% for (var i = 0; i < products.length; i++) { %> 
+                                        <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                            <% const y = x.replace("/view?usp=share_link","",40)%>
                                             
-                                          
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                   <div class="grid__col-2-4">
+                                       <a href="/<%-products[i].slug %>" class="addhref">
+                                        <div class="wishlist-item">
+                                            <img class="wishlist-img" src="<%-y %>" alt="">
+                                            <p class="wishlist-shop"><%=products[i].name %></p>
+                                            
+                                            <div class="wishlist-product-infor">
+                                                <div class="price-choice">
+                                                    <p class="price"><%=products[i].price%></p>
+                                                    <input type="checkbox" name="q" value="<%=products[i].slug %>">
+                                                </div>
+                                            
+                                                <form action="/" method="POST">
+                                                <div class="btn-wish">
+                                                    <button class="add-button" name="slug" value="<%=products[i].slug %>">
+                                                        <i class="fa fa-regular fa-bag-shopping"></i>
+                                                                        Thêm vào giỏ 
+                                                    </button>
+                                                    <button type="submit" class="btn-gift" >
+                                                        <i class="fa-solid fa-gift"></i>                               
+                                                            Tặng quà
+                                                    </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                       </div>
+                                     </a>
+                                 </div> 
+                                 <% } %>  
                  
-                
+                            
+                               </div>
+                              
+                           </div>
+                       </div>
+                    </div>
+                   </div>
             </div>
         </div>
 
