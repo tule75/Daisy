@@ -446,7 +446,7 @@
     
 }
 
-.category-item--active .category-item_link::before {
+.category-item--active .category-item::before {
     content: " ";
     position: absolute;
     border: 4px solid;
@@ -457,8 +457,14 @@
 
     
 }
+.grid__row-item {
+    display: none;
+}
+.grid__row-item.active {
+    display: flex;
+}
 
-.category-item_link {
+.category-item {
     text-decoration: none;
     color: black; 
     cursor: pointer;
@@ -468,7 +474,7 @@
     transition: right linear .1s;
  
 }
-.category-item_link:hover {
+.category-item:hover {
     right: -15px;
  }
 

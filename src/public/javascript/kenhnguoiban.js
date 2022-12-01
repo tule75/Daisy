@@ -160,3 +160,19 @@ headerTitles_2.forEach((headerTitle_2,index) => {
         }
     })
     
+
+    // them san pham 
+    const clickAdd = $(".add-product")
+    const open = $(".modal-product")
+    const Clickclose = $(".close")
+    const submit = $(".submit")
+    clickAdd.onclick = function () {
+       open.classList.add("open")
+    }
+    Clickclose.onclick = function () {
+        open.classList.remove("open")
+    }
+    submit.onclick = function() {
+        alert("Bạn đã thêm một sản phẩm!")
+        open.classList.remove("open")
+    }
