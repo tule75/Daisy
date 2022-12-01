@@ -110,20 +110,22 @@
 
             <div class="slide-container">
                 <div class="slide-show">
+                    <% for (let i = 0; i < shops.length; i++) {%> 
                     <div class="slide-show-wrap">
                         <div class="slide-show-pic">
-                            <img class="Anxuan" src="https://cagaileoanxuan.vn/wp-content/uploads/2020/08/Logo-cagaileo.png" alt="">
+                            <img class="Anxuan" src="/img/<%-shops[i].img%>" alt="">
+                        </div>
+                        <!-- <div class="slide-show-pic">
+                            <img class="Anxuan" src="/img/<%-shops[i].img%>" alt="">
                         </div>
                         <div class="slide-show-pic">
                             <img class="Anxuan" src="https://cagaileoanxuan.vn/wp-content/uploads/2020/08/Logo-cagaileo.png" alt="">
                         </div>
                         <div class="slide-show-pic">
                             <img class="Anxuan" src="https://cagaileoanxuan.vn/wp-content/uploads/2020/08/Logo-cagaileo.png" alt="">
-                        </div>
-                        <div class="slide-show-pic">
-                            <img class="Anxuan" src="https://cagaileoanxuan.vn/wp-content/uploads/2020/08/Logo-cagaileo.png" alt="">
-                        </div>
+                        </div> -->
                     </div>
+                    <% } %> 
                 </div>
             </div>
 
