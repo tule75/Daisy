@@ -1,6 +1,7 @@
 const User = require('../models/Users')
 const WishList = require('../models/WishList')
 const Product = require('../models/Product')
+const GioHang = require('../models/GioHang')
 var jwt = require('jsonwebtoken')
 
 class UserController {
@@ -19,6 +20,18 @@ class UserController {
                     .then(wl => {
                         //sản phẩm trong giỏ
                         var counts = 0
+                        GioHang.find({user_slug: data.slug})
+                        .then(dataa => {
+                            if (dataa) {
+                                for (var i = 0; i < dataa.length; i++) {
+                                    counts += dataa[i].count;
+                                }
+                            }
+                            else {
+                                counts = counts;
+                            }
+                        })
+                        .catch()
                         var i = 0
 
                         function resolveAfter2Seconds(x) {
@@ -32,7 +45,6 @@ class UserController {
                         var promise = new Promise( function(resolve, reject) {
                             let pr = [];
                             wl.forEach((element, i) => {
-                                counts += element.count
                                 Product.findOne({slug: element.product_slug})   
                                 .then((product) => {
                                     if (product != null){

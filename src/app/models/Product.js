@@ -16,6 +16,7 @@ const Product = new Schema({
     guide: String,
     presevartion: String,
     user_slug: String,
+    cer: String,
     countC: Number,
     slug: { type: String, slug: "name", unique: true},
     user_id: String,
