@@ -1,6 +1,7 @@
 
 
 const $ = document.querySelector.bind(document)
+const $$ = document.querySelectorAll.bind(document)
 const btnAddfr = document.querySelector(".btn-follow-user")
 // const value = document.querySelector(".btn-follow-user").value
 
@@ -17,11 +18,15 @@ btnAddfr.onclick = function () {
 
 const choose = $(".choose")
 const buy = $(".buy")
-const check = $(".check")
+const checks = $$(".check")
 
     choose.onclick = function () {
-        check.classList.add("open")
-        check.onclick = function () {
-            buy.classList.add("open")
-        }
+       
+        checks.forEach((check) => {
+            check.classList.add("open")
+            check.onclick = function () {
+                buy.classList.add("open")
+            }
+        })
+        
     }
