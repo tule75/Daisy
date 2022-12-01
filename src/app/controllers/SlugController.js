@@ -1,6 +1,7 @@
 const Product = require('../models/Product')
 const User = require('../models/Users')
 const GioHang = require('../models/GioHang')
+const jwt = require('jsonwebtoken')
 
 class SlugController {
     show(req, res, next) {

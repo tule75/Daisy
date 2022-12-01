@@ -262,8 +262,9 @@
                                     <a href="/<%-products[i].slug %>" class="addhref">
                                     <div class="home-product__item">
                                          <img class="home-product__item-img" src="<%-y%>" alt="">
-                                     <button class="wishlist-btn"><i class="fa-solid fa-gift"></i></button>
-                                         
+                                    <form action="/wishlist/add" method="post" >
+                                        <button class="wishlist-btn" name="slug" value="<%-products[i].slug %>"><i class="fa-solid fa-gift"></i></button>
+                                    </form>
                                         <h4 class="home-product__item-name"><%=products[i].name%></h4>
                                          <div class="home-product__item-price"> 
                                             <span class="popular-price"><%=products[i].price%></span>
@@ -295,9 +296,10 @@
                                             </button></a>
                                         </div>
                                         
-                                     </div>
-                                 </div> 
-                        </a>
+                                    </div>
+                                </a>
+                            </div> 
+                        
                 <% } %>  
                          
                             </div>

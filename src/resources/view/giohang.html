@@ -141,7 +141,7 @@
                     
 
                         <p class="total"> <%=products[i].price * products[i].count%></p>
-                        <button class="btn product-trash" value="<%=i %>">
+                        <button class="btn product-trash" type="button" value="<%=i %>">
                             <i class="fa-solid fa-trash delete"></i>
                         </button>
                
@@ -355,7 +355,7 @@
                     let x = $(this).val();
                     let slug = $('#slug' + s).text();
                     $.ajax({
-                        url: "/giohang/plus",
+                        url: "/giohang/delete",
                         type: 'POST',
                         data: {'ps': slug,
                         'us': $('#userslug').text(),},
