@@ -450,3 +450,32 @@
     font-size: 18px;
     padding-top: 10px;
 }
+
+.buttons {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.choose {
+    padding: 8px 13px;
+    color: white;
+    background-color: rgb(51, 126, 64);
+    border: none;
+}
+.buy {
+    margin-left: 15px;
+    padding: 8px 13px;
+    color: white;
+    background-color: rgb(51, 126, 64);
+    border: none;
+    display: none;
+}
+.buy.open {
+    display: block;
+}
+.check {
+    display: none;
+}
+.check.open {
+    display: block;
+}

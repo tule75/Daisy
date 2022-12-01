@@ -130,7 +130,13 @@
 
             <div class="body-wishlist">
                 <h4 class="wishlist-header">Wishlist</h4>
+                
                 <div class="grid">
+                    <div class="buttons">
+                        <button class="choose"><i class="fa-solid fa-pen-to-square"></i> Chon san pham</button>
+                        <button class="buy"><i class="fa-solid fa-check"></i>Mua</button>
+                    </div>
+
                     <div class="grid__row">
                         <!-- chia theo bieu do 12 cot -->
                         <div id="shop" class="grid__col-12">
@@ -149,7 +155,7 @@
                                             <div class="wishlist-product-infor">
                                                 <div class="price-choice">
                                                     <p class="price"><%=products[i].price%></p>
-                                                    <input type="checkbox" name="q" value="<%=products[i].slug %>">
+                                                    <input class="check" type="checkbox" name="q" value="<%=products[i].slug %>">
                                                 </div>
                                             
                                                 <form action="/" method="POST">
@@ -334,7 +340,7 @@
 
         </div>
     </div>
-    <script src="/javascript/giohang.js"></script>
+    <script src="/javascript/wishlist.js"></script>
     
 </body>
 </html>
