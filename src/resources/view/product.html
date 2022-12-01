@@ -86,7 +86,7 @@
         <div class="body">
             <div class="product-show">
                 <div class="product-show-img">
-                    <!-- <img class="img-item has-item" src="/img/DSC_0976.jpg" alt="">
+                    <img class="img-item has-item" src="/img/DSC_0976.jpg" alt="">
                     <ul class="img-list">
                         <li class="img-list-item">
                              <img class="img-item" src="/img/DSC_0976.jpg" alt="">
@@ -97,10 +97,10 @@
                        <li class="img-list-item">
                         <img class="img-item" src="/img/DSC_0976.jpg" alt="">
                     </li>
-                    </ul> -->
-                    <%const x = product.img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                    </ul>
+                    <!-- <%const x = product.img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
                     <% const y = x.replace("/view?usp=share_link","",40)%>
-                    <img src="<%-y %>" alt="" class="img-item has-item" >
+                    <img src="<%-y %>" alt="" class="img-item has-item" > -->
                 </div>
                 <div class="product-information">
                     <h4 class="product-name"><%=product.name%></h4>
@@ -290,131 +290,63 @@
             <div class=".grid__full-width">
                 <div class="grid__row ">
                     <!-- chia theo bieu do 12 cot -->
-                    <div id="shop" class="grid__col-10">
+                    <div id="shop" class="grid__col-12">
                        <div  class="home-product">
                         <h4 class="product-title">Sản phẩm cùng hãng</h4>
-                           <div class="grid__row">
-                            <div class="grid__col-2">
-                                <div class="home-product__item">
-                                     <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
-                                     <div class="wishlist-btn"><i class="fa-solid fa-gift"></i></div>
-                                     <h4 class="home-product__item-name">Bun Dong</h4>
-                                     <div class="home-product__item-price"> 
-                                        <span class="popular-price">65.000</span>
-                                        <span class="home-product__item-quatity">1,1k Đã bán</span>
-                                     </div>
-                                     <button class="add-btn-product" >
-                                        <i class="fa fa-regular fa-bag-shopping"></i>
-                                        Thêm vào giỏ
-                                    </button>
-                                 
-                                  
-                                 </div>
-                             </div> 
-                                <div class="grid__col-2">
+                        <div class="grid__row grid__row-item active">
+                            <% for (var i = 0; i < products.length; i++) { %> 
+                                <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                                    <% const y = x.replace("/view?usp=share_link","",40)%>
+                                    
+                                <div class="grid__col-2-4">
+                                    <a href="/<%-products[i].slug %>" class="addhref">
                                     <div class="home-product__item">
-                                         <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
-                                         <button class="wishlist-btn"><i class="fa-solid fa-gift"></i></button>
-                                         <h4 class="home-product__item-name">Bun Dong</h4>
+                                         <img class="home-product__item-img" src="<%-y%>" alt="">
+
+                                    <form action="/wishlist/add" method="post" >
+                                        <button class="wishlist-btn" name="slug" value="<%-products[i].slug %>"><i class="fa-solid fa-gift"></i></button>
+                                    </form>
+
+                                        <h4 class="home-product__item-name"><%=products[i].name%></h4>
                                          <div class="home-product__item-price"> 
-                                            <span class="popular-price">65.000</span>
+                                            <span class="popular-price"><%=products[i].price%></span>
                                             <span class="home-product__item-quatity">1,1k Đã bán</span>
                                          </div>
-                                     
-                                         <button class="add-btn-product" >
-                                            <i class="fa fa-regular fa-bag-shopping"></i>
-                                            Thêm vào giỏ
-                                        </button>
-                                     </div>
-                                 </div> 
-                                 <div class="grid__col-2">
-                                    <div class="home-product__item">
-                                         <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
-                                         <button class="wishlist-btn"><i class="fa-solid fa-gift"></i></button>
-                                         <h4 class="home-product__item-name">Bun Dong</h4>
-                                         <div class="home-product__item-price"> 
-                                            <span class="popular-price">65.000</span>
-                                            <span class="home-product__item-quatity">1,1k Đã bán</span>
-                                         </div>
-                                         <button class="add-btn-product" >
-                                            <i class="fa fa-regular fa-bag-shopping"></i>
-                                            Thêm vào giỏ
-                                        </button>
-                                      
-                                     </div>
-                                 </div> 
-                                 <div class="grid__col-2">
-                                    <div class="home-product__item">
-                                         <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
-                                         <div class="wishlist-btn"><i class="fa-solid fa-gift"></i></div>
-                                         
-                                         <h4 class="home-product__item-name">Bun Dong</h4>
-                                         <div class="home-product__item-price"> 
-                                            <span class="popular-price">65.000</span>
-                                            <span class="home-product__item-quatity">1,1k Đã bán</span>
-                                         </div>
-                                         <button class="add-btn-product" >
-                                            <i class="fa fa-regular fa-bag-shopping"></i>
-                                            Thêm vào giỏ
-                                        </button>
-                                      
-                                     </div>
-                                 </div> 
-                                 <div class="grid__col-2">
-                                    <div class="home-product__item">
-                                         <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
-                                         <div class="wishlist-btn"><i class="fa-solid fa-gift"></i></div>
-                                         
-                                         <h4 class="home-product__item-name">Bun Dong</h4>
-                                         <div class="home-product__item-price"> 
-                                            <span class="popular-price">65.000</span>
-                                            <span class="home-product__item-quatity">1,1k Đã bán</span>
-                                         </div>
-                                         <button class="add-btn-product" >
-                                            <i class="fa fa-regular fa-bag-shopping"></i>
-                                            Thêm vào giỏ
-                                        </button>
-                                      
-                                     </div>
-                                 </div> 
-                              
-                                 <div class="grid__col-2">
-                                    <div class="home-product__item">
-                                         <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
-                                         <div class="wishlist-btn"><i class="fa-solid fa-gift"></i></div>
-                                         
-                                         <h4 class="home-product__item-name">Bun Dong</h4>
-                                         <div class="home-product__item-price"> 
-                                            <span class="popular-price">65.000</span>
-                                            <span class="home-product__item-quatity">1,1k Đã bán</span>
-                                         </div>
-                                         <button class="add-btn-product" >
-                                            <i class="fa fa-regular fa-bag-shopping"></i>
-                                            Thêm vào giỏ
-                                        </button>
-                                      
-                                     </div>
-                                 </div> 
-                                 <div class="grid__col-2">
-                                    <div class="home-product__item">
-                                         <img class="home-product__item-img" src="/img/DSC_0976.jpg" alt="">
-                                         <div class="wishlist-btn"><i class="fa-solid fa-gift"></i></div>
-                                         
-                                         <h4 class="home-product__item-name">Bun Dong</h4>
-                                         <div class="home-product__item-price"> 
-                                            <span class="popular-price">65.000</span>
-                                            <span class="home-product__item-quatity">1,1k Đã bán</span>
-                                         </div>
-                                     
-                                         <button class="add-btn-product" >
-                                            <i class="fa fa-regular fa-bag-shopping"></i>
-                                            Thêm vào giỏ
-                                        </button>
-                                     </div>
-                                 </div> 
-                              
-                               
-                           </div>
+                                        
+                                         <div class="home-product__item-orgigin">
+
+                                                <span class="home-product__item-evaluate">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </span>
+
+                                                    <span class="home-product__item-ship"><i class="fa-regular fa-truck"></i></span>
+                                            </div>
+
+
+                                        <div class="btn-buy-add">
+                                            <form action="/" method="POST">
+                                            <button class="btn-buy-item add-gh" name="slug" value="<%-products[i].slug %>">
+                                                <i class="fa fa-regular fa-bag-shopping"></i>
+                                            </button>
+                                            </form> 
+                                            <a href="/thanhtoan/<%-products[i].slug %> ">
+                                                <button class="btn-buy-item has--plus">
+                                                 Mua Ngay!
+                                            </button>
+                                        </a>
+                                        </div>
+                                        
+                                    </div>
+                                </a>
+                            </div> 
+                        
+                <% } %>  
+                         
+                            </div>
+                    
                        </div>
                    </div>
                 </div>
