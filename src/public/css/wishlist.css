@@ -299,25 +299,24 @@
 }
 .wishlist-wrap {
     padding-left: 0;
-    
+   
 }
 .wishlist-item {
     border: 1px solid rgb(186, 182, 182);
-    position: relative;
     height: auto;
     margin-top: 15px;
     cursor: pointer;
     transition: top 0.2s ease ;
     top: 0;
     padding-bottom: 10px;
-
 }
 .wishlist-item:hover {
     top: -10px;
 }
+
 .wishlist-img{
-   max-width: 190px;
-    max-height: 180px;
+    width: 100%;
+    height: 135px;
     z-index: 0;
 }
 .wishlist-shop {
