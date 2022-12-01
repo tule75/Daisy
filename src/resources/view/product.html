@@ -86,7 +86,7 @@
         <div class="body">
             <div class="product-show">
                 <div class="product-show-img">
-                    <img class="img-item has-item" src="/img/DSC_0976.jpg" alt="">
+                    <!-- <img class="img-item has-item" src="/img/DSC_0976.jpg" alt="">
                     <ul class="img-list">
                         <li class="img-list-item">
                              <img class="img-item" src="/img/DSC_0976.jpg" alt="">
@@ -97,7 +97,10 @@
                        <li class="img-list-item">
                         <img class="img-item" src="/img/DSC_0976.jpg" alt="">
                     </li>
-                    </ul>
+                    </ul> -->
+                    <%const x = product.img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                    <% const y = x.replace("/view?usp=share_link","",40)%>
+                    <img src="<%-y %>" alt="" class="img-item has-item" >
                 </div>
                 <div class="product-information">
                     <h4 class="product-name"><%=product.name%></h4>
@@ -223,6 +226,9 @@
                         <%=product.proceduce%> <br>
                    </p>
                     <h4 class="description-title">Kiểm chứng an toàn</h4>
+                    <p class="description-list">
+                        <img src="<%-product.cer  %>" alt="" class="img-item has-item">
+                    </p>
                 </div>
                </div>
                <ul class="about-popular-product">
