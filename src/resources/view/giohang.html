@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/giohang.css">
     <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/home.css">
     <!-- <link rel="stylesheet" href="/assets/css/main.css">  -->
     <link rel="stylesheet" href="/css/giohang-responsive.css">
 </head>
@@ -164,7 +165,30 @@
                     </div>
                 </div>
         </div>
+        <!-- modal -->
+             <div class="modal-add">
+            <div class="modal-container-add">
+
+                <div class="header-modal-add">
+                    
+                    Kết Nối Người Quen
+                    <div class="icon-close-add"><i class="fa-regular fa-circle-xmark"></i></div>
+                </div>
+                <form action="/wishlist/find" method="post">
+                    <div class="body-modal-add">
+                        <p class="body-add-heading">
+                            Tìm qua số điện thoại
+                        </p>
+                            <input type="text" class="phone-input" name="phone" placeholder="Nhập số điện thoại" value="">
+                    </div>
+                    <button class="footer-modal-add">
+                        Tìm
+                    </button>
+                </form>
+            </div>
+             </div>
         </form>
+
 
          <!-- footer -->
         <div class="footer">
@@ -346,10 +370,21 @@
                         }
                     })
                 })
-        })
+        }) 
         </script> -->
 
-        <script>
+        <script >
+
+        const btnAddfr = $(".addfr")
+        const closeAddfr = $(".icon-close-add")
+        const modaladd = $(".modal-add")
+
+        btnAddfr.onclick = function() {
+            modaladd.classList.add("open")
+        }
+        closeAddfr.onclick = function () {
+            modaladd.classList.remove("open")
+        }
             $(document).ready(function() {
                 $('.product-trash').click(function() {
                     let x = $(this).val();

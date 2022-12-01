@@ -195,7 +195,6 @@
 .img-item {
     width: 150px;
     height: 150px;
-  
 }
 .has-item {
     width: 250px;
@@ -532,7 +531,7 @@
     flex-direction: column;
     align-items: center;
     padding: 10px 0px;
-    height: auto;
+    max-height: 920px;
 
 }
 .about-popular-product-title {
@@ -737,4 +736,11 @@
     background-color: rgb(220, 60, 60);
     color: #cce8d4;
     border: none;
+}
+.description-cer {
+    height: auto;
+}
+.cer-img {
+    width: 240px;
+    height: 350px;
 }
