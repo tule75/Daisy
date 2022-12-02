@@ -361,11 +361,13 @@
     margin-right: 5px;
 }
 .btn-gift {
+    height: 43px;
     padding: 5px 10px;
     border: none;
     margin-right: 5px;
     background-color: rgb(229, 55, 55);
     color: white;
+    margin-bottom: 0;
 }
 
 /* footer */
