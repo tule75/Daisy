@@ -142,14 +142,14 @@
             </div>
 
             <% }} else { %> 
-                <% tien = product.price %> 
+                <% tien = product.price * product.count%> 
                 <%const x = product.img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
                 <% const y = x.replace("/view?usp=share_link","",40)%>
             <div class="product-wrap">
                 <div class="product-list">
                     <h5 class="product-name"><%=shop.name %> </h5>
                     <div class="product-container">
-                        <input class="product-check-text" type="text" style="display: none;" name="p" value="<%=JSON.stringify({user_slug: user.slug, product_slug: product.slug , shop_slug: product.user_slug , send: 0, sell: 0, money: product.price, count: 1 }) %>">
+                        <input class="product-check-text" type="text" style="display: none;" name="p" value="<%=JSON.stringify({user_slug: user.slug, product_slug: product.slug , shop_slug: product.user_slug , send: 0, sell: 0, money: product.price, count: product.count }) %>">
                         <img class="product-img" src="<%-y%>" alt="">
                         <div class="product-item">
                             <h5 class="name">><%=product.name%></h5>

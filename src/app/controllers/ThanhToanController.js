@@ -364,8 +364,16 @@ class ThanhToanController {
             res.render('login.html', {check: 0})
         }
     }
-    //[GET] /thanhtoan/:slug
+    //[GET] /thanhtoan/:slug?c=...
     showO(req, res, next) {
+        let count
+        if (req.query.c > 1){
+            count = req.query.c;
+        }
+        else {
+            count = 1;
+        }
+        
         if (req.cookies.token){
             let vouchers;
             const token = req.cookies.token
@@ -389,6 +397,7 @@ class ThanhToanController {
 
                     Product.findOne({slug: req.params.slug})
                     .then(product => {
+                        product.count = count;
 
                         Voucher.find({product_slug: product.slug})
                         .then(voucher => {
