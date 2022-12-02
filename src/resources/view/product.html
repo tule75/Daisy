@@ -156,11 +156,11 @@
                         </div>
                     </div>
                     <div class="buy-btn">
-                        <a href="/thanhtoan/<%-product.slug %> ">
-                        <button class="btn-buy ">
-                            Mua Ngay!
-                        </button>
-                        </a>
+                        <form action="/thanhtoan/<%-product.slug %>">
+                            <button id="buyyy" class="btn-buy " name="c" value="1">
+                                Mua Ngay!
+                            </button>
+                        </form>
                         <form action="/" method="POST">
                         <button class="add-button" name="slug" value="<%-product.slug %>" >
                             <i class="fa fa-regular fa-bag-shopping"></i>
@@ -212,7 +212,7 @@
                     </div>
                     <div class="product-origin-show">
                         <p class="show-item">Kho hàng :
-                            <span class="item-content">  <%=shop.count%></span>
+                            <span class="item-content">  <%=product.count%></span>
                         </p>
                     </div>
                     <div class="product-origin-show">
@@ -511,5 +511,25 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('.quantity-add').click(function(e) {
+                let x = parseInt($('.quantity-number').text())
+                $('.quantity-number').text(x + 1)
+                $('#buyyy').val(x+1)
+                e.preventDefault()
+            })
+
+            $('.quantity-minus').click(function(e) {
+                let x = parseInt($('.quantity-number').text())
+                if (x > 1) {
+                    $('.quantity-number').text(x - 1)
+                    $('#buyyy').val(x-1)
+                } else {}
+                e.preventDefault()
+            })
+        })
+    </script>
 </body>
 </html>
