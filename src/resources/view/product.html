@@ -116,17 +116,20 @@
                     <div class="product-has-price">
                         <span class="price-final"> <%=product.price %> </span>
                         <span class="price-discount"><%=product.price_discount%> </span>
-                        <span class="discount-number" >-75%</span>
+                        <span class="discount-number" >-0%</span>
                     </div>
                     <div class="voucher">
                         <h6 class="voucher-title">Vouchers</h6>
                        <div class="voucher-list">
-                        <div class="voucher-item">
+                        <div class="voucher-note">
+                            Không có voucher nào!
+                        </div>
+                        <!-- <div class="voucher-item">
                             50k
                         </div>
                         <div class="voucher-item">
                             150k
-                        </div>
+                        </div> -->
                        </div>
 
                     </div>
@@ -155,7 +158,7 @@
                     <div class="buy-btn">
                         <a href="/thanhtoan/<%-product.slug %> ">
                         <button class="btn-buy ">
-                            Buy Now!
+                            Mua Ngay!
                         </button>
                         </a>
                         <form action="/" method="POST">
