@@ -744,3 +744,8 @@
     width: 240px;
     height: 350px;
 }
+.voucher-note {
+    margin: 0 auto;
+    padding-bottom: 20px;
+    color: #ccc;
+}
