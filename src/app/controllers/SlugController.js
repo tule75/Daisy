@@ -34,6 +34,7 @@ class SlugController {
                             User.findOne({slug: data.user_slug})
                             .then(shop => {
                                 if (shop) {
+                                    console.log(shop)
                                     Product.find({user_slug: shop.slug})
                                     .then((products) => {
                                         if (products) {
@@ -66,7 +67,8 @@ class SlugController {
                             User.findOne({slug: data.user_slug})
                             .then(shop => {
                                 if (shop) {
-                                    Product.findOne({user_slug: shop.slug})
+                                    console.log(shop)
+                                    Product.find({user_slug: shop.slug})
                                     .then((products => {
                                         if (products) {
                                             res.render('product.html', {product: data,shop: shop, check: 0, countCart: 0, products: products});
@@ -103,7 +105,7 @@ class SlugController {
                         User.findOne({slug: data.user_slug})
                         .then(shop => {
                             if (shop) {
-                                Product.findOne({user_slug: shop.slug})
+                                Product.find({user_slug: shop.slug})
                                 .then((products => {
                                     if (products) {
                                         res.render('product.html', {product: data,shop: shop, check: 0, countCart: 0, products: products});
