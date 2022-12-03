@@ -859,28 +859,46 @@
 
                         <div class="wishlist__items changecontent">
                             <div class="wishlist__item">
-                                <div class="wishlist__info">
+                                <!-- <div class="wishlist__info">
                                     <div class="wishlist__info--shopname">An xuân</div>
 
-                                    <div class="wishlist__info-p1">
+                                    <div class="wishlist__info-p1"> -->
                                         <!-- <div class="wishlist__info--shopname">An xuân</div> -->
-                                        <img class="wishlist--img" src="/assets/image/687cf3426183a89fe099dc2498dd18e8.jpg " alt="">
+                                        <!-- <img class="wishlist--img" src="/assets/image/687cf3426183a89fe099dc2498dd18e8.jpg " alt="">
 
                                         <div class="wishlist__info__left">
                                             <h3 class="wishlist__info--name wishlist__info__left--item">Ly uống nước</h3>
                                             <li class="wishlist__info--account wishlist__info__left--item">Số lượng: 1</li>
                                             <li class="wishlist__info--type wishlist__info__left--item">Phân loại: hồng</li>
-                                            <li class="wishlist__info--price wishlist__info__left--item">Giá: 10.000 VND</li>
+                                            <li class="wishlist__info--price wishlist__info__left--item">Giá: 10.000 VND</li> -->
                                             <!-- <li class="wishlist__info--status">Đã giao</li> -->
-                                        </div>
+                                        <!-- </div>
                                     </div>
                                 </div>
 
                                 <div class="wishlist__right">
-                                    <h3 class="wishlist__info--totalp">Tổng tiền: 10.000 VND</h3>
+                                    <h3 class="wishlist__info--totalp">Tổng tiền: 10.000 VND</h3> -->
                                     <!-- <button class="wishlist__info--btn">Đánh giá</button> -->
                                     <!-- <button class="wishlist__info--btn">Mua lại</button> -->
-                                </div>
+                                <!-- </div> -->
+                                <% for (let i = 0; i < products.length; i++) {%>
+                                    <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                    <% const y = x.replace("/view?usp=share_link","",40)%>
+                                    <div class="wishlist__info">
+                                        <!-- <div class="wishlist__info--shopname">Cần hiện shop k</div> -->
+                                        <div class="wishlist__info-p1">
+                                            <img class="wishlist--img" src="<%-y %>" alt="">
+
+                                            <div class="wishlist__info__left">
+                                                <h3 class="wishlist__info--name wishlist__info__left--item"><%=products[i].name %></h3>
+                                                <li class="wishlist__info--account wishlist__info__left--item">Số lượng: 1</li>
+                                                <!-- <li class="wishlist__info--type wishlist__info__left--item">Phân loại: hồng</li> -->
+                                                <li class="wishlist__info--price wishlist__info__left--item">Giá: <%=products[i].price %> VND</li>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <% } %> 
+
                             </div>
                         </div>
 
