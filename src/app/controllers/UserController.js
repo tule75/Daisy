@@ -47,18 +47,12 @@ class UserController {
                             wl.forEach((element, i) => {
                                 Product.findOne({slug: element.product_slug})   
                                 .then((product) => {
-                                    if (product != null){
-                                        var p = {};
-                                        p.name = product.name;
-                                        p.slug = product.slug;
-                                        p.price = product.price;
-                                        p.count = cart[i].count;
-                                        p.img = product.img;
-                                        p.user_id = product.user_id;
+                                    console.log(product)
+                                    if (product){
                                         // console.log(product)
                                         // console.log(p)
                                         
-                                        pr.push(p);
+                                        pr.push(product);
                                         // console.log(products)
                                     }
                                     // i++;
@@ -73,6 +67,7 @@ class UserController {
                         })
                         promise.then(async (pr) => {
                             pr = await resolveAfter2Seconds(pr)
+                            console.log(pr)
                             res.render('customer.html', {products: pr, check: 1, user: user, countCart: counts})
                         })
                         
