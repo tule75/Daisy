@@ -70,38 +70,15 @@
                                 <i class="fa fa-regular fa-bell "></i>
                                 <ul class="cart-announcement">
                                     <h4 class="product-title-announ">Thông báo</h4>
-                                    <li class="announ-item">
-                                        <img class="announ-img" src="img/DSC_0976.jpg" alt="">
-                                        <div class="announ-name">
-                                            <p class="announ-title">Ten sp</p>
-                                            <p class="announ-note">Mat hang dang giam 50% trong <span class="note-span">2 ngay duy nhat!</span></p>
-                                        </div>
-                                        <div class="announ-buy">Mua ngay</div>
-                                    </li>
-                                    <li class="announ-item">
-                                        <img class="announ-img" src="img/DSC_0976.jpg" alt="">
-                                        <div class="announ-name">
-                                            <p class="announ-title">Ten sp</p>
-                                            <p class="announ-note">Mat hang dang giam 50% trong <span class="note-span">2 ngay duy nhat!</span></p>
-                                        </div>
-                                        <div class="announ-buy">Mua ngay</div>
-                                    </li>
-                                    <li class="announ-item">
-                                        <img class="announ-img" src="img/DSC_0976.jpg" alt="">
-                                        <div class="announ-name">
-                                            <p class="announ-title">Ten sp</p>
-                                            <p class="announ-note">Mat hang dang giam 50% trong <span class="note-span">2 ngay duy nhat!</span></p>
-                                        </div>
-                                        <div class="announ-buy">Mua ngay</div>
-                                    </li>
-                                    <li class="announ-item">
-                                        <img class="announ-img" src="img/DSC_0976.jpg" alt="">
-                                        <div class="announ-name">
-                                            <p class="announ-title">Ten sp</p>
-                                            <p class="announ-note">Mat hang dang giam 50% trong <span class="note-span">2 ngay duy nhat!</span></p>
-                                        </div>
-                                        <div class="announ-buy">Mua ngay</div>
-                                    </li>
+                                    <!-- <li class="announ-item">
+                                        <h5>Bạn không có thông báo nào</h5>
+                                    </li> -->
+                                    <% for (let i = 0; i < notify.length; i++) {%>
+                                        <li class="announ-item">
+                                            <h5><%=notify[i].data%></h5>
+                                        </li>
+                                    <% } %>  
+
                                 </ul>
                             </li>
     

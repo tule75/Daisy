@@ -1,8 +1,6 @@
 const path = require('path')
-const { mutipleMongoosetoObject } = require('../../until/mongoose')
+const Notify = require('../models/Notify')
 var jwt = require('jsonwebtoken');
-const { mongoosetoObject } = require('../../until/mongoose')
-const { getCounts } = require('../../until/countCarts')
 const Product = require('../models/Product')
 const User = require('../models/Users')
 const GioHang = require('../models/GioHang')
@@ -37,7 +35,15 @@ class SiteController {
 
                     Product.find()
                         .then(products => {
-                            res.render('home.html', {products: products, check: 1, user: user, countCart: counts, shops: shops})
+                            Notify.find({user_slug: user.slug})
+                            .then((no) => {
+                                if (no) {
+                                    res.render('home.html', {products: products, check: 1, user: user, countCart: counts, shops: shops, notify: no})
+                                } else {
+                                    res.render('home.html', {products: products, check: 1, user: user, countCart: counts, shops: shops, notify: []})
+                                }
+                            })
+                            
                             // res.json(products)
                         })
                         .catch(err => {res.send(err)})
