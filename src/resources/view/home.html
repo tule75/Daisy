@@ -70,9 +70,14 @@
                                 <i class="fa fa-regular fa-bell "></i>
                                 <ul class="cart-announcement">
                                     <h4 class="product-title-announ">Thông báo</h4>
-                                    <li class="announ-item">
+                                    <!-- <li class="announ-item">
                                         <h5>Bạn không có thông báo nào</h5>
-                                    </li>
+                                    </li> -->
+                                    <% for (let i = 0; i < notify.length; i++) {%>
+                                        <li class="announ-item">
+                                            <h5><%=notify[i].data%></h5>
+                                        </li>
+                                    <% } %>  
                                 </ul>
                             </li>
     

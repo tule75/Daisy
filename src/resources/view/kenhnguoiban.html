@@ -1347,23 +1347,28 @@
                     <h4> Thêm Sản Phẩm </h4>
                     <i class="fa-solid fa-rectangle-xmark close"></i>
                 </div>
+                <form action="/product/create" method="POST">
                 <div class="product-container-body">
                    <div class="ve-sanpham">
                     <div class="container-body-item ">
                         <p>Tên sản phẩm :</p>
-                        <input class="isfocus" type="text" placeholder="Nhập tên sản phẩm">
+                        <input class="isfocus" type="text" placeholder="Nhập tên sản phẩm" name="name">
+                    </div>
+                    <div class="container-body-item">
+                        <p>Giới thiệu :</p>
+                        <input class="isfocus" type="text" placeholder="Nhập giá sản phẩm" name="introduction">
                     </div>
                     <div class="container-body-item">
                         <p>Giá :</p>
-                        <input class="isfocus" type="text" placeholder="Nhập giá sản phẩm">
+                        <input class="isfocus" type="number" placeholder="Nhập giá sản phẩm" name="price">
                     </div>
                     <div class="container-body-item">
                         <p>Ảnh sản phẩm : </p>
-                        <input class="isfocus" type="text" placeholder="Link driver">
+                        <input class="isfocus" type="text" placeholder="Link driver" name="img">
                     </div>
                     <div class="container-body-item">
                         <p>Ảnh kiểm định an toàn : </p>
-                        <input class="isfocus" important! type="text" placeholder="Link driver">
+                        <input class="isfocus" important! type="text" placeholder="Link driver" name="cer">
                     </div>
                   
                    </div>
@@ -1371,19 +1376,23 @@
                    <div class="ve-chitiet">
                     <div class="container-body-item">
                         <p>Công dụng : </p>
-                        <input class="isfocus" type="text" placeholder="Nhập công dụng">
+                        <input class="isfocus" type="text" placeholder="Nhập công dụng" name="effect">
+                    </div>
+                    <div class="container-body-item">
+                        <p>Cách dùng :</p>
+                        <input class="isfocus" type="number" placeholder="Nhập giá sản phẩm" name="proceduce">
                     </div>
                     <div class="container-body-item">
                         <p>Chính sách : </p>
-                        <input class="isfocus" type="text" placeholder="Nhập chính sách">
+                        <input class="isfocus" type="text" placeholder="Nhập chính sách" name="policy">
                     </div>
                     <div class="container-body-item">
                         <p>Khối lượng : </p>
-                        <input class="isfocus" type="number" min="1" placeholder="Nhập khối lượng sản phẩm">
+                        <input class="isfocus" type="number" min="1" placeholder="Nhập khối lượng sản phẩm (g)" name="weigh">
                     </div>
                     <div class="container-body-item">
                         <p>Số lượng hàng trong kho</p>
-                        <input class="isfocus" type="text" placeholder="Nhập số hàng">
+                        <input class="isfocus" type="number" placeholder="Nhập số hàng" name="count">
                     </div>
                     
                    </div>
@@ -1392,6 +1401,7 @@
                 <div class="container-footer">
                     <button class="submit">Tạo sản phẩm</button>
                </div>
+            </form>
             </div>
         </div>
 

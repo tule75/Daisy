@@ -2,6 +2,7 @@ const User = require('../models/Users')
 const Product = require('../models/Product')
 const GioHang = require('../models/GioHang')
 const Bill = require('../models/Bill')
+const Notify = require('../models/Notify')
 const mongoose = require('mongoose')
 mongoose.Promise = require('bluebird');
 const jwt = require('jsonwebtoken')
@@ -16,11 +17,22 @@ class NguoiBanController {
         Bill.findOne({user_slug: bills.user_slug, product_slug: bills.product_slug})
         .then(bill => {
             if (bill) {
-                bill['send'] = 1;
-                bill.save()
-                .then(() => {
-                    console.log('success', bill)
-                    res.status(204).send('cập nhật thành công')
+                Product.findOne({slug: bill.product_slug})
+                .then(product => {
+                    bill['send'] = 1;
+                    bill.save()
+                    .then(() => {
+                        var no = new Notify({user_slug: bill.user_slug, data: `Đơn hàng sản phẩm ${product.name} của bạn đã được gửi thành công`})
+                        no.save()
+                        console.log('success', bill)
+                        res.status(204).send('cập nhật thành công')
+                    })
+                    .catch(err => {
+                        res.status(204).send('cập nhật không thành công')
+                    })
+                })
+                .catch(err => {
+                    res.status(204).send(err.message)
                 })
             }
             else {
@@ -148,9 +160,6 @@ class NguoiBanController {
                         })
                         
                     })
-
-
-
 
                     // dùng foreach
                         // products.forEach(async (element, index) => {
