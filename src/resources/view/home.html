@@ -71,7 +71,36 @@
                                 <ul class="cart-announcement">
                                     <h4 class="product-title-announ">Thông báo</h4>
                                     <li class="announ-item">
-                                        <h5>Bạn không có thông báo nào</h5>
+                                        <img class="announ-img" src="img/DSC_0976.jpg" alt="">
+                                        <div class="announ-name">
+                                            <p class="announ-title">Ten sp</p>
+                                            <p class="announ-note">Mat hang dang giam 50% trong <span class="note-span">2 ngay duy nhat!</span></p>
+                                        </div>
+                                        <div class="announ-buy">Mua ngay</div>
+                                    </li>
+                                    <li class="announ-item">
+                                        <img class="announ-img" src="img/DSC_0976.jpg" alt="">
+                                        <div class="announ-name">
+                                            <p class="announ-title">Ten sp</p>
+                                            <p class="announ-note">Mat hang dang giam 50% trong <span class="note-span">2 ngay duy nhat!</span></p>
+                                        </div>
+                                        <div class="announ-buy">Mua ngay</div>
+                                    </li>
+                                    <li class="announ-item">
+                                        <img class="announ-img" src="img/DSC_0976.jpg" alt="">
+                                        <div class="announ-name">
+                                            <p class="announ-title">Ten sp</p>
+                                            <p class="announ-note">Mat hang dang giam 50% trong <span class="note-span">2 ngay duy nhat!</span></p>
+                                        </div>
+                                        <div class="announ-buy">Mua ngay</div>
+                                    </li>
+                                    <li class="announ-item">
+                                        <img class="announ-img" src="img/DSC_0976.jpg" alt="">
+                                        <div class="announ-name">
+                                            <p class="announ-title">Ten sp</p>
+                                            <p class="announ-note">Mat hang dang giam 50% trong <span class="note-span">2 ngay duy nhat!</span></p>
+                                        </div>
+                                        <div class="announ-buy">Mua ngay</div>
                                     </li>
                                 </ul>
                             </li>
@@ -202,31 +231,36 @@
                                     <i class="category__heading-icon fa-solid fa-list-ul"></i>
                                  <h4 class="category__heading"> Danh mục </h4>
                                 </div>
-                                 <li class="category-item category-item--active">
+                                 <li class="category-item active ">
                                        
-                                             Tất cả đặc sản
+                                             Tất cả sản phẩm
                                        
                                  </li>
-                                 <li class="category-item">
+                                 <li class="category-item ">
                                    
-                                        ĐS Cao Bằng
+                                        Sức khoẻ
                                     
                                  </li>
-                                 <li class="category-item">
+                                 <li class="category-item ">
+                                    
+                                      Giày dép
+                                     
+                                  </li>
+                                 <li class="category-item ">
                                     
                                        Đồ khô
                                      
-                                  </li>
-                                 <li class="category-item">
-                                    
-                                        Giày dép
-                                     
                                  </li>
-                                 <li class="category-item">
+                                 <li class="category-item ">
                                     
                                          Trà
                                      
                                  </li>
+                                 <li class="category-item ">
+                                    
+                                   Làm đẹp
+                                
+                            </li>
                                  
                             </ul>
                             
@@ -237,7 +271,7 @@
                      </div>
                      <div id="shop" class="grid__col-10">
                         <div  class="home-product">
-                            <div class="grid__row grid__row-item active">
+                            <div class="grid__row grid__row-item active ">
                             <% for (var i = 0; i < products.length; i++) { %> 
                                 <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
                                                     <% const y = x.replace("/view?usp=share_link","",40)%>
@@ -289,7 +323,18 @@
                 <% } %>  
                          
                             </div>
-                           
+                            <div class="grid__row grid__row-item  ">
+                                content 2
+                            </div>
+                            <div class="grid__row grid__row-item">
+                                content 3
+                            </div>
+                            <div class="grid__row grid__row-item">
+                                content 4
+                            </div>
+                            <div class="grid__row grid__row-item">
+                                content 5
+                            </div>
                         </div>
                     </div>
                  </div>
@@ -515,6 +560,8 @@
         })
 
 
+        const $$ = document.querySelectorAll.bind(document)
+
         const btnAddfr = $(".addfr")
         const closeAddfr = $(".icon-close-add")
         const modaladd = $(".modal-add")
@@ -530,12 +577,14 @@
         const categoryActives = $$(".category-item")
         const gridShows = $$(".grid__row-item")
 
-        categoryActives.forEach((categoryActive, item) => {
+        categoryActives.forEach((categoryActive, index) => {
             const gridItem = gridShows[index]
 
             categoryActive.onclick = function () {
                 $(".grid__row-item.active").classList.remove("active")
+                $(".category-item.active").classList.remove("active")
 
+                this.classList.add("active")
                 gridItem.classList.add("active")
             }
         })
