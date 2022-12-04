@@ -162,19 +162,21 @@
                                             
                                                 
                                                 <div class="btn-wish">
-                                                    <form action="/" method="POST">
-                                                        <button class="add-button" name="slug" value="<%=products[i].slug %>">
+                                                    <form id="1" action="/" method="POST">
+                                                        <button class="add-button" id="" name="slug" value="<%=products[i].slug %>">
                                                             <i class="fa fa-regular fa-bag-shopping"></i>
                                                                             Thêm vào giỏ 
                                                         </button>
                                                     </form>
-                                                    <form action="/thanhtoan/tang" method="get">
-                                                        <button type="submit" class="btn-gift" name="u" value="<%=receiver.slug %>">
-                                                            <input type="text" name="q" value="<%=products[i].slug%>" style="display: none;">
-                                                            <i class="fa-solid fa-gift"></i>                               
-                                                                Tặng quà
-                                                        </button>
-                                                    </form>
+                                                </div>
+                                                <div class="btn-wish">
+                                                        <form action="/thanhtoan/tang" method="get">
+                                                            <button type="submit" class="btn-gift" name="u" value="<%=receiver.slug %>">
+                                                                <input type="text" name="q" value="<%=products[i].slug%>" style="display: none;">
+                                                                <i class="fa-solid fa-gift"></i>                               
+                                                                    Tặng quà
+                                                            </button>
+                                                        </form>
                                                 </div>
                                             </div>
                                        </div>

@@ -409,12 +409,14 @@
                                                 <!-- TAT CA -->
                                               
                                                     <% for (let i = 0; i <  bills.length; i++) {%> 
+                                                        <%const x = products_buy[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                                    <% const y = x.replace("/view?usp=share_link","",40)%>
                                                         <div class="item-has-product isProcess">
                                                         <ul class="list-filter">
                                                             <li class="item-filter">
                                                                 <div class="filter-wrapper">
 
-                                                                    <img class="filter-img" src="img/<%-products_buy[i].img%>" alt="">
+                                                                    <img class="filter-img" src="<%-y%>" alt="">
 
                                                                     <p class="filter-name"><%=products_buy[i].name%></p>
 
@@ -426,9 +428,10 @@
                                                                       <span class="user-span">   Tên : <%=users_buy[i].name%></span>
                                                                               <span class="icon-span"><i class="fa-solid fa-thumbs-up"></i>: 90%</span></p>
                                                                     <p class="isaddress"> Địa chỉ :
-                                                                        <span class="user-span"><%=users_buy[i].award, 
-                                                                                                    users_buy[i].district, 
-                                                                                                    users_buy[i].province%></span>
+                                                                        <span class="user-span"><%=`${users_buy[i].address}, ${users_buy[i].award}, ${users_buy[i].district}, ${users_buy[i].province}`%></span>
+                                                                       </p>
+                                                                       <p class="isaddress"> SĐT :
+                                                                        <span class="user-span"><%=users_buy[i].phone%></span>
                                                                        </p>
                                                                     <p class="user_quantity">Số lượng: <span class="user-span"><%=bills[i].count%></span></p> 
                                                                 </div>
@@ -483,11 +486,13 @@
                                              
                                             <% for (let i = 0; i <  bills.length; i++) {%> 
                                                 <%if (bills[i].send == 0) {%>
+                                                    <%const x = products_buy[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                                    <% const y = x.replace("/view?usp=share_link","",40)%>
                                                 <div class="item-has-product isProcess">
                                                 <ul class="list-filter">
                                                     <li class="item-filter">
                                                         <div class="filter-wrapper">
-                                                            <img class="filter-img" src="img/<%=products_buy[i].img%>" alt="">
+                                                            <img class="filter-img" src="<%=y%>" alt="">
                                                             <p class="filter-name"><%=products_buy[i].name%></p>
                                                         </div>
                                                     </li>
@@ -496,9 +501,10 @@
                                                             <p class="user_name"><span class="user-span">Tên : <%=users_buy[i].name%></span>
                                                                 <span class="icon-span"><i class="fa-solid fa-thumbs-up"></i>: 90%</span></p>
                                                             <p class="isaddress"> Địa chỉ :
-                                                                <span class="user-span"><%=users_buy[i].award, 
-                                                                                            users_buy[i].district, 
-                                                                                            users_buy[i].province%></span>
+                                                                <span class="user-span"><%=`${users_buy[i].address}, ${users_buy[i].award}, ${users_buy[i].district}, ${users_buy[i].province}`%></span>
+                                                               </p>
+                                                               <p class="isaddress"> SĐT :
+                                                                <span class="user-span"><%=users_buy[i].phone%></span>
                                                                </p>
                                                             <p class="user_quantity">Số lượng: <span class="user-span"><%=bills[i].count%></span></p> 
                                                         </div>
@@ -548,11 +554,13 @@
                                                  
                                             <% for (let i = 0; i <  bills.length; i++) {%> 
                                                 <%if (bills[i].send == 1) {%>
+                                                    <%const x = products_buy[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                                    <% const y = x.replace("/view?usp=share_link","",40)%>
                                                 <div class="item-has-product isProcess">
                                                 <ul class="list-filter">
                                                     <li class="item-filter">
                                                         <div class="filter-wrapper">
-                                                            <img class="filter-img" src="img/<%-products_buy[i].img%>" alt="">
+                                                            <img class="filter-img" src="<%-y%>" alt="">
                                                             <p class="filter-name"><%=products_buy[i].name%></p>
                                                         </div>
                                                     </li>
@@ -561,10 +569,11 @@
                                                             <p class="user_name"> <span class="user-span">Tên : <%=users_buy[i].name%></span> 
                                                                                 <span class="icon-span"><i class="fa-solid fa-thumbs-up"></i>: 90%</span></p>
                                                             <p class="isaddress"> Địa chỉ :
-                                                                <span class="user-span"><%=users_buy[i].award, 
-                                                                                            users_buy[i].district, 
-                                                                                            users_buy[i].province%></span>
+                                                                <span class="user-span"><%=`${users_buy[i].address}, ${users_buy[i].award}, ${users_buy[i].district}, ${users_buy[i].province}`%></span>
                                                                </p>
+                                                               <p class="isaddress"> SĐT :
+                                                                <span class="user-span"><%=users_buy[i].phone%></span>
+                                                               </p>                                                               
                                                             <p class="user_quantity">Số lượng: <span class="user-span"><%=bills[i].count%></span></p> 
                                                         </div>
                                                     </li>
@@ -656,11 +665,13 @@
                                                 <!-- TAT CA -->
                                               
                                                     <% for (let i = 0; i <  bills.length; i++) {%> 
+                                                        <%const x = products_buy[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                                    <% const y = x.replace("/view?usp=share_link","",40)%>
                                                         <div class="item-has-product isProcess">
                                                         <ul class="list-filter">
                                                             <li class="item-filter">
                                                                 <div class="filter-wrapper">
-                                                                    <img class="filter-img" src="img/<%-products_buy[i].img%>" alt="">
+                                                                    <img class="filter-img" src="<%-y%>" alt="">
                                                                     <p class="filter-name"><%=products_buy[i].name%></p>
 
                                                                 </div>
@@ -669,11 +680,11 @@
                                                                 <%=bills[i].count%>
                                                             </li>
                                                             <li class="item-filter">
-                                                                <p class="isaddress"><%=users_buy[i].address,
-                                                                    users_buy[i].award, 
-                                                                    users_buy[i].district, 
-                                                                      users_buy[i].province%>
+                                                                <p class="isaddress"><%=`${users_buy[i].address}, ${users_buy[i].award}, ${users_buy[i].district}, ${users_buy[i].province}`%>
                                                                    </p>
+                                                                   <p class="isaddress"> SĐT :
+                                                                    <span class="user-span"><%=users_buy[i].phone%></span>
+                                                                   </p>                                                            
                                                         
                                                             </li>
                                                             <%if (bills[i].send == 0) {%>
@@ -715,11 +726,13 @@
                                              
                                             <% for (let i = 0; i <  bills.length; i++) {%> 
                                                 <%if (bills[i].send == 0) {%>
+                                                    <%const x = products_buy[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                                    <% const y = x.replace("/view?usp=share_link","",40)%>
                                                 <div class="item-has-product isProcess">
                                                 <ul class="list-filter">
                                                     <li class="item-filter">
                                                         <div class="filter-wrapper">
-                                                            <img class="filter-img" src="img/<%-products_buy[i].img%>" alt="">
+                                                            <img class="filter-img" src="<%-y%>" alt="">
                                                             <p class="filter-name"><%=products_buy[i].name%></p>
                                                         </div>
                                                     </li>
@@ -728,11 +741,11 @@
                                                     </li>
                                                     <li class="item-filter">
                                                         <p class="isaddress">
-                                                            <%=users_buy[i].address,
-                                                            users_buy[i].award, 
-                                                            users_buy[i].district, 
-                                                            users_buy[i].province%>
+                                                            <%=`${users_buy[i].address}, ${users_buy[i].award}, ${users_buy[i].district}, ${users_buy[i].province}`%>
                                                          </p>
+                                                         <p class="isaddress"> SĐT :
+                                                            <span class="user-span"><%=users_buy[i].phone%></span>
+                                                           </p>                                                         
                                                  
                                                      </li>
                                                         <li class="item-filter waiting">
@@ -774,11 +787,13 @@
                                                  
                                             <% for (let i = 0; i <  bills.length; i++) {%> 
                                                 <%if (bills[i].send == 1) {%>
+                                                    <%const x = products_buy[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                                    <% const y = x.replace("/view?usp=share_link","",40)%>
                                                 <div class="item-has-product isProcess">
                                                 <ul class="list-filter">
                                                     <li class="item-filter">
                                                         <div class="filter-wrapper">
-                                                            <img class="filter-img" src="img/<%-products_buy[i].img%>" alt="">
+                                                            <img class="filter-img" src="<%-y%>" alt="">
                                                             <p class="filter-name"><%=products_buy[i].name%></p>
                                                         </div>
                                                     </li>
@@ -786,11 +801,11 @@
                                                         <%=bills[i].count%>
                                                     </li>
                                                     <li class="item-filter">
-                                                        <p class="isaddress"><%=users_buy[i].address,
-                                                            users_buy[i].award, 
-                                                            users_buy[i].district, 
-                                                            users_buy[i].province%>
+                                                        <p class="isaddress"><%=`${users_buy[i].address}, ${users_buy[i].award}, ${users_buy[i].district}, ${users_buy[i].province}`%>
                                                         </p>
+                                                        <p class="isaddress"> SĐT :
+                                                            <span class="user-span"><%=users_buy[i].phone%></span>
+                                                           </p>                                                    
                                                  
                                                      </li>
                                                         <li class="item-filter">
@@ -876,11 +891,13 @@
                                              
                                             <% for (let i = 0; i <  bills.length; i++) {%> 
                                                 <%if (bills[i].send == 0) {%>
+                                                    <%const x = products_buy[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                                    <% const y = x.replace("/view?usp=share_link","",40)%>
                                                 <div class="item-has-product isProcess">
                                                 <ul class="list-filter">
                                                     <li class="item-filter">
                                                         <div class="filter-wrapper">
-                                                            <img class="filter-img" src="img/<%-products_buy[i].img%>" alt="">
+                                                            <img class="filter-img" src="<%-y%>" alt="">
                                                             <p class="filter-name"><%=products_buy[i].name%></p>
                                                         </div>
                                                     </li>
@@ -888,11 +905,11 @@
                                                         <%=bills[i].count%>
                                                     </li>
                                                     <li class="item-filter">
-                                                        <p class="isaddress"><%=users_buy[i].address,
-                                                                users_buy[i].award, 
-                                                                users_buy[i].district, 
-                                                                users_buy[i].province%>
+                                                        <p class="isaddress"><%=`${users_buy[i].address}, ${users_buy[i].award}, ${users_buy[i].district}, ${users_buy[i].province}`%>
                                                         </p>
+                                                        <p class="isaddress"> SĐT :
+                                                            <span class="user-span"><%=users_buy[i].phone%></span>
+                                                           </p>                                                        
                                                  
                                                      </li>
                                                         <li class="item-filter waiting">
@@ -979,11 +996,13 @@
                                              
                                             <% for (let i = 0; i <  bills.length; i++) {%> 
                                                 <%if (bills[i].send == 1) {%>
+                                                    <%const x = products_buy[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                                    <% const y = x.replace("/view?usp=share_link","",40)%>
                                                 <div class="item-has-product isProcess">
                                                 <ul class="list-filter">
                                                     <li class="item-filter">
                                                         <div class="filter-wrapper">
-                                                            <img class="filter-img" src="img/DSC_0976.jpg" alt="">
+                                                            <img class="filter-img" src="<%-y%>" alt="">
                                                             <p class="filter-name"><%=products_buy[i].name%></p>
                                                         </div>
                                                     </li>
@@ -991,12 +1010,11 @@
                                                         <%=bills[i].count%>
                                                     </li>
                                                     <li class="item-filter">
-                                                        <p class="isaddress"><%=users_buy[i].address,
-                                                            users_buy[i].award, 
-                                                            users_buy[i].district, 
-                                                            users_buy[i].province%>
+                                                        <p class="isaddress"><%=`${users_buy[i].address}, ${users_buy[i].award}, ${users_buy[i].district}, ${users_buy[i].province}`%>
                                                          </p>
-                                                 
+                                                         <p class="isaddress"> SĐT :
+                                                            <span class="user-span"><%=users_buy[i].phone%></span>
+                                                           </p>                                                 
                                                      </li>
                                                         <li class="item-filter waiting">
                                                             Đã giao 
