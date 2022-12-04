@@ -256,24 +256,34 @@
 
                         <div class="orders__list nextto">
                             <!-- <div class="order"> -->
-
+                            <% for (let i = 0; i < bills.length; i++) {%> 
+                                <%const x = products_buy[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                <% const y = x.replace("/view?usp=share_link","",40)%>
                                 <div class="order__info">
-                                    <img class="order--img" src="/assets/image/687cf3426183a89fe099dc2498dd18e8.jpg " alt="">
+                                    <img class="order--img" src="<%-y %>" alt="">
 
                                     <div class="left">
-                                        <h3 class="order__info--name">Ly uống nước</h3>
-                                        <li class="order__info--account">Số lượng: 1</li>
-                                        <li class="order__info--type">Phân loại: hồng</li>
-                                        <li class="order__info--price">Giá: 10.000 VND</li>
-                                        <li class="order__info--status">Đã giao</li>
+                                        <h3 class="order__info--name"><%=products_buy[i].name%></h3>
+                                        <li class="order__info--account">Số lượng: <%=bills[i].count %> </li>
+                                        <li class="order__info--price">Giá: <%=products_buy[i].price%></li>
+                                        <% if (bills[i].send == 0 && bills[i].sell == 0) {%> 
+                                        <li class="order__info--status">Chờ xác nhận</li>
+                                        <% } else if (bills[i].send == 1) {%> 
+                                        <li class="order__info--status">Đang giao</li>
+                                        <form method="post" class="sendbill" action="/user/took">
+                                            <input type="text" style="display: none;" name="bill" value="<%=JSON.stringify(bills[i]) %>">
+                                            <button type="submit" class="accept">Đã nhận</button>
+                                        </form>
+                                        <% } %> 
                                     </div>
                                 </div>
 
                                 <div class="right">
-                                    <h3 class="order__info--totalp">Tổng tiền: 10.000 VND</h3>
-                                    <button class="order__info--btn">Đánh giá</button>
-                                    <button class="order__info--btn">Mua lại</button>
+                                    <h3 class="order__info--totalp">Tổng tiền: <%=bills[i].money%></h3>
+                                    <button type="button" class="order__info--btn">Đánh giá</button>
+                                    <button type="button" class="order__info--btn">Mua lại</button>
                                 </div>
+                            <% } %> 
                             <!-- </div> -->
 
 
@@ -281,26 +291,28 @@
 
                         <div class="orders__list">
                             <!-- <div class="order"> -->
-
+                            <% for (let i = 0; i < bills.length; i++) {%> 
+                                <%const x = products_buy[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                <% const y = x.replace("/view?usp=share_link","",40)%>
+                                <% if (bills[i].send == 0 && bills[i].sell == 0) {%> 
                                 <div class="order__info">
-                                    <img class="order--img" src="/assets/image/687cf3426183a89fe099dc2498dd18e8.jpg" alt="">
+                                    <img class="order--img" src="<%-y %>" alt="">
 
                                     <div class="left">
-                                        <h3 class="order__info--name">Ly uống nước</h3>
-                                        <li class="order__info--account">Số lượng: 2</li>
-                                        <li class="order__info--type">Phân loại: hồng</li>
-                                        <li class="order__info--price">Giá: 10.000 VND</li>
-                                        <li class="order__info--status">Đã giao</li>
+                                        <h3 class="order__info--name"><%=products_buy[i].name%></h3>
+                                        <li class="order__info--account">Số lượng: <%=bills[i].count %> </li>
+                                        <li class="order__info--price">Giá: <%=products_buy[i].price%></li>
+                                        <li class="order__info--status">Chờ xác nhận</li>
                                     </div>
                                 </div>
 
                                 <div class="right">
-                                    <h3 class="order__info--totalp">Tổng tiền: 20.000 VND</h3>
-                                    <button class="order__info--btn">Đánh giá</button>
-                                    <button class="order__info--btn">Mua lại</button>
+                                    <h3 class="order__info--totalp">Tổng tiền: <%=bills[i].money%></h3>
+                                    <button type="button" class="order__info--btn">Đánh giá</button>
+                                    <button type="button" class="order__info--btn">Mua lại</button>
                                 </div>
                             <!-- </div> -->
-
+                            <% }} %> 
 
                         </div>
 
@@ -331,49 +343,60 @@
 
                         <div class="orders__list">
                             <!-- <div class="order"> -->
-
+                            <% for (let i = 0; i < bills.length; i++) {%> 
+                                <%const x = products_buy[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                <% const y = x.replace("/view?usp=share_link","",40)%>
+                                <% if (bills[i].send == 1 && bills[i].sell == 0) {%> 
                                 <div class="order__info">
-                                    <img class="order--img" src="/assets/image/687cf3426183a89fe099dc2498dd18e8.jpg" alt="">
+                                    <img class="order--img" src="<%-y %>" alt="">
 
                                     <div class="left">
-                                        <h3 class="order__info--name">Ly uống nước</h3>
-                                        <li class="order__info--account">Số lượng: 4</li>
-                                        <li class="order__info--type">Phân loại: hồng</li>
-                                        <li class="order__info--price">Giá: 10.000 VND</li>
-                                        <li class="order__info--status">Đã giao</li>
+                                        <h3 class="order__info--name"><%=products_buy[i].name%></h3>
+                                        <li class="order__info--account">Số lượng: <%=bills[i].count %> </li>
+                                        <li class="order__info--price">Giá: <%=products_buy[i].price%></li>
+                                        <li class="order__info--status">Đang giao</li>
+                                        <form method="post" class="sendbill" action="/user/took">
+                                            <input type="text" style="display: none;" name="bill" value="<%=JSON.stringify(bills[i]) %>">
+                                            <button type="submit" class="accept">Đã nhận</button>
+                                        </form>
                                     </div>
                                 </div>
 
                                 <div class="right">
-                                    <h3 class="order__info--totalp">Tổng tiền: 40.000 VND</h3>
-                                    <button class="order__info--btn">Đánh giá</button>
-                                    <button class="order__info--btn">Mua lại</button>
+                                    <h3 class="order__info--totalp">Tổng tiền: <%=bills[i].money%></h3>
+                                    <button type="button" class="order__info--btn">Đánh giá</button>
+                                    <button type="button" class="order__info--btn">Mua lại</button>
                                 </div>
                             <!-- </div> -->
-
+                                <% }} %> 
 
                         </div>
 
                         <div class="orders__list">
                             <!-- <div class="order"> -->
 
-                                <div class="order__info">
-                                    <img class="order--img" src="/assets/image/687cf3426183a89fe099dc2498dd18e8.jpg" alt="">
-
-                                    <div class="left">
-                                        <h3 class="order__info--name">Ly uống nước</h3>
-                                        <li class="order__info--account">Số lượng: 5</li>
-                                        <li class="order__info--type">Phân loại: hồng</li>
-                                        <li class="order__info--price">Giá: 10.000 VND</li>
-                                        <li class="order__info--status">Đã giao</li>
+                                <% for (let i = 0; i < bills.length; i++) {%> 
+                                    <%const x = products_buy[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                    <% const y = x.replace("/view?usp=share_link","",40)%>
+                                    <% if (bills[i].sell == 1) {%> 
+                                    <div class="order__info">
+                                        <img class="order--img" src="<%-y %>" alt="">
+    
+                                        <div class="left">
+                                            <h3 class="order__info--name"><%=products_buy[i].name%></h3>
+                                            <li class="order__info--account">Số lượng: <%=bills[i].count %> </li>
+                                            <li class="order__info--price">Giá: <%=products_buy[i].price%></li>
+                                            <li class="order__info--status">Mua hàng thành công</li>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="right">
-                                    <h3 class="order__info--totalp">Tổng tiền: 50.000 VND</h3>
-                                    <button class="order__info--btn">Đánh giá</button>
-                                    <button class="order__info--btn">Mua lại</button>
-                                </div>
+    
+                                    <div class="right">
+                                        <h3 class="order__info--totalp">Tổng tiền: <%=bills[i].money%></h3>
+                                        <button type="button" class="order__info--btn">Đánh giá</button>
+                                        <button type="button" class="order__info--btn">Mua lại</button>
+                                    </div>
+                                <!-- </div> -->
+                                    <% }} %> 
                             <!-- </div> -->
 
 
@@ -1208,6 +1231,35 @@
             });
 
 
+        </script>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+                $('.sendbill').submit(function(e) {
+                    
+                    e.preventDefault();
+
+                    let $input = $('.sendbill: input ');
+                    var value;
+                    $inputs.each(function() {
+                        if (isJson($(this).val())) {
+                            value = $(this).val();
+                        }
+                    });
+                    console.log(value);
+                    console.log(typeof value)
+
+                    $ajax({
+                        url: "/user/took",
+                        type: 'POST',
+                        data: {'bill': value},
+                        dataType: 'json',
+                        success: function(data){
+                            alert('success')
+                        }
+                    })
+            })
+            })
         </script>
     </body>
 </html>
