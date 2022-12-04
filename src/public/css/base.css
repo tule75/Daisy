@@ -267,11 +267,11 @@ a {
 .cart-announcement {
   position: absolute;
   width: 350px;
-  height: 300px;
+  height: auto;
   top: 55px;
   right: 170px;
   animation: headerNotiGrowth ease 0.4s;
-  background-color:#9cc8a9 ;
+  background-color:#e9ecea ;
   box-shadow: 0 0px 3px #999;
   display: none;
   padding-left: 0;
@@ -301,27 +301,52 @@ margin-bottom: 0;
 
 .announ-item {
   display: flex;
-  /* justify-content: space-between; */
+  padding: 10px 5px;
   align-items: center;
-  justify-content: center;
-  padding: 100px 0;
-  font-weight: bold;
-  color: #777;
-
+  border-bottom: 1px solid #ccc;
+}
+.announ-name  {
+  margin-top: 5px;
+  margin-left: 0;
+  padding-left: 5px;
+}
+.announ-title {
+   padding-left: 2px;
+   font-size: 15px;
+   margin-bottom: 0;
+   padding-top: 0;
+   padding-bottom: 3px;
+   font-weight: 700;
 }
 
+.note-span {
+  font-weight: 700;
+  padding-left: 0;
+  margin-left: 0;
+}
+.announ-img {
+  width: 60px;
+  height: 70px;
+
+}
+.announ-buy {
+  font-size: 10px;
+  background-color: red;
+  text-align: center;
+  color: white;
+  height: 18px;
+  padding: 2px 5px;
+  transform: translateY(-35px);
+  
+}
 .noti-btn {
   background-color: transparent;
   border: none;
 }
 
-.announ-pic {
-  width: 100px;
-  height: 90px;
-}
 
 .announ-note {
-  padding: 5px 15px;
+  padding: 2px 3px;
 
   color: rgb(43, 42, 42);
   display: flex;
