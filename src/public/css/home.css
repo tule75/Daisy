@@ -469,15 +469,18 @@
     transition: right linear .1s;
 
 }
+.category-item.active {
+    color: green;
+}
 .category-item:hover {
     right: -15px;
  }
 
 /* products */
-.grid__row-item {
+.grid__row.grid__row-item {
     display: none;
 }
-.grid__row-item.active {
+.grid__row.grid__row-item.active{
     display: flex;
 }
 
