@@ -22,7 +22,7 @@ class NguoiBanController {
                     bill['send'] = 1;
                     bill.save()
                     .then(() => {
-                        var no = new Notify({user_slug: bill.user_slug, data: `Đơn hàng sản phẩm ${product.name} của bạn đã được gửi thành công`})
+                        var no = new Notify({user_slug: bill.user_slug, data: `Đơn hàng sản phẩm ${product.name} của bạn đã được xác nhận`})
                         no.save()
                         console.log('success', bill)
                         res.status(204).send('cập nhật thành công')
