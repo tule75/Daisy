@@ -70,14 +70,15 @@
                                 <i class="fa fa-regular fa-bell "></i>
                                 <ul class="cart-announcement">
                                     <h4 class="product-title-announ">Thông báo</h4>
-                                    <!-- <li class="announ-item">
-                                        <h5>Bạn không có thông báo nào</h5>
-                                    </li> -->
+                                   
                                     <% for (let i = 0; i < notify.length; i++) {%>
-                                        <li class="announ-item">
+                                        <li class="announ-item isNoti ">
                                             <h5><%=notify[i].data%></h5>
                                         </li>
                                     <% } %>  
+                                     <li class="announ-item isntNoti">
+                                        <h5>Bạn không có thông báo nào</h5>
+                                    </li>
 
                                 </ul>
                             </li>
@@ -136,7 +137,6 @@
                             <img class="Anxuan-info" src="/img/<%-shops[i].img%>" alt="">
                            </div>
                         </a>
-                    
                         <h1 class="company-info-name">
                             <a href="/shop/<%-shops[i].slug%>" class="link-color"> <%=shops[i].name%></a>
                         </h1>
@@ -570,6 +570,19 @@
                 gridItem.classList.add("active")
             }
         })
+
+        const announItem = $(".announ-item.isNoti")
+        const isntNoti = $(".announ-item.isntNoti")
+        if($(".announ-item.isNoti").classList.contains("isNoti")) {
+            announItem.style.display = "block";
+            isntNoti.style.display = "none";
+
+        }
+        else {
+            announItem.style.display = "none"
+            isntNoti.style.display = "block";
+
+        }
 
     </script>
     
