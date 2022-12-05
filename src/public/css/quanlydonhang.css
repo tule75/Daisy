@@ -254,6 +254,17 @@
     border-bottom:  1px solid #ccc;
     padding-top: 15px;
     padding-right: 10px;
+    position: relative;
+}
+.trash-btn {
+    position: absolute;
+    bottom: 70%;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+}
+.trash-btn:active {
+    color: #ccc;
 }
 .order-alert{
     color: rgb(139, 41, 41);

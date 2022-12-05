@@ -282,25 +282,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-direction: ; */
-    /* margin-bottom: 200px; */
     box-shadow: #999;
+    flex-wrap: wrap;
+    margin: 0 180px;
    
 }
 .company-info {
-    margin:  0 20px;
+    margin:  25px 20px;
     width: 150px;
     height: 120px;
    /* border: 1px solid #ccc; */
-   position: relative;
+    position: relative;
    border-radius: 40px;
    display: flex;
    align-items: center;
    justify-content: center;
    flex-direction: column;
-}
-.company-info:hover {
-   
+   flex-wrap: wrap;
 }
 
 .Anxuan-info{
@@ -325,7 +323,7 @@
 
 /* popular-product */
 .popular-product {
-    margin-top: 60px;
+    /* margin-top: 60px; */
     display: flex;
     justify-content: center;
     align-items: center;
