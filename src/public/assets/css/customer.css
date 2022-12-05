@@ -539,34 +539,55 @@
     flex-direction: row;
     /* justify-content:space-between; */
     padding-top: 20px;
+    align-items: center;
+    /*  */
+    
 }
 
 .orders-status {
     width: 14.28%;
-    height: fit-content;
     font-size: 14px;
-    /* border-right-style: solid; */
-    /* border-right-color: #999; */
-    /* border-right: 4px; */
-    border-style: none;
-    background-color: #fff;
-    text-align: center;
+    border: none;
+    /* background-color: #ccc; */
     cursor: pointer;
-    padding: 0 0;
+    text-align: center;
+    color: black;
+    /* padding: 20px 10px; */
 }
-
+.orders-status.active {
+    color: red;
+    /* text-align: center; */
+}
 .orders__list {
     width: 100%;
-    height: 120px;
+    height: 320px;
     /* display: flex; */
     flex-direction: row;
     justify-content: space-between;
     background-color: #f0f0f0;
     margin-top: 20px;
     margin-bottom: 20px;
-    display: none;
+    /* display:none; */
+    flex-direction: column;
+    overflow: scroll;
 }
-
+.list-item {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+    color: black;
+}
+.list-item.active {
+    display: flex;
+}
+.accept {
+    padding: 5px 8px;
+    background-color: green;
+    color: white;
+    border: none;
+}
 .order__info {
     display: flex;
     flex-direction: row;
@@ -574,7 +595,7 @@
 }
 
 .order--img {
-    width: 90px;
+    width: 100px;
     height: 90px;
     margin: 8px;
     align-self: center;
@@ -587,7 +608,7 @@
 }
 
 .right {
-    transform: translateY(48px);
+    /* transform: translateY(58px); */
     margin-right: 8px;    
 }
 
@@ -900,19 +921,21 @@
     display: none;
     flex-direction: column;
     margin-top: 20px;
+    height: 320px;
+    overflow: scroll;
 }
 
 .wishlist__item {
     width: 100%;
-    /* height: 120px; */
-    /* display: flex; */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     background-color: #f0f0f0;
     padding-bottom: 8px;
-    margin: 10px 0;
+    margin: 10px 10px;
+   position: relative;
     border-radius: 2px;
+    
     box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
 }
 
@@ -921,6 +944,7 @@
     flex-direction: column;
     margin-left: 8px;
     width: 30%;
+  
 }
 
 .wishlist__info-p1 {
@@ -980,6 +1004,14 @@
 .wishlist__info--btn:hover {
     opacity: 0.8;
     color: #fff;
+}
+.trash {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
 }
 
 

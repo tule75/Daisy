@@ -70,19 +70,19 @@
                                 <i class="fa fa-regular fa-bell "></i>
                                 <ul class="cart-announcement">
                                     <h4 class="product-title-announ">Thông báo</h4>
-                                    <!-- <li class="announ-item">
-                                        <h5>Bạn không có thông báo nào</h5>
-                                    </li> -->
+
                                     <% if (notify[0]) {%> 
                                     <% for (let i = 0; i < notify.length; i++) {%>
-                                        <li class="announ-item">
+                                        <li class="announ-item isNoti ">
                                             <h5><%=notify[i].data%></h5>
                                         </li>
+
                                     <% }} else { %>
-                                        <li class="announ-item">
-                                            <h5>Khong co thong bao</h5>
+                                        <li class="announ-item isntNoti">
+                                            <h5>Bạn không có thông báo nào</h5>
                                         </li>
                                     <% } %>   
+
                                 </ul>
                             </li>
     
@@ -140,7 +140,6 @@
                             <img class="Anxuan-info" src="/img/<%-shops[i].img%>" alt="">
                            </div>
                         </a>
-                    
                         <h1 class="company-info-name">
                             <a href="/shop/<%-shops[i].slug%>" class="link-color"> <%=shops[i].name%></a>
                         </h1>
@@ -212,24 +211,38 @@
                                     <i class="category__heading-icon fa-solid fa-list-ul"></i>
                                  <h4 class="category__heading"> Danh mục </h4>
                                 </div>
-                                 <li class="category-item category-item--active">
-                                    Tất cả
+
+                                 <li class="category-item active ">
+                                       
+                                             Tất cả sản phẩm
+                                       
                                  </li>
-                                 <li class="category-item">
-                                    Chăm sóc sức khỏe
+                                 <li class="category-item ">
+                                   
+                                        Sức khoẻ
+                                    
                                  </li>
-                                 <li class="category-item">
-                                    Đồ khô
+                                 <li class="category-item ">
+                                    
+                                      Giày dép
+                                     
                                   </li>
-                                 <li class="category-item">
-                                    Giày dép
+                                 <li class="category-item ">
+                                    
+                                       Đồ khô
+                                     
                                  </li>
-                                 <li class="category-item">
-                                    Dụng cụ làm đẹp
-                                </li>
-                                 <li class="category-item">
-                                    Trà
+                                 <li class="category-item ">
+                                    
+                                         Trà
+                                     
+
                                  </li>
+                                 <li class="category-item ">
+                                    
+                                   Làm đẹp
+                                
+                            </li>
                                  
                             </ul>
                             
@@ -240,7 +253,7 @@
                      </div>
                      <div id="shop" class="grid__col-10">
                         <div  class="home-product">
-                            <div class="grid__row grid__row-item active">
+                            <div class="grid__row grid__row-item active ">
                             <% for (var i = 0; i < products.length; i++) { %> 
                                 <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
                                                     <% const y = x.replace("/view?usp=share_link","",40)%>
@@ -292,7 +305,21 @@
                 <% } %>  
                          
                             </div>
-                           
+                            <div class="grid__row grid__row-item  ">
+                                content 2
+                            </div>
+                            <div class="grid__row grid__row-item">
+                                content 3
+                            </div>
+                            <div class="grid__row grid__row-item">
+                                content 4
+                            </div>
+                            <div class="grid__row grid__row-item">
+                                content 5
+                            </div>
+                            <div class="grid__row grid__row-item">
+                                content 6
+                            </div>  
                         </div>
                     </div>
                  </div>
@@ -518,6 +545,8 @@
         })
 
 
+        const $$ = document.querySelectorAll.bind(document)
+
         const btnAddfr = $(".addfr")
         const closeAddfr = $(".icon-close-add")
         const modaladd = $(".modal-add")
@@ -533,15 +562,30 @@
         const categoryActives = $$(".category-item")
         const gridShows = $$(".grid__row-item")
 
-        categoryActives.forEach((categoryActive, item) => {
+        categoryActives.forEach((categoryActive, index) => {
             const gridItem = gridShows[index]
 
             categoryActive.onclick = function () {
                 $(".grid__row-item.active").classList.remove("active")
+                $(".category-item.active").classList.remove("active")
 
+                this.classList.add("active")
                 gridItem.classList.add("active")
             }
         })
+
+        const announItem = $(".announ-item.isNoti")
+        const isntNoti = $(".announ-item.isntNoti")
+        if($(".announ-item.isNoti").classList.contains("isNoti")) {
+            announItem.style.display = "block";
+            isntNoti.style.display = "none";
+
+        }
+        else {
+            announItem.style.display = "none"
+            isntNoti.style.display = "block";
+
+        }
 
     </script>
     

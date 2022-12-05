@@ -145,16 +145,22 @@
                 <div class="voucher-shop">
                     <h5 class="header-voucher">Voucher của shop</h5>
                     <ul class="voucher-list">
-                        <li class="voucher-item ">50k</li>
+                        <div class="voucher-note">
+                            Hiện không có voucher nào!
+                        </div>
+                        <!-- <li class="voucher-item ">50k</li>
                         <li class="voucher-item">100k</li>
-                        <li class="voucher-item">Freeship</li>
+                        <li class="voucher-item">Freeship</li> -->
                     </ul>
                 </div>
                 <div class="voucher-daisy">
                     <h5 class="header-voucher">Voucher của Daisy</h5>
                     <ul class="voucher-list">
-                        <li class="voucher-item">50k</li>
-                        <li class="voucher-item">Freeship</li>
+                        <div class="voucher-note">
+                            Hiện không có voucher nào!
+                        </div>
+                        <!-- <li class="voucher-item">50k</li>
+                        <li class="voucher-item">Freeship</li> -->
                     </ul>
                 </div>
             </div>
@@ -360,7 +366,6 @@
         const $ = document.querySelector.bind(document)
         const order = document.querySelector('.ending')
         const momo = document.querySelector('.momo')
-        const khiThanhToan = document.querySelector('.khinhanhang')
         const internetBanking = document.querySelector('.internet-banking')
 
         order.addEventListener('click', () => {
@@ -369,9 +374,7 @@
         momo.addEventListener('click', () => {
             alert('Bạn đã chọn Thanh toán bằng Ví Momo!')
         })
-        khiThanhToan.addEventListener('click', () => {
-            alert('Bạn đã chọn Thanh toán khi nhận hàng')
-        })
+       
         internetBanking.addEventListener('click', () => {
             alert('Bạn đã chọn Thanh toán bằng Internet Banking!')
         })
