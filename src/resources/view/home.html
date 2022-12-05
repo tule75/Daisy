@@ -73,7 +73,7 @@
                                     <!-- <li class="announ-item">
                                         <h5>Bạn không có thông báo nào</h5>
                                     </li> -->
-                                    <% if (Array.isArray(notify)) {%> 
+                                    <% if (notify[0]) {%> 
                                     <% for (let i = 0; i < notify.length; i++) {%>
                                         <li class="announ-item">
                                             <h5><%=notify[i].data%></h5>
