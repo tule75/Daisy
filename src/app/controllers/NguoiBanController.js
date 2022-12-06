@@ -65,7 +65,7 @@ class NguoiBanController {
                 return new Promise((resolve) => {
                   setTimeout(() => {
                     resolve(x);
-                  }, 2000);
+                  }, 1000);
                 });
             }
             const token = req.cookies.token
