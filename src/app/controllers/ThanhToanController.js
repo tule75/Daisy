@@ -4,8 +4,6 @@ const GioHang = require('../models/GioHang')
 const Bill = require('../models/Bill')
 const jwt = require('jsonwebtoken')
 const Voucher = require('../models/Voucher')
-const { isObjectIdOrHexString } = require('mongoose')
-
 
 class ThanhToanController {
     //[POST] /createbill
