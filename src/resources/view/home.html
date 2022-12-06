@@ -234,7 +234,7 @@
                                  </li>
                                  <li class="category-item ">
                                     
-                                         Trà
+                                    Trà thảo mộc
                                      
 
                                  </li>
@@ -306,19 +306,264 @@
                          
                             </div>
                             <div class="grid__row grid__row-item  ">
-                                content 2
+                                <% for (var i = 0; i < products.length; i++) { %> 
+                                    <% if (products[i].category == "suckhoe") {%> 
+                                    <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                                        <% const y = x.replace("/view?usp=share_link","",40)%>
+                                    
+                                    <div class="grid__col-2-4">
+                                        <a href="/<%-products[i].slug %>" class="addhref">
+                                        <div class="home-product__item">
+                                             <img class="home-product__item-img" src="<%-y%>" alt="">
+    
+                                        <form action="/wishlist/add" method="post" >
+                                            <button class="wishlist-btn" name="slug" value="<%-products[i].slug %>"><i class="fa-solid fa-gift"></i></button>
+                                        </form>
+    
+                                            <h4 class="home-product__item-name"><%=products[i].name%></h4>
+                                             <div class="home-product__item-price"> 
+                                                <span class="popular-price"><%=products[i].price%></span>
+                                                <span class="home-product__item-quatity">1,1k Đã bán</span>
+                                             </div>
+                                            
+                                             <div class="home-product__item-orgigin">
+    
+                                                    <span class="home-product__item-evaluate">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </span>
+    
+                                                        <span class="home-product__item-ship"><i class="fa-regular fa-truck"></i></span>
+                                                </div>
+    
+    
+                                            <div class="btn-buy">
+                                                <form action="/" method="POST">
+                                                <button class="btn-buy-item add-gh" name="slug" value="<%-products[i].slug %>">
+                                                    <i class="fa fa-regular fa-bag-shopping"></i>
+                                                </button>
+                                                </form> 
+                                                <a href="/thanhtoan/<%-products[i].slug %> ">
+                                                    <button class="btn-buy-item has--plus">
+                                                    Mua Ngay!
+                                                </button></a>
+                                            </div>
+                                            
+                                        </div>
+                                    </a>
+                                </div> 
+                            
+                    <% }} %>  
                             </div>
                             <div class="grid__row grid__row-item">
-                                content 3
+                                <% for (var i = 0; i < products.length; i++) { %> 
+                                    <% if (products[i].category == "giaydep") {%> 
+                                    <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                                        <% const y = x.replace("/view?usp=share_link","",40)%>
+                                    
+                                    <div class="grid__col-2-4">
+                                        <a href="/<%-products[i].slug %>" class="addhref">
+                                        <div class="home-product__item">
+                                             <img class="home-product__item-img" src="<%-y%>" alt="">
+    
+                                        <form action="/wishlist/add" method="post" >
+                                            <button class="wishlist-btn" name="slug" value="<%-products[i].slug %>"><i class="fa-solid fa-gift"></i></button>
+                                        </form>
+    
+                                            <h4 class="home-product__item-name"><%=products[i].name%></h4>
+                                             <div class="home-product__item-price"> 
+                                                <span class="popular-price"><%=products[i].price%></span>
+                                                <span class="home-product__item-quatity">1,1k Đã bán</span>
+                                             </div>
+                                            
+                                             <div class="home-product__item-orgigin">
+    
+                                                    <span class="home-product__item-evaluate">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </span>
+    
+                                                        <span class="home-product__item-ship"><i class="fa-regular fa-truck"></i></span>
+                                                </div>
+    
+    
+                                            <div class="btn-buy">
+                                                <form action="/" method="POST">
+                                                <button class="btn-buy-item add-gh" name="slug" value="<%-products[i].slug %>">
+                                                    <i class="fa fa-regular fa-bag-shopping"></i>
+                                                </button>
+                                                </form> 
+                                                <a href="/thanhtoan/<%-products[i].slug %> ">
+                                                    <button class="btn-buy-item has--plus">
+                                                    Mua Ngay!
+                                                </button></a>
+                                            </div>
+                                            
+                                        </div>
+                                    </a>
+                                </div> 
+                            
+                    <% }} %>  
                             </div>
                             <div class="grid__row grid__row-item">
-                                content 4
+                                <% for (var i = 0; i < products.length; i++) { %> 
+                                    <% if (products[i].category == "dokho") {%> 
+                                    <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                                        <% const y = x.replace("/view?usp=share_link","",40)%>
+                                    
+                                    <div class="grid__col-2-4">
+                                        <a href="/<%-products[i].slug %>" class="addhref">
+                                        <div class="home-product__item">
+                                             <img class="home-product__item-img" src="<%-y%>" alt="">
+    
+                                        <form action="/wishlist/add" method="post" >
+                                            <button class="wishlist-btn" name="slug" value="<%-products[i].slug %>"><i class="fa-solid fa-gift"></i></button>
+                                        </form>
+    
+                                            <h4 class="home-product__item-name"><%=products[i].name%></h4>
+                                             <div class="home-product__item-price"> 
+                                                <span class="popular-price"><%=products[i].price%></span>
+                                                <span class="home-product__item-quatity">1,1k Đã bán</span>
+                                             </div>
+                                            
+                                             <div class="home-product__item-orgigin">
+    
+                                                    <span class="home-product__item-evaluate">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </span>
+    
+                                                        <span class="home-product__item-ship"><i class="fa-regular fa-truck"></i></span>
+                                                </div>
+    
+    
+                                            <div class="btn-buy">
+                                                <form action="/" method="POST">
+                                                <button class="btn-buy-item add-gh" name="slug" value="<%-products[i].slug %>">
+                                                    <i class="fa fa-regular fa-bag-shopping"></i>
+                                                </button>
+                                                </form> 
+                                                <a href="/thanhtoan/<%-products[i].slug %> ">
+                                                    <button class="btn-buy-item has--plus">
+                                                    Mua Ngay!
+                                                </button></a>
+                                            </div>
+                                            
+                                        </div>
+                                    </a>
+                                </div> 
+                            
+                    <% }} %>  
                             </div>
                             <div class="grid__row grid__row-item">
-                                content 5
+                                <% for (var i = 0; i < products.length; i++) { %> 
+                                    <% if (products[i].category == "tra") {%> 
+                                    <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                                        <% const y = x.replace("/view?usp=share_link","",40)%>
+                                    
+                                    <div class="grid__col-2-4">
+                                        <a href="/<%-products[i].slug %>" class="addhref">
+                                        <div class="home-product__item">
+                                             <img class="home-product__item-img" src="<%-y%>" alt="">
+    
+                                        <form action="/wishlist/add" method="post" >
+                                            <button class="wishlist-btn" name="slug" value="<%-products[i].slug %>"><i class="fa-solid fa-gift"></i></button>
+                                        </form>
+    
+                                            <h4 class="home-product__item-name"><%=products[i].name%></h4>
+                                             <div class="home-product__item-price"> 
+                                                <span class="popular-price"><%=products[i].price%></span>
+                                                <span class="home-product__item-quatity">1,1k Đã bán</span>
+                                             </div>
+                                            
+                                             <div class="home-product__item-orgigin">
+    
+                                                    <span class="home-product__item-evaluate">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </span>
+    
+                                                        <span class="home-product__item-ship"><i class="fa-regular fa-truck"></i></span>
+                                                </div>
+    
+    
+                                            <div class="btn-buy">
+                                                <form action="/" method="POST">
+                                                <button class="btn-buy-item add-gh" name="slug" value="<%-products[i].slug %>">
+                                                    <i class="fa fa-regular fa-bag-shopping"></i>
+                                                </button>
+                                                </form> 
+                                                <a href="/thanhtoan/<%-products[i].slug %> ">
+                                                    <button class="btn-buy-item has--plus">
+                                                    Mua Ngay!
+                                                </button></a>
+                                            </div>
+                                            
+                                        </div>
+                                    </a>
+                                </div> 
+                            
+                    <% }} %>  
                             </div>
                             <div class="grid__row grid__row-item">
-                                content 6
+                                <% for (var i = 0; i < products.length; i++) { %> 
+                                    <% if (products[i].category == "lamdep") {%> 
+                                    <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                                                        <% const y = x.replace("/view?usp=share_link","",40)%>
+                                    
+                                    <div class="grid__col-2-4">
+                                        <a href="/<%-products[i].slug %>" class="addhref">
+                                        <div class="home-product__item">
+                                             <img class="home-product__item-img" src="<%-y%>" alt="">
+    
+                                        <form action="/wishlist/add" method="post" >
+                                            <button class="wishlist-btn" name="slug" value="<%-products[i].slug %>"><i class="fa-solid fa-gift"></i></button>
+                                        </form>
+    
+                                            <h4 class="home-product__item-name"><%=products[i].name%></h4>
+                                             <div class="home-product__item-price"> 
+                                                <span class="popular-price"><%=products[i].price%></span>
+                                                <span class="home-product__item-quatity">1,1k Đã bán</span>
+                                             </div>
+                                            
+                                             <div class="home-product__item-orgigin">
+    
+                                                    <span class="home-product__item-evaluate">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </span>
+    
+                                                        <span class="home-product__item-ship"><i class="fa-regular fa-truck"></i></span>
+                                                </div>
+    
+    
+                                            <div class="btn-buy">
+                                                <form action="/" method="POST">
+                                                <button class="btn-buy-item add-gh" name="slug" value="<%-products[i].slug %>">
+                                                    <i class="fa fa-regular fa-bag-shopping"></i>
+                                                </button>
+                                                </form> 
+                                                <a href="/thanhtoan/<%-products[i].slug %> ">
+                                                    <button class="btn-buy-item has--plus">
+                                                    Mua Ngay!
+                                                </button></a>
+                                            </div>
+                                            
+                                        </div>
+                                    </a>
+                                </div> 
+                            
+                    <% }} %>  
                             </div>  
                         </div>
                     </div>
