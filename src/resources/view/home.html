@@ -78,7 +78,7 @@
                                         </li>
 
                                     <% }} else { %>
-                                        <li class="announ-item isntNoti">
+                                        <li class="announ-item">
                                             <h5>Bạn không có thông báo nào</h5>
                                         </li>
                                     <% } %>   
@@ -819,19 +819,7 @@
             }
         })
 
-        const announItem = $(".announ-item.isNoti")
-        const isntNoti = $(".announ-item.isntNoti")
-        if($(".announ-item.isNoti").classList.contains("isNoti")) {
-            announItem.style.display = "block";
-            isntNoti.style.display = "none";
-
-        }
-        else {
-            announItem.style.display = "none"
-            isntNoti.style.display = "block";
-
-        }
-
+      
     </script>
     
 </body>
