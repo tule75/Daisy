@@ -307,7 +307,7 @@
                             </div>
                             <div class="grid__row grid__row-item  ">
                                 <% for (var i = 0; i < products.length; i++) { %> 
-                                    <% if (products[i].category == "suckhoe") {%> 
+                                    <% if (products[i].category === "suckhoe") {%> 
                                     <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
                                                         <% const y = x.replace("/view?usp=share_link","",40)%>
                                     
