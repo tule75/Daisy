@@ -12,12 +12,14 @@ const newRouteTest = require("./test")
 const newRouteWL = require("./wishlist")
 const newRouteMomo = require("./momo")
 const newRouteProduct = require("./product")
+const newRouteZalo = require("./zalo")
 
 function route(app) {
     // app.get('/test', (req, res) => {
     //     var x = [{user_slug: "foo", product_slug: "bar", money: 100, send: 0}, {user_slug: "foo", product_slug: "bar", money: 500, send: 0}]
     //     res.render('test.html', {product: x})
     // })
+    app.use('/zalo', newRouteZalo)
     app.use('/product', newRouteProduct)
     app.use('/createmomo', newRouteMomo)
     app.use('/wishlist', newRouteWL)
