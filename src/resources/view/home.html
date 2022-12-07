@@ -774,26 +774,26 @@
             headerNav.classList.remove('open')
         }
 
-        headerBar.onclick = function() {{
-            if($('.header-nav.open')) {
-                headerNav.classList.remove('open')
-            }
-            else {
-                headerNav.classList.add('open')
-            }
-        }}
+        // headerBar.onclick = function() {{
+        //     if($('.header-nav.open')) {
+        //         headerNav.classList.remove('open')
+        //     }
+        //     else {
+        //         headerNav.classList.add('open')
+        //     }
+        // }}
 
         // headerBar.addEventListener('click', showHeaderNav)
 
-        closeNav.addEventListener('click', hideHeaderNav)
+        // closeNav.addEventListener('click', hideHeaderNav)
 
-         headerNav.addEventListener('click', function(event) {
-            event.stopPropagation()
-        })
+        //  headerNav.addEventListener('click', function(event) {
+        //     event.stopPropagation()
+        // })
 
-        headerBar.addEventListener('click', function(event) {
-            event.stopPropagation()
-        })
+        // headerBar.addEventListener('click', function(event) {
+        //     event.stopPropagation()
+        // })
 
 
         const $$ = document.querySelectorAll.bind(document)
