@@ -97,7 +97,7 @@
                             </li>
                             
                         <% } else { %> 
-                        <button class="user-button"><a href="/login" class="user-button user-button-text">Sign in</a></button>
+                            <a href="/login" class="user-button user-button-text"><button type="button" class="user-button">Sign in</button></a>
                         <% } %> 
                     </ul>
                     
@@ -292,7 +292,7 @@
                                                 <i class="fa fa-regular fa-bag-shopping"></i>
                                             </button>
                                             </form> 
-                                            <a href="/thanhtoan/<%-products[i].slug %> ">
+                                            <a href="/thanhtoan/<%-products[i].slug %>">
                                                 <button class="btn-buy-item has--plus">
                                                 Mua Ngay!
                                             </button></a>
@@ -515,7 +515,7 @@
                             </div>
                             <div class="grid__row grid__row-item">
                                 <% for (var i = 0; i < products.length; i++) { %> 
-                                    <% if (products[i].category == "lamdep") {%> 
+                                <% if (products[i].category === "lamdep") {%> 
                                     <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
                                                         <% const y = x.replace("/view?usp=share_link","",40)%>
                                     
@@ -751,6 +751,12 @@
         </div>
 
     </div>
+
+    <h1 style="display: none;" class="has--bar"></h1>
+    <h1 style="display: none;" class="addfr"></h1>
+    <h1 style="display: none;" class="icon-close-add"></h1>
+    <h1 style="display: none;" class="modal-add"></h1>
+    <h1 style="display: none;" class="announ-item isNoti isntNoti"></h1>
 
     <script src="javascript/home.js"> </script>
 
