@@ -105,23 +105,12 @@
         </div>
 
         <ul class="header-nav">
-            <li class="header-nav__item"><% if (notify[0]) {%> 
-                <% for (let i = 0; i < notify.length; i++) {%>
-                    <li class="announ-item isNoti ">
-                        <h5><%=notify[i].data%></h5>
-                    </li>
-
-                <% }} else { %>
-                    <li class="announ-item">
-                        <h5>Bạn không có thông báo nào</h5>
-                    </li>
-                <% } %>   </li>
-            <a href="/giohang" class="has-cart"><li class="header-nav__item">Giỏ hàng</li></a>
-            <li class="header-nav__item"><a href="/user/<%-user.slug %>" class="has-account">Tài khoản của bạn</a></li>
-            <!-- <li class="header-nav__item">Đơn hàng của bạn</li> -->
-            <li class="header-nav__item"><button class="addfr"> Tìm bạn</button></li>
-            <li class="header-nav__item"><a href="/kenhnguoiban"><p class="header-has-seller">Kênh người bán</p></a></li>
-            <li class="header-nav__item"><a class="box-link" href="/logout">Đăng xuất</a></li>
+            <li class="header-nav__item">Thông báo</li>
+            <li class="header-nav__item"><a href="/giohang" class="has-cart" style="color: white;">Giỏ hàng</a></li>
+            <li class="header-nav__item"><a href="/user/<%-user.slug %>" class="has-account" style="color: white;">Tài khoản của bạn</a></li>
+            <li class="header-nav__item">Đơn hàng của bạn</li>
+            <li class="header-nav__item"><a href="/kenhnguoiban" style="color: white;">Kênh người bán</a></li>
+            <li class="header-nav__item"><a class="box-link" href="/logout" style="color: white;">Đăng xuất</a></li>
         </ul>
 
         <!-- body -->
