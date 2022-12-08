@@ -4,6 +4,7 @@ const GioHang = require('../models/GioHang')
 const Bill = require('../models/Bill')
 const jwt = require('jsonwebtoken')
 const Voucher = require('../models/Voucher')
+const WishList = require('../models/WishList')
 
 class ThanhToanController {
     //[POST] /createbill
@@ -156,7 +157,7 @@ class ThanhToanController {
                                 if (product != null){
                                     var voucher = []
 
-                                    GioHang.findOne({product_slug: product.slug, user_slug: user.slug})
+                                    WishList.findOne({product_slug: product.slug, user_slug: receiver.slug})
                                     .then((data) => {
                                         product.count = data.count
                                     })

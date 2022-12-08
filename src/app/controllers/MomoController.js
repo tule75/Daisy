@@ -45,8 +45,8 @@ class MomoController {
             var secretKey = 'K951B6PE1waDMi640xX08PD3vg6EkVlz';
             var orderInfo = 'thanh toán hàng hóa';
             var partnerCode = 'MOMO';
-            var redirectUrl = 'localhost:3000';
-            var ipnUrl = 'localhost:3000/createbill';
+            var redirectUrl = '103.1.237.153';
+            var ipnUrl = '103.1.237.153/createbill';
             var requestType = "payWithMethod";
             var amount = x;
             var orderId = partnerCode + new Date().getTime();

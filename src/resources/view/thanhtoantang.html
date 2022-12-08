@@ -125,7 +125,7 @@
                 <div class="product-list">
                     <!-- <h5 class="product-name"><%=//shop[i].name %></h5> -->
                     <div class="product-container">
-                        <input type="text" style="display: none;" name="p<%-i %>" value="<%=JSON.stringify({user_slug: user.slug, product_slug: product[i].slug , shop_slug: product[i].user_slug , send: 0, sell: 0, money: product[i].price * product[i].count, count: 1, receiver_slug: receiver.slug }) %>">
+                        <input type="text" style="display: none;" name="p<%-i %>" value="<%=JSON.stringify({user_slug: user.slug, product_id: product[i].id , shop_slug: product[i].user_slug , send: 0, sell: 0, money: product[i].price + 20000, count: 1, receiver_slug: receiver.slug }) %>">
                         <img class="product-img" src="<%-y%>" alt="">
                         <div class="product-item">
                             <h5 class="name"><%=product[i].name%></h5>
@@ -184,6 +184,7 @@
                 <button class="ending" type="submit">ĐẶT HÀNG</button>
                 <button class="ending_2"><a href="/"> Quay lai trang chu</a></button>
             </div>
+        </form>
             <div class="modal-add">
                 <div class="modal-container-add">
     
@@ -207,7 +208,7 @@
                  </div>
            
          </div>
-        </form>
+        
          <div class="footer">
             <div class="grid">
                 <div class="grid__row">
