@@ -105,13 +105,15 @@
                 <div class="product-information">
                     <h4 class="product-name"><%=product.name%></h4>
                     <div class="product-name-evaluate home-product__item-orgigin">
-                        <span class="home-product__item-evaluate">
+                        <span class="home-product__item-evaluate evalute-product">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star start-no-color last-child"></i>
                         </span>
-                         <!-- <span class="home-product__item-ship"><i class="fa-regular fa-truck"></i></span> -->
+                         <div class="qr-scan">
+                            <img class="qr-img" src="img/QR_code_for_mobile_English_Wikipedia.png" alt="">
+                         </div>
                     </div>
                     <div class="product-has-price">
                         <span class="price-final"> <%=product.price %> </span>
@@ -124,12 +126,7 @@
                         <div class="voucher-note">
                             Không có voucher nào!
                         </div>
-                        <!-- <div class="voucher-item">
-                            50k
-                        </div>
-                        <div class="voucher-item">
-                            150k
-                        </div> -->
+                      
                        </div>
 
                     </div>
@@ -163,7 +160,7 @@
                         </form>
                         <form action="/" method="POST">
                         <button class="add-button" name="slug" value="<%-product.slug %>" >
-                            <i class="fa fa-regular fa-bag-shopping"></i>
+                           
                             Thêm vào giỏ
                         </button>
                         </form>
