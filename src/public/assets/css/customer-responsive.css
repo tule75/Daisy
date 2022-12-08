@@ -93,9 +93,12 @@
         width: 100%;
         height: 100%;
         display: block;
-        transform: translateX(30px);
+        /* transform: translateX(30px); */
         color: #fff;
         cursor: pointer;
+        font-size: 20px;
+        text-align: center;
+        transform: translateY(-16px);;
     }
 
     .has--bar:hover {
@@ -117,7 +120,7 @@
         list-style: none;
         background-color: #5BAB5A;
         flex-direction: column;
-        transform: translateY(79px);
+        transform: translateY(50px);
         padding-left: 0;
         /* padding-right: 2px; */
         z-index: 1;
