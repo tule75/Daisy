@@ -75,9 +75,22 @@
                                 </ul>
                             </li>
                         </ul>
+
+                        <ul class="user-item has--bar">
+                            <i class="fa-solid fa-bars"></i>
+                        </ul>
                     </div>
 
                 </div>
+
+                <ul class="header-nav">
+                    <li class="header-nav__item">Thông báo</li>
+                    <li class="header-nav__item">Giỏ hàng</li>
+                    <li class="header-nav__item">Tài khoản của bạn</li>
+                    <li class="header-nav__item">Đơn hàng của bạn</li>
+                    <li class="header-nav__item">Kênh người bán</li>
+                    <li class="header-nav__item">Đăng xuất</li>
+                </ul>
             </div>
             <!--End: Header-->
 
@@ -1561,16 +1574,23 @@
             // =============content=============
             const choices = document.querySelectorAll('.content__side-bar--choice ')
             const contents = document.querySelectorAll('.js-content-form')
+            const contentFormModals = $$('.js-content-form-modal')
+            const contentModal = document.querySelector('.content__form-modal')
 
             choices.forEach((choice, index) => {
-                let content = contents[index]
-
+                const content = contents[index]
+                const contentFormModal = contentFormModals[index]
                 choice.onclick = function() {
                     $('.content__side-bar--choice.active').classList.remove('active')
                     $('.js-content-form.on').classList.remove('on')
 
                     this.classList.add('active')
                     content.classList.add('on')
+
+                    contentModal.classList.add('turn')
+                    $('.js-content-form-modal.b').classList.remove('b')
+
+                    contentFormModal.classList.add('b')
                 }
             })
 
@@ -1657,12 +1677,13 @@
             //     const content = contentFormModals[i]
 
             //     choice.onclick = function() {
-            //         $$('.js-content-form-modal').classList.add('turn')
+
+            //         // contentModal.classList.add('turn')
             //         $('.content__side-bar--choice-modal.a').classList.remove('a')
             //         $('.js-content-form-modal.b').classList.remove('b')
 
             //         this.classList.add('a')
-            //         content.classList.add('b')
+            //         // content.classList.add('b')
             //     }
             // })
 
@@ -1676,6 +1697,42 @@
                 back.addEventListener('click', HideContentModal)
             }
 
+        </script>
+
+        <script>
+        const headerBar = document.querySelector('.has--bar')
+        const headerNav = document.querySelector('.header-nav')
+        const closeNav = document.querySelector('.main')
+        const a = document.querySelector.bind(document)
+            
+        function showHeaderNav() {
+            headerNav.classList.add('open')
+        }
+
+        function hideHeaderNav() {
+            headerNav.classList.remove('open')
+        }
+        
+        headerBar.onclick = function() {{
+            if(a('.header-nav.open')) {
+                headerNav.classList.remove('open')
+            }
+            else {
+                headerNav.classList.add('open')
+            }
+        }}
+
+        headerBar.addEventListener('click', showHeaderNav)
+
+        closeNav.addEventListener('click', hideHeaderNav)
+
+         headerNav.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
+
+        headerBar.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
         </script>
 
         <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
