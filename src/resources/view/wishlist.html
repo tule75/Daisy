@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/wishlist.css">
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/wishlist-responsive.css">
 
 </head>
 <body>
@@ -92,6 +93,16 @@
                 
             </div>
     </div>
+
+    <ul class="header-nav">
+        <li class="header-nav__item">Thông báo</li>
+        <li class="header-nav__item">Giỏ hàng</li>
+        <li class="header-nav__item">Tài khoản của bạn</li>
+        <li class="header-nav__item">Đơn hàng của bạn</li>
+        <li class="header-nav__item">Kênh người bán</li>
+        <li class="header-nav__item">Đăng xuất</li>
+    </ul>
+
         <div class="body">
             <div class="body-header">
                 <div class="user_side">
@@ -382,6 +393,43 @@
         }
 
     </script>
+
+<script>
+    const headerBar = document.querySelector('.has--bar')
+const headerNav = document.querySelector('.header-nav')
+const closeNav = document.querySelector('.app')
+const a = document.querySelector.bind(document)
+
+function showHeaderNav() {
+ headerNav.classList.add('open')
+}
+
+function hideHeaderNav() {
+ headerNav.classList.remove('open')
+}
+
+headerBar.onclick = function() {{
+ if(a('.header-nav.open')) {
+     headerNav.classList.remove('open')
+ }
+ else {
+     headerNav.classList.add('open')
+ }
+}}
+
+headerBar.addEventListener('click', showHeaderNav)
+
+closeNav.addEventListener('click', hideHeaderNav)
+
+headerNav.addEventListener('click', function(event) {
+ event.stopPropagation()
+})
+
+headerBar.addEventListener('click', function(event) {
+ event.stopPropagation()
+})
+
+</script>
     
 </body>
 </html>
