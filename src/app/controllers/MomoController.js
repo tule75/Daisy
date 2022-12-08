@@ -41,6 +41,7 @@ class MomoController {
             return pr;
         })
         .then((data) => {
+            console.log(data)
             var accessKey = 'F8BBA842ECF85';
             var secretKey = 'K951B6PE1waDMi640xX08PD3vg6EkVlz';
             var orderInfo = 'thanh toán hàng hóa';

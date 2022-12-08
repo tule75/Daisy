@@ -15,7 +15,7 @@ class ThanhToanController {
                 return new Promise((resolve) => {
                   setTimeout(() => {
                     resolve(x);
-                  }, 3000);
+                  }, 1000);
                 });
             }
 
@@ -23,12 +23,14 @@ class ThanhToanController {
                 var pr = []
                 // let data = req.body.extraData.toString('base64').split('&');
                 let data = req.body.extraData.split('&');
-                for (let i = 0; i < data.length; i++) {
+                data.forEach((element, i) => {
                     // if (isJson(req.body[p])) {
-
-                    pr[i] = JSON.parse(data[i]);
+                    if (element !== '') {
+                        pr[i] = JSON.parse(element);
+                        console.log(pr[i])
+                    }
                     // }
-                };
+                });
                 if (pr) {
                     resolve(pr)
                 } else {
