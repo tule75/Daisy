@@ -44,7 +44,7 @@ class MomoController {
             console.log(data)
             var accessKey = 'F8BBA842ECF85';
             var secretKey = 'K951B6PE1waDMi640xX08PD3vg6EkVlz';
-            var orderInfo = 'thanh toán hàng hóa';
+            var orderInfo = 'uitdaisy.vn thanh toán';
             var partnerCode = 'MOMO';
             var redirectUrl = 'https://103.1.237.153';
             var ipnUrl = 'https://103.1.237.153/createbill';
