@@ -32,21 +32,22 @@ class MomoController {
             if (pr) {
                 resolve(pr)
             } else {
-                reject()
-            }
-        })
+		reject()
+	    }
+	})
         promise.then(async (pr) => {
             pr = await resolveAfter2Seconds(pr)
             console.log(pr)
             return pr;
         })
         .then((data) => {
+            console.log(data)
             var accessKey = 'F8BBA842ECF85';
             var secretKey = 'K951B6PE1waDMi640xX08PD3vg6EkVlz';
-            var orderInfo = 'thanh toán hàng hóa';
+            var orderInfo = 'uitdaisy.vn thanh toán';
             var partnerCode = 'MOMO';
-            var redirectUrl = 'localhost:3000';
-            var ipnUrl = 'localhost:3000/createbill';
+            var redirectUrl = 'https://103.1.237.153';
+            var ipnUrl = 'https://103.1.237.153/createbill';
             var requestType = "payWithMethod";
             var amount = x;
             var orderId = partnerCode + new Date().getTime();
@@ -99,7 +100,7 @@ class MomoController {
                 response.on('data', (body) => {
                     console.log(body)
                     if (JSON.parse(body).shortLink != undefined) {
-                        res.redirect(JSON.parse(body).shortLink)
+                        res.redirect(JSON.parse(body).payUrl)
                     }  else {
                         res.send(JSON.parse(body).message)
                     }
