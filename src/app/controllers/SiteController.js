@@ -8,6 +8,9 @@ const GioHang = require('../models/GioHang')
 class SiteController {
     //[GET] /
     index(req, res){
+        if (req.query.extraData) {
+            res.redirect('/')
+        }
         if (req.cookies.token){
             const token = req.cookies.token
             const id = jwt.verify(token, 'daisy')

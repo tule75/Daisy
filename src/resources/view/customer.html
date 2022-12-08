@@ -99,45 +99,45 @@
                 <div class="content__side-bar">
                     <img class="user-avatar" src="/assets/image/download.jpeg" alt="">
 
-                    <button class="content__side-bar--button">Đổi ảnh đại diện</button>
+                    <button type="button" class="content__side-bar--button">Đổi ảnh đại diện</button>
 
                     <div class="content__side-bar--choice-list">
-                        <button class="content__side-bar--choice active content__side-bar--choice-modal a">
+                        <button type="button" class="content__side-bar--choice active content__side-bar--choice-modal a">
                             <i class="fa-solid fa-user content__side-bar--ic"></i>
                             Thông tin cá nhân
                         </button>
 
-                        <button class="content__side-bar--choice content__side-bar--choice-modal">
+                        <button type="button" class="content__side-bar--choice content__side-bar--choice-modal">
                             <i class="fa-solid fa-location-dot content__side-bar--ic"></i>
                             Địa chỉ nhận hàng
                         </button>
 
-                        <button class="content__side-bar--choice content__side-bar--choice-modal">
+                        <button type="button" class="content__side-bar--choice content__side-bar--choice-modal">
                             <i class="fa-solid fa-building-columns content__side-bar--ic"></i>
                             Ngân hàng liên kết
                         </button>
 
-                        <button class="content__side-bar--choice content__side-bar--choice-modal">
+                        <button type="button" class="content__side-bar--choice content__side-bar--choice-modal">
                             <i class="fa-solid fa-box content__side-bar--ic"></i>
                             Quản lý đơn hàng
                         </button>
 
-                        <button class="content__side-bar--choice content__side-bar--choice-modal">
+                        <button type="button" class="content__side-bar--choice content__side-bar--choice-modal">
                             <i class="fa-solid fa-key content__side-bar--ic"></i>
                             Đổi mật khẩu
                         </button>
 
-                        <button class="content__side-bar--choice content__side-bar--choice-modal">
+                        <button type="button" class="content__side-bar--choice content__side-bar--choice-modal">
                             <i class="fa-solid fa-ticket content__side-bar--ic"></i>
                             Kho voucher
                         </button>
 
-                        <button class="content__side-bar--choice content__side-bar--choice-modal">
+                        <button type="button" class="content__side-bar--choice content__side-bar--choice-modal">
                             <i class="fa-solid fa-list-ul content__side-bar--ic"></i>
                             Điều ước của bạn
                         </button>
 
-                        <button class="content__side-bar--choice-btn">
+                        <button type="button" class="content__side-bar--choice-btn">
                             <i class="fa-solid fa-right-from-bracket content__side-bar--ic"></i>
                             Đăng xuất
                         </button>
@@ -145,7 +145,8 @@
                 </div>
 
                 <div class="content__form">
-                    <form class="content__form-userinfo js-content-form on" method="post">
+                    <div class="content__form-userinfo js-content-form on">
+                   
                         <div class="content__form-col"> 
                             <div class="content__form-head">
                                 <li class="content__form--info">Tên đăng nhập: </li>
@@ -168,7 +169,7 @@
                                 <li class="content__form--info">Giới tính:</li>
                                 <li class="content__form--info">Email:</li>
                                 <li class="content__form--info">Số điện thoại: </li>
-                                <button class="content__form-button">Lưu thay đổi</button>
+                                <button type="button" class="content__form-button">Lưu thay đổi</button>
                             </div>
     
                             <div class="content__form-space">
@@ -182,7 +183,8 @@
                             </div>
                         </div>
     
-                    </form>
+                  
+                    </div>
 
                     <div class="content__form-address js-content-form">
                         <h2 class="address__head">Địa chỉ của bạn</h2>
@@ -230,9 +232,9 @@
                             </div>
 
                             <div class="bank__right">
-                                <button class="bank__list--btn">Cập nhật</button>
-                                <button class="bank__list--btn">Xóa</button>
-                                <button class="bank__list--btn">Đặt mặc định</button>
+                                <button type="button" class="bank__list--btn">Cập nhật</button>
+                                <button type="button" class="bank__list--btn">Xóa</button>
+                                <button type="button" class="bank__list--btn">Đặt mặc định</button>
                             </div>
                         </div> 
 
@@ -243,9 +245,9 @@
                             </div>
 
                             <div class="bank__right">
-                                <button class="bank__list--btn">Cập nhật</button>
-                                <button class="bank__list--btn">Xóa</button>
-                                <button class="bank__list--btn">Đặt mặc định</button>
+                                <button type="button" class="bank__list--btn">Cập nhật</button>
+                                <button type="button" class="bank__list--btn">Xóa</button>
+                                <button type="button" class="bank__list--btn">Đặt mặc định</button>
                             </div>
                         </div>  
 
@@ -1570,7 +1572,7 @@
             const $$ = document.querySelectorAll.bind(document)
 
             // =============content=============
-            const choices = document.querySelectorAll('.content__side-bar--choice')
+            const choices = document.querySelectorAll('.content__side-bar--choice ')
             const contents = document.querySelectorAll('.js-content-form')
             const contentFormModals = $$('.js-content-form-modal')
             const contentModal = document.querySelector('.content__form-modal')
@@ -1579,10 +1581,10 @@
                 const content = contents[index]
                 const contentFormModal = contentFormModals[index]
 
+
                 choice.onclick = function() {
                     $('.content__side-bar--choice.active').classList.remove('active')
                     $('.js-content-form.on').classList.remove('on')
-
 
                     this.classList.add('active')
                     content.classList.add('on')
@@ -1677,14 +1679,7 @@
             //     const content = contentFormModals[i]
 
             //     choice.onclick = function() {
-            //         // contentModal.classList.add('turn')
-            //         $('.content__side-bar--choice-modal.a').classList.remove('a')
-            //         $('.js-content-form-modal.b').classList.remove('b')
 
-            //         this.classList.add('a')
-            //         // content.classList.add('b')
-            //     }
-            // })
 
             const backs = document.querySelectorAll('.fa-chevron-left')
 
@@ -1737,9 +1732,8 @@
         <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
         <script>
-            $(document).ready(function() {
+            jQuery( document ).ready(function() {
                 $('.sendbill').submit(function(e) {
-                    
                     e.preventDefault();
 
                     let $input = $('.sendbill: input ');

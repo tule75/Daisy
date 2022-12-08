@@ -4,6 +4,7 @@ const GioHang = require('../models/GioHang')
 const Bill = require('../models/Bill')
 const jwt = require('jsonwebtoken')
 const Voucher = require('../models/Voucher')
+const WishList = require('../models/WishList')
 
 class ThanhToanController {
     //[POST] /createbill
@@ -14,7 +15,7 @@ class ThanhToanController {
                 return new Promise((resolve) => {
                   setTimeout(() => {
                     resolve(x);
-                  }, 3000);
+                  }, 1000);
                 });
             }
 
@@ -22,12 +23,21 @@ class ThanhToanController {
                 var pr = []
                 // let data = req.body.extraData.toString('base64').split('&');
                 let data = req.body.extraData.split('&');
-                for (let i = 0; i < data.length; i++) {
+                data.forEach((element, i) => {
                     // if (isJson(req.body[p])) {
-
-                    pr[i] = JSON.parse(data[i]);
+                    if (element !== '') {
+                        pr[i] = JSON.parse(element);
+                        Product.findById(pr[i].product_id)
+                        .then((product) => {
+                            if (product) {
+                                pr[i].product_slug = product.slug
+                            }
+                        })
+                        .catch((error) => {})
+                        console.log(pr[i])
+                    }
                     // }
-                };
+                });
                 if (pr) {
                     resolve(pr)
                 } else {
@@ -37,6 +47,7 @@ class ThanhToanController {
             promise.then(async (pr) => {
                 pr = await resolveAfter2Seconds(pr)
                 console.log(pr)
+                
                 Bill.create(pr)
                 .then(() => {
                     console.log(-1)
@@ -156,7 +167,7 @@ class ThanhToanController {
                                 if (product != null){
                                     var voucher = []
 
-                                    GioHang.findOne({product_slug: product.slug, user_slug: user.slug})
+                                    WishList.findOne({product_slug: product.slug, user_slug: receiver.slug})
                                     .then((data) => {
                                         product.count = data.count
                                     })

@@ -86,7 +86,9 @@
         <div class="body">
             <div class="product-show">
                 <div class="product-show-img">
-                    <img class="img-item has-item" src="/img/DSC_0976.jpg" alt="">
+                    <%const x = product.img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                    <% const y = x.replace("/view?usp=share_link","",40)%>
+                    <img class="img-item has-item" src="<%-y%>" alt="">
                     <ul class="img-list">
                         <li class="img-list-item">
                              <img class="img-item" src="/img/DSC_0976.jpg" alt="">
@@ -98,20 +100,21 @@
                         <img class="img-item" src="/img/DSC_0976.jpg" alt="">
                     </li>
                     </ul>
-                    <!-- <%const x = product.img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
-                    <% const y = x.replace("/view?usp=share_link","",40)%>
+
                     <img src="<%-y %>" alt="" class="img-item has-item" > -->
                 </div>
                 <div class="product-information">
                     <h4 class="product-name"><%=product.name%></h4>
                     <div class="product-name-evaluate home-product__item-orgigin">
-                        <span class="home-product__item-evaluate">
+                        <span class="home-product__item-evaluate evalute-product">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star start-no-color last-child"></i>
                         </span>
-                         <!-- <span class="home-product__item-ship"><i class="fa-regular fa-truck"></i></span> -->
+                         <div class="qr-scan">
+                            <img class="qr-img" src="img/QR_code_for_mobile_English_Wikipedia.png" alt="">
+                         </div>
                     </div>
                     <div class="product-has-price">
                         <span class="price-final"> <%=product.price %> </span>
@@ -124,12 +127,7 @@
                         <div class="voucher-note">
                             Không có voucher nào!
                         </div>
-                        <!-- <div class="voucher-item">
-                            50k
-                        </div>
-                        <div class="voucher-item">
-                            150k
-                        </div> -->
+                      
                        </div>
 
                     </div>
@@ -163,7 +161,7 @@
                         </form>
                         <form action="/" method="POST">
                         <button class="add-button" name="slug" value="<%-product.slug %>" >
-                            <i class="fa fa-regular fa-bag-shopping"></i>
+                           
                             Thêm vào giỏ
                         </button>
                         </form>

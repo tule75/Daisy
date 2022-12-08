@@ -61,6 +61,9 @@
                     
                     
                      <% if (check != 0) {%> 
+                        <li class="user-item has--bar">
+                            <i class="fa-solid fa-bars"></i>
+                        </li>
                         <li class="user-item has--noti ">
                             <i class="fa fa-regular fa-bell "></i>
                             <ul class="cart-announcement">
@@ -89,6 +92,16 @@
                 </ul>
              </div>
          </div>
+
+         <ul class="header-nav">
+            <li class="header-nav__item">Thông báo</li>
+            <li class="header-nav__item">Giỏ hàng</li>
+            <li class="header-nav__item">Tài khoản của bạn</li>
+            <li class="header-nav__item">Đơn hàng của bạn</li>
+            <li class="header-nav__item">Kênh người bán</li>
+            <li class="header-nav__item">Đăng xuất</li>
+        </ul>
+
          <form method="GET" class="thanhtoantien" action="/thanhtoan/cart">
         <div class="cart-body">
                 <h4 class="car-body-heading">
@@ -113,7 +126,7 @@
                 <% for (var i = 0; i < products.length; i++) { %> 
                     <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
                     <% const y = x.replace("/view?usp=share_link","",40)%>
-                <div id="xoa<%=i %>">
+                <div id="xoa<%=i %>" class="item">
                 <div class="cart-product-wrap">
                    <div class="cart-product-infor">
                         <input class="checkbox" type="checkbox" name="q<%=i %>" value="<%-products[i].slug %>">
@@ -450,6 +463,43 @@
                     })
                 })
             })
+        </script>
+
+        <script>
+               const headerBar = document.querySelector('.has--bar')
+        const headerNav = document.querySelector('.header-nav')
+        const closeNav = document.querySelector('.cart-shopping')
+        const $ = document.querySelector.bind(document)
+
+        function showHeaderNav() {
+            headerNav.classList.add('open')
+        }
+
+        function hideHeaderNav() {
+            headerNav.classList.remove('open')
+        }
+        
+        headerBar.onclick = function() {{
+            if($('.header-nav.open')) {
+                headerNav.classList.remove('open')
+            }
+            else {
+                headerNav.classList.add('open')
+            }
+        }}
+
+        headerBar.addEventListener('click', showHeaderNav)
+
+        closeNav.addEventListener('click', hideHeaderNav)
+
+         headerNav.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
+
+        headerBar.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
+
         </script>
 
 
