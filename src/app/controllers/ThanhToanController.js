@@ -27,6 +27,13 @@ class ThanhToanController {
                     // if (isJson(req.body[p])) {
                     if (element !== '') {
                         pr[i] = JSON.parse(element);
+                        Product.findById(pr[i].product_id)
+                        .then((product) => {
+                            if (product) {
+                                pr[i].product_slug = product.slug
+                            }
+                        })
+                        .catch((error) => {})
                         console.log(pr[i])
                     }
                     // }
@@ -40,6 +47,7 @@ class ThanhToanController {
             promise.then(async (pr) => {
                 pr = await resolveAfter2Seconds(pr)
                 console.log(pr)
+                
                 Bill.create(pr)
                 .then(() => {
                     console.log(-1)
