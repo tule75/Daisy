@@ -571,6 +571,7 @@
     flex-direction: column;
     overflow: scroll;
 }
+
 .list-item {
     display: none;
     justify-content: space-between;
@@ -579,6 +580,7 @@
     padding: 10px 0;
     color: black;
 }
+
 .list-item.active {
     display: flex;
 }
@@ -935,7 +937,6 @@
     margin: 10px 10px;
    position: relative;
     border-radius: 2px;
-    
     box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
 }
 
@@ -943,8 +944,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 8px;
-    width: 30%;
-  
+    width: 30%; 
 }
 
 .wishlist__info-p1 {
@@ -1046,6 +1046,7 @@
 .changecontent {
     display: flex;
 }
+
 /*-------------------------Footer-----------------------*/
 .footer {
     width: 100%;
@@ -1192,5 +1193,9 @@
         opacity: 1;
         transform: translateY(0);
     }
+ }
+
+ .content__form-modal {
+    display: none;
  }
 
