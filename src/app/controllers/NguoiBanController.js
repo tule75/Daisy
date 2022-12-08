@@ -7,14 +7,14 @@ const mongoose = require('mongoose')
 mongoose.Promise = require('bluebird');
 const jwt = require('jsonwebtoken')
 const { resolve } = require('bluebird')
-
+const http = require('http')
 
 class NguoiBanController {
     //[POST] /kenhnguoiban
     sent(req, res, next) {
         console.log(req.body)
         let bills = JSON.parse(req.body.bill)
-        Bill.findOne({user_slug: bills.user_slug, product_slug: bills.product_slug})
+        Bill.findOne({user_slug: bills.user_slug, product_slug: bills.product_slug, send: 0})
         .then(bill => {
             if (bill) {
                 Product.findOne({slug: bill.product_slug})
@@ -22,8 +22,43 @@ class NguoiBanController {
                     bill['send'] = 1;
                     bill.save()
                     .then(() => {
-                        var no = new Notify({user_slug: bill.user_slug, data: `Đơn hàng sản phẩm ${product.name} của bạn đã được xác nhận`})
+                        //lưu thông báo
+                        var no = new Notify({user_slug: bill.user_slug, data: `Đơn hàng mã ${bill._id} sản phẩm ${product.name} của bạn đã được xác nhận`})
                         no.save()
+                        .then(() => {
+                            // gọi đến /zalo/sendmessage để xử lý gửi tin nhắn ezns hoặc esms
+                            const requestBody = JSON.stringify({
+                                shop_slug: bill.shop_slug,
+                                cus_slug: bill.user_slug
+                            })
+
+                            var options = {
+                                    hostname: 'localhost',
+                                    port: 3000,
+                                    path: '/zalo/sendmessage',
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json',
+                                        'Content-Length': Buffer.byteLength(requestBody)
+                                    }
+                                }
+                                const request = http.request(options, response => {
+                                    response.setEncoding('utf8');
+                                    response.on('data', (body) => {
+                                        //CodeResult = 103 vì tài khoản trên không đủ tiền.
+                                        // console.log('success')
+                                    });
+                                    response.on('end', () => {
+                                        console.log('xong');
+                                    });
+                                })
+            
+                                request.on('error', (e) => {
+                                    console.log(`problem with request: ${e.message}`);
+                                });
+                                request.write(requestBody);
+                                request.end('')
+                        })
                         console.log('success', bill)
                         res.status(204).send('cập nhật thành công')
                     })
