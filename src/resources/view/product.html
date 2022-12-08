@@ -86,7 +86,9 @@
         <div class="body">
             <div class="product-show">
                 <div class="product-show-img">
-                    <img class="img-item has-item" src="/img/DSC_0976.jpg" alt="">
+                    <%const x = product.img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                    <% const y = x.replace("/view?usp=share_link","",40)%>
+                    <img class="img-item has-item" src="<%-y%>" alt="">
                     <ul class="img-list">
                         <li class="img-list-item">
                              <img class="img-item" src="/img/DSC_0976.jpg" alt="">
@@ -98,8 +100,7 @@
                         <img class="img-item" src="/img/DSC_0976.jpg" alt="">
                     </li>
                     </ul>
-                    <!-- <%const x = product.img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
-                    <% const y = x.replace("/view?usp=share_link","",40)%>
+                    <!-- 
                     <img src="<%-y %>" alt="" class="img-item has-item" > -->
                 </div>
                 <div class="product-information">
