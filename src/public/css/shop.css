@@ -35,7 +35,7 @@
     border: none;
     outline: none;
     padding: 10px 25px;
-    min-width: 610px;
+    width: 610px;
     border-radius: 13px;
     background-color: rgb(235, 232, 232);
 
@@ -783,8 +783,17 @@
 
 
 
+.shop-nav-respon {
+    display: none;
+}
 
+.has--bar{
+    display: none;
+}
 
+.header-nav{
+    display: none;
+}
 
 
 /* announcement */

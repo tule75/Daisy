@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/shop.css">
     <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/shop-responsive.css">
 </head>
 <body>
     <div class="shop">
@@ -39,6 +40,7 @@
                 <i class="fa fa-solid fa-magnifying-glass input-icon"></i>
                </button>
             </div>
+            
             <div class="header-user">
                 <ul class="user-list">
                     <a href="/giohang" class="has-cart"><li class="user-item ">
@@ -48,6 +50,7 @@
                     </li>
                     </a>
                     <li class="user-item has--noti ">
+                      
                         <i class="fa fa-regular fa-bell "></i>
                         <ul class="cart-announcement">
                             <h4 class="product-title-announ">Thông báo</h4>
@@ -62,6 +65,9 @@
                             <a href="/user/<%-user.slug %> ">
                             <i class="fa fa-solid fa-user"></i>
                          </a>
+                         <li class="user-item has--bar">
+                            <i class="fa-solid fa-bars"></i>
+                        </li>
                          <ul class="box-list">
                             <li class="box-list--item">Tài khoản</li>
                             <li class="box-list--item"><a class="box-link" href="/logout">Đăng xuất</a></li>
@@ -75,6 +81,15 @@
                 
             </div>
         </div>
+
+        <ul class="header-nav">
+            <li class="header-nav__item">Thông báo</li>
+            <li class="header-nav__item"><a href="/giohang" class="has-cart" style="color: white;">Giỏ hàng</a></li>
+            <li class="header-nav__item"><% if (check != 0) {%> <a href="/user/<%-user.slug %>" class="has-account" style="color: white;">Tài khoản của bạn</a> <% } else { %> Đăng nhập <% } %>   </li>
+            <li class="header-nav__item">Đơn hàng của bạn</li>
+            <li class="header-nav__item"><a href="/kenhnguoiban" style="color: white;">Kênh người bán</a></li>
+            <li class="header-nav__item"><a class="box-link" href="/logout" style="color: white;">Đăng xuất</a></li>
+        </ul>
 
         <div  class="body">
             <div class="shop-header">
@@ -126,6 +141,13 @@
 
             </div>
 
+            <ul class="shop-nav-respon">
+                <li class="nav-item"><a href="/">Trang chủ</a></li>
+                <li class="nav-item"><a href="#fav">Nổi bật</a></li>
+                <li class="nav-item"><a href="#phanloai">Tất cả sản phẩm</a></li>
+                <li class="nav-item"><a href="#uudai">Ưu đãi</a></li>
+            </ul>
+
             <!-- ticket -->
             <div id="coupon" class="shop-ticket">
                 <h3 class="shop-ticket-title">Vouchers</h3>
@@ -145,7 +167,7 @@
                         <li class="circle-item"></li>
                        </ul>
                     </div>
-                    <div class="ticket-item">
+                    <div class="ticket-item respon">
                         <h4 class="ticket-item-discount">Giảm 50%</h4>
                         <h6 class="ticket-item-condition">Đơn hàng từ 200.000</h6>
                         <input type="button" value="Lưu mã" class="coupon-btn  "> </input>
@@ -160,7 +182,7 @@
                         <li class="circle-item"></li>
                        </ul>
                     </div>
-                    <div class="ticket-item">
+                    <div class="ticket-item respon">
                         <h4 class="ticket-item-discount">Giảm 50%</h4>
                         <h6 class="ticket-item-condition">Đơn hàng từ 200.000</h6>
                         <input type="button" value="Lưu mã" class="coupon-btn  "> </input>
@@ -211,7 +233,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="popular-info active">
+                    <div class="popular-info active respon">
                         <div class="popular-picture">
                             <img class="product-1" src="/img/DSC_0976.jpg" alt="">
                         </div>
@@ -224,7 +246,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="popular-info active">
+                    <div class="popular-info active respon">
                         <div class="popular-picture">
                             <img class="product-1" src="/img/DSC_0976.jpg" alt="">
                         </div>
@@ -237,7 +259,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="popular-info active">
+                    <div class="popular-info active respon">
                         <div class="popular-picture">
                             <img class="product-1" src="/img/DSC_0976.jpg" alt="">
                         </div>
@@ -529,6 +551,42 @@
 
     <script src="/javascript/home.js">
        
+    </script>
+
+    <script>
+        const headerBar = document.querySelector('.has--bar')
+        const headerNav = document.querySelector('.header-nav')
+        const closeNav = document.querySelector('.app')
+        const $ = document.querySelector.bind(document)
+
+        function showHeaderNav() {
+            headerNav.classList.add('open')
+        }
+
+        function hideHeaderNav() {
+            headerNav.classList.remove('open')
+        }
+        
+        headerBar.onclick = function() {{
+            if($('.header-nav.open')) {
+                headerNav.classList.remove('open')
+            }
+            else {
+                headerNav.classList.add('open')
+            }
+        }}
+
+        headerBar.addEventListener('click', showHeaderNav)
+
+        closeNav.addEventListener('click', hideHeaderNav)
+
+         headerNav.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
+
+        headerBar.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
     </script>
 
 </body>
