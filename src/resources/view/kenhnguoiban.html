@@ -1136,7 +1136,7 @@
 
                                 <td class="cart-navbar-item right-little-item">Đồ khô</td>
 
-                                <td class="cart-navbar-item price-right"><%=(products[i].price * boGio[i])%></td>
+                                <td class="cart-navbar-item price-right"><%=(products[i].price)%></td>
                                 <td class="cart-navbar-item">Còn hàng</td>
                                 <td class="cart-navbar-item has--discount "> 
                                     <span class="discount-is">Discount</span> 
@@ -1158,6 +1158,7 @@
                                         <form  action="/product/discount" method="POST">
                                             <div class="body-modal">
                                                 <input type="text" style="display: none;" name="slug" value="<%=products[i].slug %>">
+                                                <input type="text" style="display: none;" name="user_slug" value="<%=[i].slug %>">
                                                   <p class="body-heading">Nhập mã giảm giá: </p>
                                                 <input class="modal-input" type="number" min="1" max="100" checked name="discount" value="" placeholder='Phần trăm'>
                                                 <div class="footer-modal">
