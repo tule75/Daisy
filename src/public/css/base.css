@@ -301,21 +301,20 @@ margin-bottom: 0;
 }
 
 .announ-item {
-  display: flex;
+  display: none;
   padding: 10px 5px;
   align-items: center;
   border-bottom: 1px solid #ccc;
 }
 .announ-item.isNoti {
-  display: none;
+  display: flex;
 }
-.announ-item.isntNoti {
+/* .announ-item.isntNoti {
   display: block;
-  /* display: flex; */
   padding: 10px 5px;
   align-items: center;
   border-bottom: 1px solid #ccc;
-}
+} */
 .announ-name  {
   margin-top: 5px;
   margin-left: 0;

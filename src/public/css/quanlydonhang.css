@@ -173,6 +173,10 @@
     color: rgb(117, 56, 56);
 
 }
+.btn-apply {
+    border: none;
+    background-color: transparent;
+}
 .footer-modal:hover {
     background-color:rgb(166, 144, 144) ;
     color: black;

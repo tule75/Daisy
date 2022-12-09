@@ -36,10 +36,10 @@
                         </h3> 
                         <ul class="header-search-history-list">
                             <li class="header-search-history-item">
-                                <a class="search-history-item-link" href="">Mien dong</a>
+                                <a class="search-history-item-link" href="">Miến dong</a>
                             </li>
                             <li class="header-search-history-item">
-                                <a class="search-history-item-link" href="">Bun dong</a>
+                                <a class="search-history-item-link" href="">Bún dong</a>
                             </li>
                         </ul>
                     </div>
@@ -73,15 +73,15 @@
 
                                     <% if (notify[0]) {%> 
                                     <% for (let i = 0; i < notify.length; i++) {%>
-                                        <li class="announ-item isNoti ">
-                                            <h5><%=notify[i].data%></h5>
+                                        <li class="announ-item show isNoti ">
+                                            <!-- <h5><%=notify[i].data%></h5> -->
                                         </li>
 
                                     <% }} else { %>
-                                        <li class="announ-item">
+                                        <li class="announ-item ">
                                             <h5>Bạn không có thông báo nào</h5>
                                         </li>
-                                    <% } %>   
+                                        <% } %>   
 
                                 </ul>
                             </li>
@@ -97,7 +97,7 @@
                             </li>
                             
                         <% } else { %> 
-                            <a href="/login" class="user-button user-button-text"><button type="button" class="user-button">Sign in</button></a>
+                            <a href="/login" class="user-button user-button-text"><button type="button" class="user-button">Đăng nhập</button></a>
                         <% } %> 
                     </ul>
                     
@@ -154,7 +154,7 @@
 
                 <div class="popular-info active">
                     <div class="popular-picture">
-                        <img class="product-1" src="img/DSC_0976.jpg" alt="">
+                        <img class="product-1" src="img/06.jpg" alt="">
                     </div>
                     <div class="popular-content">
                         <h3 class="popular-name">Miến dong</h3>
@@ -184,7 +184,7 @@
 
                 <div class="popular-info active res-po">
                     <div class="popular-picture">
-                        <img class="product-1" src="img/DSC_0976.jpg" alt="">
+                        <img class="product-1" src="img/Bản sao của Cu-cai-kho.jpg" alt="">
                     </div>
                     <div class="popular-content">
                         <h3 class="popular-name">Miến dong</h3>
@@ -797,6 +797,14 @@
 
 
         const $$ = document.querySelectorAll.bind(document)
+        const announItem = $(".announ-item")
+        if(announItem.classList.contains("block")) {
+            announItem.style.display = "flex";
+            
+        }
+        else {
+            announItem.style.display = "block"
+        }
 
         const btnAddfr = $(".addfr")
         const closeAddfr = $(".icon-close-add")

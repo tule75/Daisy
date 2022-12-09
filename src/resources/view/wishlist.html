@@ -20,10 +20,8 @@
     <div class="app">
         <div class="header">
             <div class="header-left"> 
-                <!-- <img class="header__logo" src="/assets/image/logo3.png" alt=""> -->
 
                <a href="/"><img class="header-logo" src="/assets/image/logo3.png" alt=""></a> 
-                <!-- <a href="/kenhnguoiban"><p class="header-has-seller">Kênh người bán</p></a> -->
            </div>
 
             <div class="header-search">
@@ -36,10 +34,10 @@
                     </h3> 
                     <ul class="header-search-history-list">
                         <li class="header-search-history-item">
-                            <a class="search-history-item-link" href="">Mien dong</a>
+                            <a class="search-history-item-link" href="">Miến dong</a>
                         </li>
                         <li class="header-search-history-item">
-                            <a class="search-history-item-link" href="">Bun dong</a>
+                            <a class="search-history-item-link" href="">Bún dong</a>
                         </li>
                     </ul>
                 </div>
@@ -53,7 +51,6 @@
                 <ul class="user-list">
                     <a href="/giohang" class="has-cart">
                         <li class="user-item ">
-                        <!-- <i class="fa fa-regular fa-bell "></i><i class="fa-regular fa-cart-shopping-fast"></i> -->
                         <button class="noti-btn"><i class="fa fa-light fa-cart-shopping"></i></button>
                         <div class="cartAmount"><%=countCart%></div>
                         </li>
@@ -69,7 +66,7 @@
                         <li class="user-item has--noti ">
                             <i class="fa fa-regular fa-bell "></i>
                             <ul class="cart-announcement">
-                                <h4 class="product-title-announ">Thong bao</h4>
+                                <h4 class="product-title-announ">Thông báo</h4>
                                 <li class="announ-item">
                                     <h5>Bạn không có thông báo nào</h5>
                                 </li>
@@ -86,7 +83,7 @@
                         </li>
                         
                     <% } else { %> 
-                    <button class="user-button"><a href="/login" class="user-button user-button-text">Sign in</a></button>
+                    <button class="user-button"><a href="/login" class="user-button user-button-text">Đăng nhập</a></button>
                     <% } %> 
                 </ul>
                 
@@ -120,7 +117,7 @@
                 <div class="side-infor">
                     <p class="infor-item">Ngày tham gia : <span>11/12/2022</span></p>
                     <p class="infor-item">Xếp hạng Member : <span>Vàng</span></p>
-                    <p class="infor-item">Link : <span>11/12/2022</span></p>
+                    <p class="infor-item">Link : <span>info@uitdaisy.vn</span></p>
                 </div>
                 <div class="decor">
                     <i class="fa-solid fa-gift"></i>
@@ -189,27 +186,7 @@
                     </div>
                 </form>
                 </div>
-                <div class="modal-add">
-                    <div class="modal-container-add">
-        
-                        <div class="header-modal-add">
-                            
-                            Kết Nối Người Quen
-                            <div class="icon-close-add"><i class="fa-regular fa-circle-xmark"></i></div>
-                        </div>
-                        <form action="/wishlist/find" method="post">
-                            <div class="body-modal-add">
-                                <p class="body-add-heading">
-                                    Tìm qua số điện thoại
-                                </p>
-                                    <input type="text" class="phone-input" name="phone" placeholder="Nhập số điện thoại" value="">
-                            </div>
-                            <button class="footer-modal-add">
-                                Tìm
-                            </button>
-                        </form>
-                    </div>
-                     </div>
+                
             </div>
         </div>
 
