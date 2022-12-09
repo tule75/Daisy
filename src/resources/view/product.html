@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/product-respon.css">
 </head>
 <body>
     <!-- <% if (product) {%>
@@ -63,6 +64,9 @@
                     </li>
                    
                     <% if (check != 0) {%> 
+                        <li class="user-item has--bar">
+                            <i class="fa-solid fa-bars"></i>
+                        </li>
                         <li class="user-item has--content" >
                             <a href="/user/<%-user.slug %> ">
                             <i class="fa fa-solid fa-user"></i>
@@ -81,6 +85,16 @@
             </div>
         </div>
 
+        <ul class="header-nav">
+            <li class="header-nav__item">Thông báo</li>
+            <li class="header-nav__item"><a href="/giohang" class="has-cart" style="color: white;">Giỏ hàng</a></li>
+            <li class="header-nav__item"><% if (check != 0) {%> <a href="/user/<%-user.slug %>" class="has-account" style="color: white;">Tài khoản của bạn</a> <% } else { %> Đăng nhập <% } %>   </li>
+            <li class="header-nav__item">Đơn hàng của bạn</li>
+            <li class="header-nav__item"><a href="/kenhnguoiban" style="color: white;">Kênh người bán</a></li>
+            <li class="header-nav__item"><a class="box-link" href="/logout" style="color: white;">Đăng xuất</a></li>
+        </ul>
+
+
         <div class="body">
             <div class="product-show">
                 <div class="product-show-img">
@@ -88,13 +102,13 @@
                     <% const y = x.replace("/view?usp=share_link","",40)%>
                     <img class="img-item has-item" src="<%-y%>" alt="">
                     <ul class="img-list">
-                        <li class="img-list-item">
+                        <li class="img-list-item ">
                              <img class="img-item" src="/img/DSC_0976.jpg" alt="">
                         </li>
                         <li class="img-list-item">
                             <img class="img-item" src="/img/DSC_0976.jpg" alt="">
                        </li>
-                       <li class="img-list-item">
+                       <li class="img-list-item respon">
                         <img class="img-item" src="/img/DSC_0976.jpg" alt="">
                     </li>
                     </ul>
@@ -525,6 +539,43 @@
                 e.preventDefault()
             })
         })
+    </script>
+
+    <script>
+        const headerBar = document.querySelector('.has--bar')
+        const headerNav = document.querySelector('.header-nav')
+        const closeNav = document.querySelector('.app')
+        const $ = document.querySelector.bind(document)
+
+        function showHeaderNav() {
+            headerNav.classList.add('open')
+        }
+
+        function hideHeaderNav() {
+            headerNav.classList.remove('open')
+        }
+        
+        headerBar.onclick = function() {{
+            if($('.header-nav.open')) {
+                headerNav.classList.remove('open')
+            }
+            else {
+                headerNav.classList.add('open')
+            }
+        }}
+
+        headerBar.addEventListener('click', showHeaderNav)
+
+        closeNav.addEventListener('click', hideHeaderNav)
+
+         headerNav.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
+
+        headerBar.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
+
     </script>
 </body>
 </html>
