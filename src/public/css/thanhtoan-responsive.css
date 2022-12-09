@@ -1,27 +1,22 @@
 @media only screen and (max-width: 740px) {
-    /* ========header ========*/
+    
     html {
         width: 100%;
-        margin: 0  auto;
     }
 
-    body {
+    .app {
         width: 100%;
-    }
-
-    .cart-shopping {
-        width: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
     .header {
-        width: 100%;
+        max-width: 414px;
         justify-content: flex-start;
-        /* position: fixed;
-        z-index: 100; */
-        /* overflow: hidden; */
-        position: unset;
+        /* position: fixed; */
+        /* z-index: 100; */
+        display: flex;
     }
-
 
     .header-left{
         width: 0%;
@@ -69,10 +64,9 @@
         font-size: 10px;
     }
 
-
-
     .header-user {
         width: 30%;
+        
     }
 
     .has-cart {
@@ -116,7 +110,7 @@
         list-style: none;
         background-color: #5BAB5A;
         flex-direction: column;
-        transform: translateY(0px);
+        transform: translateY(79px);
         padding-left: 0;
         /* padding-right: 2px; */
         z-index: 1;
@@ -144,92 +138,122 @@
         display: flex;
     }
 
-    /* =======body======== */
-    .cart-body {
-        /* margin-left: 10px; */
-        padding-top: 30px;
-    }
-
-    .checkbox {
-        position: unset;
-        margin-right: 4px ;
-    }
-
-    .cart-infor-list {
-        width: 100%;
-    }
-
-    .cart-infor-child {
-        width: 25%;
-        padding: 0;
-        text-align: center;
-    }
-
-    .cart-infor-child:first-child {
-        margin-right: 60px;
-    }
-
-    .item {
-        width: 100%;
-    }
-
-    .cart-product-wrap {
-        width: 100%;
-    }
-
-    .cart-product-infor {
-        width: 40%;
-    }
-
-    .cart-product-img{
-        width: 100px;
-        height: 100px;
-    }
-
-    .cart-product-name {
-        font-size: 16px;
-        
-    }
-
-    .cart-product-quantity {
-        width: 20%;
-        height: 28px;
-        transform: translateX(-20px);
-        flex-direction: row;
+    .body {
+        display: flex;
+        flex-direction: column;
         justify-content: space-between;
     }
 
-    .quantity-number {
-        font-size: 16px;
-        padding: 0;
-    }
-
-    .quantity-minus {
-        padding: 4px;
-    }
-
-    .quantity-add {
-        padding: 4px;
-    }
-
-
-    .total {
-        transform: translate(-20px, 4px);
-    }
-
-    .product-trash {
-        transform: unset;
-    }
-
-    .cart-footer {
+    /* ==========body============= */
+    .body {
         width: 100%;
     }
 
-    .button-thanhtoan {
-        transform: translateX(-120px);
+    .information-wrap {
+        margin-left: 0;
+        margin-right: 0;
     }
 
-    /*============ footer========== */
+    .customer-side {
+        width: 50%;
+    }
+
+    .customer-infor {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .customer-infor-showing {
+        width: 100%;
+    }
+
+    .change-add {
+        padding: 4px 7px;
+        position: unset;
+    }
+
+    .customer-side::after {
+        right: 10px;
+    }
+
+
+    .shipment-side {
+        width: 50%;
+    }
+
+    .shipment-title {
+        font-size: 14px;
+    }
+
+    .shipment-showing {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .fa-truck-fast {
+        /* width: 50%; */
+    }
+
+    .shipment-change {
+        /* width: 50%; */
+        position: unset;
+        padding: 0;
+        width: 100px;
+        margin-right: 4px;
+    }
+
+
+    .voucher-wrap {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .voucher-shop::after {
+        right: 10px;
+    }
+
+    .thanhtoan-wrap {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .header-thanhtoan {
+        text-align: center;
+    }
+
+    .thanhtoan-way {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .thanhtoan{
+        width: 100%;
+        margin: 4px 0;
+    }
+
+    .total-wrap {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .header-total {
+        margin-left: 18px;
+    }
+    .ending {
+        position:unset;
+        font-size: 16px;
+        margin-left: 20px;
+    }
+
+    .ending_2 {
+        position: unset;
+        font-size: 16px;
+    }
+
+    /* =========footer=========== */
     .sign-in{
         margin-top: 10px;
     }
@@ -251,7 +275,4 @@
     .footer-item-icon {
         font-size: 16px;
     }
-
-
-
 }

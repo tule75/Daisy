@@ -14,6 +14,7 @@
    <link rel="stylesheet" href="/css/thanhtoan.css">
    <link rel="stylesheet" href="/css/home.css">
    <link rel="stylesheet" href="/css/base.css">
+   <link rel="stylesheet" href="/css/thanhtoan-responsive.css">
 </head>
 <body>
     <div class="app">
@@ -45,6 +46,10 @@
              </div>
              <div class="header-user">
                  <ul class="user-list">
+                    <li class="user-item has--bar">
+                        <i class="fa-solid fa-bars"></i>
+                    </li>
+                    
                      <a href="/giohang" class="has-cart">
                          <li class="user-item ">
                          
@@ -81,6 +86,15 @@
                  
              </div>
          </div>
+
+         <ul class="header-nav">
+            <li class="header-nav__item">Thông báo</li>
+            <li class="header-nav__item">Giỏ hàng</li>
+            <li class="header-nav__item">Tài khoản của bạn</li>
+            <li class="header-nav__item">Đơn hàng của bạn</li>
+            <li class="header-nav__item">Kênh người bán</li>
+            <li class="header-nav__item">Đăng xuất</li>
+        </ul>
          
          <!-- body -->
          <div class="body">
@@ -383,6 +397,43 @@
             alert('Bạn đã chọn Thanh toán bằng Internet Banking!')
         })
 
+
+    </script>
+
+    <script>
+         const headerBar = document.querySelector('.has--bar')
+        const headerNav = document.querySelector('.header-nav')
+        const closeNav = document.querySelector('.app')
+        const $ = document.querySelector.bind(document)
+
+        function showHeaderNav() {
+            headerNav.classList.add('open')
+        }
+
+        function hideHeaderNav() {
+            headerNav.classList.remove('open')
+        }
+        
+        headerBar.onclick = function() {{
+            if($('.header-nav.open')) {
+                headerNav.classList.remove('open')
+            }
+            else {
+                headerNav.classList.add('open')
+            }
+        }}
+
+        headerBar.addEventListener('click', showHeaderNav)
+
+        closeNav.addEventListener('click', hideHeaderNav)
+
+         headerNav.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
+
+        headerBar.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
 
     </script>
 </body>

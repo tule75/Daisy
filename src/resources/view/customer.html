@@ -8,6 +8,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="/assets/css/base.css">
         <link rel="stylesheet" href="/assets/css/customer.css">
+        <link rel="stylesheet" href="/assets/css/customer-responsive.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Sansita+Swashed:wght@800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/assets/fonts/fontawesome-free-6.2.0-web/css/all.css">
     </head>
@@ -73,9 +74,22 @@
                                 </ul>
                             </li>
                         </ul>
+
+                        <ul class="user-item has--bar">
+                            <i class="fa-solid fa-bars"></i>
+                        </ul>
                     </div>
 
                 </div>
+
+                <ul class="header-nav">
+                    <li class="header-nav__item">Thông báo</li>
+                    <li class="header-nav__item">Giỏ hàng</li>
+                    <li class="header-nav__item">Tài khoản của bạn</li>
+                    <li class="header-nav__item">Đơn hàng của bạn</li>
+                    <li class="header-nav__item">Kênh người bán</li>
+                    <li class="header-nav__item">Đăng xuất</li>
+                </ul>
             </div>
             <!--End: Header-->
 
@@ -84,45 +98,45 @@
                 <div class="content__side-bar">
                     <img class="user-avatar" src="/assets/image/download.jpeg" alt="">
 
-                    <button class="content__side-bar--button">Đổi ảnh đại diện</button>
+                    <button type="button" class="content__side-bar--button">Đổi ảnh đại diện</button>
 
                     <div class="content__side-bar--choice-list">
-                        <button class="content__side-bar--choice active">
+                        <button type="button" class="content__side-bar--choice active content__side-bar--choice-modal a">
                             <i class="fa-solid fa-user content__side-bar--ic"></i>
                             Thông tin cá nhân
                         </button>
 
-                        <button class="content__side-bar--choice">
+                        <button type="button" class="content__side-bar--choice content__side-bar--choice-modal">
                             <i class="fa-solid fa-location-dot content__side-bar--ic"></i>
                             Địa chỉ nhận hàng
                         </button>
 
-                        <button class="content__side-bar--choice">
+                        <button type="button" class="content__side-bar--choice content__side-bar--choice-modal">
                             <i class="fa-solid fa-building-columns content__side-bar--ic"></i>
                             Ngân hàng liên kết
                         </button>
 
-                        <button class="content__side-bar--choice">
+                        <button type="button" class="content__side-bar--choice content__side-bar--choice-modal">
                             <i class="fa-solid fa-box content__side-bar--ic"></i>
                             Quản lý đơn hàng
                         </button>
 
-                        <button class="content__side-bar--choice">
+                        <button type="button" class="content__side-bar--choice content__side-bar--choice-modal">
                             <i class="fa-solid fa-key content__side-bar--ic"></i>
                             Đổi mật khẩu
                         </button>
 
-                        <button class="content__side-bar--choice">
+                        <button type="button" class="content__side-bar--choice content__side-bar--choice-modal">
                             <i class="fa-solid fa-ticket content__side-bar--ic"></i>
                             Kho voucher
                         </button>
 
-                        <button class="content__side-bar--choice">
+                        <button type="button" class="content__side-bar--choice content__side-bar--choice-modal">
                             <i class="fa-solid fa-list-ul content__side-bar--ic"></i>
                             Điều ước của bạn
                         </button>
 
-                        <button class="content__side-bar--choice-btn">
+                        <button type="button" class="content__side-bar--choice-btn">
                             <i class="fa-solid fa-right-from-bracket content__side-bar--ic"></i>
                             Đăng xuất
                         </button>
@@ -130,7 +144,8 @@
                 </div>
 
                 <div class="content__form">
-                    <form class="content__form-userinfo js-content-form on" method="post">
+                    <div class="content__form-userinfo js-content-form on">
+                   
                         <div class="content__form-col"> 
                             <div class="content__form-head">
                                 <li class="content__form--info">Tên đăng nhập: </li>
@@ -153,7 +168,7 @@
                                 <li class="content__form--info">Giới tính:</li>
                                 <li class="content__form--info">Email:</li>
                                 <li class="content__form--info">Số điện thoại: </li>
-                                <button class="content__form-button">Lưu thay đổi</button>
+                                <button type="button" class="content__form-button">Lưu thay đổi</button>
                             </div>
     
                             <div class="content__form-space">
@@ -167,7 +182,8 @@
                             </div>
                         </div>
     
-                    </form>
+                  
+                    </div>
 
                     <div class="content__form-address js-content-form">
                         <h2 class="address__head">Địa chỉ của bạn</h2>
@@ -215,9 +231,9 @@
                             </div>
 
                             <div class="bank__right">
-                                <button class="bank__list--btn">Cập nhật</button>
-                                <button class="bank__list--btn">Xóa</button>
-                                <button class="bank__list--btn">Đặt mặc định</button>
+                                <button type="button" class="bank__list--btn">Cập nhật</button>
+                                <button type="button" class="bank__list--btn">Xóa</button>
+                                <button type="button" class="bank__list--btn">Đặt mặc định</button>
                             </div>
                         </div> 
 
@@ -228,9 +244,9 @@
                             </div>
 
                             <div class="bank__right">
-                                <button class="bank__list--btn">Cập nhật</button>
-                                <button class="bank__list--btn">Xóa</button>
-                                <button class="bank__list--btn">Đặt mặc định</button>
+                                <button type="button" class="bank__list--btn">Cập nhật</button>
+                                <button type="button" class="bank__list--btn">Xóa</button>
+                                <button type="button" class="bank__list--btn">Đặt mặc định</button>
                             </div>
                         </div>  
 
@@ -714,8 +730,7 @@
                             <div class="wishlist-status__item change">Danh sách</div>
                         </div>
 
-                        <div class="wishlist__items changecontent">
-                           
+                        <div class="wishlist__items">
                                 <% for (let i = 0; i < products.length; i++) {%>
                                     <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
                                     <% const y = x.replace("/view?usp=share_link","",40)%>
@@ -736,8 +751,6 @@
                                         </div>
                                     </div>
                                 <% } %> 
-
-                           
                         </div>
                     </div>
 
@@ -920,25 +933,667 @@
             </div>
         </div>
 
+        <div class="content__form-modal">
+            <form class="content__form-userinfo-modal js-content-form-modal b" method="post">
+                <div class="content__form-header">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <h2>Thông tin cá nhân</h2>
+                </div>
+
+                <div class="content__form-col"> 
+                    <div class="content__form-head">
+                        <li class="content__form--info">Tên đăng nhập: </li>
+                        <li class="content__form--info">Họ:</li>
+                        <li class="content__form--info">Tên đệm & Tên:</li>
+                        <li class="content__form--info">Ngày sinh:</li>
+                        <li class="content__form--info">Giới tính:</li>
+                        <li class="content__form--info">Email:</li>
+                        <li class="content__form--info">Số điện thoại: </li>
+                        <!-- <button class="content__form-button">Lưu thay đổi</button> -->
+                    </div>
+
+                    <div class="content__form-space">
+                        <input type="text" class="content__form--input" placeholder="<%= user.username %> " name="username">
+                        <input type="text" class="content__form--input" placeholder="<%= user.name %> " name="firstname">
+                        <input type="text" class="content__form--input" placeholder="<%= user.name %> " name="lastname">
+                        <input type="date" class="content__form--input" placeholder="" name="birth">
+                        <li class="content__form--input">
+                            <input type="radio" id="gender-male"  placeholder="" name="gender" checked> Nam
+                            <input type="radio" id="gender-female"  placeholder="" name="gender"> Nữ
+                            <input type="radio" id="gender-others"  placeholder="" name="gender"> Khác
+                        </li>
+                        <input type="text"  class="content__form--input" placeholder="<%= user.email %> " name="email">
+                        <input type="number"  class="content__form--input" placeholder="<%= user.phone%>" name="phone">
+                    </div>
+                </div>
+
+                <button class="content__form-button-modal">Lưu thay đổi</button>
+
+            </form>
+
+            <div class="content__form-address-modal js-content-form-modal">
+                <div class="content__form-header">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <h2>Địa chỉ của bạn</h2>
+                </div>
+                <div class="address__list address__list--seperate">
+                    <div class="address__left">
+                        <li class="address__info">Van A</li> 
+                        <li class="address__info">0123456789</li>
+                        <li class="address__info">KTX ĐHQG khu B</li>
+                        <li class="address__info">Phường Linh Trung, TP. Thủ Đức, TP. HCM</li>
+                    </div>
+
+                    <div class="address__right">
+                        <button class="address__list--btn">Cập nhật</button>
+                        <button class="address__list--btn">Xóa</button>
+                        <button class="address__list--btn">Đặt mặc định</button>
+                    </div>
+                </div>   
+
+                <div class="address__list">
+                    <div class="address__left">
+                        <li class="address__info">Van A</li> 
+                        <li class="address__info">0123456789</li>
+                        <li class="address__info">KTX ĐHQG khu B</li>
+                        <li class="address__info">Phường Linh Trung, TP. Thủ Đức, TP. HCM</li>
+                    </div>
+
+                    <div class="address__right">
+                        <button class="address__list--btn">Cập nhật</button>
+                        <button class="address__list--btn">Xóa</button>
+                        <button class="address__list--btn">Đặt mặc định</button>
+                    </div>
+                </div>
+
+                <button class="address__add js-open">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            
+            <div class="content__form-bank-modal js-content-form-modal">
+                <div class="content__form-header">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <h2>Ngân hàng của bạn</h2>
+                </div>
+
+                <div class="bank__list address__list--seperate">
+                    <div class="bank__left">
+                        <i class="bank__ic fa-solid fa-building-columns"></i>
+                        <li class="bank__type">VISA</li>
+                    </div>
+
+                    <div class="bank__right">
+                        <button class="bank__list--btn">Cập nhật</button>
+                        <button class="bank__list--btn">Xóa</button>
+                        <button class="bank__list--btn">Đặt mặc định</button>
+                    </div>
+                </div> 
+
+                <div class="bank__list address__list--seperate">
+                    <div class="bank__left">
+                        <i class="bank__ic fa-solid fa-building-columns"></i>
+                        <li class="bank__type">NAPAS</li>
+                    </div>
+
+                    <div class="bank__right">
+                        <button class="bank__list--btn">Cập nhật</button>
+                        <button class="bank__list--btn">Xóa</button>
+                        <button class="bank__list--btn">Đặt mặc định</button>
+                    </div>
+                </div>  
+
+                <button class="bank__add">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+
+            <div class="content__form-orders-modal js-content-form-modal">
+                <div class="content__form-header">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <h2>Đơn hàng của bạn</h2>
+                </div>
+
+                <div class="orders-status__list">
+                    <div class="orders-status active">Tất cả</div>
+                    <div class="orders-status">Chờ xác nhận</div>
+                    <div class="orders-status">Chờ lấy hàng</div>
+                    <div class="orders-status">Đang giao</div>
+                    <div class="orders-status">Đã giao</div>
+                    <div class="orders-status">Đã hủy</div>
+                    <div class="orders-status">Trả hàng/hoàn tiền</div>
+                </div>
+
+                <div class="orders__list ">
+                    <!-- <div class="order"> -->
+                    <% for (let i = 0; i < bills.length; i++) {%> 
+                        <%const x = products_buy[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                        <% const y = x.replace("/view?usp=share_link","",40)%>
+                       <div class="list-item active">
+                            <div class="order__info">
+                                <img class="order--img" src="<%-y %>" alt="">
+
+                                <div class="left">
+                                    <h3 class="order__info--name"><%=products_buy[i].name%></h3>
+                                    <li class="order__info--account">Số lượng: <%=bills[i].count %> </li>
+                                    <li class="order__info--price">Giá: <%=products_buy[i].price%></li>
+                                    <% if (bills[i].send == 0 && bills[i].sell == 0) {%> 
+                                    <% } else if (bills[i].send == 1) {%> 
+                                    <form method="post" class="sendbill" action="/user/took">
+                                        <input type="text" style="display: none;" name="bill" value="<%=JSON.stringify(bills[i]) %>">
+                                        <button type="submit" class="accept">Đã nhận</button>
+                                    </form>
+                                    <% } %> 
+                                    <h3 class="order__info--totalp">Tổng tiền: <%=bills[i].money%></h3>
+                                </div>
+                            </div>
+
+                            <div class="right">
+                                <!-- <h3 class="order__info--totalp">Tổng tiền: <%=bills[i].money%></h3> -->
+                                <button type="button" class="order__info--btn">Đánh giá</button>
+                                <button type="button" class="order__info--btn">Mua lại</button>
+                            </div>
+                       </div>
+                    <% } %> 
+                    <!-- </div> -->
+                </div>
+            </div>
+
+            <form class="content__form-pass-modal js-content-form-modal" method="post" action="">
+                <div class="content__form-header">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <h2>Đổi mật khẩu</h2>
+                </div>
+
+                <div class="content__form-body">
+                    <div class="content__form-pass--head">
+                        <li class="pass__head">Nhập mật khẩu cũ:</li>
+                        <li class="pass__head">Nhập mật khẩu mới:</li>
+                        <li class="pass__head">Nhập lại mật khẩu mới:</li>
+                    </div>
+    
+                    <div class="content__form-pass--input">
+                        <input type="password" class="pass__input" placeholder="" name="password">
+                        <input type="password" class="pass__input" placeholder="" name="password">
+                        <input type="password" class="pass__input" placeholder="" name="password">
+                    </div>
+                </div>
+
+                <button class="content__form-pass-button-modal">Lưu thay đổi</button>
+            </form>
+
+            <div class="content__form-voucher-modal js-content-form-modal">
+                <div class="content__form-header">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <h2>Vouchers</h2>
+                </div>
+                <div class="content__form-voucher__list">
+                    <button class="voucher-status change">Tất cả</button>
+                    <button class="voucher-status">Chờ xác nhận</button>
+                    <button class="voucher-status">Chờ lấy hàng</button>
+                    <button class="voucher-status">Đang giao</button>
+                    <button class="voucher-status">Đã giao</button>
+                    <button class="voucher-status">Đã hủy</button>
+                    <button class="voucher-status">Trả hàng/hoàn tiền</button>
+                </div>
+
+                <div class="voucher-list changecontent">
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="voucher-list">
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="voucher-list">
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="voucher-list">
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="voucher-list">
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="voucher-list">
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="voucher-list">
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+                    <div class="voucher">
+                        <div class="voucher-left">Miễn phí vận chuyển</div>
+                        <div class="voucher-middle">
+                            <li class="voucher-discript">Tất cả hình thức thanh toán</li>
+                            <li class="voucher-count">Freeship đến 55k</li>
+                            <li class="voucher-date">HSD: 30-12-2022</li>
+                        </div>
+                        <div class="voucher-right">
+                            <a href="" class="voucher-btn">Lưu mã</a>
+                            <a href="" class="voucher-btn">Điều kiện</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                
+            </div>
+
+            <div class="content__form-wishlist-modal js-content-form-modal">
+                <div class="content__form-header">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <h2>Điều ước của bạn</h2>
+                </div>
+                <!-- <div class="wishlist-status">
+                    <div class="wishlist-status__item change">Danh sách</div>
+                </div> -->
+
+                <div class="wishlist__items changecontent">
+                        <% for (let i = 0; i < products.length; i++) {%>
+                            <%const x = products[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
+                            <% const y = x.replace("/view?usp=share_link","",40)%>
+                            <div class="wishlist__item">
+                                <!-- <div class="wishlist__info--shopname">Cần hiện shop k</div> -->
+                                <div class="wishlist__info-p1">
+                                    <img class="wishlist--img" src="<%-y %>" alt="">
+
+                                    <div class="wishlist__info__left">
+                                        <h3 class="wishlist__info--name wishlist__info__left--item"><%=products[i].name %></h3>
+                                        <li class="wishlist__info--account wishlist__info__left--item">Số lượng: 1</li>
+                                        <!-- <li class="wishlist__info--type wishlist__info__left--item">Phân loại: hồng</li> -->
+                                        <li class="wishlist__info--price wishlist__info__left--item">Giá: <%=products[i].price %> VND</li>
+                                    </div>
+                                    <div class="trash">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        <% } %> 
+                </div>
+            </div>
+        </div>
+
         <script>
             const $ = document.querySelector.bind(document)
             const $$ = document.querySelectorAll.bind(document)
 
-            const choices = $$('.content__side-bar--choice')
-            const contents = $$('.js-content-form')
+            // =============content=============
+            const choices = document.querySelectorAll('.content__side-bar--choice ')
+            const contents = document.querySelectorAll('.js-content-form')
+            const contentFormModals = $$('.js-content-form-modal')
+            const contentModal = document.querySelector('.content__form-modal')
 
             choices.forEach((choice, index) => {
                 const content = contents[index]
-
+                const contentFormModal = contentFormModals[index]
                 choice.onclick = function() {
                     $('.content__side-bar--choice.active').classList.remove('active')
                     $('.js-content-form.on').classList.remove('on')
 
                     this.classList.add('active')
                     content.classList.add('on')
+
+                    contentModal.classList.add('turn')
+                    $('.js-content-form-modal.b').classList.remove('b')
+
+                    contentFormModal.classList.add('b')
                 }
             })
-        
+
+            // ==============orders=========================
             const statuses =  document.querySelectorAll('.orders-status')
             const orders = document.querySelectorAll('.list-item')
 
@@ -955,7 +1610,8 @@
                     order.classList.add('active')
                 }
             })
-       
+
+            // =============vouchers=========================
             const voucherStatuses =  document.querySelectorAll('.voucher-status')
             const vouchers = document.querySelectorAll('.voucher-list')
 
@@ -972,22 +1628,23 @@
                 }
             })
   
-    // const wishlistStatuses =  document.querySelectorAll('.wishlist-status__item')
-    // const wishlists = document.querySelectorAll('.wishlist__items')
+            // const wishlistStatuses =  document.querySelectorAll('.wishlist-status__item')
+            // const wishlists = document.querySelectorAll('.wishlist__items')
 
-    // wishlistStatuses.forEach((status, i) => {
+            // wishlistStatuses.forEach((status, i) => {
 
-    //     const wishlist = wishlists[i]
+            //     const wishlist = wishlists[i]
 
-    //     status.onclick = function () {    
-    //         $('.wishlist-status__item.change').classList.remove('change')
-    //         $('.wishlist__items.changecontent').classList.remove('changecontent')
+            //     status.onclick = function () {    
+            //         $('.wishlist-status__item.change').classList.remove('change')
+            //         $('.wishlist__items.changecontent').classList.remove('changecontent')
 
-    //         this.classList.add('change')
-    //         wishlist.classList.add('changecontent')
-    //     }
-    // })
+            //         this.classList.add('change')
+            //         wishlist.classList.add('changecontent')
+            //     }
+            // })
 
+            // ===================address=======================
             const addressAdd = document.querySelector('.js-address-add')
             const addressContainer = document.querySelector('.js-address-container')
             const addressClose = document.querySelector('.js-close')
@@ -1010,13 +1667,69 @@
             addressContainer.addEventListener('click', function(event) {event.stopPropagation()
             });
 
+            // ====================content-modal==================
+            // const contentFormModals = $$('.js-content-form-modal')
+            // const contentModal = document.querySelector('.content__form-modal')
+            // const choicesModal = document.querySelectorAll('.content__side-bar--choice-modal')
+            
+            // choicesModal.forEach((choice, i) => {
+            //     const content = contentFormModals[i]
+
+            //     choice.onclick = function() {
+
+            const backs = document.querySelectorAll('.fa-chevron-left')
+
+            function HideContentModal() {
+                contentModal.classList.remove('turn')
+            }
+
+            for(const back of backs) {
+                back.addEventListener('click', HideContentModal)
+            }
 
         </script>
-        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
         <script>
-            $(document).ready(function() {
+        const headerBar = document.querySelector('.has--bar')
+        const headerNav = document.querySelector('.header-nav')
+        const closeNav = document.querySelector('.main')
+        const a = document.querySelector.bind(document)
+            
+        function showHeaderNav() {
+            headerNav.classList.add('open')
+        }
+
+        function hideHeaderNav() {
+            headerNav.classList.remove('open')
+        }
+        
+        headerBar.onclick = function() {{
+            if(a('.header-nav.open')) {
+                headerNav.classList.remove('open')
+            }
+            else {
+                headerNav.classList.add('open')
+            }
+        }}
+
+        headerBar.addEventListener('click', showHeaderNav)
+
+        closeNav.addEventListener('click', hideHeaderNav)
+
+         headerNav.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
+
+        headerBar.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+        <script>
+            jQuery( document ).ready(function() {
                 $('.sendbill').submit(function(e) {
-                    
                     e.preventDefault();
 
                     let $input = $('.sendbill: input ');

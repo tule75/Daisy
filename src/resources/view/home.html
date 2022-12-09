@@ -106,11 +106,11 @@
 
         <ul class="header-nav">
             <li class="header-nav__item">Thông báo</li>
-            <li class="header-nav__item">Giỏ hàng</li>
-            <li class="header-nav__item">Tài khoản của bạn</li>
+            <li class="header-nav__item"><a href="/giohang" class="has-cart" style="color: white;">Giỏ hàng</a></li>
+            <li class="header-nav__item"><% if (check != 0) {%> <a href="/user/<%-user.slug %>" class="has-account" style="color: white;">Tài khoản của bạn</a> <% } else { %> Đăng nhập <% } %>   </li>
             <li class="header-nav__item">Đơn hàng của bạn</li>
-            <li class="header-nav__item">Kênh người bán</li>
-            <li class="header-nav__item">Đăng xuất</li>
+            <li class="header-nav__item"><a href="/kenhnguoiban" style="color: white;">Kênh người bán</a></li>
+            <li class="header-nav__item"><a class="box-link" href="/logout" style="color: white;">Đăng xuất</a></li>
         </ul>
 
         <!-- body -->
@@ -773,27 +773,27 @@
         function hideHeaderNav() {
             headerNav.classList.remove('open')
         }
+        
+        headerBar.onclick = function() {{
+            if($('.header-nav.open')) {
+                headerNav.classList.remove('open')
+            }
+            else {
+                headerNav.classList.add('open')
+            }
+        }}
 
-        // headerBar.onclick = function() {{
-        //     if($('.header-nav.open')) {
-        //         headerNav.classList.remove('open')
-        //     }
-        //     else {
-        //         headerNav.classList.add('open')
-        //     }
-        // }}
+        headerBar.addEventListener('click', showHeaderNav)
 
-        // headerBar.addEventListener('click', showHeaderNav)
+        closeNav.addEventListener('click', hideHeaderNav)
 
-        // closeNav.addEventListener('click', hideHeaderNav)
+         headerNav.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
 
-        //  headerNav.addEventListener('click', function(event) {
-        //     event.stopPropagation()
-        // })
-
-        // headerBar.addEventListener('click', function(event) {
-        //     event.stopPropagation()
-        // })
+        headerBar.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
 
 
         const $$ = document.querySelectorAll.bind(document)
