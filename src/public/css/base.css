@@ -268,7 +268,6 @@ a {
 .cart-announcement {
   position: absolute;
   width: 350px;
-  height: auto;
   top: 55px;
   right: 170px;
   animation: headerNotiGrowth ease 0.4s;
@@ -276,6 +275,8 @@ a {
   box-shadow: 0 0px 3px #999;
   display: none;
   padding-left: 0;
+  height: 450px;
+  overflow: scroll;
 }
 
 .cart-announcement::before{
@@ -304,6 +305,8 @@ margin-bottom: 0;
   display: none;
   padding: 10px 5px;
   align-items: center;
+  font-size: 13px;
+ 
   border-bottom: 1px solid #ccc;
 }
 .announ-item.isNoti {
