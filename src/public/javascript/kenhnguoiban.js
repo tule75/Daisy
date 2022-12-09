@@ -78,15 +78,16 @@ headerTitles_2.forEach((headerTitle_2,index) => {
     }
     })
 
-    // modalClose.onclick = function () {
-    //         alert("Ap dung ma thanh cong")
-    // }
+    modalClose.onclick = function () {
+            $(".modal.open").classList.remove("open")
+    }
 
     apply.onclick = function () {
-        alert("Ap dung ma thanh cong")
+        alert("Áp dụng mã thành công")
         $(".modal.open").classList.remove("open")
         // trasher.style.display = 'block'
     }
+
 
 // show noti
     const homeContainer = $(".forhome-container")

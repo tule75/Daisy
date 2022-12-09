@@ -35,11 +35,11 @@
                      </h3>
                      <ul class="header-search-history-list">
                          <li class="header-search-history-item">
-                             <a class="search-history-item-link" href="">Mien dong</a>
+                             <a class="search-history-item-link" href="">Miến dong</a>
                          </li>
 
                          <li class="header-search-history-item">
-                             <a class="search-history-item-link" href="">Bun dong</a>
+                             <a class="search-history-item-link" href="">Bún dong</a>
                          </li>
                      </ul>
                 </div>
@@ -80,14 +80,12 @@
                              
                             <ul class="box-list">
                                 <li class="box-list--item"><a href="/user/<%-user.slug %> " class="has-account">Tài khoản</a></li>
-                                <!-- <li class="box-list--item">Đơn hàng</li> -->
-                                <li class="box-list--item"> <button class="addfr"> Tìm bạn</button></li>
                                 <li class="box-list--item"><a class="box-link" href="/logout">Đăng xuất</a></li>
                             </ul>
                         </li>
                          
                      <% } else { %> 
-                        <button class="user-button"><a href="/login" class="user-button">Sign in</a></button>
+                        <button class="user-button"><a href="/login" class="user-button">Đăng nhập</a></button>
                      <% } %> 
                 </ul>
              </div>
@@ -176,28 +174,6 @@
                     </div>
                 </div>
         </div>
-        <!-- modal -->
-             <div class="modal-add">
-            <div class="modal-container-add">
-
-                <div class="header-modal-add">
-                    
-                    Kết Nối Người Quen
-                    <div class="icon-close-add"><i class="fa-regular fa-circle-xmark"></i></div>
-                </div>
-                <form action="/wishlist/find" method="post">
-                    <div class="body-modal-add">
-                        <p class="body-add-heading">
-                            Tìm qua số điện thoại
-                        </p>
-                            <input type="text" class="phone-input" name="phone" placeholder="Nhập số điện thoại" value="">
-                    </div>
-                    <button class="footer-modal-add">
-                        Tìm
-                    </button>
-                </form>
-            </div>
-             </div>
         </form>
 
 
@@ -386,16 +362,7 @@
 
         <script >
 
-        const btnAddfr = $(".addfr")
-        const closeAddfr = $(".icon-close-add")
-        const modaladd = $(".modal-add")
-
-        btnAddfr.onclick = function() {
-            modaladd.classList.add("open")
-        }
-        closeAddfr.onclick = function () {
-            modaladd.classList.remove("open")
-        }
+       
             $(document).ready(function() {
                 $('.product-trash').click(function() {
                     let x = $(this).val();

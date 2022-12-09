@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seller</title>
+    <title>Kênh Người Bán</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Itim|Lobster|Montserrat:500|Noto+Serif|Nunito|Patrick+Hand|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab|Saira" rel="stylesheet">
@@ -26,7 +26,7 @@
             </div>
             <div class="header-right">
                 <div class="seller-account">
-                    <img class="seller-avt" src="https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/316182758_3560323187547272_2736166690037173098_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=pYyquu0RpXIAX8Xg0Ck&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfC3WK-uEFSBfG67CqGzuoM6DJYJyhVhbgtXTbPpWv2TnQ&oe=637D50FD" alt="">
+                    <img class="seller-avt" src="img/phanhoang.png" alt="">
                     <p class="seller-name"><%-user.name%></p>
                     <ul class="seller-logout">
                         <li class="logout-item">Profile</li>
@@ -53,19 +53,13 @@
                     <li class="navbar-item shipment-list ">
                         <i class="fa-sharp fa-solid fa-truck"></i>
                            <h7 class="ship-title "> Vận chuyển
-                                <!-- <span><i class="fa-regular fa-angle-up control-icon "></i></span> -->
                             </h7>
-                            <ul class="ship-list-2">
-                                
-                                <!-- <li class="ship-contain set-manageship manage-item">Cài đặt vận chuyển</li> -->
-
-                            </ul>
+                  
                     </li>
                     <li class="navbar-item manage-list">
                         <i class="fa-solid fa-bag-shopping"></i>
                            <h7 class="manage-product-title ">
                                 Quản lý đơn hàng
-                                <!-- <span><i class="fa-regular fa-angle-up control-icon "></i></span> -->
                             </h7>
                             <ul class="manage-list-2">
                                 <li class="manage-item">
@@ -1145,7 +1139,7 @@
                                 <td class="cart-navbar-item price-right"><%=(products[i].price * boGio[i])%></td>
                                 <td class="cart-navbar-item">Còn hàng</td>
                                 <td class="cart-navbar-item has--discount "> 
-                                    <span class="discount-is"> Discount</span> 
+                                    <span class="discount-is">Discount</span> 
                                     <form action="/product/discount/delete" method="POST">
                                         <input type="text" name="slug" value="<%=products[i].slug %>" style="display: none;">
                                         <button class="trasher"> <i class="fa-sharp fa-solid fa-trash "></i></button>
@@ -1158,15 +1152,17 @@
                                     <div class="header-modal">
                                         
                                         DISCOUNT FOR CUSTOMER
-                                        <!-- <div class="icon-close"><i class="fa-regular fa-circle-xmark"></i></div> -->
+                                        <div class="icon-close"><i class="fa-regular fa-circle-xmark"></i></div>
                                     </div>
                                     
-                                        <form class="body-modal" action="/product/discount" method="POST">
-                                            <input type="text" style="display: none;" name="slug" value="<%=products[i].slug %>">
-                                            <p class="body-heading">Nhập mã giảm giá: </p>
-                                            <input class="modal-input" type="number" min="1" max="100" checked name="discount" value="" placeholder='Phần trăm'>
-                                            <div class="footer-modal">
-                                                <button type="submit" class="btn-apply"><div class="">Ap dung</div></button>
+                                        <form  action="/product/discount" method="POST">
+                                            <div class="body-modal">
+                                                <input type="text" style="display: none;" name="slug" value="<%=products[i].slug %>">
+                                                  <p class="body-heading">Nhập mã giảm giá: </p>
+                                                <input class="modal-input" type="number" min="1" max="100" checked name="discount" value="" placeholder='Phần trăm'>
+                                                <div class="footer-modal">
+                                                <button type="submit" class="btn-apply">Áp dụng</button>
+                                                </div>
                                             </div>
                                         </form>
                                     
@@ -1411,6 +1407,7 @@
     </div>
 
     <script src="javascript/kenhnguoiban.js">
+
     </script>
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script>
