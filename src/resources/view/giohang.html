@@ -433,39 +433,26 @@
         </script>
 
         <script>
-               const headerBar = document.querySelector('.has--bar')
+              
+
+        const headerBar = document.querySelector('.has--bar')
         const headerNav = document.querySelector('.header-nav')
-        const closeNav = document.querySelector('.cart-shopping')
+        const closeNav = document.querySelector('.app')
         const $ = document.querySelector.bind(document)
 
-        function showHeaderNav() {
-            headerNav.classList.add('open')
-        }
-
-        function hideHeaderNav() {
-            headerNav.classList.remove('open')
-        }
-        
-        headerBar.onclick = function() {{
-            if($('.header-nav.open')) {
-                headerNav.classList.remove('open')
+        headerBar.onclick = function () {
+            if(headerBar.classList.contains("show")) {
+                headerNav.style.display = "block"
+                headerBar.classList.remove("show")
             }
             else {
-                headerNav.classList.add('open')
+                headerNav.style.display = "none"
+                headerBar.classList.add("show")
+            
             }
-        }}
+            
+        }
 
-        headerBar.addEventListener('click', showHeaderNav)
-
-        closeNav.addEventListener('click', hideHeaderNav)
-
-         headerNav.addEventListener('click', function(event) {
-            event.stopPropagation()
-        })
-
-        headerBar.addEventListener('click', function(event) {
-            event.stopPropagation()
-        })
 
         </script>
 

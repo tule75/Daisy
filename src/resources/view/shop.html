@@ -86,7 +86,7 @@
             <li class="header-nav__item">Thông báo</li>
             <li class="header-nav__item"><a href="/giohang" class="has-cart" style="color: white;">Giỏ hàng</a></li>
             <li class="header-nav__item"><% if (check != 0) {%> <a href="/user/<%-user.slug %>" class="has-account" style="color: white;">Tài khoản của bạn</a> <% } else { %> Đăng nhập <% } %>   </li>
-            <li class="header-nav__item">Đơn hàng của bạn</li>
+            <!-- <li class="header-nav__item">Đơn hàng của bạn</li> -->
             <li class="header-nav__item"><a href="/kenhnguoiban" style="color: white;">Kênh người bán</a></li>
             <li class="header-nav__item"><a class="box-link" href="/logout" style="color: white;">Đăng xuất</a></li>
         </ul>
@@ -215,7 +215,6 @@
                             <h3 class="popular-name">Miến dong</h3>
                             <p class="popular-price">65.000</p>
                             <button class="add-button">
-                                <i class="fa fa-regular fa-bag-shopping"></i>
                                 Thêm vào giỏ hàng
                             </button>
                         </div>
@@ -228,7 +227,6 @@
                             <h3 class="popular-name">Miến dong</h3>
                             <p class="popular-price">65.000</p>
                             <button class="add-button">
-                                <i class="fa fa-regular fa-bag-shopping"></i>
                                 Thêm vào giỏ hàng
                             </button>
                         </div>
@@ -241,7 +239,6 @@
                             <h3 class="popular-name">Miến dong</h3>
                             <p class="popular-price">65.000</p>
                             <button class="add-button">
-                                <i class="fa fa-regular fa-bag-shopping"></i>
                                 Thêm vào giỏ hàng
                             </button>
                         </div>
@@ -254,7 +251,6 @@
                             <h3 class="popular-name">Miến dong</h3>
                             <p class="popular-price">65.000</p>
                             <button class="add-button">
-                                <i class="fa fa-regular fa-bag-shopping"></i>
                                 Thêm vào giỏ hàng
                             </button>
                         </div>
@@ -267,7 +263,6 @@
                             <h3 class="popular-name">Miến dong</h3>
                             <p class="popular-price">65.000</p>
                             <button class="add-button">
-                                <i class="fa fa-regular fa-bag-shopping"></i>
                                 Thêm vào giỏ hàng
                             </button>
                         </div>
@@ -353,20 +348,18 @@
                                                         <i class="fa-solid fa-star"></i>
                                                         <i class="fa-solid fa-star"></i>
                                                     </span>
-    
-                                                        <span class="home-product__item-ship"><i class="fa-regular fa-truck"></i></span>
                                                 </div>
     
     
                                             <div class="btn-buy">
                                                 <form action="/" method="POST">
                                                 <button class="btn-buy-item add-gh" name="slug" value="<%-products[i].slug %>">
-                                                    <i class="fa fa-regular fa-bag-shopping"></i>
+                                                    Bỏ giỏ
                                                 </button>
                                                 </form> 
                                                 <a href="/thanhtoan/<%-products[i].slug %> ">
                                                     <button class="btn-buy-item has--plus">
-                                                    Buy Now!
+                                                    Mua!
                                                 </button></a>
                                             </div>
                                             
