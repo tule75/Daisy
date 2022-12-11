@@ -38,6 +38,7 @@ class UserController {
                             res.send('không tồn tại')
                         }
                     })
+                    .catch(err => {res.send(err.message)});
                 } else {
                     User.findOne({slug: req.params.slug})
                     .then(shop => {
@@ -46,11 +47,13 @@ class UserController {
                             .then(products => {
                                 res.render('shop.html', {shop: shop, check: 0, countCart: 0, products: products});
                             })
+                            .catch(err => {res.send(er.message)})
                         }
                         else {
                             res.send('không tồn tại')
                         }
                     })
+                    .catch(err => {res.send(err.message)})
                 }
             })
             .catch(err => {
@@ -69,6 +72,7 @@ class UserController {
                         res.send('không tồn tại')
                     }
                 })
+                .catch(err => {res.send(err.message)})
         }    
     }
 }

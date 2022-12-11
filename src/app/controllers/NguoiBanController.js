@@ -59,6 +59,7 @@ class NguoiBanController {
                                 request.write(requestBody);
                                 request.end('')
                         })
+                        .catch(err => {console.log(`problem with request: ${err}`)})
                         console.log('success', bill)
                         res.status(204).send('cập nhật thành công')
                     })
@@ -87,9 +88,11 @@ class NguoiBanController {
         .then(user => {
             product.user_slug = user.slug
         })
+        .catch(err => {})
         product.price_discount = product.price
         product.save()
         .then(() => {res.redirect('/kenhnguoiban')})
+        .catch(err => {res.send(err.message)})
     }
 
 
@@ -155,6 +158,7 @@ class NguoiBanController {
                                     .catch((err) => {})
                                 })
                             })
+                            .catch((err) => {})
 
                             
                             products.forEach((element, i) => {
@@ -193,9 +197,10 @@ class NguoiBanController {
                             
 
                         })
+                        .catch(err => {res.send(err.message)})
                         
                     })
-
+                    .catch(err => {res.send(err.message)})
                     // dùng foreach
                         // products.forEach(async (element, index) => {
                         //     GioHang.find({product_slug: element.slug})

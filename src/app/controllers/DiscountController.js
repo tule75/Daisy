@@ -28,6 +28,7 @@ class DiscountController {
                             .then(()=> {
                                 pr[i] = 1
                             })
+                            .catch(err => {})
                         });
                         if (pr) {
                             resolve(pr)
@@ -41,6 +42,7 @@ class DiscountController {
                         .then(() => {res.status(204).send('xong')})
                         .catch(() => {res.send('loi')})
                     })
+                    .catch(() => {res.status(400).send(err.message)})
                 } else {
                     product.save()  
                     .then(() => {res.status(204).send('xong')})
@@ -61,6 +63,7 @@ class DiscountController {
             .then(() => {res.status(204).send('xong')})
             .catch(() => {res.send('loi')})
         })
+        .catch((err) => {res.status(500).send(err.message)})
     }
 }
 

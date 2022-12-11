@@ -35,6 +35,7 @@ class UserController {
                 res.status(204).send('cập nhật không thành công')
             }
         })
+        .catch(err => {res.status(500).send(err.message)})
     }
 
     //[GET] /user/:slug
@@ -121,6 +122,7 @@ class UserController {
                             console.log(bi)
                             res.render('customer.html', {products: pr, check: 1, user: user, countCart: counts, bills: bills, products_buy: bi})
                         })
+                        .catch(err => {res.status(500).send(err.message)})
                         
                         
                     })

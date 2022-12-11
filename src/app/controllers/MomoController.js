@@ -34,7 +34,7 @@ class MomoController {
             } else {
 		reject()
 	    }
-	})
+	    })
         promise.then(async (pr) => {
             pr = await resolveAfter2Seconds(pr)
             console.log(pr)
@@ -115,7 +115,9 @@ class MomoController {
             });
             request.write(requestBody);
             request.end('')
-                })
+        })
+        .catch((err) => {res.send(err.message)
+        });
         }
     }
     

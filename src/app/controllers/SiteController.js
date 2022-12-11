@@ -35,6 +35,7 @@ class SiteController {
                     var shops = []
                     User.find({role: 'seller'})
                     .then(data => {shops = data})
+                    .catch(er => {})
 
                     Product.find()
                         .then(products => {
@@ -46,6 +47,7 @@ class SiteController {
                                     res.render('home.html', {products: products, check: 1, user: user, countCart: counts, shops: shops, notify: []})
                                 }
                             })
+                            .catch(er => {res.send(er.message)})
                             
                             // res.json(products)
                         })
@@ -58,6 +60,7 @@ class SiteController {
                             .then(data => {shops = data
                             res.render('home.html', {products: products, check: 0, countCart: 0, shops: shops})
                             })
+                            .catch(er => {res.send(er.message)})
 
                             // res.json(products)
                         })
@@ -76,7 +79,7 @@ class SiteController {
 
                         res.render('home.html', {products: products, check: 0, countCart: 0, shops: shops})
                     })
-
+                    .catch(err => {res.send(err)})
                     // res.json(products)
                 })
                 .catch(err => {res.send('loi')})
