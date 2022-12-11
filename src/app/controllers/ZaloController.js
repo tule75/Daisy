@@ -66,6 +66,7 @@ class ZaloController {
                 .then((bill) => {
                     params[0] = bill._id;
                 })
+                .catch((error) => {})
                 var phone;
                 User.findOne({user_slug: req.body.cus_slug})
                 .then(user => {
@@ -73,6 +74,7 @@ class ZaloController {
                     phone = user.phone.toString();
                     }
                 })
+                .catch(err=>{})
                 const OAID = "111111" //yêu cầu shop cung cấp sau
 
                 //multiChannelMessage

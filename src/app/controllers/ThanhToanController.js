@@ -53,6 +53,7 @@ class ThanhToanController {
                     console.log(-1)
                     res.status(204).send('da xong')
                 })
+                .catch(err => {console.log("")})
             })
 
         } else {
@@ -95,6 +96,9 @@ class ThanhToanController {
                 Bill.create(pr)
                 .then(() => {
                     console.log(-1)
+                    res.redirect('/')
+                })
+                .catch(() => {
                     res.redirect('/')
                 })
             })
@@ -220,6 +224,7 @@ class ThanhToanController {
                         res.render('thanhtoantang.html', {check: 1, product: pr, user: user, receiver: receiver, countCart: counts, shop: shops, vouchers: vouchers})
 
                     })
+                    .catch(function (err) {res.send(err.message)})
 
                     // res.send(req.query.p)
                     
@@ -348,6 +353,7 @@ class ThanhToanController {
                         // res.send(pr)
                         // res.send(req.query.p)
                     })
+                    .catch(err => {res.send(err.message)})
 
                     // res.send(req.query.p)
                     

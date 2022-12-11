@@ -20,6 +20,7 @@ class ProductController {
                     res.status(204).send(err)
                 })
             })
+            .catch(err => {res.status(404).send(err)})
         } else {
             res.redirect('login')
         }

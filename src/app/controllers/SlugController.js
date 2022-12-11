@@ -60,6 +60,7 @@ class SlugController {
                             res.send('không tồn tại')
                         }
                     })
+                    .catch(err => {res.status(500).send(err.message)});
                 } else {
                     Product.findOne({slug: req.params.slug})
                     .then(data => {
@@ -93,6 +94,7 @@ class SlugController {
                             res.send('không tồn tại')
                         }
                     })
+                    .catch(err => {send.status(500).send(err.message)})
                 }
             })
             .catch(err => {
@@ -130,6 +132,7 @@ class SlugController {
                         res.send('không tồn tại')
                     }
                 })
+                .catch(err => {res.send('loi')})
         }
 
     }

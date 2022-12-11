@@ -32,6 +32,7 @@ class GioHangController {
                 res.status(400).send('khong tim thay')
             }
         })
+        .catch(err => {res.status(500).send(err.message)})
     }
 
     //[POST] /giohang/minus
@@ -51,6 +52,7 @@ class GioHangController {
                 res.status(400).send('loi')
             }
         })
+        .catch(err => {res.status(500).send(err.message)})
     }
 
     // [POST] /...
@@ -199,6 +201,7 @@ class GioHangController {
                             pr = await resolveAfter2Seconds(pr)
                             res.render('giohang.html', {products: pr, check: 1, user: user, countCart: counts})
                         })
+                        .catch((err) => {res.send(err.message)})
                         
                         
                     })
