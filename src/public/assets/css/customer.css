@@ -19,7 +19,7 @@
 .header__logo {
     width: 160px;
     height: 160px;
-    margin-left: 16px;
+    margin-left: 10px;
     align-self: center;
     transform: translateY(14px);
 }
@@ -338,9 +338,8 @@
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 4px;
-    border-color: #000;
     margin-bottom: 8px;
+    border: solid 1px #888;
 }
 
 .content__side-bar--button {
@@ -542,26 +541,28 @@
     display: flex;
     flex-direction: row;
     /* justify-content:space-between; */
-    padding-top: 20px;
+    padding-top: 20px;  
     align-items: center;
-    /*  */
-    
 }
 
 .orders-status {
-    width: 14.28%;
+    width: 14.285714%;
+    display: flex;
     font-size: 14px;
     border: none;
     /* background-color: #ccc; */
     cursor: pointer;
-    text-align: center;
     color: black;
+    /* text-align: center; */
+    align-self: center;
     /* padding: 20px 10px; */
 }
+
 .orders-status.active {
-    color: red;
+    color:#5BAB5A;
     /* text-align: center; */
 }
+
 .orders__list {
     width: 100%;
     height: 320px;
@@ -898,6 +899,8 @@
     padding: 0 12px;
     transform: translateX(-20px);
     display: none;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 4px 0 #ccc;
 }
 
 .wishlist-status {
@@ -907,12 +910,13 @@
     flex-direction: row;
     /* justify-content:space-between; */
     padding-top: 20px;
+    font-weight: 500;
 }
 
 .wishlist-status__item {
     width: 50%;
     height: 100%;
-    font-size: 14px;
+    font-size: 16px;
     /* border-right-style: solid; */
     /* border-right-color: #999; */
     /* border-right: 4px; */
@@ -921,16 +925,18 @@
     align-self: center ;
     cursor: pointer;
     padding: 0 0;
-    text-align: center;
+    margin-left: 8px;
 }
 
 .wishlist__items {
     width: 100%;
-    display: none;
+    display: flex;
     flex-direction: column;
     margin-top: 20px;
     height: 320px;
     overflow: scroll;
+    background-color: #fff;
+   
 }
 
 .wishlist__item {
@@ -1019,7 +1025,6 @@
     border: none;
     cursor: pointer;
 }
-
 
 /* --------------------- */
 .active {
@@ -1203,3 +1208,7 @@
     display: none;
  }
 
+
+ .has--bar {
+    display: none;
+ }

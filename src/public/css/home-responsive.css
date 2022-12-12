@@ -196,8 +196,8 @@
     }
 
     .header-search {
-        width: 55%;
-        transform: translateX(28px);
+        width: 65%;
+        transform: translateX(34px);
     }
 
     .header-search-input {
@@ -258,7 +258,7 @@
         width: 100%;
         height: 100%;
         display: block;
-        transform: translateX(30px);
+        transform: translateX(32px);
         color: #fff;
         cursor: pointer;
     }

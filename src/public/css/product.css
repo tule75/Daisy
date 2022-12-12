@@ -415,17 +415,20 @@
     background-color: white;
     display: flex;
     justify-content: space-between;
+    padding: 12px 0px;
 }
 
 .shop-introduce {
     display: flex;
-    padding-left: 70px;
+    padding-left: 50px;
     align-items: center;
     left: 0;
 }
 .shop-img {
-    width: 110px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
+    border: #ccc solid 1px;
+    border-radius: 50%;
 }
 
 .shop-basic-infor {
@@ -438,8 +441,8 @@
     width: 1px;
     height: 100px;
     background-color: #ccc;
-    right: -80px;
-    top: -17px;
+    right: -40px;
+    top: -10px;
 }
 .shop-name {
 
@@ -451,15 +454,15 @@
 .shop-detail {
     display: flex;
     align-items: center;
-    padding-right: 100px;
+    padding-right: 110px;
     justify-content: space-between;
 
 }
 
 .shop-detail-list {
     list-style: none;
-    padding: 0 50px;
-
+    /* padding: 0 50px; */
+    margin: 0 20px;
 }
 .detail-item {
     padding: 7px 0;

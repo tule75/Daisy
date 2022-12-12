@@ -175,7 +175,11 @@
         width: 100%;
         height: 50%;
         background-color: #fff;
-        align-items: center;
+        align-items:center;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 4px 0 #ccc;
+        padding-top: 8px;
+        margin-bottom: -20px;
     }
 
     .content__side-bar--choice {
