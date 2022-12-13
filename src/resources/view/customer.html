@@ -101,7 +101,7 @@
                     <button type="button" class="content__side-bar--button">Đổi ảnh đại diện</button>
 
                     <div class="content__side-bar--choice-list">
-                        <button type="button" class="content__side-bar--choice active content__side-bar--choice-modal a">
+                        <button type="button" class="content__side-bar--choice active content__side-bar--choice-modal">
                             <i class="fa-solid fa-user content__side-bar--ic"></i>
                             Thông tin cá nhân
                         </button>
@@ -266,12 +266,12 @@
                             <div class="orders-status">Trả hàng/hoàn tiền</div>
                         </div>
 
-                        <div class="orders__list ">
+                        <div class="orders__list">
                             <!-- <div class="order"> -->
                             <% for (let i = 0; i < bills.length; i++) {%> 
                                 <%const x = products_buy[i].img.replace("https://drive.google.com/file/d/","https://drive.google.com/uc?export=view&id=")%>
                                 <% const y = x.replace("/view?usp=share_link","",40)%>
-                               <div class="list-item active">
+                               <div class="list-item on">
                                 <div class="order__info">
                                     <img class="order--img" src="<%-y %>" alt="">
 
@@ -322,12 +322,9 @@
                     <div class="content__form-voucher js-content-form">
                         <div class="content__form-voucher__list">
                             <button class="voucher-status change">Tất cả</button>
-                            <button class="voucher-status">Chờ xác nhận</button>
-                            <button class="voucher-status">Chờ lấy hàng</button>
-                            <button class="voucher-status">Đang giao</button>
-                            <button class="voucher-status">Đã giao</button>
-                            <button class="voucher-status">Đã hủy</button>
-                            <button class="voucher-status">Trả hàng/hoàn tiền</button>
+                            <button class="voucher-status">Daisy</button>
+                            <button class="voucher-status">Shop</button>
+                            <button class="voucher-status">Từ đối tác</button>
                         </div>
 
                         <div class="voucher-list changecontent">
@@ -727,7 +724,7 @@
 
                     <div class="content__form-wishlist js-content-form">
                         <div class="wishlist-status">
-                            <div class="wishlist-status__item change">Danh sách</div>
+                            <div class="wishlist-status__item">Danh sách</div>
                         </div>
 
                         <div class="wishlist__items">
@@ -1604,10 +1601,10 @@
                 status.onclick = function () {    
                    
                     $('.orders-status.active').classList.remove('active')
-                    $('.list-item.active').classList.remove('active')
+                    $('.list-item.on').classList.remove('on')
 
                     this.classList.add('active')
-                    order.classList.add('active')
+                    order.classList.add('on')
                 }
             })
 
