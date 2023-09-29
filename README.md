@@ -12,6 +12,7 @@
 ### Trước hết cần cài đặt Nodejs
 ### Tải về các thư viện cần thiết:
 > **npm install**
+
 Câu lệnh này giúp tải về các thư viện cần thiết trước khi chạy code.
 ### Chạy source code:
 > **npm start**
