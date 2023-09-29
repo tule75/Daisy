@@ -16,4 +16,5 @@
 Câu lệnh này giúp tải về các thư viện cần thiết trước khi chạy code.
 ### Chạy source code:
 > **npm start**
+
 Câu lệnh chạy source code, người dùng vào localhost:3000 để truy cập website
