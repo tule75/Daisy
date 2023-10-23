@@ -2,6 +2,7 @@ const Product = require('../models/Product')
 const User = require('../models/Users')
 const jwt = require('jsonwebtoken')
 
+// test
 class ProductController {
     //[Post] /product/create
     create(req, res, next) {
@@ -26,5 +27,7 @@ class ProductController {
         }
     }
 }
+
+
 
 module.exports = new ProductController()
