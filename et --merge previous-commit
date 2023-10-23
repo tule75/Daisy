@@ -1,0 +1,154 @@
+[33ma76daca[m[33m ([m[1;36mHEAD -> [m[1;32mtu7[m[33m, [m[1;31morigin/tu7[m[33m)[m HEAD@{0}: commit: fixx
+[33me7e2b0d[m HEAD@{1}: commit: fix
+[33m9b4637a[m HEAD@{2}: Branch: renamed refs/heads/tu2 to refs/heads/tu7
+[33m9b4637a[m HEAD@{4}: commit: thong bao
+[33m15637bf[m[33m ([m[1;31morigin/main[m[33m)[m HEAD@{5}: pull origin main: Fast-forward
+[33m0bd8d2f[m[33m ([m[1;31morigin/tu2[m[33m)[m HEAD@{6}: commit: m
+[33mfd96c1c[m HEAD@{7}: Branch: renamed refs/heads/tu3 to refs/heads/tu2
+[33mfd96c1c[m HEAD@{9}: commit: h
+[33m2d2c249[m[33m ([m[1;31morigin/tu3[m[33m)[m HEAD@{10}: commit: re
+[33m921be1e[m HEAD@{11}: commit: re
+[33m6d28f2f[m HEAD@{12}: pull origin main: Fast-forward
+[33mac80082[m HEAD@{13}: commit: hix
+[33md43105f[m HEAD@{14}: pull origin dao8: Merge made by the 'ort' strategy.
+[33meaa0b53[m HEAD@{15}: Branch: renamed refs/heads/tu5 to refs/heads/tu3
+[33meaa0b53[m HEAD@{17}: commit: tu
+[33m596cab8[m[33m ([m[1;31morigin/tu5[m[33m)[m HEAD@{18}: commit: t
+[33m8ffd361[m HEAD@{19}: pull origin main: Fast-forward
+[33m4927cef[m HEAD@{20}: commit: nehe
+[33m8335c31[m HEAD@{21}: pull origin main: Fast-forward
+[33m9ef4ecb[m HEAD@{22}: commit: hĩ
+[33m25ce3b4[m HEAD@{23}: commit: update
+[33m7c63491[m HEAD@{24}: pull origin main: Fast-forward
+[33mc3f242f[m HEAD@{25}: Branch: renamed refs/heads/tu to refs/heads/tu5
+[33mc3f242f[m HEAD@{27}: commit: hic
+[33m28d6343[m[33m ([m[1;31morigin/tu[m[33m)[m HEAD@{28}: commit: zalo chat
+[33m1fc2a0b[m HEAD@{29}: commit: hĩ
+[33mc092e60[m HEAD@{30}: commit: category
+[33ma84e7a3[m HEAD@{31}: pull origin main: Fast-forward
+[33m10098be[m HEAD@{32}: Branch: renamed refs/heads/tu4 to refs/heads/tu
+[33m10098be[m HEAD@{34}: commit: hix
+[33mc66837c[m[33m ([m[1;31morigin/tu4[m[33m)[m HEAD@{35}: commit: fix
+[33mb0321f9[m HEAD@{36}: commit: check
+[33m35644d2[m HEAD@{37}: Branch: renamed refs/heads/tu3 to refs/heads/tu4
+[33m35644d2[m HEAD@{39}: commit: customer
+[33m970d80c[m HEAD@{40}: commit: xong
+[33m4697913[m HEAD@{41}: commit: fix
+[33m8afdd82[m HEAD@{42}: commit: add and minus
+[33m41f8b1e[m HEAD@{43}: pull origin main: Fast-forward
+[33m2cb7b97[m HEAD@{44}: commit: hix
+[33mb1948f2[m HEAD@{45}: pull origin main: Fast-forward
+[33mc66a443[m HEAD@{46}: commit: hix
+[33me6f8b03[m HEAD@{47}: commit: link tang qua
+[33m3736450[m HEAD@{48}: pull origin main: Fast-forward
+[33md43515e[m HEAD@{49}: Branch: renamed refs/heads/tu1 to refs/heads/tu3
+[33md43515e[m HEAD@{51}: commit: san pham cùng shop
+[33m4fe4237[m[33m ([m[1;31morigin/tu1[m[33m)[m HEAD@{52}: commit: fix
+[33maf1b2b6[m HEAD@{53}: commit: fix product
+[33m8996075[m HEAD@{54}: pull origin main: Fast-forward
+[33m4f1f035[m HEAD@{55}: commit: link
+[33mcc1c6bd[m HEAD@{56}: pull origin main: Fast-forward
+[33mdb2d221[m HEAD@{57}: Branch: renamed refs/heads/tu to refs/heads/tu1
+[33mdb2d221[m HEAD@{59}: commit: thanh toan tang hang bang momo
+[33m8b678dd[m HEAD@{60}: commit: search
+[33m13fbbed[m HEAD@{61}: pull origin main: Fast-forward
+[33m0e71b98[m HEAD@{62}: pull origin main: Fast-forward
+[33m05830ac[m HEAD@{63}: commit: wl
+[33m6e7aad4[m HEAD@{64}: commit: wishlist
+[33m3f70a43[m HEAD@{65}: pull origin main: Fast-forward
+[33m9ca4898[m HEAD@{66}: Branch: renamed refs/heads/tu3 to refs/heads/tu
+[33m9ca4898[m HEAD@{68}: commit: pain
+[33mdb21cff[m HEAD@{69}: commit: ajax
+[33ma536331[m HEAD@{70}: pull origin main: Fast-forward
+[33md50c64c[m HEAD@{71}: commit: fix
+[33m696a17b[m HEAD@{72}: pull origin main: Fast-forward
+[33m09b39fa[m HEAD@{73}: commit: fix
+[33m6f90cd5[m HEAD@{74}: commit: thanh toan
+[33m7f50990[m HEAD@{75}: pull origin main: Fast-forward
+[33m5849022[m HEAD@{76}: commit: discount
+[33mf95bf40[m HEAD@{77}: pull origin main: Fast-forward
+[33mbdaeb5d[m HEAD@{78}: pull origin main: Fast-forward
+[33m65af112[m HEAD@{79}: commit: delete discount
+[33m59d4960[m HEAD@{80}: commit: discount
+[33m445b403[m HEAD@{81}: commit: seller login
+[33m0547c83[m HEAD@{82}: pull origin main: Fast-forward
+[33m63bec3d[m HEAD@{83}: pull origin main: Fast-forward
+[33mc402528[m HEAD@{84}: commit: fix
+[33mb297369[m HEAD@{85}: pull origin main: Fast-forward
+[33mdc26cf5[m HEAD@{86}: pull origin main: Fast-forward
+[33m40f7b4a[m HEAD@{87}: pull origin main: Fast-forward
+[33m20dad05[m HEAD@{88}: commit: them san pham
+[33m6ac74ca[m HEAD@{89}: pull origin main: Fast-forward
+[33m2835af5[m HEAD@{90}: commit: hang cho gui
+[33mbab47e3[m HEAD@{91}: commit: mua hàng
+[33mefaec12[m HEAD@{92}: commit: fix
+[33m2b9e8d6[m HEAD@{93}: Branch: renamed refs/heads/tu4 to refs/heads/tu3
+[33m2b9e8d6[m HEAD@{95}: Branch: renamed refs/heads/tu1 to refs/heads/tu4
+[33m2b9e8d6[m HEAD@{97}: commit: update product in shop
+[33m25cc86b[m HEAD@{98}: commit: logo shop
+[33m253a02d[m HEAD@{99}: commit: fix
+[33m481f9bc[m HEAD@{100}: pull origin main: Fast-forward
+[33m91fcb85[m HEAD@{101}: commit: fix
+[33m4c19e9b[m HEAD@{102}: commit: thanh toan
+[33m736910b[m HEAD@{103}: commit (merge): Merge branch 'main' of https://github.com/UIT-21522738/Daisy
+[33m9090148[m HEAD@{104}: commit: fix
+[33m990c053[m HEAD@{105}: Branch: renamed refs/heads/tu to refs/heads/tu1
+[33m990c053[m HEAD@{107}: commit: fix
+[33mfa3bce2[m HEAD@{108}: commit: kenh nguoi ban
+[33m2393c2e[m HEAD@{109}: commit: link shop
+[33m47f1ddb[m HEAD@{110}: pull origin main: Fast-forward
+[33m0bb8e1e[m HEAD@{111}: commit: link
+[33m3dc181f[m HEAD@{112}: pull origin main: Fast-forward
+[33mdc13dc6[m HEAD@{113}: commit: sua gio hang
+[33m548f243[m HEAD@{114}: pull origin main: Fast-forward
+[33m0d441db[m HEAD@{115}: Branch: renamed refs/heads/tu5 to refs/heads/tu
+[33m0d441db[m HEAD@{117}: commit: gio hang
+[33m4155624[m HEAD@{118}: reset: moving to HEAD
+[33m4155624[m HEAD@{119}: commit: t
+[33m2fd75be[m HEAD@{120}: commit: giohang
+[33m737692f[m HEAD@{121}: commit: link thanh toan
+[33m1393f2b[m HEAD@{122}: pull origin main: Fast-forward
+[33m7fab82a[m HEAD@{123}: commit: dangki
+[33m42cc7f4[m HEAD@{124}: pull origin main: Fast-forward
+[33m552ecb4[m HEAD@{125}: commit: update
+[33m34e03f3[m HEAD@{126}: pull origin main: Fast-forward
+[33m1e5f4bf[m HEAD@{127}: Branch: renamed refs/heads/tu3 to refs/heads/tu5
+[33m1e5f4bf[m HEAD@{129}: commit: product
+[33mf1a5e38[m HEAD@{130}: Branch: renamed refs/heads/tu4 to refs/heads/tu3
+[33mf1a5e38[m HEAD@{132}: commit: render product
+[33m0302819[m HEAD@{133}: commit: fix gio hang
+[33m7b31bf4[m HEAD@{134}: pull origin main: Fast-forward
+[33m062782a[m HEAD@{135}: commit: logout and fix
+[33m8bc6b75[m HEAD@{136}: Branch: renamed refs/heads/tu2 to refs/heads/tu4
+[33m8bc6b75[m HEAD@{138}: commit: đếm giỏ hàng
+[33mbb9abdf[m HEAD@{139}: commit: shop
+[33m7069a53[m HEAD@{140}: pull origin main: Fast-forward
+[33m3c6d82a[m HEAD@{141}: Branch: renamed refs/heads/tu1 to refs/heads/tu2
+[33m3c6d82a[m HEAD@{143}: commit: fix
+[33mdb4fd36[m HEAD@{144}: Branch: renamed refs/heads/tu to refs/heads/tu1
+[33mdb4fd36[m HEAD@{146}: Branch: renamed refs/heads/tu to refs/heads/tu
+[33mdb4fd36[m HEAD@{148}: commit: user
+[33m499e906[m HEAD@{149}: commit: slug
+[33mf22598e[m HEAD@{150}: Branch: renamed refs/heads/tu to refs/heads/tu
+[33mf22598e[m HEAD@{152}: commit: add and repair
+[33m342099b[m HEAD@{153}: Branch: renamed refs/heads/tu to refs/heads/tu
+[33m342099b[m HEAD@{155}: commit: gio hang
+[33ma0b5cb3[m HEAD@{156}: merge origin/main: Fast-forward
+[33m0fecc80[m HEAD@{157}: Branch: renamed refs/heads/tu to refs/heads/tu
+[33m0fecc80[m HEAD@{159}: commit: capnhat
+[33m82ff93c[m HEAD@{160}: pull origin main: Fast-forward
+[33m9a81060[m[33m ([m[1;31morigin/capnhat[m[33m)[m HEAD@{161}: Branch: renamed refs/heads/capnhat to refs/heads/tu
+[33m9a81060[m[33m ([m[1;31morigin/capnhat[m[33m)[m HEAD@{163}: Branch: renamed refs/heads/capnhat to refs/heads/capnhat
+[33m9a81060[m[33m ([m[1;31morigin/capnhat[m[33m)[m HEAD@{165}: commit: hinh anh
+[33m25b52bc[m HEAD@{166}: commit: cap nhat login
+[33mc285ec4[m HEAD@{167}: Branch: renamed refs/heads/capnhat to refs/heads/capnhat
+[33mc285ec4[m HEAD@{169}: Branch: renamed refs/heads/main to refs/heads/capnhat
+[33mc285ec4[m HEAD@{171}: pull: Merge made by the 'ort' strategy.
+[33m17e8c29[m HEAD@{172}: commit (merge): cap nhat
+[33mcc73ca1[m HEAD@{173}: Branch: renamed refs/heads/main to refs/heads/main
+[33mcc73ca1[m HEAD@{175}: commit: capnhat
+[33m6fdc707[m HEAD@{176}: Branch: renamed refs/heads/main to refs/heads/main
+[33m6fdc707[m HEAD@{178}: commit: module
+[33m47d7cd7[m HEAD@{179}: Branch: renamed refs/heads/main to refs/heads/main
+[33m47d7cd7[m HEAD@{181}: Branch: renamed refs/heads/master to refs/heads/main
+[33m47d7cd7[m HEAD@{183}: commit (initial): first commit
